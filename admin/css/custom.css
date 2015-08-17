@@ -624,7 +624,7 @@ a:focus {
 }
 
 .nav.side-menu> li > a {
-    border: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
     margin-left: 60px;
     background: #ffffff;
 }
@@ -1038,6 +1038,8 @@ h2 {
     float: left;
     clear: both;
     margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid ##cecece;
 }
 
 .x_content h4 {
@@ -2014,6 +2016,9 @@ h4.graph_title {
     color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+#sidebar-menu li > i.fa {
+    border-bottom: 1px solid #2681A7;
 }
 /* *********  /iconts-display  **************************** */
 /* *********  Tile stats  **************************** */

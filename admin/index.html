@@ -104,29 +104,105 @@
             <div class="top_nav">
 
                 <div class="nav_menu">
-                    <nav class="" role="navigation">
+                    <nav role="navigation">
                         <div class="nav_title" style="border: 0;">
                             <a href="index.html" class="site_title"> 한국정보공학(주)</a>
                         </div>
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="">
+                            <li>
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                     <i class=" fa fa-user"></i> 기술개발팀 과장 홍길동
                                     <span class=" fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
-                                    <li><a href="javascript:;">  개인정보수정</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <span class="badge bg-red pull-right">50%</span>
-                                            <span>Settings</span>
-                                        </a>
+                                    <li><a href="#none" data-toggle="modal" data-target=".main_my"> 개인정보수정</a>
                                     </li>
                                     <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                                     </li>
                                 </ul>
+
+
+                                <!-- 개인정보수정 MODAL (S)-->
+                                <div class="modal fade main_my" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">개인정보수정</h4>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="member-number">사번
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" id="member-number" disabled="disabled" class="form-control col-md-7 col-xs-12" placeholder="150301">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="member-id">아이디
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" id="member-id" name="member-id" disabled="disabled" class="form-control col-md-7 col-xs-12" placeholder="ID">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="new-memberpw" class="control-label col-md-3 col-sm-3 col-xs-12">새 비밀번호</label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="new-memberpw" class="form-control col-md-7 col-xs-12" type="password" name="new-memberpw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="new-memberpw-ok" class="control-label col-md-3 col-sm-3 col-xs-12">새 비밀번호 확인</label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="new-memberpw-ok" class="form-control col-md-7 col-xs-12" type="password" name="new-memberpw-ok">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">E-mail
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-email" class="form-control col-md-7 col-xs-12" type="text" placeholder="id@domain.com">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mobile
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-mobile" class="form-control col-md-7 col-xs-12" type="text" placeholder="010-1234-1234">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Office
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-office" class="form-control col-md-7 col-xs-12" type="text" placeholder="02-1234-1234">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ln_solid"></div>
+                                                    <div class="form-group">
+                                                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                                            <button type="submit" class="btn btn-primary" data-dismiss="modal">취소</button>
+                                                            <button type="submit" class="btn btn-success">수정</button>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 개인정보수정 MODAL (E)-->
+
+
                             </li>
 
                         </ul>
