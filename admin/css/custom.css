@@ -12,17 +12,8 @@ body.nav-sm .container.body .right_col {
     z-index: 2;
 }
 .right_col{min-height: 1000px;}
-body.nav-sm .navbar.nav_title {
+body.nav-sm .navbar.toggle {
     width: 60px;
-}
-
-body.nav-sm .navbar.nav_title a span {
-    display: none;
-}
-
-body.nav-sm .navbar.nav_title a i {
-    font-size: 27px;
-    margin: 13px 0 0 3px;
 }
 
 .site_title i {
@@ -181,6 +172,8 @@ body.nav-md .container.body .right_col {
     background: #3f6298;
     border-radius: 0;
     height: 60px;
+    position: absolute;
+    left: 60px;
 }
 
 @media (max-width: 991px) {
@@ -669,7 +662,7 @@ a:focus {
 .nav.side-menu> li.active .fa {
     border-left: 4px solid #ffae00;
 }
-
+.nav.side-menu> li.current-page > a,
 .nav.side-menu> li.active > a {
     color: #ff0000;
     background: #e8f9ff;
@@ -755,7 +748,10 @@ li.current-page a {
     float: left;
     margin: 0;
     padding-top: 16px;
-    width: 70px;
+    width: 240px;
+    height: 60px;
+    background-color: #3f6298;
+    border-radius: 0;
 }
 
 .toggle a {
@@ -811,15 +807,20 @@ li.current-page a {
 
 .x_content canvas {}
 
+.sub_content {
+    padding: 0px 11px;
+}
+
 footer {
-    background: #fff;
-    padding: 5px 20px 0;
+    background: #ddd;
+    padding: 20px 36px;
     margin-top: 40px;
-    height: 45px;
+    height: 70px;
     margin: 0 -20px;
 }
 footer .pull-left {
     margin: 0;
+    font-size: 13px;
 }
 .tile-stats.sparkline {
     padding: 10px;
@@ -1005,7 +1006,7 @@ h2 {
 }
 
 .x_title {
-    padding: 1px 5px 6px;    
+    padding: 1px 5px 6px;
 }
 
 .x_title .filter {

@@ -33,38 +33,63 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
 
-                    <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"> <i class="fa fa-chrome"></i> <span>한국정보공학(주)</span></a>
+                    <div class="navbar toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                     </div>
                     <div class="clearfix"></div>
-
 
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
                         <div class="menu_section">
                             <ul class="nav side-menu">
-                                <li><i class="fa fa-briefcase"></i> <a> 고객사 <span class="fa fa-chevron-right"></span></a>
+                                <li><i class="fa fa-briefcase"></i> <a href="customer.html"> 고객사 <span class="fa fa-chevron-right"></span></a>
                                 </li>
                                 <li><i class="fa fa-calendar"></i><a> 스케줄 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="schedule.html">- 스케줄 관리</a></li>
+                                        <li><a href="schedule_history.html">- 스케줄 이력</a></li>
+                                    </ul>
                                 </li>
                                 <li><i class="fa fa-file-text-o"></i><a> 보고서 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="report.html">- 보고서 조회</a></li>
+                                        <li><a href="report_macro.html">- 상용구 관리</a></li>
+                                    </ul>
                                 </li>
                                 <li><i class="fa fa-bar-chart"></i><a> 통계정보 <span class="fa fa-chevron-right"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="index.html">- 활동정보 요약보기
-                                        <li><a href="index1.html">- 활동정보 상세보기</a></li>
-                                        <li><a href="index2.html">- Grafik kegiatan</a></li>
-                                        <li><a href="index3.html">- Catatan/rekok datang...</a></li>
+                                        <li><a href="statistics.html">- 활동정보 요약</a></li>
+                                        <li><a href="statistics_active.html">- 활동정보 상세</a></li>
+                                        <li><a href="statistics_graph.html">- 활동그래프</a></li>
+                                        <li><a href="admin_rollbook.html">- 출퇴근기록</a></li>
                                     </ul>
                                 </li>
                                 <li><i class="fa fa-users"></i><a> 직원 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="member.html">- 직원 연락처</a></li>
+                                        <li><a href="member_state.html">- 비즈미 사용 현황</a></li>
+                                        <li><a href="member_stamp.html">- 업무발자취</a></li>
+                                    </ul>
                                 </li>
                                 <li><i class="fa fa-folder-open"></i><a> 관리 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="admin_off.html">- 휴가자설정</a></li>
+                                        <li><a href="admin_holiday.html">- 휴일설정</a></li>
+                                        <li><a href="admin_department.html">- 조직관리</a></li>
+                                        <li><a href="admin_position.html">- 직위관리</a></li>
+                                        <li><a href="admin_employee.html">- 직원관리</a></li>
+                                        <li><a href="admin_work.html">- 업무구분설정</a></li>
+                                        <li><a href="admin_costomer.html">- 곡객구분설정</a></li>
+                                    </ul>
                                 </li>
                                 <li><i class="fa fa-cog"></i><a> 설정 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="admin_level.html">- 권한설정</a></li>
+                                        <li><a href="admin_setting.html">- 환경변수 설정</a></li>
+                                    </ul>
                                 </li>
-                                <li><i class="fa fa-tachometer"></i><a> 상황실 <span class="fa fa-chevron-right"></span></a>
+                                <li><i class="fa fa-tachometer"></i><a href="monitoring"> 상황실 <span class="fa fa-chevron-right"></span></a>
                                 </li>
                             </ul>
                         </div>
@@ -80,8 +105,8 @@
 
                 <div class="nav_menu">
                     <nav class="" role="navigation">
-                        <div class="nav toggle">
-                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        <div class="nav_title" style="border: 0;">
+                            <a href="index.html" class="site_title"> 한국정보공학(주)</a>
                         </div>
 
                         <ul class="nav navbar-nav navbar-right">
@@ -119,7 +144,7 @@
                 <div class="row">
 
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="dashboard_graph">
+                        <div class="sub_content">
 
                             <div class="row x_title">
                                 <div class="col-md-6">
@@ -156,8 +181,8 @@
                 <footer>
                     <div class="">
                         <p class="pull-left">
-                            Gentelella Alela! a Bootstrap 3 template by <a>Kimlabs</a>. |<br />
-                            COPYRIGHT (c) 2015
+                            한국정보공학(주) ㅣ 대표번호 : 031-789-8700   주소 : 경기도 성남시 분당구 서현동 253-4 경림빌딩<br />
+                            COPYRIGHT (c) 2005 KIES CO., LTD. All rights are reserved. Since 2015
                         </p>
                     </div>
                     <div class="clearfix"></div>
