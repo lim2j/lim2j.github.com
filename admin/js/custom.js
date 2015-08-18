@@ -1,4 +1,4 @@
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -73,16 +73,7 @@ if ($(".progress .progress-bar")[0]) {
     $('.progress .progress-bar').progressbar(); // bootstrap 3
 }
 /** ******  /progressbar  *********************** **/
-/** ******  switchery  *********************** **/
-if ($(".js-switch")[0]) {
-    var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
-    elems.forEach(function (html) {
-        var switchery = new Switchery(html, {
-            color: '#26B99A'
-        });
-    });
-}
-/** ******  /switcher  *********************** **/
+
 /** ******  collapse panel  *********************** **/
 // Close ibox function
 $('.close-link').click(function () {
@@ -104,16 +95,6 @@ $('.collapse-link').click(function () {
     }, 50);
 });
 /** ******  /collapse panel  *********************** **/
-/** ******  iswitch  *********************** **/
-if ($("input.flat")[0]) {
-    $(document).ready(function () {
-        $('input.flat').iCheck({
-            checkboxClass: 'icheckbox_flat-green',
-            radioClass: 'iradio_flat-green'
-        });
-    });
-}
-/** ******  /iswitch  *********************** **/
 /** ******  star rating  *********************** **/
 // Starrr plugin (https://github.com/dobtco/starrr)
 var __slice = [].slice;
@@ -307,7 +288,7 @@ $(function () {
 /** ******  Accordion  *********************** **/
 /** ******  scrollview  *********************** **/
 $(document).ready(function () {
-  
+
             $(".scroll-view").niceScroll({
                 touchbehavior: true,
                 cursorcolor: "rgba(42, 63, 84, 0.35)"
