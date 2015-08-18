@@ -1032,7 +1032,7 @@ h2 {
     width: 100%;
     float: left;
     clear: both;
-    margin-top: 5px;
+    margin: 0 5px;
 }
 
 .x_content h4 {
@@ -1042,6 +1042,13 @@ h2 {
 
 legend {
     padding-bottom: 7px;
+}
+
+.y-line {
+    display: inline-block;
+    height: 20px;
+    border-left: 1px solid #ddd;
+    margin-top: 5px;
 }
 
 .modal-title {
@@ -1261,6 +1268,12 @@ h3.degrees {
 }
 /* *********  tables styling  ******************************* */
 
+.table>thead>tr>th {    
+    border-bottom: 2px solid #93b2e3;
+    color: #4a73b3;
+    text-align: center;
+}
+
 .bulk-actions {
     display: none;
 }
@@ -1357,7 +1370,7 @@ table.jambo_table tbody tr.selected td {
 }
 
 .dataTables_info {
-    width: 60%;
+    width: 40%;
     float: left;
 }
 
@@ -2339,17 +2352,17 @@ a.star {
 span.section {
   display: block;
   width: 100%;
-  padding: 0;
+  padding: 10px;
   margin-bottom: 20px;
-  font-size: 21px;
+  font-size: 16px;
   line-height: inherit;
-  color: #333;
+  color: #4a73b3;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .form-control {
-    border-radius: 0;
+    border-radius: 3px;
     line-height: 30px;
     width: 100%;
 }
@@ -2362,6 +2375,10 @@ span.section {
 .form-control:focus {
     border-color: #CCD0D7;
     box-shadow: none !important;
+}
+
+.required {
+    color: #f42c44;
 }
 
 legend {
@@ -2499,6 +2516,19 @@ select.parsley-error {
 .item.bad .alert {
     left: 0;
     opacity: 1;
+}
+
+.googleMap-title {
+    background-color: #515151;
+    padding: 2px 13px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #eee;
+}
+.googleMap-title i {
+    font-size: 21px;
+    color: #eee;
 }
 /* ***** dropzone ****** */
 
@@ -3421,8 +3451,8 @@ ul.bar_tabs > li {
 }
 
 ul.bar_tabs > li.active {
-    border-right: 2px solid #3F6298;
-    border-bottom: 1px solid #fff;
+    border-right: 4px solid #3F6298;
+    margin-top: -16px;
 }
 
 ul.bar_tabs > li.active a {
@@ -3433,10 +3463,11 @@ ul.bar_tabs > li.active a {
 
 ul.bar_tabs > li a {
     padding: 10px 17px;
-    background: #F5F7FA;
+    background: #f3f3f3;
     margin: 0;
     border-radius: 0;
     font-weight: bold;
+    color: #666;
 }
 
 ul.bar_tabs.right {
@@ -3884,6 +3915,16 @@ html > body > .ui-pnotify {
 .btn-dark:hover {
     color: #F7F7F7;
 }
+
+.btn-gray {
+    color: #E9EDEF;
+    background-color: #868686;
+    border-color: #747474;
+}
+
+.btn-gray:hover {
+    color: #F7F7F7;
+}
 /* /theming */
 /* /Pnotify by Hunter Perrin :: 2.0.1 */
 
@@ -3926,6 +3967,12 @@ html > body > .ui-pnotify {
     border-width: 2px;
 }
 
+.btn-default {
+    background-color: #f4f4f4;
+    border-color: #ddd;
+    color: #5d6c7d;
+}
+
 .btn-warning {
     background: #f0ad4e;
     border-color: #f0ad4e;
@@ -3934,6 +3981,16 @@ html > body > .ui-pnotify {
 .btn-danger {
     background: #d9534f;
     border-color: #d9534f;
+}
+
+.btn-primary {
+    background-color: #fff;
+    border-color: #156ba0;
+}
+
+.btn-primary {
+    background-color: #1a82c3;
+    border-color: #156ba0;
 }
 
 .btn-primary:hover,
