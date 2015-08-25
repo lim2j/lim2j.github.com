@@ -1270,6 +1270,13 @@ h3.degrees {
 .table-contents-view {
     padding: 0 30px;
 }
+.table-contents-view .row {
+    padding: 11px 0;
+    border-top: 1px solid #ddd;
+}
+.table-contents-view .row:first-child {
+    border-top: 0 none;
+}
 
 .table>thead>tr>th {
     border-bottom: 2px solid #93b2e3;
@@ -2300,7 +2307,7 @@ a.star {
 }
 
 .attachment {
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .attachment ul {
@@ -2308,7 +2315,7 @@ a.star {
     list-style: none;
     padding-left: 0;
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .attachment ul li {
