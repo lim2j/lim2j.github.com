@@ -1027,7 +1027,7 @@ h2 {
 }
 
 .x_content {
-    padding: 0 30px 30px;
+    padding: 0 30px 15px;
     position: relative;
     width: 100%;
     float: left;
@@ -1268,12 +1268,17 @@ h3.degrees {
 }
 /* *********  tables styling  ******************************* */
 
-.table>thead>tr>th {    
+.table>thead>tr>th {
     border-bottom: 2px solid #93b2e3;
     color: #4a73b3;
     text-align: center;
 }
-
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    vertical-align: middle;
+}
+.table>tbody>tr.success>th, .table>tbody>tr.success>td {
+    background-color: #dbf6f3;
+}
 .bulk-actions {
     display: none;
 }
@@ -2391,6 +2396,13 @@ legend {
 .form-horizontal .form-group {
     margin-right: 0;
     margin-left: 0;
+}
+.input-file-box{
+    padding-top: 7px;
+}
+.input-file-box input[type="file"] {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .form-control-feedback {
@@ -5856,14 +5868,6 @@ body {
 
 /* *********  /cropping  **************************** */
 /* *********    **************************** */
-/* *********    **************************** */
-/* *********    **************************** */
-/* *********    **************************** */
-/* *********    **************************** */
-/* *********    **************************** */
-/* *********    **************************** */
-/* *********    **************************** */
-
 ul.notifications {
     float: right;
     display: block;
@@ -5918,4 +5922,9 @@ ul.notifications {
     color: #E9EDEF;
     float: right;
     opacity: 1;
+}
+
+/* *********  /padding  **************************** */
+.p0 {
+    padding: 0;
 }
