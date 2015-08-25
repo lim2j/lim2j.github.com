@@ -1032,7 +1032,7 @@ h2 {
     width: 100%;
     float: left;
     clear: both;
-    margin: 0 5px;
+    margin: 0;
 }
 
 .x_content h4 {
@@ -1267,6 +1267,9 @@ h3.degrees {
     margin-bottom: 0
 }
 /* *********  tables styling  ******************************* */
+.table-contents-view {
+    padding: 0 30px;
+}
 
 .table>thead>tr>th {
     border-bottom: 2px solid #93b2e3;
@@ -1278,6 +1281,9 @@ h3.degrees {
 }
 .table>tbody>tr.success>th, .table>tbody>tr.success>td {
     background-color: #dbf6f3;
+}
+.table-view>tbody>tr:first-child>th, .table-view>tbody>tr:first-child>td {
+    border-top: 0 none;
 }
 .bulk-actions {
     display: none;

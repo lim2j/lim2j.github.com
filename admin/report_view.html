@@ -242,110 +242,170 @@
 
                             <div class="x_content">
 
-                                <form class="form-horizontal form-label-left">
+                                <span class="section">고객사 분류</span>
 
-                                    <br /><br />
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">생성일</label>
-                                        <div class="col-md-7 col-sm-7 col-xs-12">
-                                            <input type="text" class="form-control" readonly="readonly" placeholder="2015-08-10 17:54">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">작성자</label>
-                                        <div class="col-md-7 col-sm-7 col-xs-12">
-                                            <input type="text" class="form-control" readonly="readonly" placeholder="홍길동">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">고객사</label>
-                                        <div class="col-md-7 col-sm-7 col-xs-12">
-                                            <input type="text" class="form-control" readonly="readonly" placeholder="한국정보공학">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Check IN</label>
-                                        <div class="col-md-7 col-sm-7 col-xs-12">
-                                            <input type="text" class="form-control" readonly="readonly" placeholder="2015-08-10 17:54">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Check OUT</label>
-                                        <div class="col-md-7 col-sm-7 col-xs-12">
-                                            <input type="text" class="form-control" readonly="readonly" placeholder="2015-08-10 17:54">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">업무구분 <span class="required">*</span></label>
-                                        <div class="col-md-7 col-sm-7 col-xs-12">
-                                            <select class="form-control">
-                                                <option>1차 분류</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-offset-3 col-md-7 col-sm-7 col-xs-12">
-                                            <select class="form-control">
-                                                <option>2차 분류</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">내용</label>
-                                        <div class="col-md-3 col-sm-3 col-xs-12">
-                                            <button type="button" class="btn btn-info">상용구 선택</button>
-                                            <button type="button" class="btn btn-primary">사용구 등록</button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-offset-3 col-md-7 col-sm-7 col-xs-12">
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">첨부파일
-                                            <button type="button" class="btn btn-link p0" id="InputFilePlus"><i class="fa fa-plus-square"></i></button>
-                                        </label>
-                                        <div class="col-md-7 col-sm-7 col-xs-12">
-                                             <div class="input-file-box">
-                                                 <div><input type="file"></div>
-                                             </div>
-                                             <p class="help-block">&#183; 파일 등록은 최대 5개까지 가능합니다.</p>
-                                        </div>
+                                <div class="table-contents-view">
+
+                                    <div class="row">
+                                      <div class="col-md-2 col-sm-2 col-xs-3">.col-md-1</div>
+                                      <div class="col-md-4 col-sm-4 col-xs-9">.col-md-1</div>
+                                      <div class="col-md-2 col-sm-2 col-xs-3">.col-md-1</div>
+                                      <div class="col-md-4 col-sm-4 col-xs-9">.col-md-1</div>
                                     </div>
 
-                                    <script>
-                                    $(document).ready(function() {
-                                        var max_fields      = 5; //maximum input boxes allowed
-                                        var wrapper         = $(".input-file-box"); //Fields wrapper
-                                        var add_button      = $("#InputFilePlus"); //Add button ID
+                                    <table class="table table-view">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" width="15%">생성일</th>
+                                                <td width="35%">2015-08-10 17:54</td>
+                                                <th scope="row" width="15%">Check IN</th>
+                                                <td width="35%">2015-08-10 17:54</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">작성자</th>
+                                                <td>홍길동</td>
+                                                <th scope="row">Check OUT</th>
+                                                <td>2015-08-10 17:54</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                        var x = 1; //initlal text box count
-                                        $(add_button).click(function(e){ //on add input button click
-                                            e.preventDefault();
-                                            if(x < max_fields){ //max input box allowed
-                                                x++; //text box increment
-                                                $(wrapper).append('<div><input type="file"><button type="button" class="btn btn-link remove_field"><i class="fa fa-minus-square-o"></i></button></div>'); //add input box
-                                            } else {
-                                                $(".help-block").addClass("red");
-                                            }
-                                        });
+                                    <div class="attachment">
+                                        <p>
+                                            <span><i class="fa fa-paperclip"></i> 3 attachments — </span>
+                                            <a href="#">Download all attachments</a> |
+                                            <a href="#">View all images</a>
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="atch-thumb">
+                                                    <img src="images/1.png" alt="img">
+                                                </a>
 
-                                        $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-                                            e.preventDefault(); $(this).parent('div').remove(); x--;
-                                        })
-                                    });
-                                    </script>
+                                                <div class="file-name">
+                                                    image-name.jpg
+                                                </div>
+                                                <span>12KB</span>
+
+
+                                                <div class="links">
+                                                    <a href="#">View</a> -
+                                                    <a href="#">Download</a>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a href="#" class="atch-thumb">
+                                                    <img src="images/1.png" alt="img">
+                                                </a>
+
+                                                <div class="file-name">
+                                                    img_name.jpg
+                                                </div>
+                                                <span>40KB</span>
+
+                                                <div class="links">
+                                                    <a href="#">View</a> -
+                                                    <a href="#">Download</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="atch-thumb">
+                                                    <img src="images/1.png" alt="img">
+                                                </a>
+
+                                                <div class="file-name">
+                                                    img_name.jpg
+                                                </div>
+                                                <span>30KB</span>
+
+                                                <div class="links">
+                                                    <a href="#">View</a> -
+                                                    <a href="#">Download</a>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel">
+                                            <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <h4 class="panel-title">Collapsible Group Items #1</h4>
+                                            </a>
+                                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true">
+                                                <div class="panel-body">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>First Name</th>
+                                                                <th>Last Name</th>
+                                                                <th>Username</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td>Mark</td>
+                                                                <td>Otto</td>
+                                                                <td>@mdo</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>Jacob</td>
+                                                                <td>Thornton</td>
+                                                                <td>@fat</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">3</th>
+                                                                <td>Larry</td>
+                                                                <td>the Bird</td>
+                                                                <td>@twitter</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel">
+                                            <a class="panel-heading collapsed" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <h4 class="panel-title">Collapsible Group Items #2</h4>
+                                            </a>
+                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <p><strong>Collapsible Item 2 data</strong>
+                                                    </p>
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel">
+                                            <a class="panel-heading collapsed" role="tab" id="headingThree" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <h4 class="panel-title">Collapsible Group Items #3</h4>
+                                            </a>
+                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <p><strong>Collapsible Item 3 data</strong>
+                                                    </p>
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
 
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
-                                        <div class="col-md-7 col-sm-7 col-xs-12 col-md-offset-3">
-                                            <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> 확인</button>
-                                            <button type="submit" class="btn btn-success">취소</button>
+                                        <div class="col-md-12 col-sm-12 col-xs-12 text-right">
+                                            <button type="submit" class="btn btn-primary">수정</button>
+                                            <button type="submit" class="btn btn-default"><i class="fa fa-list-ul"></i> 목록</button>
                                         </div>
                                     </div>
 
-                                </form>
+
+                                </div>
 
                             </div>
                             <!-- x_content (e) -->

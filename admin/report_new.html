@@ -324,14 +324,14 @@
                                         $(add_button).click(function(e){ //on add input button click
                                             e.preventDefault();
                                             if(x < max_fields){ //max input box allowed
-                                                x++; //text box increment
+                                                x++; //input-file box increment
                                                 $(wrapper).append('<div><input type="file"><button type="button" class="btn btn-link remove_field"><i class="fa fa-minus-square-o"></i></button></div>'); //add input box
                                             } else {
                                                 $(".help-block").addClass("red");
                                             }
                                         });
 
-                                        $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+                                        $(wrapper).on("click",".remove_field", function(e){ //user click on remove input-file
                                             e.preventDefault(); $(this).parent('div').remove(); x--;
                                         })
                                     });
