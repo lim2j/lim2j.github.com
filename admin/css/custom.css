@@ -998,6 +998,9 @@ h2 {
     color: #909090;
     padding-left: 20px;
 }
+.accordion .panel-title span {
+    color: #93b2e3;
+}
 .accordion .panel-body ul {
     margin-bottom: 0;
     margin-top: -5px;
@@ -1328,6 +1331,20 @@ h3.degrees {
 }
 .table-view>tbody>tr:first-child>th, .table-view>tbody>tr:first-child>td {
     border-top: 0 none;
+}
+.table .order {
+    display: inline-block;
+    height: 14px;
+    width: 8px;
+    vertical-align: middle;
+    margin-left: 10px
+}
+.table .order span.fa {
+    float: left;
+    height: 7px;
+}
+.table .order span.fa-sort-down {
+    line-height: 3px;
 }
 .bulk-actions {
     display: none;
