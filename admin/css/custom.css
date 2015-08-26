@@ -217,6 +217,9 @@ blue,
 .blue {
     color: #3498DB;
 }
+.eastern-blue{
+    color: #2A9DB4;
+}
 
 purple,
 .purple {
@@ -962,22 +965,51 @@ h2 {
 }
 
 .accordion .panel {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     border-radius: 0;
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #93b2e3;
 }
 
 .accordion .panel-heading {
-    background: #F2F5F7;
     padding: 13px;
-      width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
+}
+.accordion .panel-heading:hover {
+    text-decoration: none;
 }
 
 .accordion .panel:hover {
     background: #F2F5F7;
 }
-
+.accordion .panel-body {
+    background-color: #f2f2f2;
+    border-top: 1px solid #93b2e3;
+}
+.accordion .panel-title {
+    font-size: 15px;
+    color: #4a73b3;
+}
+.accordion .collapsed .panel-title {
+    color: #505050;
+}
+.accordion .panel-title span {
+    font-size: 14px;
+    color: #909090;
+    padding-left: 20px;
+}
+.accordion .panel-body ul {
+    margin-bottom: 0;
+    margin-top: -5px;
+    padding-left: 25px;
+}
+.accordion .panel-body ul li {
+    padding-top: 5px;
+}
+.accordion .panel-body ul li a {
+    color: #0078d5x;
+    text-decoration: underline;
+}
 .x_panel {
     position: relative;
     width: 100%;
@@ -996,6 +1028,10 @@ h2 {
     -webkit-transition: all .2s ease;
     -ms-transition: all .2s ease;
     transition: all .2s ease;
+}
+
+.v-title {
+    color: #7d8ea7;
 }
 
 .x_title {
@@ -1036,7 +1072,7 @@ h2 {
 }
 
 .x_content h4 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
 }
 
@@ -1269,6 +1305,7 @@ h3.degrees {
 /* *********  tables styling  ******************************* */
 .table-contents-view {
     padding: 0 30px;
+    font-size: 14px;
 }
 .table-contents-view .row {
     padding: 11px 0;
@@ -2322,7 +2359,7 @@ a.star {
     float: left;
     width: 150px;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .attachment ul li img {
@@ -4016,6 +4053,11 @@ html > body > .ui-pnotify {
 .btn-primary {
     background-color: #1a82c3;
     border-color: #156ba0;
+}
+.btn-info2 {
+    background-color: #2aafb4;
+    color: #fff;
+    box-shadow: 2px 2px 0px #bfbfbf;
 }
 
 .btn-primary:hover,
