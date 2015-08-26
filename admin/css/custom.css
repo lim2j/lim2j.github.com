@@ -2433,6 +2433,14 @@ span.section {
   border-bottom: 1px solid #e5e5e5;
 }
 
+span.section.section-bg04{
+    background-image: url(../images/section_bg04.gif);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    color: #505050;
+    border-bottom: 1px solid #6b6b6b;
+}
+
 .form-control {
     border-radius: 3px;
     line-height: 30px;
