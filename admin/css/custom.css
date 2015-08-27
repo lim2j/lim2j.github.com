@@ -245,6 +245,10 @@ dark,
     color: #34495E;
 }
 
+.gray {
+    color: #666666;
+}
+
 .border-blue {
     border-color: #3498DB !important;
 }
@@ -1063,6 +1067,9 @@ h2 {
 
 .x_title span {
     color: #BDBDBD;
+}
+.x_title span.red {
+    color: #E74C3C;
 }
 
 .x_content {
@@ -2255,7 +2262,7 @@ a.star {
     color: #428bca !important
 }
 
-.mail_content {
+.report_content {
     background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 4px;
     margin-top: 20px;
@@ -2301,63 +2308,74 @@ a.star {
     margin-right: 0;
 }
 
-.mail_list_column {
-    border-left: 1px solid #DBDBDB;
+.report_list_column {
+
 }
 
-.mail_view {
+.report_list_column .table strong {
+    display: block;
+    padding-bottom: 5px;
+}
+
+.report_view {
     border-left: 1px solid #DBDBDB
 }
 
-.mail_list {
+.report_list {
     width: 100%;
     border-bottom: 1px solid #DBDBDB;
     margin-bottom: 2px;
     display: inline-block;
 }
 
-.mail_list .left {
+.report_list .left {
     width: 5%;
     float: left;
     margin-right: 3%
 }
 
-.mail_list .right {
+.report_list .right {
     width: 90%;
     float: left
 }
 
-.mail_list h3 {
+.report_list h3 {
     font-size: 15px;
     font-weight: bold;
     margin: 0px 0 6px;
 }
 
-.mail_list h3 small {
+.report_list h3 small {
     float: right;
     color: #ADABAB;
     font-size: 11px;
     line-height: 20px;
 }
 
-.mail_list .badge {
+.report_list .badge {
     padding: 3px 6px;
     font-size: 8px;
     background: #BAB7B7
 }
 
 @media (max-width: 767px) {
-    .mail_list {
+    .report_list {
         margin-bottom: 5px;
         display: inline-block;
     }
 }
 
-.mail_heading h4 {
+.report_heading h4 {
     font-size: 18px;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.report_heading h4 small {
+    display: block;
+    padding-top: 10px;
+    color: #4a73b3;
 }
 
 .attachment {
@@ -2442,7 +2460,7 @@ span.section.section-bg04{
 }
 
 span.section.section-bg01{
-    background-image: url(../images/section_bg01.gif);    
+    background-image: url(../images/section_bg01.gif);
 }
 
 .form-control {
@@ -6008,4 +6026,7 @@ ul.notifications {
 /* *********  /padding  **************************** */
 .p0 {
     padding: 0;
+}
+.pt5 {
+    padding-top: 5px;
 }
