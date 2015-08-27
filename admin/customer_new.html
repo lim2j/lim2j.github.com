@@ -299,12 +299,12 @@
                                                 <div class="col-md-offset-3 col-md-9 col-sm-9 col-xs-12">
                                                     <label class="control-label col-md-2 col-sm-2 col-xs-3">LAT</label>
                                                     <div class="col-md-4 col-sm-4 col-xs-9">
-                                                        <input type="text" class="form-control" placeholder="위도">
+                                                        <input type="text" class="form-control" id="lat" placeholder="위도" value="37.54">
                                                     </div>
 
                                                     <label class="control-label col-md-2 col-sm-2 col-xs-3">LNG</label>
                                                     <div class="col-md-4 col-sm-4 col-xs-9">
-                                                        <input type="text" class="form-control" placeholder="경도">
+                                                        <input type="text" class="form-control" id="lng" placeholder="경도" value="127">
                                                     </div>
                                                 </div>
                                             </div>
@@ -359,18 +359,21 @@
                                                 <i class="fa fa-map-marker"></i>  지도데이터 확인
                                             </div>
                                             <div id="googleMap" style="height:424px"></div>
+
+                                            <script src="js/jquery-geolocation-edit-master/jquery.geolocation.edit.js"></script>
                                             <script>
-
-                                            var map;
-                                            function initMap() {
-                                              map = new google.maps.Map(document.getElementById('googleMap'), {
-                                                center: {lat: -34.397, lng: 150.644},
-                                                zoom: 8
-                                              });
-                                            }
-
+                                            $(document).ready(function () {
+                                            	// activate geolocate plugin
+                                            	$("#googleMap").geolocate({
+                                            		lat: "#lat",
+                                            		lng: "#lng",
+                                                    mapOptions : {
+                                                		disableDefaultUI : false ,
+                                                		zoom : 8
+                                                	}
+                                            	});
+                                            });
                                             </script>
-                                            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 
                                         </div>
                                         <!-- 구글 map (E) -->
