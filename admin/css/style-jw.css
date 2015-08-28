@@ -85,6 +85,73 @@
     font-weight: 500;
 }
 /* ==================================================
+   customer
+================================================== */
+.company-name {
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 15px;
+    font-weight: 500;
+}
+.infocon {
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 2px 12px;
+    color: white;
+    line-height: 1.5;
+}
+.infocon-green {
+    background-color: #3aa429;    
+}
+.infocon-darkcyan {
+    background-color: #2aafb4;    
+}
+.infocon-darkslateblue {
+    background-color: #3f6298;
+}
+.infocon-default {
+    background-color: #6c6c6c;
+}
+span.section-bg04{
+    background-image: url(../images/section_bg04.gif);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    display: block;
+    width: 100%;
+    padding: 10px 17px;
+    font-size-adjust: 16px;
+}
+.report-history-scroll-wrap {
+    position: relative;
+    padding-top: 47px;
+}
+.report-history-scroll {
+    max-height: 250px;
+    overflow-y: auto;
+}
+.report-history-scroll thead tr:first-child {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+}
+.report-history-scroll thead tr:first-child th {
+    display: block;
+    float: left;
+    line-height: 1.63em
+}
+.report-history-scroll thead tr th{
+    height: 47px;
+}
+.table-active {
+    cursor: pointer;
+}
+.table-active tbody tr:hover {
+    background-color: #dbf6f3;
+}
+/* ==================================================
    Accordion
 ================================================== */
 .accordion .panel {
