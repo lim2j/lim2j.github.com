@@ -72,10 +72,33 @@
     font-weight: bold;
 }
 
-.modal-body-scroll {
-    height: 450px;
-    overflow-y: scroll;
+.modal-body-wrap {
+    position: relative;
+    padding-top: 47px
 }
+.modal-body-scroll {
+    max-height: 450px;
+    overflow-y: auto;
+    padding: 0;
+}
+.modal-body-scroll thead tr:first-child {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+}
+.modal-body-scroll thead tr:first-child th {
+    display: block;
+    float: left;
+    line-height: 1.63em
+}
+
+.modal-body-scroll thead tr th{
+    height: 47px;
+}
+
+
 /* ==================================================
    List
 ================================================== */
@@ -235,4 +258,13 @@ span.section-bg04{
 }
 .member-list .divider:hover {
     background-color: white;
+}
+.bizme-out-time {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width:100%;
+}
+.bizme-out-time li {
+    margin: 3px 0;
 }
