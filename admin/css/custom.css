@@ -2432,7 +2432,7 @@ a.star {
 }
 
 .input-group {
-    margin-bottom: 10px;
+
 }
 
 .ln_solid {
@@ -3288,11 +3288,11 @@ select.parsley-error {
 
 .daterangepicker select.monthselect {
     margin-right: 2%;
-    width: 56%;
+    width: 46%;
 }
 
 .daterangepicker select.yearselect {
-    width: 40%;
+    width: 50%;
 }
 
 .daterangepicker select.hourselect,
