@@ -249,6 +249,10 @@ dark,
     color: #666666;
 }
 
+.edward {
+    color: #9A9E9E;
+}
+
 .border-blue {
     border-color: #3498DB !important;
 }
@@ -2392,15 +2396,15 @@ a.star {
 
 .attachment ul li {
     float: left;
-    width: 150px;
+    width: 99px;
     margin-right: 10px;
     margin-bottom: 0px;
 }
 
 .attachment ul li img {
-    height: 150px;
+    height: 73px;
     border: 1px solid #ddd;
-    padding: 5px;
+    /*padding: 5px;*/
     margin-bottom: 10px;
 }
 
@@ -2439,6 +2443,14 @@ a.star {
     margin: 20px 0;
 }
 
+.ln_solid2 {
+    border-top: 1px solid #b5b5b5;
+    color: #ffffff;
+    background-color: #ffffff;
+    height: 1px;
+    margin: 20px 0;
+}
+
 span.section {
   display: block;
   width: 100%;
@@ -2453,6 +2465,16 @@ span.section {
   background-position: 7px 50%;
 }
 
+div.section {
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: inherit;
+  color: #444;
+  border: 0;
+  border-bottom: 2px solid #92aed9;
+}
+
 span.section.section-bg04{
     background-image: url(../images/section_bg04.gif);
     color: #505050;
@@ -2461,6 +2483,16 @@ span.section.section-bg04{
 
 span.section.section-bg01{
     background-image: url(../images/section_bg01.gif);
+}
+
+span.section-bg01{
+    background-image: url(../images/section_bg01.gif);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    display: block;
+    width: 100%;
+    padding: 10px 17px;
+    font-size-adjust: 16px;
 }
 
 .form-control {
@@ -2624,6 +2656,9 @@ select.parsley-error {
     opacity: 1;
 }
 
+#googleMap {
+    border: 1px solid #eaeaea;
+}
 .googleMap-title {
     background-color: #515151;
     padding: 2px 13px;
@@ -2635,6 +2670,15 @@ select.parsley-error {
 .googleMap-title i {
     font-size: 21px;
     color: #eee;
+}
+.map-info {
+    border: 1px solid #eaeaea;
+    border-top: 0 none;
+    overflow: hidden;
+    padding: 10px 0;
+}
+.map-info .control-label {
+    padding-top: 7px;
 }
 /* ***** dropzone ****** */
 
