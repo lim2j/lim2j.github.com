@@ -3103,6 +3103,58 @@ select.parsley-error {
 }
 /* ***** /buttons *******/
 /* *********  /form design  **************************** */
+/* *********  calender schedule  **************************** */
+.row .calender-toolbar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.calender-info p {
+    padding: 0;
+    margin: 5px 0 0;
+    font-size: 12px;
+}
+.table-calender {
+
+}
+.table-calender>thead>tr>th,
+.table-calender>tbody>tr>td {
+    border: 1px solid #e3e3e3;
+    padding: 5px;
+    vertical-align: top;
+    width: 14.28%
+}
+.table-calender>thead:first-child>tr:first-child>th {
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 2px solid #e3e3e3;
+}
+.table-calender>tbody>tr>td {
+    height: 130px;
+}
+.table-calender>tbody>tr>td.tc-other-month{
+    background-color: #f4f4f4;
+}
+.table-calender>tbody>tr>td.tc-today-month{
+    background-color: #fffeaf;
+}
+.tc-sun .tc-day {
+    color: #e43131;
+}
+.tc-sat .tc-day {
+    color: #2d5da6;
+}
+.tc-day {
+    text-align: right;
+}
+.sc-txt i,
+.sc-more i,
+.sc-all i {
+    width: 11px;
+    font-size: 11px;
+}
+.sc-more {
+    padding-left: 11px;
+}
+/* *********  /calender schedule  **************************** */
 /* *********  calender dropdown  **************************** */
 
 .daterangepicker.dropdown-menu {
@@ -4159,6 +4211,13 @@ html > body > .ui-pnotify {
     color: #fff;
     box-shadow: 2px 2px 0px #bfbfbf;
 }
+
+.btn-White {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
 
 .btn-primary:hover,
 .btn-primary:focus,
