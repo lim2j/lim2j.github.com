@@ -11,7 +11,6 @@
     <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styling plus plugins -->
     <link href="css/custom.css" rel="stylesheet">
-    <link href="css/style-jw.css" rel="stylesheet">
 
     <script src="js/jquery.min.js"></script>
     <!--[if lt IE 9]>
@@ -189,7 +188,7 @@
                                                     <div class="form-group">
                                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                                             <button type="submit" class="btn btn-primary">수정</button>
-                                                            <button type="submit" class="btn btn-success" data-dismiss="modal">취소</button>
+                                                            <button type="reset" class="btn btn-success" data-dismiss="modal">취소</button>
                                                         </div>
                                                     </div>
 
@@ -219,7 +218,7 @@
 
                 <div class="page-title">
                     <div class="title_left">
-                        <h3 class="titele_ic">비즈미 사용 현황</h3>
+                        <h3 class="titele_ic">보고서 작성</h3>
                     </div>
 
                     <div class="title_right">
@@ -227,8 +226,8 @@
                             <!-- location -->
                             <ol class="breadcrumb">
                               <li><i class="fa fa-home "></i> <a href="index.html">Home</a></li>
-                              <li><a href="customer.html">직원</a></li>
-                              <li class="active">비즈미 사용 현황</li><!-- 현재 -->
+                              <li><a href="customer.html">보고서</a></li>
+                              <li class="active">보고서 작성</li><!-- 현재 -->
                             </ol>
                         </div>
                     </div>
@@ -241,190 +240,117 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
 
-
                             <div class="x_title">
-                                <div class="pull-left">
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <label for="table-view">View</label>
-                                            <select id="table-view" class="form-control">
-                                                <option value="10">10</option>
-                                                <option value="20">20</option>
-                                                <option value="30">30</option>
-                                                <option value="50">50</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <span class="y-line"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                <input type="text" id="reportrangeDate" class="form-control" value="2015/08/22 ~ 2015/08/28" style="width:240px">
-                                            </div>
-
-
-                                        </div>
-                                    </form>
-                                </div>
 
                                 <div class="pull-right">
-                                    <a href="customer_new.html" class="btn btn-primary"><i class="fa fa-print"></i> 프린트 </a>
-                                    <button type="button" class="btn btn-default"><i class="fa fa-download"></i> 다운로드</button>
+                                    <button type="button" class="btn btn-primary"><i class="fa  fa-trash"></i> 스케줄 등록</button>
+                                    <button type="button" class="btn btn-default"><i class="fa  fa-trash"></i> 업무전달</button>
                                 </div>
 
                                 <div class="clearfix"></div>
                             </div>
-                            <!-- x_title (e) -->
-
 
                             <div class="x_content">
 
-                                <table class="table table-striped">
-                                    <colgroup>
-                                        <col width="5%"><col width="15%"><col width="8%"><col width="8%"><col width=""><col width="15%"><col width="10%"><col width="10%">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>NO</th>
-                                            <th>부서
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                            <th>직위
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                            <th>이름
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                            <th>위치 업로드 누락 간격</th>
-                                            <th>총 누락시간
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                            <th>위치 업로드 건수
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                            <th>업로드 방식
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">
-                                                <ul class="bizme-out-time">
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                    <li>09:00~09:50</li>
-                                                    <li>09:00~09:50</li>
-                                                </ul>
-                                            </td>
-                                            <td class="text-center">3시간 20분</td>
-                                            <td class="text-center">10건</td>
-                                            <td class="text-center">자동업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">
-                                                <ul class="bizme-out-time">
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                    <li>09:00~09:50</li>
-                                                </ul>
-                                            </td>
-                                            <td class="text-center">3시간 20분</td>
-                                            <td class="text-center">10건</td>
-                                            <td class="text-center">자동업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">
-                                                <ul class="bizme-out-time">
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                </ul>
-                                            </td>
-                                            <td class="text-center">3시간 20분</td>
-                                            <td class="text-center">10건</td>
-                                            <td class="text-center">자동업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">
-                                                <ul class="bizme-out-time">
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                    <li>09:00~09:50</li>
-                                                </ul>
-                                            </td>
-                                            <td class="text-center">3시간 20분</td>
-                                            <td class="text-center">10건</td>
-                                            <td class="text-center">자동업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">-</td>
-                                            <td class="text-center">-</td>
-                                            <td class="text-center">60건</td>
-                                            <td class="text-center">선택적업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">-</td>
-                                            <td class="text-center">-</td>
-                                            <td class="text-center">60건</td>
-                                            <td class="text-center">선택적업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">
-                                                <ul class="bizme-out-time">
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                </ul>
-                                            </td>
-                                            <td class="text-center">3시간 20분</td>
-                                            <td class="text-center">10건</td>
-                                            <td class="text-center">자동업로드</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="row">
 
-                                <div class="dataTables_info">Total : <span>30</span> 개</div>
 
-                                <div class="dataTables_paginate paging_full_numbers">
-                                    <a tabindex="0" class="first paginate_button paginate_button_disabled"><i class="fa fa-angle-double-left"></i></a>
-                                    <a tabindex="0" class="previous paginate_button paginate_button_disabled"><i class="fa fa-angle-left"></i></a><span>
-                                    <a tabindex="0" class="paginate_active">1</a>
-                                    <a tabindex="0" class="paginate_button">2</a>
-                                    <a tabindex="0" class="paginate_button">3</a>
-                                    <a tabindex="0" class="paginate_button">4</a></span>
-                                    <a tabindex="0" class="next paginate_button"><i class="fa fa-angle-right"></i></a>
-                                    <a tabindex="0" class="last paginate_button"><i class="fa fa-angle-double-right"></i></a>
+                                    <!-- CONTENT -->
+                                    <div class="col-sm-9 calender_view">
+
+
+                                    </div>
+                                    <!-- /CONTENT -->
+
+                                    <div class="col-sm-3 calender_list_column">
+
+                                        <div class="" role="tabpanel">
+                                            <ul class="nav nav-tabs bar_tabs" role="tablist" id="myTab">
+                                                <li role="presentation" class="active"><a href="#tab_content1" role="tab" data-toggle="tab" aria-controls="true">MY 스케줄</a></li>
+                                                <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab"  aria-controls="false">전체 스케줄</a></li>
+                                            </ul>
+
+                                            <!-- tab-content (s)-->
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane fade active in" id="tab_content1">
+                                                    <table class="table table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>NO</th>
+                                                                <th>시간</th>
+                                                                <th>고객사</th>
+                                                                <th>등록자</th>
+                                                                <th>상태</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row" class="text-center">1</th>
+                                                                <td class="text-center">9:00 ~ 10:00</td>
+                                                                <td>한국정보공학</td>
+                                                                <td class="text-center">김정기</td>
+                                                                <td class="text-center">완료</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center">1</th>
+                                                                <td class="text-center">9:00 ~ 10:00</td>
+                                                                <td>한국정보공학</td>
+                                                                <td class="text-center">김정기</td>
+                                                                <td class="text-center">
+                                                                    <a href="" class="btn-circle btn-warning"><i class="fa fa-pencil-square-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center">1</th>
+                                                                <td class="text-center">9:00 ~ 10:00</td>
+                                                                <td>한국정보공학</td>
+                                                                <td class="text-center">김정기</td>
+                                                                <td class="text-center">
+                                                                    <span class="red">미방문</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center">1</th>
+                                                                <td class="text-center">9:00 ~ 10:00</td>
+                                                                <td>한국정보공학</td>
+                                                                <td class="text-center">김정기</td>
+                                                                <td class="text-center">완료</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center">1</th>
+                                                                <td class="text-center">9:00 ~ 10:00</td>
+                                                                <td>한국정보공학</td>
+                                                                <td class="text-center">김정기</td>
+                                                                <td class="text-center">완료</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+                                                <!-- tab_content1 (e) -->
+
+                                                <div role="tabpanel" class="tab-pane fade" id="tab_content2">
+                                                    tab_content2
+                                                </div>
+                                                <!-- tab_content2 (e) -->
+
+                                            </div>
+                                            <!--
+                                            <script>
+                                              $(function () {
+                                                $('#myTab a:last').tab('show') //마지막이 보이게 처리
+                                              })
+                                            </script>
+                                            -->
+                                            <!-- tab-content (e)-->
+                                        </div>
+
+                                    </div>
+                                    <!-- /LIST -->
+
                                 </div>
+
 
 
                             </div>
@@ -466,38 +392,6 @@
     <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
 
     <script src="js/custom.js"></script>
-
-    <script type="text/javascript" src="js/moment.min.js"></script>
-    <script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
-    <script>
-    $(document).ready(function () {
-
-        var cb = function (start, end, label) {
-                //console.log(start.toISOString(), end.toISOString(), label);
-                $('#reportrangeDate').val(start.format('YYYY/MM/DD') + ' ~ ' + end.format('YYYY/MM/DD'));
-            }
-
-            var optionSet1 = {
-                startDate: "08/22/2015",
-                endDate: "08/28/2015",
-                minDate: "01/01/2015",
-                maxDate: "12/31/2015",
-                applyClass: "btn-primary",
-                locale: {
-                    format: 'YYYY/MM/DD',
-                    applyLabel: '선택',
-                    cancelLabel: '취소',
-                    fromLabel: 'From',
-                    toLabel: 'To',
-                    daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
-                    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-                    firstDay: 1
-                }
-            };
-
-            $('#reportrangeDate').daterangepicker(optionSet1, cb);
-    });
-    </script>
 
 
 </body>
