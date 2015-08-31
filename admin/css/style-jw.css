@@ -97,6 +97,9 @@
 .modal-body-scroll thead tr th{
     height: 47px;
 }
+.color-shuttle-gray {
+    color: #5D6C7D;
+}
 
 
 /* ==================================================
@@ -267,4 +270,95 @@ span.section-bg04{
 }
 .bizme-out-time li {
     margin: 3px 0;
+}
+
+/*---------- 업무발자취 -----------------*/
+.move-map {
+    padding: 0;
+    margin: 0 0 20px;
+}
+.move-map .move-map-box {
+    padding: 0;
+    margin-top: 10px;
+    height: 320px;
+    background-color: #efefef;
+}
+.move-map-conbox {
+    border: 3px solid #eee;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.move-map-form {    
+    background-color: #efefef;
+    padding: 5px;
+}
+.move-map-form .moveMap_info {
+    display: inline-block;
+    margin-top: 7px;
+    margin-left: 7px;
+    font-size: 1.2em;
+}
+.move-map-form .moveMap_info span {
+    color: darkblue;
+    font-weight: 600;
+}
+.move-map-list-wrap {
+    position: relative;
+    padding-top: 47px;
+}
+.move-map-list {
+    overflow-y: auto;
+    max-height: 250px;
+}
+.move-map-list thead tr:first-child {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+}
+.move-map-list thead tr:first-child th {
+    display: block;
+    float: left;
+    line-height: 1.63em
+}
+.move-map-list thead tr th{
+    height: 47px;
+}
+
+/* ==================================================
+   Add Button
+================================================== */
+.btn-green {
+    background-color: #25b983;
+    border: 1px solid #009a53;
+    color: #fff;
+}
+.btn-green:hover {
+    background-color: #33a87d;
+    text-decoration: none;
+    color: #fff;
+}
+.btn-Wedgewood {
+    background-color: #5A7AAC;
+    border: 1px solid #446dae;
+    color: #fff;
+}
+.btn-Wedgewood:hover {
+    background-color: #4d6c9b;
+    text-decoration: none;
+    color: #fff;
+}
+
+.circleBtn {
+    font-size: 17px;
+    border-radius: 50%;
+    line-height: 0;    
+    border: 0;
+    padding: 6px 10px;
+    background-color: #E0AF18;
+    color: #fff;
+}
+.circleBtn:hover {    
+    background-color: #c08811;
 }
