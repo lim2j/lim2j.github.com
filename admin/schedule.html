@@ -186,7 +186,7 @@
                                                     </div>
                                                     <div class="ln_solid"></div>
                                                     <div class="form-group">
-                                                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                                        <div class="col-md-6 col-sm-6 col-xs-12 col-xs-offset-3">
                                                             <button type="submit" class="btn btn-primary">수정</button>
                                                             <button type="reset" class="btn btn-success" data-dismiss="modal">취소</button>
                                                         </div>
@@ -218,7 +218,7 @@
 
                 <div class="page-title">
                     <div class="title_left">
-                        <h3 class="titele_ic">보고서 작성</h3>
+                        <h3 class="titele_ic">스케줄 관리</h3>
                     </div>
 
                     <div class="title_right">
@@ -226,8 +226,8 @@
                             <!-- location -->
                             <ol class="breadcrumb">
                               <li><i class="fa fa-home "></i> <a href="index.html">Home</a></li>
-                              <li><a href="customer.html">보고서</a></li>
-                              <li class="active">보고서 작성</li><!-- 현재 -->
+                              <li><a href="customer.html">스케줄</a></li>
+                              <li class="active">스케줄 관리</li><!-- 현재 -->
                             </ol>
                         </div>
                     </div>
@@ -243,8 +243,8 @@
                             <div class="x_title">
 
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-primary"><i class="fa  fa-trash"></i> 스케줄 등록</button>
-                                    <button type="button" class="btn btn-default"><i class="fa  fa-trash"></i> 업무전달</button>
+                                    <a href="schedule_new.html" class="btn btn-primary"><i class="fa fa-calendar-plus-o"></i> 스케줄 등록</a>
+                                    <a href="schedule_new.html" class="btn btn-info"><i class="fa fa-arrow-right"></i> 업무전달</a>
                                 </div>
 
                                 <div class="clearfix"></div>
@@ -439,6 +439,22 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
+
+
+
+                                                <script>
+                                                $(document).ready(function() {
+                                                    //td click addClass
+                                                    $('.table-calender tbody td').click(function() {
+                                                        $('.table-calender tbody td').removeClass("tc-acive-month");
+                                                        if($(this).hasClass('tc-acive-month')) {
+                                                            $(this).removeClass("tc-acive-month");
+                                                        } else {
+                                                            $(this).addClass("tc-acive-month");
+                                                        }
+                                                    });
+                                                });
+                                                </script>
 
                                             </div>
 

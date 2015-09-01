@@ -11,7 +11,6 @@
     <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styling plus plugins -->
     <link href="css/custom.css" rel="stylesheet">
-    <link href="css/style-jw.css" rel="stylesheet">
 
     <script src="js/jquery.min.js"></script>
     <!--[if lt IE 9]>
@@ -189,7 +188,7 @@
                                                     <div class="form-group">
                                                         <div class="col-md-6 col-sm-6 col-xs-12 col-xs-offset-3">
                                                             <button type="submit" class="btn btn-primary">수정</button>
-                                                            <button type="submit" class="btn btn-success" data-dismiss="modal">취소</button>
+                                                            <button type="reset" class="btn btn-success" data-dismiss="modal">취소</button>
                                                         </div>
                                                     </div>
 
@@ -219,7 +218,7 @@
 
                 <div class="page-title">
                     <div class="title_left">
-                        <h3 class="titele_ic">비즈미 사용 현황</h3>
+                        <h3 class="titele_ic">스케줄 등록</h3>
                     </div>
 
                     <div class="title_right">
@@ -227,8 +226,8 @@
                             <!-- location -->
                             <ol class="breadcrumb">
                               <li><i class="fa fa-home "></i> <a href="index.html">Home</a></li>
-                              <li><a href="customer.html">직원</a></li>
-                              <li class="active">비즈미 사용 현황</li><!-- 현재 -->
+                              <li><a href="customer.html">스케줄</a></li>
+                              <li class="active">스케줄 등록</li><!-- 현재 -->
                             </ol>
                         </div>
                     </div>
@@ -241,191 +240,196 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
 
-
-                            <div class="x_title">
-                                <div class="pull-left">
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <label for="table-view">View</label>
-                                            <select id="table-view" class="form-control">
-                                                <option value="10">10</option>
-                                                <option value="20">20</option>
-                                                <option value="30">30</option>
-                                                <option value="50">50</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <span class="y-line"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                <input type="text" id="reportrangeDate" class="form-control" value="2015/08/22 ~ 2015/08/28" style="width:240px">
-                                            </div>
-
-
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <div class="pull-right">
-                                    <a href="customer_new.html" class="btn btn-primary"><i class="fa fa-print"></i> 프린트 </a>
-                                    <button type="button" class="btn btn-default"><i class="fa fa-download"></i> 다운로드</button>
-                                </div>
-
-                                <div class="clearfix"></div>
-                            </div>
-                            <!-- x_title (e) -->
-
-
                             <div class="x_content">
 
-                                <table class="table table-striped">
-                                    <colgroup>
-                                        <col width="5%"><col width="15%"><col width="8%"><col width="8%"><col width=""><col width="15%"><col width="10%"><col width="10%">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>NO</th>
-                                            <th>부서
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                            <th>직위
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                            <th>이름
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                            <th>위치 업로드 누락 간격</th>
-                                            <th>총 누락시간
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                            <th>위치 업로드 건수
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                            <th>업로드 방식
-                                                <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">
-                                                <ul class="bizme-out-time">
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                    <li>09:00~09:50</li>
-                                                    <li>09:00~09:50</li>
-                                                </ul>
-                                            </td>
-                                            <td class="text-center">3시간 20분</td>
-                                            <td class="text-center">10건</td>
-                                            <td class="text-center">자동업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">
-                                                <ul class="bizme-out-time">
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                    <li>09:00~09:50</li>
-                                                </ul>
-                                            </td>
-                                            <td class="text-center">3시간 20분</td>
-                                            <td class="text-center">10건</td>
-                                            <td class="text-center">자동업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">
-                                                <ul class="bizme-out-time">
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                </ul>
-                                            </td>
-                                            <td class="text-center">3시간 20분</td>
-                                            <td class="text-center">10건</td>
-                                            <td class="text-center">자동업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">
-                                                <ul class="bizme-out-time">
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                    <li>09:00~09:50</li>
-                                                </ul>
-                                            </td>
-                                            <td class="text-center">3시간 20분</td>
-                                            <td class="text-center">10건</td>
-                                            <td class="text-center">자동업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">-</td>
-                                            <td class="text-center">-</td>
-                                            <td class="text-center">60건</td>
-                                            <td class="text-center">선택적업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">-</td>
-                                            <td class="text-center">-</td>
-                                            <td class="text-center">60건</td>
-                                            <td class="text-center">선택적업로드</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="text-center">1</th>
-                                            <td class="text-center">기술연구소</td>
-                                            <td class="text-center">과장</td>
-                                            <td class="text-center">홍길동</td>
-                                            <td class="text-center">
-                                                <ul class="bizme-out-time">
-                                                    <li>09:00~09:50</li>
-                                                    <li>12:50~17:00</li>
-                                                </ul>
-                                            </td>
-                                            <td class="text-center">3시간 20분</td>
-                                            <td class="text-center">10건</td>
-                                            <td class="text-center">자동업로드</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <form class="form-horizontal form-label-left">
 
-                                <div class="dataTables_info">Total : <span>30</span> 개</div>
+                                    <br /><br />
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">날짜</label>
+                                        <div class="col-md-7 col-sm-7 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                <input type="text" class="form-control" name="reportrangeDate" value="09/18/2015">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">시간</label>
+                                        <div class="col-md-7 col-sm-7 col-xs-12 form-inline">
+                                            <div class="input-group bootstrap-timepicker timepicker">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                                                <input type="text" class="form-control" name="reportrangeTime" value="">
+                                            </div>
+                                            ~
+                                            <div class="input-group bootstrap-timepicker timepicker">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                                                <input type="text" class="form-control" name="reportrangeTime" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">고객사</label>
+                                        <div class="col-md-7 col-sm-7 col-xs-12">
+                                            <input type="text" class="form-control" placeholder="한국정보공학">
+                                        </div>
+                                    </div>
 
-                                <div class="dataTables_paginate paging_full_numbers">
-                                    <a tabindex="0" class="first paginate_button paginate_button_disabled"><i class="fa fa-angle-double-left"></i></a>
-                                    <a tabindex="0" class="previous paginate_button paginate_button_disabled"><i class="fa fa-angle-left"></i></a><span>
-                                    <a tabindex="0" class="paginate_active">1</a>
-                                    <a tabindex="0" class="paginate_button">2</a>
-                                    <a tabindex="0" class="paginate_button">3</a>
-                                    <a tabindex="0" class="paginate_button">4</a></span>
-                                    <a tabindex="0" class="next paginate_button"><i class="fa fa-angle-right"></i></a>
-                                    <a tabindex="0" class="last paginate_button"><i class="fa fa-angle-double-right"></i></a>
-                                </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">내용</label>
+                                        <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <button type="button" class="btn btn-info" data-toggle="modal" data-target=".macro">상용구 선택</button>
+                                        </div>
+                                    </div>
 
+                                    <!-- 상용구 선택 MODAL (S)-->
+                                    <div class="modal fade macro" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">상용구 선택</h4>
+                                                </div>
+                                                <div class="modal-body">
+
+                                                    <div class="report_list_column v-scroll" style="height:320px">
+                                                    <table class="table selectable">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row" class="text-center"><input type="checkbox"></th>
+                                                                <td><strong>영업 협의 </strong>
+                                                                    <small class="gray">영업 결과 입력 폼</small>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center"><input type="checkbox"></th>
+                                                                <td><strong>영업 협의 </strong>
+                                                                    <small class="gray">영업 결과 입력 폼</small>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center"><input type="checkbox"></th>
+                                                                <td><strong>영업 협의 </strong>
+                                                                    <small class="gray">영업 결과 입력 폼</small>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center"><input type="checkbox"></th>
+                                                                <td><strong>영업 협의 </strong>
+                                                                    <small class="gray">영업 결과 입력 폼</small>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center"><input type="checkbox"></th>
+                                                                <td><strong>영업 협의 </strong>
+                                                                    <small class="gray">영업 결과 입력 폼</small>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center"><input type="checkbox"></th>
+                                                                <td><strong>영업 협의 </strong>
+                                                                    <small class="gray">영업 결과 입력 폼</small>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center"><input type="checkbox"></th>
+                                                                <td><strong>영업 협의 </strong>
+                                                                    <small class="gray">영업 결과 입력 폼</small>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center"><input type="checkbox"></th>
+                                                                <td><strong>영업 협의 </strong>
+                                                                    <small class="gray">영업 결과 입력 폼</small>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center"><input type="checkbox"></th>
+                                                                <td><strong>영업 협의 </strong>
+                                                                    <small class="gray">영업 결과 입력 폼</small>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="text-center"><input type="checkbox"></th>
+                                                                <td><strong>영업 협의 </strong>
+                                                                    <small class="gray">영업 결과 입력 폼</small>
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                    </div>
+
+                                                    <script>
+                                                    $(document).ready(function() {
+
+                                                        //checkbox row add remove Class
+                                                        $(".selectable tbody tr input[type=checkbox]").change(function(e){
+                                                            if (e.target.checked)
+                                                                $(this).closest("tr").addClass("success");
+                                                            else
+                                                                $(this).closest("tr").removeClass("success");
+                                                        });
+
+                                                        //tr click checked
+                                                        $('.selectable tbody tr').click(function() {
+                                                            var thisCk = $(this).find("input[type=checkbox]");
+                                                            if(thisCk.is(':checked')) {
+                                                                thisCk.prop('checked', false)
+                                                                $(this).removeClass("success");
+                                                            } else {
+                                                                thisCk.prop('checked', true)
+                                                                $(this).addClass("success");
+
+                                                            }
+                                                        });
+                                                    });
+                                                    </script>
+
+                                                    <div class="ln_solid"></div>
+                                                    <div class="form-group">
+                                                        <div class="col-md-6 col-sm-6 col-xs-12 col-xs-offset-3">
+                                                            <button type="submit" class="btn btn-primary">확인</button>
+                                                            <button type="reset" class="btn btn-success" data-dismiss="modal">취소</button>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 상용구 선택 MODAL (E)-->
+
+
+                                    <div class="form-group">
+                                        <div class="col-xs-offset-3 col-md-7 col-sm-7 col-xs-12">
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">알람</label>
+                                        <div class="col-md-2 col-sm-2 col-xs-12">
+                                            <select class="form-control">
+                                                <option>5분</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-7 col-sm-7 col-xs-12 col-xs-offset-3">
+                                            <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> 확인</button>
+                                            <button type="reset" class="btn btn-success">취소</button>
+                                        </div>
+                                    </div>
+
+                                </form>
 
                             </div>
                             <!-- x_content (e) -->
@@ -469,33 +473,27 @@
 
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap-timepicker/bootstrap-timepicker.js"></script>
     <script>
     $(document).ready(function () {
 
-        var cb = function (start, end, label) {
-                //console.log(start.toISOString(), end.toISOString(), label);
-                $('#reportrangeDate').val(start.format('YYYY/MM/DD') + ' ~ ' + end.format('YYYY/MM/DD'));
+        $('input[name="reportrangeDate"]').daterangepicker({
+            singleDatePicker: true,
+            calender_style: "picker_4",
+            //showDropdowns: true,
+            locale: {
+                daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
+                monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                firstDay: 1
             }
+        })
 
-            var optionSet1 = {
-                startDate: "08/22/2015",
-                endDate: "08/28/2015",
-                minDate: "01/01/2015",
-                maxDate: "12/31/2015",
-                applyClass: "btn-primary",
-                locale: {
-                    format: 'YYYY/MM/DD',
-                    applyLabel: '선택',
-                    cancelLabel: '취소',
-                    fromLabel: 'From',
-                    toLabel: 'To',
-                    daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
-                    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-                    firstDay: 1
-                }
-            };
+        $('input[name="reportrangeTime"]').timepicker({
+            minuteStep: 5
+        });
 
-            $('#reportrangeDate').daterangepicker(optionSet1, cb);
+
     });
     </script>
 
