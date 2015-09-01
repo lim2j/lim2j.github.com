@@ -536,12 +536,19 @@
                 minDate: "01/01/2015",
                 maxDate: "12/31/2015",
                 applyClass: "btn-primary",
+                ranges: {
+                    '오늘': [moment(), moment()],
+                    '금주': [moment().subtract(6, 'days'), moment()],
+                    '이번달': [moment().startOf('month'), moment().endOf('month')],
+                    '지난달': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
                 locale: {
                     format: 'YYYY/MM/DD',
                     applyLabel: '선택',
                     cancelLabel: '취소',
                     fromLabel: 'From',
                     toLabel: 'To',
+                    customRangeLabel: '사용자',
                     daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
                     monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
                     firstDay: 1
