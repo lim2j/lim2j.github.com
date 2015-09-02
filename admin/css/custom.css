@@ -1122,6 +1122,28 @@ legend {
     height: 280px;
 }
 /* *********  contacts  ********************************** */
+.my-body {
+
+}
+.my-body .x_content {
+    padding: 0 20px 15px;
+}
+.my-body .x_title h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.badge-blue {
+    background-color: #24a3c3;
+    color: #fff !important;
+}
+.badge-aqua {
+    background-color: #19bcaf;
+    color: #fff !important;
+}
+.my-body .x_panel {
+    border-top-width: 3px;
+}
 .profile_view {
     margin-bottom: 20px;
     display: inline-block;
@@ -3124,7 +3146,8 @@ select.parsley-error {
     border: 1px solid #e3e3e3;
     padding: 5px;
     vertical-align: top;
-    width: 14.28%
+    width: 14.28%;
+    text-align: center;
 }
 .table-calender>thead:first-child>tr:first-child>th {
     border-top: 1px solid #e3e3e3;
@@ -3142,14 +3165,98 @@ select.parsley-error {
 .table-calender>tbody>tr>td.tc-acive-month{
     background-color: #fffeaf;
 }
+
+.calender-box {
+    position: relative;
+    width: 100%;
+    padding: 0 0px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+}
+.calender-toolbar02 {
+    background-color: #37b66d;
+    border-bottom: 1px solid #cecece;
+    margin: 0;
+    padding: 10px 0;
+}
+.calender-toolbar02 .calender-button .btn,
+.calender-toolbar02 .calender-info .btn {
+    background-color: #3fc076;
+    border: 1px solid #32a764;
+    color: #fff;
+}
+.calender-toolbar02 .calender-button .btn {
+    padding: 6px;
+}
+.calender-toolbar02 .calender-yymm h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 0;
+}
+.calender-toolbar02 .calender-info {
+    text-align: right;
+}
+.table-calender02 {
+
+}
+.table-calender02>thead>tr>th {
+    border-bottom: 0 none;
+}
+.table-calender02>thead>tr>th,
+.table-calender02>tbody>tr>td {
+    vertical-align: top;
+    width: 14.28%;
+    text-align: center;
+}
+.table-calender02>thead>tr>th {
+    padding: 10px 5px;
+}
+.table-calender02>tbody>tr>td{
+    padding: 5px;
+    height: 66px;
+}
+.table-calender02>thead:first-child>tr:first-child>th {
+}
+.table-calender02>tbody>tr>td {
+    border-top: 1px solid #e3e3e3;
+}
+.table-calender02>tbody>tr:first-child>td {
+    border-top: 0 none;
+}
+.table-calender02>tbody>tr>td.tc-other-month{
+    background-color: #f4f4f4;
+}
+.table-calender02>tbody>tr>td.tc-today-month{
+    background-color: #fffeaf;
+}
+.table-calender02>tbody>tr>td.tc-acive-month{
+    background-color: #fffeaf;
+}
+.table>thead>tr>th {
+    color: #555;
+}
+.table>thead>tr>th.tc-sun,
 .tc-sun .tc-day {
     color: #e43131;
 }
+.table>thead>tr>th.tc-sat,
 .tc-sat .tc-day {
     color: #2d5da6;
 }
 .tc-day {
     text-align: right;
+}
+.table-calender02 .tc-day {
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    line-height: 27px;
+    margin-bottom: 0;
 }
 .sc-txt i,
 .sc-more i,
