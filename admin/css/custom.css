@@ -318,6 +318,13 @@ dark,
     border: 1px solid #50C1CF !important;
     color: #fff;
 }
+.bg-Sunglow {
+    background-color: #FFBF35;
+}
+.bg-Ocean {
+    background-color: #37B679;
+}
+
 
 .container {
     width: 100%;
@@ -3228,11 +3235,13 @@ select.parsley-error {
 .table-calender02>tbody>tr>td.tc-other-month{
     background-color: #f4f4f4;
 }
-.table-calender02>tbody>tr>td.tc-today-month{
-    background-color: #fffeaf;
+.table-calender02>tbody>tr>td.tc-today-month .tc-day{
+    background-color: #fc930a;
+    color: #fff;
 }
-.table-calender02>tbody>tr>td.tc-acive-month{
-    background-color: #fffeaf;
+.table-calender02>tbody>tr>td.tc-acive-month .tc-day{
+    background-color: #fc930a;
+    color: #fff;
 }
 .table>thead>tr>th {
     color: #555;
@@ -3251,7 +3260,6 @@ select.parsley-error {
 .table-calender02 .tc-day {
     text-align: center;
     border-radius: 50%;
-    background-color: #fff;
     width: 27px;
     height: 27px;
     display: inline-block;
@@ -4484,7 +4492,44 @@ social-body {
     padding-top: 5px;
 }
 /* *********  /profile/social  **************************** */
+/* *********  chart  **************************** */
+.chart-info-bar {
+    height: 16px;
+    width: 68px;
+    vertical-align: middle;
+}
+.chart-info-bar span {
+    display: inline-block;
+    width: 22px;
+    height: 10px;
+}
+/* *********  /chart  **************************** */
 /* *********  widgets  **************************** */
+.gowork-box1 {
+    background-color: #5b8abe;
+    padding: 20px 0 10px;
+}
+.gowork-box2 {
+    background-color: #178fc6;
+    padding: 20px 0 10px;
+}
+.gowork-box3 {
+    background-color: #7781cd;
+    padding: 20px 0 10px;
+}
+.gowork-box-numbur {
+    font-size: 37px;
+    line-height: 37px;
+    margin-bottom: 0;
+    color: #fff;
+    text-align: center;
+}
+.gowork-box-txt {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+}
 
 .dashboard_graph .x_title {
     padding: 0;

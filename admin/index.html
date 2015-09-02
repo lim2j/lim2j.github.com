@@ -418,8 +418,8 @@
                                         <script>
                                         $(document).ready(function() {
                                             //td click addClass
-                                            $('.table-calender tbody td').click(function() {
-                                                $('.table-calender tbody td').removeClass("tc-acive-month");
+                                            $('.table-calender02 tbody td').click(function() {
+                                                $('.table-calender02 tbody td').removeClass("tc-acive-month");
                                                 if($(this).hasClass('tc-acive-month')) {
                                                     $(this).removeClass("tc-acive-month");
                                                 } else {
@@ -693,6 +693,18 @@
 
                             <div class="x_content">
 
+                                <div class="chart-box" style="height:248px">
+                                    <div class="chart-info pull-right">
+                                        <div class="chart-info-bar">
+                                            <span class="bg-Sunglow"></span> <strong>개인</strong>
+                                        </div>
+                                        <div class="chart-info-bar">
+                                            <span class="bg-Ocean"></span> <strong>개인</strong>
+                                        </div>
+                                    </div>
+                                    <canvas id="canvas_bar"></canvas>
+                                </div>
+
                             </div>
                             <!-- x_content (e) -->
 
@@ -706,7 +718,10 @@
                     <div class="col-md-8 col-sm-8 col-xs-12">
                         <div class="x_panel">
 
+                            <div class="">
 
+
+                            </div>
 
                         </div>
                     </div>
@@ -715,11 +730,38 @@
                         <div class="x_panel">
 
                             <div class="x_title">
-                                <h3>이달의 출근 현황</h3>
+                                <div class="pull-left">
+                                    <h3>이달의 출근 현황</h3>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-White btn-xs"><i class="fa fa-plus"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
                             </div>
                             <!-- x_title (e) -->
 
                             <div class="x_content">
+                                <div class="gowork-box">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <div class=" gowork-box1">
+                                            <p class="gowork-box-numbur">10</p>
+                                            <p class="gowork-box-txt">정상출근</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <div class="gowork-box2">
+                                            <p class="gowork-box-numbur">0</p>
+                                            <p class="gowork-box-txt">지각</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <div class="gowork-box3">
+                                            <p class="gowork-box-numbur">8</p>
+                                            <p class="gowork-box-txt">직근</p>
+                                        </div>
+                                    </div>
+                                <div>
+
 
                             </div>
                             <!-- x_content (e) -->
@@ -757,6 +799,35 @@
     <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
 
     <script src="js/custom.js"></script>
+
+    <script src="js/chartjs/chart.min.js"></script>
+
+    <script>
+    var barChartData = {
+        labels: ["4월", "5월", "6월", "7월"],
+        datasets: [
+            {
+                fillColor: "#ffbf35", //rgba(220,220,220,0.5)
+                strokeColor: "#ffbf35", //rgba(220,220,220,0.8)
+                data: [51, 30, 40, 28]
+        },
+            {
+                fillColor: "#37b679", //rgba(151,187,205,0.5)
+                strokeColor: "#37b679", //rgba(151,187,205,0.8)
+                data: [41, 56, 25, 48]
+        }
+    ],
+    }
+
+    $(document).ready(function () {
+        new Chart($("#canvas_bar").get(0).getContext("2d")).Bar(barChartData, {
+            tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+            responsive: true,
+            barDatasetSpacing: 5,
+            barValueSpacing: 10
+        });
+    });
+    </script>
 
 
 </body>
