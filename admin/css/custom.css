@@ -3338,7 +3338,7 @@ select.parsley-error {
     background-color: #fc930a;
     color: #fff;
 }
-.table>thead>tr>th {
+.table-calender02>thead>tr>th {
     color: #555;
 }
 .table>thead>tr>th.tc-sun,
