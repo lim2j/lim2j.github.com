@@ -2620,6 +2620,13 @@ span.section.section-bg04{
     border-bottom: 1px solid #6b6b6b;
 }
 
+span.section.section-bg05{
+    background-image: url(../images/section_bg04.gif);
+    color: #505050;
+    border-bottom: 0px none;
+    margin-bottom: 0;
+}
+
 span.section.section-bg01{
     background-image: url(../images/section_bg01.gif);
 }
@@ -6552,6 +6559,9 @@ ul.notifications {
 .pt5 {
     padding-top: 5px;
 }
+.pt10 {
+    padding-top: 10px;
+}
 
 .v-scroll {
     overflow-y: scroll;
@@ -6585,3 +6595,32 @@ ul.notifications {
 .table-scroll thead tr th{
     height: 47px;
 }
+
+/* .accordiontable .tr-acd:nth-of-type(odd) */
+.accordiontable .tr-acd.tr-acd-bg {
+    background-color: #f9f9f9;
+}
+.accordiontable .collapse {
+    background-color: #eff7ff;
+}
+.accordiontable .fa-plus-square {
+    color: #1a82c3;
+}
+.accordiontable .fa-minus-square-o {
+    color: #e767ac;
+}
+
+.accordiontable tr {cursor: pointer;}
+
+.table-bordered {}
+.table-bordered>thead>tr>th {
+    background-color: #eeeeee;
+    border-bottom: 1px solid #ddd;
+    color: #505050;
+    text-align: center;
+}
+
+.table-bordered>tbody>tr>td {
+    color: #505050
+}
+
