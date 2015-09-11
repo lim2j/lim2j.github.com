@@ -316,8 +316,27 @@
                                         <div role="tabpanel" class="tab-pane fade active in" id="tab_content1">
                                             <div class="graph-box">
                                                 <span class="section section-bg04 bold-600">분류별 고객사 현황</span>
-                                                <div class="chart-box">                                                    
-                                                    <canvas id="canvas_bar"></canvas>
+                                                <div class="chart-box">
+                                                    <div class="pull-left">                                                   
+                                                        <canvas id="canvas_bar" width="1200" height="400"></canvas>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+<!--                                                     <div style="background-color: #5674b9: height:360px;">111111</div>-->
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="graph-box">
+                                                <span class="section section-bg04 bold-600">신규 고객사 등록 현황</span>
+                                                <div class="chart-box">
+<!--
+                                                    <div class="pull-left">
+                                                        <canvas id="canvas_bar"  width="400" height="400"></canvas>
+                                                    </div>
+                                                    <div class="pull-right">
+                                                        <canvas id="canvas_doughnut"></canvas>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+-->
                                                 </div>
                                             </div>
                                         </div>
@@ -414,6 +433,7 @@
     </script>
     
     <script>
+    
     var barChartData = {
         labels: ["4월", "5월", "6월", "4월", "5월", "6월", "4월", "5월", "6월", "6월", "7월"],
         datasets: [
