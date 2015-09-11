@@ -1,4 +1,74 @@
 /* ==================================================
+   Main schedule
+================================================== */
+.table-calender02 {
+    margin-bottom: 0 !important;
+}
+.table-calender02>tbody>tr>td{
+    height: 60px !important;
+    cursor:default;
+}
+.table-calender02>tbody>tr>td.tc-other-month{
+    background-color: #fff;
+    opacity: 0.4;
+    filter:Alpha(opacity=40);
+}
+.table-calender02>tbody>tr>td.tc-today-month .tc-day{
+    cursor:default;
+}
+.table-calender02>tbody>tr>td.tc-acive-month .tc-day{
+    background-color: #e9e26b !important;
+    color: #555 !important;
+    cursor:default;
+}
+
+/* ------------   schedule  ------------------ */
+.table-calender>tbody>tr>td {
+    height: 110px !important;
+    cursor:default;
+}
+.table-calender>tbody>tr>td.tc-other-month{
+    background-color: #efefef;
+    opacity: 0.5;
+    filter:Alpha(opacity=50);
+}
+.table-calender>tbody>tr>td.tc-today-month{
+    background-color: #dbf6f3;
+}
+.table-calender>tbody>tr>td.tc-acive-month{
+    background-color: #fffeaf;
+}
+.calender_list_column {    
+    padding-left: 20px;
+    padding-top: 23px;
+    padding-right: 0;
+}
+.my-schedule-wrap {
+    position: relative;
+    padding-top: 47px;
+    overflow-y: hidden!important;
+}
+.my-schedule {
+    overflow-y: auto !important;
+    max-height: 650px;
+}
+.my-schedule thead tr:first-child {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+}
+.my-schedule thead tr:first-child th {
+    display: block;
+    float: left;
+    line-height: 1.63em
+}
+.my-schedule thead tr th{
+    height: 47px;
+}
+
+/* ==================================================
    Back to Top
 ================================================== */
 #back-to-top {
@@ -100,7 +170,9 @@
 .color-shuttle-gray {
     color: #5D6C7D;
 }
-
+.color-steel-blue {
+    color: #6185BC;
+}
 
 /* ==================================================
    List
@@ -109,6 +181,29 @@
     color: #4a73b3;
     line-height: normal;
     font-weight: 500;
+}
+.imgdiv {
+    padding: 0;
+    margin: 0;       
+}
+.imgdiv .file-del-display {
+    list-style: none;
+    margin-bottom: 10px;
+}
+.imgdiv .file-del-display > li {
+    display: inline-block ;
+    padding: 0;
+    margin: 0;
+}
+.imgdiv .file-del-display .file-name {
+    font-size: 12px;
+    width: 69px;
+    overflow: hidden;
+    padding-top: 2px;
+    text-overflow: ellipsis;
+}
+.imgdiv .file-del-display .file-del {
+    width: 30px;
 }
 /* ==================================================
    customer
@@ -171,11 +266,11 @@ span.section-bg04{
 .report-history-scroll thead tr th{
     height: 47px;
 }
-.table-active {
-    cursor: pointer;
+.table-active {    
 }
 .table-active tbody tr:hover {
-    background-color: #dbf6f3;
+    background-color: #feffe7 !important;
+    cursor: pointer;
 }
 /* ==================================================
    Accordion
@@ -349,6 +444,10 @@ span.section-bg04{
     text-decoration: none;
     color: #fff;
 }
+.btn-info3 {
+    background-color: #def5f1;
+    color: #656565 !important;
+}
 
 .circleBtn {
     font-size: 17px;
@@ -361,4 +460,60 @@ span.section-bg04{
 }
 .circleBtn:hover {    
     background-color: #c08811;
+}
+.dis-inline {
+    display:inline-block;
+}
+/* ==================================================
+   Statistics Graph
+================================================== */
+.graph-box {
+    display: block;
+    margin: 20px auto;
+    width: 100%;    
+    border: solid 1px #efefef;    
+    padding: 10px;
+    overflow:hidden;
+}
+
+/* ==================================================
+   Admin_Work
+================================================== */
+.table-work {
+    margin: 20px auto 30px;
+    width:96%;
+    border-top: 1px solid #b8cadd;
+}
+.table-work>thead>tr>th,
+.table-work>tbody>tr>th,
+.table-work>tbody>tr>td {    
+    border: 1px solid #e3e3e3; 
+    text-align: center;
+    width: 14.28%;
+    text-align: center;
+    color: #666;
+}
+.table-work>thead>tr:first-child>th {
+    border-bottom: 1px solid #b8cadd;
+    border-left: 1px solid #b8cadd;
+    border-right: 1px solid #b8cadd;
+    background-color: #dfeaf5;
+    color: #1e599e;
+}
+.table-work>thead>tr:nth-child(2)>th {
+    background-color: #f7f7f7;
+    color: #4a73b3;
+}
+.table-work>tbody>tr:first-child>th:first-child {
+    color: #4a73b3;
+}
+/* ==================================================
+   Admin_Setting
+================================================== */
+.setting-label {
+    font-weight: normal;
+    color: #666;
+}
+.setting-input[disabled] {
+    color: #888;
 }
