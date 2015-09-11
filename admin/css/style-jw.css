@@ -468,12 +468,28 @@ span.section-bg04{
    Statistics Graph
 ================================================== */
 .graph-box {
-    display: block;
-    margin: 20px auto;
+    position: relative;
     width: 100%;    
-    border: solid 1px #efefef;    
-    padding: 10px;
-    overflow:hidden;
+    display: inline-block;
+    margin: 20px auto;
+    border: solid 1px #f0f0f0; 
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    opacity: 1;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.graph-box .chart-box {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 /* ==================================================
