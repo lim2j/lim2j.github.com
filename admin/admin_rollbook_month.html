@@ -273,6 +273,18 @@
                                             </ul>
                                         </div>
 
+                                        <div class="form-group">
+                                            <select id="table-view" class="form-control">
+                                                <option value="">이름</option>
+                                                <option value="">홍길동 과장</option>
+                                                <option value="">홍길동 과장</option>
+                                                <option value="">홍길동 과장</option>
+                                                <option value="">홍길동 과장</option>
+                                                <option value="">홍길동 과장</option>
+                                                <option value="">홍길동 과장</option>
+                                                <option value="">홍길동 과장</option>
+                                            </select>
+                                        </div>
                                         <button type="submit" class="btn btn-gray">검색</button>
                                     </form>
                                 </div>
@@ -281,7 +293,7 @@
                                     <button type="button" class="btn btn-Wedgewood"><i class="fa fa-print"></i> 프린트 </button>
                                     <button type="button" class="btn btn-green"><i class="fa fa-download"></i> 다운로드</button>
                                     <span class="y-line"></span>
-                                    <a href="admin_rollbook_month.html" class="btn btn-primary">월별보기 <i class="fa fa-angle-right"></i></a>
+                                    <a href="admin_rollbook.html" class="btn btn-primary">일별보기 <i class="fa fa-angle-right"></i></a>
                                 </div>
 
                                 <div class="clearfix"></div>
@@ -293,44 +305,293 @@
 
                                 <div class="rollbook-list">
 
-                                    <ul>
-                                        <li>
-                                            <div class="rl-text"><i class="fa fa-user"></i> 총원</div>
-                                            <div class="rl-number">81</div>
-                                        </li>
-                                        <li>
-                                            <div class="rl-text">출근</div>
-                                            <div class="rl-number">77</div>
-                                        </li>
-                                        <li>
-                                            <div class="rl-text">지각</div>
-                                            <div class="rl-number">1</div>
-                                        </li>
-                                        <li>
-                                            <div class="rl-text">휴가</div>
-                                            <div class="rl-number">2</div>
-                                        </li>
-                                        <li>
-                                            <div class="rl-text">결근</div>
-                                            <div class="rl-number">1</div>
-                                        </li>
-                                    </ul>
-
-
                                 </div>
 
                                 <div class="rollbook-list-wrap">
+                                    <table class="table table-bordered2">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2">NO</th>
+                                                <th rowspan="2">부서
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                                <th rowspan="2">직위
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                                <th rowspan="2">이름
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                                <th colspan="31">2015.09
+                                                </th>
+                                                <th rowspan="2">지각
+                                                </th>
+                                                <th rowspan="2">결근
+                                                </th>
+                                                <th rowspan="2">휴가
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>1</th>
+                                                <th>2</th>
+                                                <th>3</th>
+                                                <th>4</th>
+                                                <th>5</th>
+                                                <th>6</th>
+                                                <th>7</th>
+                                                <th>8</th>
+                                                <th>9</th>
+                                                <th>10</th>
+                                                <th>11</th>
+                                                <th>12</th>
+                                                <th>13</th>
+                                                <th>14</th>
+                                                <th>15</th>
+                                                <th>16</th>
+                                                <th>17</th>
+                                                <th>18</th>
+                                                <th>19</th>
+                                                <th>20</th>
+                                                <th>21</th>
+                                                <th>22</th>
+                                                <th>23</th>
+                                                <th>24</th>
+                                                <th>25</th>
+                                                <th>26</th>
+                                                <th>27</th>
+                                                <th>28</th>
+                                                <th>29</th>
+                                                <th>39</th>
+                                                <th>31</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">기술연구소</td>
+                                                <td class="text-center">부장</td>
+                                                <td class="text-center">김길동</td>
+
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+
+                                                <td class="text-center warning">-</td>
+                                                <td class="text-center info">-</td>
+                                                <td class="text-center">-</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-center">2</td>
+                                                <td class="text-center">기술연구소</td>
+                                                <td class="text-center">부장</td>
+                                                <td class="text-center">김길동</td>
+
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle red"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle blue"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+
+                                                <td class="text-center warning">-</td>
+                                                <td class="text-center info">-</td>
+                                                <td class="text-center">-</td>
+                                            </tr>
+
+                                            <tr class="active">
+                                                <td class="text-center">3</td>
+                                                <td class="text-center">기술연구소</td>
+                                                <td class="text-center">부장</td>
+                                                <td class="text-center">김길동</td>
+
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle tgold"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+
+                                                <td class="text-center warning">-</td>
+                                                <td class="text-center info">-</td>
+                                                <td class="text-center">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">기술연구소</td>
+                                                <td class="text-center">부장</td>
+                                                <td class="text-center">김길동</td>
+
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+
+                                                <td class="text-center warning">-</td>
+                                                <td class="text-center info">-</td>
+                                                <td class="text-center">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">기술연구소</td>
+                                                <td class="text-center">부장</td>
+                                                <td class="text-center">김길동</td>
+
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center holiday"></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+                                                <td class="text-center"><i class="fa fa-circle"></i></td>
+
+                                                <td class="text-center warning">-</td>
+                                                <td class="text-center info">-</td>
+                                                <td class="text-center">-</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+
+                                <span class="section section-bg05">기술연구소 / 과장 / 김길동</span>
+
+                                <div class="statistics-list-box v-scroll" style="heigt:380px">
+
                                     <table class="table table-striped">
                                         <thead>
                                             <tr>
-                                                <th>NO</th>
-                                                <th>부서
-                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                                </th>
-                                                <th>직위
-                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
-                                                </th>
-                                                <th>이름
+                                                <th>날짜
                                                     <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
                                                 </th>
                                                 <th>출근방식
@@ -355,10 +616,7 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="text-center">1</td>
-                                                <td class="text-center">기술연구소</td>
-                                                <td class="text-center">부장</td>
-                                                <td class="text-center">김길동</td>
+                                                <td class="text-center">날짜</td>
                                                 <td class="text-center">내근</td>
                                                 <td class="text-center">08:54</td>
                                                 <td class="text-center">적퇴</td>
@@ -367,10 +625,7 @@
                                                 <td class="text-center">적</td>
                                             </tr>
                                             <tr>
-                                                <td class="text-center">2</td>
-                                                <td class="text-center">기술연구소</td>
-                                                <td class="text-center">부장</td>
-                                                <td class="text-center">김길동</td>
+                                                <td class="text-center">날짜</td>
                                                 <td class="text-center">적근</td>
                                                 <td class="text-center">08:54</td>
                                                 <td class="text-center">정상퇴근</td>
@@ -379,10 +634,7 @@
                                                 <td class="text-center">출근</td>
                                             </tr>
                                             <tr>
-                                                <td class="text-center">3</td>
-                                                <td class="text-center">기술연구소</td>
-                                                <td class="text-center">부장</td>
-                                                <td class="text-center">김길동</td>
+                                                <td class="text-center">날짜</td>
                                                 <td class="text-center">내근</td>
                                                 <td class="text-center">08:54</td>
                                                 <td class="text-center">정상퇴근</td>
@@ -391,10 +643,7 @@
                                                 <td class="text-center">출근</td>
                                             </tr>
                                             <tr>
-                                                <td class="text-center">4</td>
-                                                <td class="text-center">기술연구소</td>
-                                                <td class="text-center">부장</td>
-                                                <td class="text-center">김길동</td>
+                                                <td class="text-center">날짜</td>
                                                 <td class="text-center tgold">내근</td>
                                                 <td class="text-center tgold">07:10</td>
                                                 <td class="text-center tgold">정상퇴근</td>
@@ -403,10 +652,7 @@
                                                 <td class="text-center tgold">지각</td>
                                             </tr>
                                             <tr>
-                                                <td class="text-center">5</td>
-                                                <td class="text-center">기술연구소</td>
-                                                <td class="text-center">부장</td>
-                                                <td class="text-center">김길동</td>
+                                                <td class="text-center">날짜</td>
                                                 <td class="text-center">내근</td>
                                                 <td class="text-center">08:54</td>
                                                 <td class="text-center">정상퇴근</td>
@@ -416,7 +662,9 @@
                                             </tr>
                                         </tbody>
                                     </table>
+
                                 </div>
+
 
                             </div>
                             <!-- x_content (e) -->
