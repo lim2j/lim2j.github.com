@@ -245,7 +245,7 @@
 
                             <div class="x_title">
                                 <div class="pull-left">
-                                    <form class="form-inline">                                        
+                                    <form class="form-inline">
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -253,11 +253,11 @@
                                             </div>
 
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <span class="y-line"></span>
                                         </div>
-                                        
+
                                         <div class="form-group dropdown">
                                             <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn dropdown-white">
                                                 :::::&nbsp;부서 선택&nbsp;:::::&nbsp;&nbsp;
@@ -275,8 +275,8 @@
                                                 <li><a href="">&nbsp;&nbsp;&nbsp;ㄴ 기술개발팀</a></li>
                                             </ul>
                                         </div>
-                                        
-                                        <div class="form-group">                                            
+
+                                        <div class="form-group">
                                             <select id="table-view" class="form-control">
                                                 <option value="">이름</option>
                                                 <option value="">홍길동 과장</option>
@@ -287,7 +287,7 @@
                                                 <option value="">홍길동 과장</option>
                                                 <option value="">홍길동 과장</option>
                                             </select>
-                                        </div>                                        
+                                        </div>
                                         <button type="submit" class="btn btn-gray">검색</button>
                                         <div class="form-group pt5">
                                             &nbsp;&nbsp;&nbsp;&nbsp;* 월별검색은 <span class="red">2달</span> 까지가능합니다.
@@ -296,35 +296,35 @@
                                 </div>
 
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-Wedgewood"><i class="fa fa-print"></i> 프린트 </button>                                    
+                                    <button type="button" class="btn btn-Wedgewood"><i class="fa fa-print"></i> 프린트 </button>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                             <!-- x_title (e) -->
-                            
+
                             <div class="x_content">
-                                
+
                                 <div class="" role="tabpanel">
                                     <ul class="nav nav-tabs bar_tabs" role="tablist" id="myTab">
                                         <li role="presentation" class="active"><a href="#tab_content1" role="tab" data-toggle="tab" aria-controls="true">고객사 현황</a></li>
                                         <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab"  aria-controls="false">외근 통계</a></li>
                                         <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab" data-toggle="tab"  aria-controls="false">업무시간 통계</a></li>
                                     </ul>
-                                    
+
                                     <!-- tab-content (s)-->
                                     <div class="tab-content">
                                         <div role="tabpanel" class="tab-pane fade active in" id="tab_content1">
                                             <div class="graph-box">
                                                 <span class="section section-bg04 bold-600">분류별 고객사 현황</span>
                                                 <div class="chart-box">
-                                                    <div class="pull-left">                                                   
-                                                        <canvas id="canvas_bar" width="1200" height="400"></canvas>
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <canvas id="canvas_bar" width="1200" height="360"></canvas>
                                                     </div>
                                                     <div class="clearfix"></div>
 <!--                                                     <div style="background-color: #5674b9: height:360px;">111111</div>-->
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="graph-box">
                                                 <span class="section section-bg04 bold-600">신규 고객사 등록 현황</span>
                                                 <div class="chart-box">
@@ -341,12 +341,12 @@
                                             </div>
                                         </div>
                                         <!-- tab_content1 (e) -->
-                                        
+
                                         <div role="tabpanel" class="tab-pane fade" id="tab_content2">
                                             tab_content2
                                         </div>
                                         <!-- tab_content2 (e) -->
-                                        
+
                                         <div role="tabpanel" class="tab-pane fade" id="tab_content3">
                                             tab_content3
                                         </div>
@@ -354,9 +354,9 @@
                                     </div>
                                     <!-- tab-content (e)-->
                                 </div>
-                                
+
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -392,9 +392,9 @@
 
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
-    
+
     <script src="js/chartjs/chart.min.js"></script>
-    
+
     <script>
     $(document).ready(function () {
 
@@ -431,9 +431,9 @@
             $('#reportrangeDate').daterangepicker(optionSet1, cb);
     });
     </script>
-    
+
     <script>
-    
+
     var barChartData = {
         labels: ["4월", "5월", "6월", "4월", "5월", "6월", "4월", "5월", "6월", "6월", "7월"],
         datasets: [
@@ -449,6 +449,7 @@
         new Chart($("#canvas_bar").get(0).getContext("2d")).Bar(barChartData, {
             tooltipFillColor: "rgba(51, 51, 51, 0.55)",
             responsive: true,
+            maintainAspectRatio: true,
             barDatasetSpacing: 5,
             barValueSpacing: 10
         });
