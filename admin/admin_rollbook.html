@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>한국정보공학(주)</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" media="screen" href="fonts/css/fonts.css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styling plus plugins -->
@@ -189,7 +187,7 @@
                                                     </div>
                                                     <div class="ln_solid"></div>
                                                     <div class="form-group">
-                                                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                                        <div class="col-md-6 col-sm-6 col-xs-12 col-xs-offset-3">
                                                             <button type="submit" class="btn btn-primary">수정</button>
                                                             <button type="submit" class="btn btn-success" data-dismiss="modal">취소</button>
                                                         </div>
@@ -221,7 +219,7 @@
 
                 <div class="page-title">
                     <div class="title_left">
-                        <h3 class="titele_ic">통계 차트</h3>
+                        <h3 class="titele_ic">출퇴근 기록 - 일별보기</h3>
                     </div>
 
                     <div class="title_right">
@@ -230,7 +228,7 @@
                             <ol class="breadcrumb">
                               <li><i class="fa fa-home "></i> <a href="index.html">Home</a></li>
                               <li><a href="customer.html">통계정보</a></li>
-                              <li class="active">통계 차트</li><!-- 현재 -->
+                              <li class="active">출퇴근 기록</li><!-- 현재 -->
                             </ol>
                         </div>
                     </div>
@@ -252,7 +250,6 @@
                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                 <input type="text" id="reportrangeDate" class="form-control" value="2015/08/22 ~ 2015/08/28" style="width:240px">
                                             </div>
-
                                         </div>
 
                                         <div class="form-group">
@@ -273,7 +270,6 @@
                                                 <li><a href="">- ERP팀</a></li>
                                                 <li><a href="">- 기획영업팀</a></li>
                                                 <li><a href="">- 기술개발팀</a></li>
-                                                <li><a href="">&nbsp;&nbsp;&nbsp;ㄴ 기술개발팀</a></li>
                                             </ul>
                                         </div>
 
@@ -290,14 +286,14 @@
                                             </select>
                                         </div>
                                         <button type="submit" class="btn btn-gray">검색</button>
-                                        <div class="form-group pt5">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;* 월별검색은 <span class="red">2달</span> 까지가능합니다.
-                                        </div>
                                     </form>
                                 </div>
 
                                 <div class="pull-right">
                                     <button type="button" class="btn btn-Wedgewood"><i class="fa fa-print"></i> 프린트 </button>
+                                    <button type="button" class="btn btn-green"><i class="fa fa-download"></i> 다운로드</button>
+                                    <span class="y-line"></span>
+                                    <button type="button" class="btn btn-green">월별보기 <i class="fa fa-download"></i></button>
                                 </div>
 
                                 <div class="clearfix"></div>
@@ -307,37 +303,90 @@
 
                             <div class="x_content">
 
-                                <div class="" role="tabpanel">
-                                    <ul class="nav nav-tabs bar_tabs" role="tablist" id="myTab">
-                                        <li role="presentation" class="active"><a href="#tab_content1" role="tab" data-toggle="tab" aria-controls="true">고객사 현황</a></li>
-                                        <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab"  aria-controls="false">외근 통계</a></li>
-                                        <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab" data-toggle="tab"  aria-controls="false">업무시간 통계</a></li>
+                                <div class="rollbook-list">
+
+                                    <ul>
+                                        <li>
+                                            <div class="rl-text"><i class="fa fa">총원</i></div>
+                                            <div class="rl-number">81</div>
+                                        </li>
+                                        <li>
+                                            <div class="rl-text"><i class="fa fa">출근</i></div>
+                                            <div class="rl-number">77</div>
+                                        </li>
+                                        <li>
+                                            <div class="rl-text"><i class="fa fa">지각</i></div>
+                                            <div class="rl-number">1</div>
+                                        </li>
+                                        <li>
+                                            <div class="rl-text"><i class="fa fa">휴가</i></div>
+                                            <div class="rl-number">2</div>
+                                        </li>
+                                        <li>
+                                            <div class="rl-text"><i class="fa fa">결근</i></div>
+                                            <div class="rl-number">1</div>
+                                        </li>
                                     </ul>
 
-                                    <!-- tab-content (s)-->
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane fade active in" id="tab_content1">
-                                            <div class="graph-box">
-                                                <canvas id="canvas_bar"></canvas>
-                                            </div>
-                                        </div>
-                                        <!-- tab_content1 (e) -->
 
-                                        <div role="tabpanel" class="tab-pane fade" id="tab_content2">
-                                            tab_content2
-                                        </div>
-                                        <!-- tab_content2 (e) -->
+                                </div>
 
-                                        <div role="tabpanel" class="tab-pane fade" id="tab_content3">
-                                            tab_content3
-                                        </div>
-                                        <!-- tab_content3 (e) -->
-
-                                    </div>
+                                <div class="rollbook-list-wrap">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>NO</th>
+                                                <th>부서
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                                <th>직위
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                                <th>이름
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                                <th>출근방식
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                                <th>출근시간
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                                <th>퇴근방식
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                                <th>퇵느시간
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                                <th>총 근무시간
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                                <th>결과
+                                                    <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">기술연구소</td>
+                                                <td class="text-center">부장</td>
+                                                <td class="text-center">김길동</td>
+                                                <td class="text-center">내근</td>
+                                                <td class="text-center">08:54</td>
+                                                <td class="text-center">정상퇴근</td>
+                                                <td class="text-center">17:54</td>
+                                                <td class="text-center">10:00</td>
+                                                <td class="text-center">출근</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
 
                             </div>
                             <!-- x_content (e) -->
+
+
+
 
                         </div>
                     </div>
@@ -375,9 +424,6 @@
 
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
-
-    <script src="js/chartjs/chart.min.js"></script>
-
     <script>
     $(document).ready(function () {
 
@@ -392,19 +438,12 @@
                 minDate: "01/01/2015",
                 maxDate: "12/31/2015",
                 applyClass: "btn-primary",
-                ranges: {
-                    '오늘': [moment(), moment()],
-                    '금주': [moment().subtract(6, 'days'), moment()],
-                    '이번달': [moment().startOf('month'), moment().endOf('month')],
-                    '지난달': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                },
                 locale: {
                     format: 'YYYY/MM/DD',
                     applyLabel: '선택',
                     cancelLabel: '취소',
                     fromLabel: 'From',
                     toLabel: 'To',
-                    customRangeLabel: '사용자',
                     daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
                     monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
                     firstDay: 1
@@ -412,28 +451,6 @@
             };
 
             $('#reportrangeDate').daterangepicker(optionSet1, cb);
-    });
-    </script>
-
-    <script>
-    var barChartData = {
-        labels: ["4월", "5월", "6월", "4월", "5월", "6월", "4월", "5월", "6월", "6월", "7월"],
-        datasets: [
-            {
-                fillColor: "#3a75b8", //rgba(220,220,220,0.5)
-                strokeColor: "#3a75b8", //rgba(220,220,220,0.8)
-                data: [51, 30, 40, 51, 30, 40, 51, 30, 40, 60, 28]
-        }
-    ],
-    }
-
-    $(document).ready(function () {
-        new Chart($("#canvas_bar").get(0).getContext("2d")).Bar(barChartData, {
-            tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-            responsive: true,
-            barDatasetSpacing: 5,
-            barValueSpacing: 10
-        });
     });
     </script>
 
