@@ -6626,6 +6626,9 @@ ul.notifications {
 .table-bordered>tbody>tr>td {
     color: #505050
 }
+.rollbook-list-wrap .table-bordered2 {
+    margin-top: 40px;
+}
 
 .table-bordered2 {
     border: 1px solid #ddd;
