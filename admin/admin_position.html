@@ -11,8 +11,11 @@
     <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styling plus plugins -->
     <link href="css/custom.css" rel="stylesheet">
+    <link href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet"  />
+
 
     <script src="js/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
     <!--[if lt IE 9]>
         <script src="../assets/js/ie8-responsive-file-warning.js"></script>
         <![endif]-->
@@ -245,179 +248,164 @@
 
                                 <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                    <form class="form-horizontal form-label-left">
+                                    <form class="form-horizontal form-label-left" id="positionTableEdit">
 
                                         <span class="section section-bg01">신규 직위 등록</span>
                                         <div class="row">
                                             <div class="col-md-8 col-sm-8 col-xs-12">
 
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-2 col-sm-2 col-xs-3">직위명</label>
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-3">직위명</label>
                                                     <div class="col-md-4 col-sm-4 col-xs-9">
-                                                        <input type="text" class="form-control" id="" placeholder="">
+                                                        <input type="text" class="form-control" id="positionTableAddText" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <!-- 고객사 분류 (E) -->
-
-
-
-                                        <span class="section section-bg01">고객사 정보</span>
-                                        <div class="row">
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">구분 <span class="required">*</span></label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-12">
-                                                        <select class="form-control">
-                                                            <option>고객사 구분 선택</option>
-                                                        </select>
+                                                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                                        <button type="button" class="btn btn-primary" id="positionTableAdd"><i class="fa fa-check"></i> 등록</button>
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">회사명 <span class="required">*</span></label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-12">
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">주소 <span class="required">*</span></label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-12">
-                                                        <input type="text" class="form-control" placeholder="위치입력">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="col-xs-offset-3 col-md-9 col-sm-9 col-xs-12">
-                                                        <label class="control-label col-md-2 col-sm-2 col-xs-3">LAT</label>
-                                                        <div class="col-md-4 col-sm-4 col-xs-9">
-                                                            <input type="text" class="form-control" id="lat" placeholder="위도" value="37.54">
-                                                        </div>
 
-                                                        <label class="control-label col-md-2 col-sm-2 col-xs-3">LNG</label>
-                                                        <div class="col-md-4 col-sm-4 col-xs-9">
-                                                            <input type="text" class="form-control" id="lng" placeholder="경도" value="127">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">우편번호</label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-12">
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">대표자</label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-12">
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">대표번호</label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-12">
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Fax.</label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-12">
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Homepage</label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-12">
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">업태</label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-12">
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">업종</label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-12">
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- 구글 map (S) -->
-
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <!-- 고객사 정보 (E) -->
-
-
-                                        <span class="section section-bg01">고객사 담당자</span>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">이름</label>
-                                            <div class="col-md-10 col-sm-10 col-xs-12">
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">Mobile</label>
-                                            <div class="col-md-10 col-sm-10 col-xs-12">
-                                                <input type="number" class="form-control" placeholder="'-'와 숫자 입력만 가능합니다.">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">Ofice</label>
-                                            <div class="col-md-10 col-sm-10 col-xs-12">
-                                                <input type="number" class="form-control" placeholder="'-'와 숫자 입력만 가능합니다.">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">E-mail</label>
-                                            <div class="col-md-10 col-sm-10 col-xs-12">
-                                                <input type="email" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-
-                                        <span class="section section-bg01">고객사 담당자</span>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">등록</label>
-                                            <div class="col-md-10 col-sm-10 col-xs-12">
-                                                <input type="text" class="form-control" readonly="readonly" placeholder="홍길동">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">메모</label>
-                                            <div class="col-md-10 col-sm-10 col-xs-12">
-                                                <textarea class="form-control" rows="3"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">첨부파일
-                                                <button type="button" class="btn btn-link p0" id="InputFilePlus"><i class="fa fa-plus-square"></i></button>
-                                            </label>
-                                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                 <div class="input-file-box">
-                                                     <div><input type="file"></div>
-                                                 </div>
-                                                 <p class="help-block">&#183; 파일 등록은 최대 5개까지 가능합니다.</p>
-                                            </div>
-                                        </div>
-
-
-
-
-
-                                        <div class="ln_solid"></div>
-                                        <div class="form-group">
-                                            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-2">
-                                                <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> 확인</button>
-                                                <button type="reset" class="btn btn-success">취소</button>
                                             </div>
                                         </div>
 
                                     </form>
+
+                                </div>
+
+
+
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                    <div class="positionTable-box">
+                                        <div class="positionTable-txt">* 마우스로 드래그해서 원하는 위치에 놓으세요</div>
+                                        <table id="positionTable" class="table-position">
+                                        	<!--thead>
+                                            	<tr>
+                                            		<th><input type="checkbox" id="checkAll"/></th><th>우선 순위</th><th>직위</th>
+                                            	</tr>
+                                        	</thead-->
+                                        	<tbody>
+
+                                        		<tr id="1">
+                                        			<td class="priority">1</td>
+                                        			<td class="td-radius"><span>회장</span></td>
+                                                    <td class="td-check">
+                                                        <button type="button" class="btn btn-info"> 수정</button>
+                                                        <button type="button" class="btn btn-White btn-delete">삭제</button>
+                                                    </td>
+                                        		</tr>
+
+                                        		<tr id="2">
+                                        			<td class="priority">2</td>
+                                        			<td class="td-radius"><span>부사장</span></td>
+                                                    <td class="td-check">
+                                                        <button type="button" class="btn btn-info"> 수정</button>
+                                                        <button type="button" class="btn btn-White btn-delete">삭제</button>
+                                                    </td>
+                                        		</tr>
+
+                                        		<tr id="3">
+                                        			<td class="priority">3</td>
+                                        			<td class="td-radius"><span>상무</span></td>
+                                                    <td class="td-check">
+                                                        <button type="button" class="btn btn-info"> 수정</button>
+                                                        <button type="button" class="btn btn-White btn-delete">삭제</button>
+                                                    </td>
+                                        		</tr>
+
+                                        		<tr id="4">
+                                        			<td class="priority">4</td>
+                                        			<td class="td-radius"><span>이사</span></td>
+                                                    <td class="td-check">
+                                                        <button type="button" class="btn btn-info"> 수정</button>
+                                                        <button type="button" class="btn btn-White btn-delete">삭제</button>
+                                                    </td>
+                                        		</tr>
+
+                                        	</tbody>
+                                        </table>
+
+
+                                        <script type="text/javascript">
+                                        $(document).ready(function() {
+                                        	//Helper function to keep table row from collapsing when being sorted
+                                        	var fixHelperModified = function(e, ui) {
+                                                ui.children().each(function() {
+                                                    $(this).width($(this).width());
+                                                });
+                                                return ui;
+                                            }
+
+                                        	//Make diagnosis table sortable
+                                        	$("#positionTable tbody").sortable({
+                                                item: "> td.td-radius",
+                                                //cancel: ".td-check,.priority",
+                                                axis: "y",
+                                                containment: "parent",
+                                                tolerance: "pointer",
+                                            	helper: fixHelperModified,
+                                                sort: function (event, ui) {
+                                                    ui.helper.css({ 'top': ui.position.top + $(window).scrollTop() + 'px' });
+                                                },
+                                        		stop: function(event,ui) {renumber_table('#positionTable')}
+                                        	}).disableSelection();
+
+
+                                            $('#positionTableEdit').on('click','#positionTableAdd',function() {
+
+                                                var index = $('#positionTable tbody').find("tr").length +1;
+                                                var text = $("#positionTableAddText").val();
+
+                                                $('#positionTable > tbody:last').append(
+                                                    "<tr id=" + index + ">"
+                                                    +"	<td class='priority'>" + index + "</td>"
+                                                    +"	<td class='td-radius'>" + text + "</td>"
+                                                    +"	<td class='td-check'>"
+                                                    +"       <button type='button' class='btn btn-info'>수정</button>"
+                                                    +"       <button type='button' class='btn btn-White btn-delete'>삭제</button>"
+                                                    +"  </td>"
+                                                    +"</tr>"
+                                                 );
+                                            });
+
+                                            //Delete button in table rows
+                                            $('#positionTable').on('click','.btn-delete',function() {
+                                                tableID = '#' + $(this).closest('table').attr('id');
+                                                r = confirm('삭제 하시겠습니까?');
+                                                if(r) {
+                                                    $(this).closest('tr').remove();
+                                                    renumber_table(tableID);
+                                                }
+                                            });
+
+                                            $('#positionTable').on('click','.btn-info',function() {
+
+                                                $(this).removeClass("btn-info").addClass("btn-primary").text("적용");
+
+                                                var thisTd = $(this).closest('tr').find(".td-radius");
+                                                var thisTdVal = thisTd.find("span").text()
+
+                                                thisTd.find("span").hide();
+
+                                                thisTd.append("<input type='text' class='form-control' placeholder='" + thisTdVal + "'>")
+
+
+                                            });
+
+                                        });
+
+                                        //Renumber table rows
+                                        function renumber_table(tableID) {
+                                        	$(tableID + " tr").each(function() {
+                                        		count = $(this).parent().children().index($(this)) + 1;
+                                        		$(this).find('.priority').html(count);
+                                        	});
+                                        }
+
+
+                                        </script>
+                                    </div>
 
                                 </div>
 
