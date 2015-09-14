@@ -1141,7 +1141,7 @@ h2 {
 .x_panel {
     position: relative;
     width: 100%;
-    min-height: 400px
+    min-height: 400px;
     margin-bottom: 30px;
     padding: 10px 0px;
     display: inline-block;
