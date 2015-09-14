@@ -218,7 +218,7 @@
 
                 <div class="page-title">
                     <div class="title_left">
-                        <h3 class="titele_ic">고객사</h3>
+                        <h3 class="titele_ic">휴일 설정</h3>
                     </div>
 
                     <div class="title_right">
@@ -226,8 +226,8 @@
                             <!-- location -->
                             <ol class="breadcrumb">
                               <li><i class="fa fa-home "></i> <a href="index.html">Home</a></li>
-                              <li><a href="customer.html">고객사</a></li>
-                              <li class="active">고객사 list</li><!-- 현재 -->
+                              <li><a href="customer.html">관리</a></li>
+                              <li class="active">휴일설정</li><!-- 현재 -->
                             </ol>
                         </div>
                     </div>
@@ -243,33 +243,23 @@
 
                             <div class="x_title">
                                 <div class="pull-left">
-                                    <form class="form-inline">
                                         <div class="form-group">
-                                            <label for="table-view">View</label>
-                                            <select id="table-view" class="form-control">
-                                                <option value="10">10</option>
-                                                <option value="20">20</option>
-                                                <option value="30">30</option>
-                                                <option value="40">40</option>
-                                                <option value="50">50</option>
+                                            <select id="" class="form-control">
+                                                <option value="215">2015년</option>
                                             </select>
                                         </div>
-                                        <div class="form-group">
-                                            <span class="y-line"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="form-control">
-                                                <option value="name">회사명</option>
-                                            </select>
-                                            <input type="email" id="ex4" class="form-control" placeholder="검색">
-                                        </div>
-                                        <button type="submit" class="btn btn-gray">검색</button>
-                                    </form>
                                 </div>
 
                                 <div class="pull-right">
-                                    <a href="customer_new.html" class="btn btn-primary"><i class="fa fa-building-o"></i> 고객사 등록 </a>
-                                    <button type="button" class="btn btn-default"><i class="fa  fa-trash"></i> 삭제</button>
+                                    <form class="form-inline">
+                                        <div class="form-group">
+                                            <select id="" class="form-control">
+                                                <option value="mon">월요일</option>
+                                            </select>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#holidayNew">일괄등록</button>
+                                        <button type="button" class="btn btn-gray"  data-toggle="modal" data-target="#holidayModify">일괄해지</button>
+                                    </form>
                                 </div>
 
                                 <div class="clearfix"></div>
@@ -279,29 +269,13 @@
 
                             <div class="x_content">
 
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+
                                     <!-- schedule (s) -->
-                                    <div class="calender-box">
-                                    <div class="row calender-toolbar02">
-                                        <div class="col-md-4 col-sm-4 col-xs-4 calender-button">
-                                            <button type="button" class="btn btn-White"><i class="fa fa-chevron-left"></i></button>
-                                            <button type="button" class="btn btn-White"><i class="fa fa-chevron-right"></i></button>
+                                    <div class="calender-table03">
 
-                                        </div>
-
-                                        <div class="col-md-4 col-sm-4 col-xs-4 calender-yymm">
-                                            <h3 class="text-center">2015년 5월</h3>
-                                        </div>
-
-                                        <div class="col-md-4 col-sm-4 col-xs-4 calender-info">
-                                            <button type="button" class="btn btn-White">오늘</button>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="calender-table">
-
-                                        <table class="table table-calender02">
+                                        <h3 class="calender-table-h3">1월</h3>
+                                        <table class="table table-calender03">
                                             <thead>
                                                 <tr>
                                                     <th class="tc-day-header tc-sun">일</th>
@@ -315,23 +289,23 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="tc-day-content tc-sun tc-other-month">
-                                                        <p class="tc-day">26</p>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day"></p>
                                                     </td>
-                                                    <td class="tc-day-content tc-mon tc-other-month">
-                                                        <p class="tc-day">27</p>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day"></p>
                                                     </td>
-                                                    <td class="tc-day-content tc-tue tc-other-month">
-                                                        <p class="tc-day">28</p>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day"></p>
                                                     </td>
-                                                    <td class="tc-day-content tc-wed tc-other-month">
-                                                        <p class="tc-day">29</p>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day"></p>
                                                     </td>
-                                                    <td class="tc-day-content tc-thu tc-other-month">
-                                                        <p class="tc-day">30</p>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day"></p>
                                                     </td>
-                                                    <td class="tc-day-content tc-fri tc-other-month">
-                                                        <p class="tc-day">31</p>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day"></p>
                                                     </td>
                                                     <td class="tc-day-content tc-sat">
                                                         <p class="tc-day">1</p>
@@ -343,12 +317,6 @@
                                                     </td>
                                                     <td class="tc-day-content tc-mon">
                                                         <p class="tc-day">3</p>
-
-                                                        <div class="sc-cont">
-                                                            <span class="sc-txt"><i class="fa fa-circle red"></i></span>
-                                                            <span class="sc-txt"><i class="fa fa-circle blue"></i></span>
-                                                        </div>
-
                                                     </td>
                                                     <td class="tc-day-content tc-tue">
                                                         <p class="tc-day">4</p>
@@ -428,7 +396,7 @@
                                                     <td class="tc-day-content tc-thu">
                                                         <p class="tc-day">27</p>
                                                     </td>
-                                                    <td class="tc-day-content tc-fri tc-today-month">
+                                                    <td class="tc-day-content tc-fri">
                                                         <p class="tc-day">28</p>
                                                     </td>
                                                     <td class="tc-day-content tc-sat">
@@ -442,20 +410,20 @@
                                                     <td class="tc-day-content tc-mon">
                                                         <p class="tc-day">31</p>
                                                     </td>
-                                                    <td class="tc-day-content tc-tue tc-other-month">
-                                                        <p class="tc-day">1</p>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day"></p>
                                                     </td>
-                                                    <td class="tc-day-content tc-wed tc-other-month">
-                                                        <p class="tc-day">2</p>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day"></p>
                                                     </td>
-                                                    <td class="tc-day-content tc-thu tc-other-month">
-                                                        <p class="tc-day">3</p>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day"></p>
                                                     </td>
-                                                    <td class="tc-day-content tc-fri tc-other-month">
-                                                        <p class="tc-day">4</p>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day"></p>
                                                     </td>
-                                                    <td class="tc-day-content tc-sat tc-other-month">
-                                                        <p class="tc-day">5</p>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day"></p>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -463,112 +431,624 @@
 
 
 
-                                        <script>
-                                        $(document).ready(function() {
-                                            //td click addClass
-                                            $('.table-calender02 tbody td').click(function() {
-                                                $('.table-calender02 tbody td').removeClass("tc-acive-month");
-                                                if($(this).hasClass('tc-acive-month')) {
-                                                    $(this).removeClass("tc-acive-month");
-                                                } else {
-                                                    $(this).addClass("tc-acive-month");
-                                                }
-                                            });
-                                        });
-                                        </script>
 
                                     </div>
+                                    <!-- schedule (e) -->
+
+                                </div>
+
+
+
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+
+                                    <!-- schedule (s) -->
+                                    <div class="calender-table03">
+
+                                        <h3 class="calender-table-h3">2월</h3>
+                                        <table class="table table-calender03">
+                                            <thead>
+                                                <tr>
+                                                    <th class="tc-day-header tc-sun">일</th>
+                                                    <th class="tc-day-header tc-mon">월</th>
+                                                    <th class="tc-day-header tc-tue">화</th>
+                                                    <th class="tc-day-header tc-wed">수</th>
+                                                    <th class="tc-day-header tc-thu">목</th>
+                                                    <th class="tc-day-header tc-fri">금</th>
+                                                    <th class="tc-day-header tc-sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">1</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">2</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">3</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">4</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">5</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">6</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">7</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">8</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">9</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">10</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">11</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">12</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">13</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">14</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">15</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">16</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">17</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">18</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">19</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">20</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">21</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">22</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">23</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">24</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">25</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">26</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">27</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">28</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">29</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">30</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">31</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+
+
                                     </div>
                                     <!-- schedule (e) -->
-                                    
+
                                 </div>
-                                
-                                
-                                
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                
+
+
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+
+                                    <!-- schedule (s) -->
+                                    <div class="calender-table03">
+
+                                        <h3 class="calender-table-h3">3월</h3>
+                                        <table class="table table-calender03">
+                                            <thead>
+                                                <tr>
+                                                    <th class="tc-day-header tc-sun">일</th>
+                                                    <th class="tc-day-header tc-mon">월</th>
+                                                    <th class="tc-day-header tc-tue">화</th>
+                                                    <th class="tc-day-header tc-wed">수</th>
+                                                    <th class="tc-day-header tc-thu">목</th>
+                                                    <th class="tc-day-header tc-fri">금</th>
+                                                    <th class="tc-day-header tc-sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat  tc-today-month">
+                                                        <p class="tc-day">1</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">2</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">3</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">4</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">5</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">6</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">7</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">8</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">9</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">10</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">11</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">12</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">13</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">14</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">15</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">16</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">17</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">18</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">19</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">20</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">21</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">22</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">23</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">24</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">25</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">26</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">27</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">28</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">29</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">30</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">31</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+
+
+                                    </div>
+                                    <!-- schedule (e) -->
+
+                                </div>
+
+
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+
+                                    <!-- schedule (s) -->
+                                    <div class="calender-table03">
+
+                                        <h3 class="calender-table-h3">4월</h3>
+                                        <table class="table table-calender03">
+                                            <thead>
+                                                <tr>
+                                                    <th class="tc-day-header tc-sun">일</th>
+                                                    <th class="tc-day-header tc-mon">월</th>
+                                                    <th class="tc-day-header tc-tue">화</th>
+                                                    <th class="tc-day-header tc-wed">수</th>
+                                                    <th class="tc-day-header tc-thu">목</th>
+                                                    <th class="tc-day-header tc-fri">금</th>
+                                                    <th class="tc-day-header tc-sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">1</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">2</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">3</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">4</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">5</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">6</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">7</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">8</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">9</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">10</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">11</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">12</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">13</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">14</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">15</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">16</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">17</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">18</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">19</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">20</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">21</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">22</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">23</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">24</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">25</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">26</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">27</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">28</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">29</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">30</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">31</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day"></p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+
+
+                                    </div>
+                                    <!-- schedule (e) -->
+
                                 </div>
 
                             </div>
                             <!-- x_content (e) -->
-                            
-                            
-                            
-                            
-                            
-                            <!-- 상용구 선택 MODAL (S)-->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-                            
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+
+                            <script>
+                            $(document).ready(function() {
+                                //td click addClass
+                                $('.table-calender03 tbody td').click(function() {
+                                    $('.table-calender03 tbody td').removeClass("tc-acive-month");
+                                    if($(this).hasClass('tc-acive-month')) {
+                                        $(this).removeClass("tc-acive-month");
+                                    } else {
+                                        $(this).addClass("tc-acive-month");
+                                    }
+                                });
+
+                            });
+                            </script>
+
+
+                            <!-- 휴일 등록 MODAL (S)-->
+                            <div class="modal fade macro" id="holidayNew" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+
+                                        <div class="modal-body">
+                                            <div class="text-center">일괄 등록을 진행하시겠습니까?</div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-primary"  data-toggle="modal" data-target="#holidayModalForm" data-whatever="new" data-dismiss="modal">확인</button>
+                                                <button type="reset" class="btn btn-success" data-dismiss="modal">취소</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="modal fade macro" id="holidayModify" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+
+                                        <div class="modal-body">
+                                            <div class="text-center">일괄 해지를 진행하시겠습니까?</div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-primary"  data-toggle="modal" data-target="#holidayModalForm" data-whatever="Modify" data-dismiss="modal">확인</button>
+                                                <button type="reset" class="btn btn-success" data-dismiss="modal">취소</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="modal fade" id="holidayModalForm" tabindex="-1" role="dialog" aria-labelledby="holidayModalFormLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                       <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                                        <h4 class="modal-title" id="holidayModalFormLabel">휴일 등록</h4>
                                       </div>
                                       <div class="modal-body">
                                         <form>
                                           <div class="form-group">
-                                            <label for="recipient-name" class="control-label">Recipient:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="message-text" class="control-label">Message:</label>
+                                            <label for="message-text" class="control-label">내용</label>
                                             <textarea class="form-control" id="message-text"></textarea>
                                           </div>
                                         </form>
                                       </div>
                                       <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Send message</button>
+
+                                        <button type="button" class="btn btn-primary btn-new">등록</button>
+
+                                        <button type="button" class="btn btn-primary btn-modify">수정</button>
+                                        <button type="button" class="btn btn-info btn-modify">등록 해제</button>
+
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
                                       </div>
                                     </div>
                                 </div>
                             </div>
                             <script>
-                            $('#exampleModal').on('show.bs.modal', function (event) {
+                            $('#holidayModalForm').on('show.bs.modal', function (event) {
                               var button = $(event.relatedTarget) // Button that triggered the modal
-                              var recipient = button.data('whatever') // Extract info from data-* attributes
-                              // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-                              // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                              var recipient = button.data('whatever');
                               var modal = $(this)
-                              modal.find('.modal-title').text('New message to ' + recipient)
-                              modal.find('.modal-body input').val(recipient)
+                              if(recipient == "Modify"){
+                                  modal.find('.modal-title').text('휴일 수정')
+                                  modal.find('.modal-footer .btn-modify').show();
+                                  modal.find('.modal-footer .btn-new').hide();
+                              }else{
+                                  modal.find('.modal-title').text('휴일 등록')
+                                  modal.find('.modal-footer .btn-modify').hide();
+                                  modal.find('.modal-footer .btn-new').show();
+                              }
+
                             })
                             </script>
-                            
-                            <div class="modal fade macro" tabindex="-1" role="dialog" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
-                                            </button>
-                                            <h4 class="modal-title" id="myModalLabel">상용구 선택</h4>
-                                        </div>
-                                        <div class="modal-body">
-
-                                            <div class="report_list_column v-scroll" style="height:320px">
-
-                                            </div>
 
 
-                                            <div class="ln_solid"></div>
-                                            <div class="form-group">
-                                                <div class="col-md-6 col-sm-6 col-xs-12 col-xs-offset-3">
-                                                    <button type="submit" class="btn btn-primary">확인</button>
-                                                    <button type="reset" class="btn btn-success" data-dismiss="modal">취소</button>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 상용구 선택 MODAL (E)-->
+                            <!-- 휴일 등록 MODAL (E)-->
 
 
 
