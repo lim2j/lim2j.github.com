@@ -387,8 +387,19 @@
                                                 var thisTdVal = thisTd.find("span").text()
 
                                                 thisTd.find("span").hide();
+                                                thisTd.append("<input type='text' class='form-control' value='" + thisTdVal + "'>")
 
-                                                thisTd.append("<input type='text' class='form-control' placeholder='" + thisTdVal + "'>")
+                                            });
+
+                                            $('#positionTable').on('click','.btn-primary',function() {
+
+                                                $(this).removeClass("btn-primary").addClass("btn-info").text("수정");
+
+                                                var thisTd = $(this).closest('tr').find(".td-radius");
+                                                var thisTdVal = thisTd.find("input").val()
+
+                                                thisTd.find("input").remove();
+                                                thisTd.find("span").text(thisTdVal).show();
 
 
                                             });
