@@ -32,7 +32,7 @@ body.nav-sm .main_container .top_nav {
 body.nav-sm .nav.side-menu li a {
     text-align: center !important;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 14px;
     padding: 10px 0px;
     overflow: hidden;
 }
@@ -342,7 +342,7 @@ dark,
 /*font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;*/
 body {
     color: #484848;
-    background-color: #fff;
+    background-color: #eee;
     background-image: url(../images/body_bg.gif);
     background-repeat: repeat-y;
     font-family:'NanumBarunGothic','맑은 고딕','돋움',Dotum,'굴림',Gulim,"Open Sans",Helvetica,sans-serif;
@@ -1141,6 +1141,7 @@ h2 {
 .x_panel {
     position: relative;
     width: 100%;
+    min-height: 400px
     margin-bottom: 30px;
     padding: 10px 0px;
     display: inline-block;

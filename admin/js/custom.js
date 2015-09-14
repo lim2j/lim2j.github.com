@@ -6,6 +6,12 @@
 
 /** ******  left menu  *********************** **/
 $(function () {
+    $('body').removeClass('nav-md');
+    $('body').addClass('nav-sm');
+    $('.left_col').removeClass('scroll-view');
+    $('.left_col').removeAttr('style');
+    $('.sidebar-footer').hide();
+
     $('#sidebar-menu li ul').slideUp();
     $('#sidebar-menu li').removeClass('active');
 
@@ -176,10 +182,10 @@ $(function () {
 /** ******  scrollview  *********************** **/
 $(document).ready(function () {
 
-            $(".scroll-view").niceScroll({
-                touchbehavior: true,
-                cursorcolor: "rgba(42, 63, 84, 0.35)"
-            });
+    $(".scroll-view").niceScroll({
+        touchbehavior: true,
+        cursorcolor: "rgba(42, 63, 84, 0.35)"
+    });
 
 });
 /** ******  /scrollview  *********************** **/
