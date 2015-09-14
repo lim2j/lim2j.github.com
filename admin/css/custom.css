@@ -353,6 +353,7 @@ body {
 
 body.login-body {
     background-image: none;
+    background-color: #fff;
     margin-top: 210px;
 }
 
