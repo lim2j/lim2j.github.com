@@ -6773,6 +6773,13 @@ ul.notifications {
     text-align: center;
     padding: 5px;
 }
+.table-position tbody td.priority {width: 10%;}
+.table-position tbody td.td-radius {width: 70%;}
+.table-position tbody td.td-check {width: 20%;}
+
+.table-position tbody td.td-check button {
+    margin: 0 2px;
+}
 
 .table-position tr td.td-radius span {
     background-color: #EEEEEE;
@@ -6781,6 +6788,7 @@ ul.notifications {
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     display: block;
+    height: 34px;
     width: 100%;
-    height: 100%;
+    vertical-align: middle;
 }

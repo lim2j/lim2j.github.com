@@ -243,181 +243,200 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
 
+                            <div class="x_title">
+                                <div class="pull-left pt10">
+                                    * 마우스로 드래그해서 원하는 위치에 놓으세요
+                                </div>
 
-                            <div class="x_content">
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#positionTableEdit"><i class="fa fa-plus"></i> 직위명 추가</button>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- x_title (e) -->
 
-                                <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="modal fade macro" id="positionTableEdit" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
 
-                                    <form class="form-horizontal form-label-left" id="positionTableEdit">
-
-                                        <span class="section section-bg01">신규 직위 등록</span>
-                                        <div class="row">
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title">직위명 추가</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal form-label-left" id="positionTableEdit">
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3 col-sm-3 col-xs-3">직위명</label>
-                                                    <div class="col-md-4 col-sm-4 col-xs-9">
+                                                    <div class="col-md-7 col-sm-7 col-xs-9">
                                                         <input type="text" class="form-control" id="positionTableAddText" placeholder="">
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                                                        <button type="button" class="btn btn-primary" id="positionTableAdd"><i class="fa fa-check"></i> 등록</button>
-                                                    </div>
-                                                </div>
-
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3 text-left">
+                                                <button type="submit" class="btn btn-primary" id="positionTableAdd" data-dismiss="modal"><i class="fa fa-check"></i> 확인</button>
+                                                <button type="reset" class="btn btn-success" data-dismiss="modal">취소</button>
                                             </div>
                                         </div>
 
-                                    </form>
-
+                                    </div>
                                 </div>
+                            </div>
 
 
-
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-
-                                    <div class="positionTable-box">
-                                        <div class="positionTable-txt">* 마우스로 드래그해서 원하는 위치에 놓으세요</div>
-                                        <table id="positionTable" class="table-position">
-                                        	<!--thead>
-                                            	<tr>
-                                            		<th><input type="checkbox" id="checkAll"/></th><th>우선 순위</th><th>직위</th>
-                                            	</tr>
-                                        	</thead-->
-                                        	<tbody>
-
-                                        		<tr id="1">
-                                        			<td class="priority">1</td>
-                                        			<td class="td-radius"><span>회장</span></td>
-                                                    <td class="td-check">
-                                                        <button type="button" class="btn btn-info"> 수정</button>
-                                                        <button type="button" class="btn btn-White btn-delete">삭제</button>
-                                                    </td>
-                                        		</tr>
-
-                                        		<tr id="2">
-                                        			<td class="priority">2</td>
-                                        			<td class="td-radius"><span>부사장</span></td>
-                                                    <td class="td-check">
-                                                        <button type="button" class="btn btn-info"> 수정</button>
-                                                        <button type="button" class="btn btn-White btn-delete">삭제</button>
-                                                    </td>
-                                        		</tr>
-
-                                        		<tr id="3">
-                                        			<td class="priority">3</td>
-                                        			<td class="td-radius"><span>상무</span></td>
-                                                    <td class="td-check">
-                                                        <button type="button" class="btn btn-info"> 수정</button>
-                                                        <button type="button" class="btn btn-White btn-delete">삭제</button>
-                                                    </td>
-                                        		</tr>
-
-                                        		<tr id="4">
-                                        			<td class="priority">4</td>
-                                        			<td class="td-radius"><span>이사</span></td>
-                                                    <td class="td-check">
-                                                        <button type="button" class="btn btn-info"> 수정</button>
-                                                        <button type="button" class="btn btn-White btn-delete">삭제</button>
-                                                    </td>
-                                        		</tr>
-
-                                        	</tbody>
-                                        </table>
+                            <div class="x_content">
 
 
-                                        <script type="text/javascript">
-                                        $(document).ready(function() {
-                                        	//Helper function to keep table row from collapsing when being sorted
-                                        	var fixHelperModified = function(e, ui) {
-                                                ui.children().each(function() {
-                                                    $(this).width($(this).width());
-                                                });
-                                                return ui;
+                                <div class="positionTable-box">
+                                    <div class="positionTable-txt"></div>
+                                    <table id="positionTable" class="table-position">
+                                    	<!--thead>
+                                        	<tr>
+                                        		<th><input type="checkbox" id="checkAll"/></th><th>우선 순위</th><th>직위</th>
+                                        	</tr>
+                                    	</thead-->
+                                    	<tbody>
+
+                                    		<tr id="1">
+                                    			<td class="priority">1</td>
+                                    			<td class="td-radius"><span>회장</span></td>
+                                                <td class="td-check">
+                                                    <button type="button" class="btn btn-info"> 수정</button>
+                                                    <button type="button" class="btn btn-White btn-delete">삭제</button>
+                                                </td>
+                                    		</tr>
+
+                                    		<tr id="2">
+                                    			<td class="priority">2</td>
+                                    			<td class="td-radius"><span>부사장</span></td>
+                                                <td class="td-check">
+                                                    <button type="button" class="btn btn-info"> 수정</button>
+                                                    <button type="button" class="btn btn-White btn-delete">삭제</button>
+                                                </td>
+                                    		</tr>
+
+                                    		<tr id="3">
+                                    			<td class="priority">3</td>
+                                    			<td class="td-radius"><span>상무</span></td>
+                                                <td class="td-check">
+                                                    <button type="button" class="btn btn-info"> 수정</button>
+                                                    <button type="button" class="btn btn-White btn-delete">삭제</button>
+                                                </td>
+                                    		</tr>
+
+                                    		<tr id="4">
+                                    			<td class="priority">4</td>
+                                    			<td class="td-radius"><span>이사</span></td>
+                                                <td class="td-check">
+                                                    <button type="button" class="btn btn-info"> 수정</button>
+                                                    <button type="button" class="btn btn-White btn-delete">삭제</button>
+                                                </td>
+                                    		</tr>
+
+                                    	</tbody>
+                                    </table>
+
+
+                                    <script type="text/javascript">
+                                    $(document).ready(function() {
+                                    	//Helper function to keep table row from collapsing when being sorted
+                                    	var fixHelperModified = function(e, ui) {
+                                            ui.children().each(function() {
+                                                $(this).width($(this).width());
+                                            });
+                                            return ui;
+                                        }
+
+                                    	//Make diagnosis table sortable
+                                    	$("#positionTable tbody").sortable({
+                                            item: "> td.td-radius",
+                                            //cancel: ".td-check,.priority",
+                                            axis: "y",
+                                            containment: "parent",
+                                            tolerance: "pointer",
+                                        	helper: fixHelperModified,
+                                            sort: function (event, ui) {
+                                                ui.helper.css({ 'top': ui.position.top + $(window).scrollTop() + 'px' });
+                                            },
+                                    		stop: function(event,ui) {renumber_table('#positionTable')}
+                                    	}).disableSelection();
+
+
+                                        $('#positionTableEdit').on('click','#positionTableAdd',function() {
+
+                                            var index = $('#positionTable tbody').find("tr").length +1;
+                                            var text = $("#positionTableAddText").val();
+
+                                            $('#positionTable > tbody:last').append(
+                                                "<tr id=" + index + ">"
+                                                +"	<td class='priority'>" + index + "</td>"
+                                                +"	<td class='td-radius'><span>" + text + "</span></td>"
+                                                +"	<td class='td-check'>"
+                                                +"       <button type='button' class='btn btn-info'>수정</button>"
+                                                +"       <button type='button' class='btn btn-White btn-delete'>삭제</button>"
+                                                +"  </td>"
+                                                +"</tr>"
+                                             );
+                                        });
+
+                                        //Delete button in table rows
+                                        $('#positionTable').on('click','.btn-delete',function() {
+                                            tableID = '#' + $(this).closest('table').attr('id');
+                                            r = confirm('삭제 하시겠습니까?');
+                                            if(r) {
+                                                $(this).closest('tr').remove();
+                                                renumber_table(tableID);
                                             }
+                                        });
 
-                                        	//Make diagnosis table sortable
-                                        	$("#positionTable tbody").sortable({
-                                                item: "> td.td-radius",
-                                                //cancel: ".td-check,.priority",
-                                                axis: "y",
-                                                containment: "parent",
-                                                tolerance: "pointer",
-                                            	helper: fixHelperModified,
-                                                sort: function (event, ui) {
-                                                    ui.helper.css({ 'top': ui.position.top + $(window).scrollTop() + 'px' });
-                                                },
-                                        		stop: function(event,ui) {renumber_table('#positionTable')}
-                                        	}).disableSelection();
+                                        //add button in table rows
+                                        $('#positionTable').on('click','.btn-info',function() {
+                                            $(this).removeClass("btn-info").addClass("btn-primary").text("적용");
 
+                                            var thisTd = $(this).closest('tr').find(".td-radius");
+                                            var thisTdVal = thisTd.find("span").text()
 
-                                            $('#positionTableEdit').on('click','#positionTableAdd',function() {
-
-                                                var index = $('#positionTable tbody').find("tr").length +1;
-                                                var text = $("#positionTableAddText").val();
-
-                                                $('#positionTable > tbody:last').append(
-                                                    "<tr id=" + index + ">"
-                                                    +"	<td class='priority'>" + index + "</td>"
-                                                    +"	<td class='td-radius'>" + text + "</td>"
-                                                    +"	<td class='td-check'>"
-                                                    +"       <button type='button' class='btn btn-info'>수정</button>"
-                                                    +"       <button type='button' class='btn btn-White btn-delete'>삭제</button>"
-                                                    +"  </td>"
-                                                    +"</tr>"
-                                                 );
-                                            });
-
-                                            //Delete button in table rows
-                                            $('#positionTable').on('click','.btn-delete',function() {
-                                                tableID = '#' + $(this).closest('table').attr('id');
-                                                r = confirm('삭제 하시겠습니까?');
-                                                if(r) {
-                                                    $(this).closest('tr').remove();
-                                                    renumber_table(tableID);
-                                                }
-                                            });
-
-                                            $('#positionTable').on('click','.btn-info',function() {
-
-                                                $(this).removeClass("btn-info").addClass("btn-primary").text("적용");
-
-                                                var thisTd = $(this).closest('tr').find(".td-radius");
-                                                var thisTdVal = thisTd.find("span").text()
-
-                                                thisTd.find("span").hide();
-                                                thisTd.append("<input type='text' class='form-control' value='" + thisTdVal + "'>")
-
-                                            });
-
-                                            $('#positionTable').on('click','.btn-primary',function() {
-
-                                                $(this).removeClass("btn-primary").addClass("btn-info").text("수정");
-
-                                                var thisTd = $(this).closest('tr').find(".td-radius");
-                                                var thisTdVal = thisTd.find("input").val()
-
-                                                thisTd.find("input").remove();
-                                                thisTd.find("span").text(thisTdVal).show();
-
-
-                                            });
+                                            $(this).closest('tr').find(".td-check").find(".btn-delete").before("<button type='button' class='btn btn-success'>취소</button>")
+                                            thisTd.find("span").hide();
+                                            thisTd.append("<input type='text' class='form-control' value='" + thisTdVal + "'>")
 
                                         });
 
-                                        //Renumber table rows
-                                        function renumber_table(tableID) {
-                                        	$(tableID + " tr").each(function() {
-                                        		count = $(this).parent().children().index($(this)) + 1;
-                                        		$(this).find('.priority').html(count);
-                                        	});
-                                        }
+                                        //edit button in table rows
+                                        $('#positionTable').on('click','.btn-primary',function() {
+                                            $(this).removeClass("btn-primary").addClass("btn-info").text("수정");
+
+                                            var thisTd = $(this).closest('tr').find(".td-radius");
+                                            var thisTdVal = thisTd.find("input").val()
+
+                                            $(this).closest('tr').find(".td-check").find(".btn-success").remove();
+                                            thisTd.find("input").remove();
+                                            thisTd.find("span").text(thisTdVal).show();
+                                        });
+
+                                        $('#positionTable').on('click','.btn-success',function() {
+                                            $(this).removeClass("btn-success").addClass("btn-info").text("수정");
+
+                                            var thisTd = $(this).closest('tr').find(".td-radius");
+                                            $(this).closest('tr').find(".td-check").find(".btn-primary").remove();
+
+                                            thisTd.find("input").remove();
+                                            thisTd.find("span").show();
+                                        });
+
+                                    });
+
+                                    //Renumber table rows
+                                    function renumber_table(tableID) {
+                                    	$(tableID + " tr").each(function() {
+                                    		count = $(this).parent().children().index($(this)) + 1;
+                                    		$(this).find('.priority').html(count);
+                                    	});
+                                    }
 
 
-                                        </script>
-                                    </div>
-
+                                    </script>
                                 </div>
 
                             </div>
