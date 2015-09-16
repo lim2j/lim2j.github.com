@@ -1200,6 +1200,7 @@ h2 {
     padding: 0 30px 15px;
     position: relative;
     width: 100%;
+    min-height:600px;
     float: left;
     clear: both;
     margin: 0;
