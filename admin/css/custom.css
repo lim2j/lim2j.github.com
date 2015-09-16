@@ -6792,4 +6792,5 @@ ul.notifications {
     height: 34px;
     width: 100%;
     vertical-align: middle;
+    cursor: move;
 }
