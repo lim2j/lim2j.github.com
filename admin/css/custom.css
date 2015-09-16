@@ -1143,7 +1143,7 @@ h2 {
 .x_panel {
     position: relative;
     width: 100%;
-    min-height: 400px;
+    /* min-height: 400px;*/
     margin-bottom: 30px;
     padding: 10px 0px;
     display: inline-block;
@@ -6122,7 +6122,7 @@ header{width:100%;}
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url("../../assets/img/icons.png");
+  /* background-image: url("../../assets/img/icons.png"); */
   vertical-align: middle;
 }
 
