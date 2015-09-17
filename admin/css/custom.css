@@ -1638,7 +1638,7 @@ h3.degrees {
   border-bottom-left-radius: 5px;
   position: absolute;
   zoom:1;
-  opacity':0;
+  opacity:0;
 }
 .weather-widget #app {
   margin-top: 25px;
@@ -1706,14 +1706,14 @@ h3.degrees {
 .weather-widget .header-row .temp {
   font-size: 2em;
 }
-.weather-widget.days {
+.weather-widget .days {
     width: 70%;
 }
-.weather-widget.days:hover > div {
+.weather-widget .days:hover > div {
   -webkit-filter: blur(3px);
           filter: blur(3px);
 }
-.weather-widget.days > div {
+.weather-widget .days > div {
   -webkit-animation: fade 0.45s 1 ease-in;
           animation: fade 0.45s 1 ease-in;
   -webkit-animation-fill-mode: forwards;
@@ -1731,7 +1731,7 @@ h3.degrees {
 .weather-widget.morning .days > div {
   box-shadow: inset 0px 0px 0px 1px rgba(233, 216, 166, 0.3);
 }
-.weather-widget.days > div:hover {
+.weather-widget .days > div:hover {
   background-color: rgba(255, 255, 255, 0.15);
   -webkit-transform: scale(1.1) translateY(10px);
       -ms-transform: scale(1.1) translateY(10px);
@@ -1739,10 +1739,10 @@ h3.degrees {
   -webkit-filter: blur(0);
           filter: blur(0);
 }
-.weather-widget.days > div:hover > .pop {
+.weather-widget .days > div:hover > .pop {
   opacity: 1;
 }
-.weather-widget.days > div .pop {
+.weather-widget .days > div .pop {
   font-size: 1.2em;
   opacity: 0;
   top: 105px;
@@ -1758,7 +1758,7 @@ h3.degrees {
   -webkit-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out;
 }
-.weather-widget.days > div .pop:after {
+.weather-widget .days > div .pop:after {
   content: '';
   position: absolute;
   border-style: solid;
@@ -1770,12 +1770,12 @@ h3.degrees {
   top: -5px;
   left: 49px;
 }
-.weather-widget.days > div canvas {
+.weather-widget .days > div canvas {
   z-index: 0 !important;
   margin: 10px 0 20px 0;
   padding: 10px;
 }
-.weather-widget.days > div strong {
+.weather-widget .days > div strong {
   display: block;
   padding: 10px 0 10px 0;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1785,7 +1785,7 @@ h3.degrees {
 .weather-widget.morning .days > div strong {
   border-top: 1px solid #e9d8a6;
 }
-.weather-widget.days > div .temp {
+.weather-widget .days > div .temp {
   font-size: 1.2em;
 }
 /* *********  //weather styling  ******************************* */
