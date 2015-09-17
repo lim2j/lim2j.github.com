@@ -719,22 +719,25 @@
 
                         <div id="weather-widget">
 
-                            <select id="select-time">
+                            <!-- select id="select-time">
                                 <option value="real">Use Real Time</option>
                                 <option value="morning">Morning</option>
                                 <option value="day">Day</option>
                                 <option value="night">Night</option>
-                            </select>
+                            </select -->
                             <div id="notify"><p>Sorry :( Cant get Positiondata from device - using IP based Position tracking</p></div>
 
                             <div id="center">
                                 <div id="app">
                                     <div class="header-row doflex fxcenter">
+
                                         <h1>Good Morning</h1>
                                         <h2>Looking out of the window ...</h2>
+
                                         <div class="city"></div>
-                                        <div class="weather"><canvas id="icon_MAIN" width="80" height="80"></canvas></div>
                                         <div class="temp" id="temp_MAIN"></div>
+
+                                        <div class="weather"><canvas id="icon_MAIN" width="80" height="80"></canvas></div>
                                     </div>
                                     <div class="days doflex fxcenter" id="days">
                                     </div>
@@ -900,8 +903,8 @@
                                 night : 'Good Evening!'
                               }
 
-                              $('.weather-widget').addClass(dt);
-                              $('.weather-widget h1').text(headlines[dt]);
+                              $('#weather-widget').addClass(dt);
+                              $('#weather-widget h1').text(headlines[dt]);
 
                               function init(pos) {
                                 var promise = weatherService.fetchData(pos);

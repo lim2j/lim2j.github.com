@@ -1625,7 +1625,6 @@ h3.degrees {
           animation-fill-mode: forwards;
 }
 #weather-widget #center {
-    padding: 0 20px 15px;
   margin: auto;
 }
 
@@ -1635,8 +1634,6 @@ h3.degrees {
   font-weight: bold;
   color: black;
   padding: 10px;
-  width: 680px;
-  height: 50px;
   background-color: white;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -1645,7 +1642,6 @@ h3.degrees {
   opacity:0;
 }
 #weather-widget #app {
-  margin-top: 25px;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
@@ -1696,6 +1692,8 @@ h3.degrees {
 }
 #weather-widget h1 {
   font-weight: normal;
+  display: none;
+  font-size: 26px;
 }
 #weather-widget .header-row {
   padding: 10px;
@@ -1713,6 +1711,7 @@ h3.degrees {
 }
 #weather-widget .days {
     width: 70%;
+    height: 192px;
 }
 #weather-widget .days:hover > div {
   -webkit-filter: blur(3px);
