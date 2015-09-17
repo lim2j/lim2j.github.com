@@ -1199,8 +1199,7 @@ h2 {
 .x_content {
     padding: 0 30px 15px;
     position: relative;
-    width: 100%;
-    min-height:600px;
+    width: 100%;    
     float: left;
     clear: both;
     margin: 0;
@@ -1459,6 +1458,337 @@ h3.degrees {
 .weather .row {
     margin-bottom: 0
 }
+/* *********  weather styling  ******************************* */
+.weather-widget {
+    position: relative;
+}
+@-webkit-keyframes rot {
+  0% {
+    tansform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.7) rotate(90deg);
+            transform: scale(0.7) rotate(90deg);
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(180deg);
+            transform: scale(1) rotate(180deg);
+  }
+}
+@keyframes rot {
+  0% {
+    tansform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.7) rotate(90deg);
+            transform: scale(0.7) rotate(90deg);
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(180deg);
+            transform: scale(1) rotate(180deg);
+  }
+}
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeUp {
+  0% {
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#days > div:nth-child(0) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+#days > div:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+#days > div:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+#days > div:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+#days > div:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+#days > div:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+#days > div:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+#days > div:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+body.morning {
+  background: -webkit-radial-gradient(center top, circle farthest-corner, #a07e15, #ac661c 80%);
+  background: radial-gradient(circle farthest-corner at center top, #a07e15, #ac661c 80%);
+  opacity: 1;
+}
+body.day {
+  background: -webkit-radial-gradient(circle farthest-corner at center top, #1d93ad, #0b738c 80%);
+  background: radial-gradient(circle farthest-corner at center top, #1d93ad, #0b738c 80%);
+  opacity: 1;
+}
+body.night {
+  background: -webkit-radial-gradient(center top, circle farthest-corner, #220067, #000a2f 80%);
+  background: radial-gradient(circle farthest-corner at center top, #220067, #000a2f 80%);
+  opacity: 1;
+}
+#app.show > .header-row > .city,
+#app.show > .header-row > .temp {
+  -webkit-animation: fadeUp 0.4s ease-out;
+          animation: fadeUp 0.4s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#icon_MAIN {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+#app.show > .header-row > .weather > #icon_MAIN {
+  -webkit-animation: scale 0.7s ease-out;
+          animation: scale 0.7s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#center {
+  width: 550px;
+  height: 600px;
+  margin: auto;
+}
+
+#notify {
+  font-family: 'Arial';
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  padding: 10px;
+  width: 680px;
+  height: 50px;
+  background-color: white;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+}
+#app {
+  margin-top: 25px;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  border-top: 1px solid #a6cfd8;
+  border-left: 1px solid #a6cfd8;
+  border-right: 1px solid #83bcc8;
+  border-bottom: 1px solid #83bcc8;
+  border-radius: 4px;
+  width: 550px;
+  height: 300px;
+  background: rgba(141, 189, 255, 0.4);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(200, 200, 200, 0.3);
+}
+#app.show {
+  -webkit-animation: scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          animation: scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.morning #app {
+  border-top: 1px solid #e9d8a6;
+  border-left: 1px solid #e9d8a6;
+  border-right: 1px solid #e4d092;
+  border-bottom: 1px solid #e4d092;
+}
+.doflex {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+.fxcenter {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+h1 {
+  font-weight: normal;
+}
+.header-row {
+  height: 120px;
+  width: 100%;
+}
+.header-row div {
+  width: 33%;
+  text-align: center;
+}
+.header-row .city {
+  font-size: 2em;
+}
+.header-row .temp {
+  font-size: 2.5em;
+}
+.days:hover > div {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+.days > div {
+  -webkit-animation: fade 0.45s 1 ease-in;
+          animation: fade 0.45s 1 ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  box-shadow: inset 0px 0px 0px 1px rgba(166, 207, 216, 0.3);
+  width: 14.28571429%;
+  text-align: center;
+  height: 180px;
+  opacity: 0;
+  background-color: transparent;
+  -webkit-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
+  position: relative;
+}
+.morning .days > div {
+  box-shadow: inset 0px 0px 0px 1px rgba(233, 216, 166, 0.3);
+}
+.days > div:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-transform: scale(1.1) translateY(10px);
+      -ms-transform: scale(1.1) translateY(10px);
+          transform: scale(1.1) translateY(10px);
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+.days > div:hover > .pop {
+  opacity: 1;
+}
+.days > div .pop {
+  font-size: 1.2em;
+  opacity: 0;
+  top: 105px;
+  left: -18px;
+  color: black;
+  position: absolute;
+  padding: 5px 0 10px 0;
+  text-align: center;
+  min-width: 115px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  z-index: 666;
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+.days > div .pop:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 8px 8px;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -5px;
+  left: 49px;
+}
+.days > div canvas {
+  z-index: 0 !important;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+}
+.days > div strong {
+  display: block;
+  padding: 10px 0 10px 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-family: 'Montserrat';
+  border-top: 1px solid #a6cfd8;
+}
+.morning .days > div strong {
+  border-top: 1px solid #e9d8a6;
+}
+.days > div .temp {
+  font-size: 1.2em;
+}
+/* *********  //weather styling  ******************************* */
 /* *********  tables styling  ******************************* */
 .table-contents-view {
     padding: 0 30px;
