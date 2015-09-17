@@ -718,9 +718,7 @@
                     <div class="col-md-8 col-sm-8 col-xs-12">
                         <div class="x_panel">
 
-                            <div class="weather-widget">
-
-
+                            <div id="weather-widget">
 
                                 <select id="select-time">
                                     <option value="real">Use Real Time</option>
@@ -731,10 +729,10 @@
                                 <div id="notify"><p>Sorry :( Cant get Positiondata from device - using IP based Position tracking</p></div>
 
                                 <div id="center">
-                                    <h1>Good Morning</h1>
-                                    <h2>Looking out of the window ...</h2>
                                     <div id="app">
                                         <div class="header-row doflex fxcenter">
+                                            <h1>Good Morning</h1>
+                                            <h2>Looking out of the window ...</h2>
                                             <div class="city"></div>
                                             <div class="weather"><canvas id="icon_MAIN" width="80" height="80"></canvas></div>
                                             <div class="temp" id="temp_MAIN"></div>
@@ -926,7 +924,7 @@
                                           translateIcon(weekdays[i], json.list[i].weather[0].description);
                                         } else {
                                           $('#temp_MAIN').text(json.list[i].temp.max + '°');
-                                          $('h2').text('Weather today looks like '+json.list[i].weather[0].description);
+                                          $('h2').text('Today looks like '+json.list[i].weather[0].description);
                                           translateIcon(weekdays[i], json.list[i].weather[0].description, true);
                                         }
                                       }
