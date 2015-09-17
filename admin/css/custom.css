@@ -1199,7 +1199,7 @@ h2 {
 .x_content {
     padding: 0 30px 15px;
     position: relative;
-    width: 100%;    
+    width: 100%;
     float: left;
     clear: both;
     margin: 0;
@@ -1638,6 +1638,7 @@ body.night {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   position: absolute;
+  filter:alpha(opacity=60);zoom:1;opacity':0.6;
 }
 #app {
   margin-top: 25px;
