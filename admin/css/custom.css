@@ -1464,19 +1464,7 @@ h3.degrees {
     width: 100%;
     /* min-height: 400px; */
     margin-bottom: 30px;
-    padding: 10px 0px;
     display: inline-block;
-    border: 1px solid #cecece;
-    border-radius: 4px;
-    -webkit-column-break-inside: avoid;
-    -moz-column-break-inside: avoid;
-    column-break-inside: avoid;
-    opacity: 1;
-    -moz-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    -webkit-transition: all .2s ease;
-    -ms-transition: all .2s ease;
-    transition: all .2s ease;
 }
 @-webkit-keyframes rot {
   0% {
@@ -1712,6 +1700,7 @@ h3.degrees {
 #weather-widget .header-row {
   padding: 10px;
   width: 30%;
+  float: left;
 }
 #weather-widget .header-row div {
   text-align: center;
