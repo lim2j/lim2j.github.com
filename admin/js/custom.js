@@ -141,12 +141,7 @@ $('.bulk_action input#check-all').on('ifUnchecked', function () {
 });
 
     /** ******  /table  *********************** **/
-    /** ******    *********************** **/
-    /** ******    *********************** **/
-    /** ******    *********************** **/
-    /** ******    *********************** **/
-    /** ******    *********************** **/
-    /** ******    *********************** **/
+
     /** ******  Accordion  *********************** **/
 jQuery(function ($) {
     $('[data-toggle="collapse"]').on('click', function() {
@@ -189,3 +184,10 @@ $(document).ready(function () {
 
 });
 /** ******  /scrollview  *********************** **/
+/** ******  /slider-button  *********************** **/
+$('.slider-button').toggle(function(){
+    $(this).addClass('on').html('YES').parent().next('input[type="checkbox"]').attr('checked', 'checked');
+},function(){
+    $(this).removeClass('on').html('NO').parent().next('input[type="checkbox"]').removeAttr('checked');
+});
+/** ******  /slider-button  *********************** **/
