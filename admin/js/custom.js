@@ -188,10 +188,10 @@ $(document).ready(function () {
 		var input_val = obj.children('input').val(); //cache the element where we must set the value
 
 		/* Check selected */
-		if( 0 == input_val ){
+		if( "off" == input_val ){
 			dsb.addClass('selected');
 		}
-		else if( 1 == input_val ){
+		else if( "on" == input_val ){
 			enb.addClass('selected');
 		}
 
@@ -199,14 +199,14 @@ $(document).ready(function () {
 		enb.on('click', function(){
 			$(dsb).removeClass('selected'); //remove "selected" from other elements in this object class(OFF)
 			$(this).addClass('selected'); //add "selected" to the element which was just clicked in this object class(ON)
-			$(input).val(1).change(); //Finally change the value to 1
+			$(input).val("on").change(); //Finally change the value to 1
 		});
 
 		//Action on user's click(OFF)
 		dsb.on('click', function(){
 			$(enb).removeClass('selected'); //remove "selected" from other elements in this object class(ON)
 			$(this).addClass('selected'); //add "selected" to the element which was just clicked in this object class(OFF)
-			$(input).val(0).change(); // //Finally change the value to 0
+			$(input).val("off").change(); // //Finally change the value to 0
 		});
 
 	});
