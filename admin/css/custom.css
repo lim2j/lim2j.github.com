@@ -1021,6 +1021,7 @@ a.btn-danger {
 }
 .monitor-left-graph {
     color: #d1d1d2;
+    padding: 10px 0;
 }
 
 .monitor-left-graph h3 {
@@ -1065,38 +1066,100 @@ a.btn-danger {
   margin-right : 10px;
 }
 
-
+.monitor-right {
+    padding: 0;
+}
 .monitor-right-top {
     background-color: #3f4959;
+    padding: 20px;
+}
+.monitor-right-top h3 {
+    margin: 0 0 20px;
+    color: #fff;
+    font-size: 16px;
 }
 
-.monitor-right-box .col-md-4 {
+.monitor-right-box .monitor-right-box1,
+.monitor-right-box .monitor-right-box2,
+.monitor-right-box .monitor-right-box3,
+.monitor-right-box .monitor-right-box4,
+.monitor-right-box .monitor-right-box5,
+.monitor-right-box .monitor-right-box6 {
+    margin-bottom: 10px;
     background-color: #646e7f;
     padding: 18px;
+    border-radius: 5px;
     color: #fff;
+    overflow: hidden;
 }
 .monitor-right-box .mon-title {
     font-size: 17px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
-.monitor-right-box span.fa {
+body.nav-sm .monitor-right-box span.fa {
     float: left;
     font-size: 18px;
     text-align: center;
     width: 33px;
     height: 33px;
-    display: inline-block;
+    display: block !important;
     border-radius: 50%;
     padding: 0px;
     line-height: 35px;
+    margin-top: 5px;
+}
+.monitor-right-box1 span.fa {
+    background-color: #6894d9;
+}
+.monitor-right-box2 span.fa {
+    background-color: #297cc2;
+}
+.monitor-right-box3 span.fa {
+    background-color: #6ec7da;
+}
+.monitor-right-box4 span.fa {
+    background-color: #4ebc82;
+}
+.monitor-right-box5 span.fa {
+    background-color: #b465e2;
+}
+.monitor-right-box6 span.fa {
+    background-color: #ffc556;
 }
 .monitor-right-box .mon-number {
     float: right;
     font-size: 50px;
     font-weight: bold;
+    line-height: 50px;
 }
 
-
+.monitor-right-list {
+    background-color: #e6e6e6;
+}
+.monitor-right-list ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 30px 0 30px;
+}
+.monitor-right-list ul li {
+    float: left;
+    width: 25%;
+    border-left: 1px dashed #bbb;
+    text-align: center;
+}
+.monitor-right-list ul li:first-child {
+    border-left: 0 none;
+}
+.monitor-right-list ul li .rl-text {
+    font-size: 16px;
+    color: #494949;
+    font-weight: bold;
+}
+.monitor-right-list ul li .rl-number {
+    font-size: 45px;
+    color: #494949;
+    font-weight: bold;
+}
 
 /* Main block */
 .switch_options{
@@ -1823,11 +1886,6 @@ h3.degrees {
       -ms-transform: scale(0);
           transform: scale(0);
   opacity: 0;
-  border-top: 1px solid #a6cfd8;
-  border-left: 1px solid #a6cfd8;
-  border-right: 1px solid #83bcc8;
-  border-bottom: 1px solid #83bcc8;
-  border-radius: 4px;
   background: rgba(141, 189, 255, 0.4);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 10px 0px rgba(200, 200, 200, 0.3);

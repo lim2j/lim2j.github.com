@@ -105,7 +105,7 @@
                                     </select>
                                     sec.
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-circle2 submit">적용</button>
                                     <button type="button" class="btn btn-circle3"><i class="fa fa-repeat"></i></button>
@@ -139,14 +139,14 @@
                                         <input type="text" class="form-control" name="" value="" placeholder="지역명 또는 고객사명">
                                     </div>
                                 </div>
-                                
+
                                 <button type="submit" class="btn btn-gray">검색</button>
                             </form>
-                            
+
                         </div>
-                        
+
                         <div class="monitor-left-map">
-                            
+
                             <div id="googleMap" style="height:424px"></div>
 
                             <script src="js/jquery-geolocation-edit-master/jquery.geolocation.edit.js"></script>
@@ -163,62 +163,192 @@
                                 });
                             });
                             </script>
-                            
+
                         </div>
-                        
+
                         <div class="monitor-left-graph">
-                           
+
                            <div class="row">
                                <div class="col-md-6 col-sm-6 col-xs-12" id="doughnutChart1">
-                                  
+
                                   <div class="col-md-4 col-sm-4 col-xs-12">
                                       <h3>: 근태태현황</h3>
                                       <div class="my-doughnut-legend"></div>
                                   </div>
-                                  
+
                                   <div class="col-md-7 col-sm-7 col-xs-12">
                                       <canvas class="canvas_doughnut" width="200" height="200"></canvas>
                                   </div>
-                                   
+
                                </div>
-                               
+
                                <div class="col-md-6 col-sm-6 col-xs-12" id="doughnutChart2">
-                                   
+
                                   <div class="col-md-4 col-sm-4 col-xs-12">
                                       <h3>: 스케줄현황</h3>
                                       <div class="my-doughnut-legend"></div>
                                   </div>
-                                  
+
                                   <div class="col-md-7 col-sm-7 col-xs-12">
                                       <canvas class="canvas_doughnut" width="200" height="200"></canvas>
                                   </div>
-                                  
+
                                </div>
                            </div>
-                            
+
                         </div>
 
                     </div>
                     <!-- //monitor-left -->
-                    
+
                     <div class="col-md-5 col-sm-5 col-xs-12 monitor-right">
-                    
+
                         <div class="monitor-right-top">
                            <h3>: 기술연구소 > 기술개발팀</h3>
-                           
+
                            <div class="row monitor-right-box">
-                               <div class="col-md-4 col-sm-4 col-xs-12 monitor-right-box1">
-                                   <div class="mon-title">총원</div>
-                                   <span class="fa"></span>
-                                   <div class="mon-number">50</div>
+                               <div class="col-md-4 col-sm-4 col-xs-12">
+                                   <div class="monitor-right-box1">
+                                       <div class="mon-title">총원</div>
+                                       <span class="fa fa-group"></span>
+                                       <div class="mon-number">50</div>
+                                   </div>
                                </div>
-                               
+
+                               <div class="col-md-4 col-sm-4 col-xs-12">
+                                   <div class="monitor-right-box2">
+                                       <div class="mon-title">내근</div>
+                                       <span class="fa fa-desktop"></span>
+                                       <div class="mon-number">50</div>
+                                   </div>
+                               </div>
+
+                               <div class="col-md-4 col-sm-4 col-xs-12">
+                                   <div class="monitor-right-box3">
+                                       <div class="mon-title">외근</div>
+                                       <span class="fa fa-briefcase"></span>
+                                       <div class="mon-number">50</div>
+                                   </div>
+                               </div>
+
+                               <div class="col-md-4 col-sm-4 col-xs-12">
+                                   <div class="monitor-right-box4">
+                                       <div class="mon-title">이동</div>
+                                       <span class="fa fa-arrows"></span>
+                                       <div class="mon-number">50</div>
+                                   </div>
+                               </div>
+
+                               <div class="col-md-4 col-sm-4 col-xs-12">
+                                   <div class="monitor-right-box5">
+                                       <div class="mon-title">퇴근</div>
+                                       <span class="fa fa-home"></span>
+                                       <div class="mon-number">50</div>
+                                   </div>
+                               </div>
+
+                               <div class="col-md-4 col-sm-4 col-xs-12">
+                                   <div class="monitor-right-box6">
+                                       <div class="mon-title">휴가</div>
+                                       <span class="fa fa-coffee"></span>
+                                       <div class="mon-number">50</div>
+                                   </div>
+                               </div>
+
                            </div>
-                            
+
                         </div>
-                        
-                        <div>
-                            
+
+
+                        <div class="monitor-right-list">
+
+                            <ul>
+                                <li>
+                                    <div class="rl-text">총스케줄</div>
+                                    <div class="rl-number">10</div>
+                                </li>
+                                <li>
+                                    <div class="rl-text">완료</div>
+                                    <div class="rl-number">8</div>
+                                </li>
+                                <li>
+                                    <div class="rl-text">예정</div>
+                                    <div class="rl-number">2</div>
+                                </li>
+                                <li>
+                                    <div class="rl-text">%</div>
+                                    <div class="rl-number">80</div>
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+                        <div class="monitor-right-table">
+
+                            <div class="v-scroll" style="height:248px">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>이름</th>
+                                            <th>직위</th>
+                                            <th>상태</th>
+                                            <th>유지시간</th>
+                                            <th>예정</th>
+                                            <th>완료</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="text-center">1</th>
+                                            <td class="text-center">김정지</td>
+                                            <td class="text-center">이사</td>
+                                            <td class="text-center">내근</td>
+                                            <td class="text-center">0:30</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-center">1</th>
+                                            <td class="text-center">김정지</td>
+                                            <td class="text-center">이사</td>
+                                            <td class="text-center">내근</td>
+                                            <td class="text-center">0:30</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <th scope="row" class="text-center">1</th>
+                                            <td class="text-center">김정지</td>
+                                            <td class="text-center">이사</td>
+                                            <td class="text-center blue">이동중</td>
+                                            <td class="text-center">0:30</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-center">1</th>
+                                            <td class="text-center">김정지</td>
+                                            <td class="text-center">이사</td>
+                                            <td class="text-center green">외근</td>
+                                            <td class="text-center">0:30</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-center">1</th>
+                                            <td class="text-center">김정지</td>
+                                            <td class="text-center">이사</td>
+                                            <td class="text-center red">미접속</td>
+                                            <td class="text-center">0:30</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
                         </div>
 
                     </div>
@@ -289,9 +419,9 @@
                 color: "#ffc556",
                 highlight: "#FFC870",
                 label: "휴가"
-            } 
+            }
         ]
-        
+
         var doughnutChartData2 = [
             {
                 value: 300,
@@ -312,7 +442,7 @@
                 label: "미방문"
             },
         ]
-        
+
         var doughnutChartOption = {
             responsive : true,
             segmentShowStroke: false,
@@ -321,16 +451,16 @@
             percentageInnerCutout: 50,
             tooltipTemplate: "<%= value %>%"
         }
-        
+
         var ctx1 = $("#doughnutChart1 .canvas_doughnut").get(0).getContext("2d");
         var myChart1 = new Chart(ctx1).Doughnut(doughnutChartData1, doughnutChartOption);
         $('#doughnutChart1 .my-doughnut-legend').get(0).innerHTML = myChart1.generateLegend();
-        
+
         var ctx2 = $("#doughnutChart2 .canvas_doughnut").get(0).getContext("2d");
         var myChart2 = new Chart(ctx2).Doughnut(doughnutChartData2, doughnutChartOption);
         $('#doughnutChart2 .my-doughnut-legend').get(0).innerHTML = myChart2.generateLegend();
 
-       
+
     </script>
 
 
