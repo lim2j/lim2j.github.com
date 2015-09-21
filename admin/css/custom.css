@@ -3061,6 +3061,14 @@ a.star {
     margin: 20px 0;
 }
 
+.ln_solid3 {
+    border-top: 1px solid #e5e5e5;
+    color: #ffffff;
+    background-color: #ffffff;
+    height: 1px;
+    margin: 15px 0;
+}
+
 .ln_dashed {
     border-top: 1px dashed #b5b5b5;
     height: 1px;
@@ -6378,4 +6386,56 @@ ul.notifications {
 }
 .costomer-check-list li.select .check-text {
     color: #555;
+}
+
+.role-modal-table tbody>tr:first-child>td {
+    border-top: 0 none;
+}
+.role-modal-table .fa {color: #ffcd1f;}
+
+.btn-ic-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.btn-ic-list li {
+    margin: 0;
+    padding: 0 0 0 10px;
+    float: left;
+}
+.btn-ic {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 3px 0;
+    width: 28px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    color: #fff;
+}
+.btn-ic-rw {background-color: #0080c3;}
+.btn-ic-r {background-color: #00c393;}
+.btn-ic-re {background-color: #626262 ;}
+
+.role-drop-left {
+    border: 1px solid #f5f5f5;
+    padding: 20px;
+}
+.role-drop-right {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.role-drop-table {
+    border-top: 1px dashed #c2c2c2;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.role-drop-table table {
+    width: 100%;
 }
