@@ -6106,6 +6106,28 @@ ul.notifications {
 .pt10 {
     padding-top: 10px;
 }
+.pb14 {
+    padding-bottom: 14px;
+}
+.nbsp-box {
+    border-right: 1px solid #ddd;
+    display: block;
+    width: 25px;
+    height: 50px;
+    float: left;
+}
+.department-name {
+    display: block;
+    padding-left: 15px;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    float: left;
+}
+
+.table-bordered-td td {
+    padding: 0 !important;
+}
 
 .v-scroll {
     overflow-y: scroll;
