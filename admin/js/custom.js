@@ -7,6 +7,22 @@
 /** ******  left menu  *********************** **/
 $(function () {
 
+    if($(window).width() < "1280"){
+        if ($('body').hasClass('nav-md')) {
+            $('body').removeClass('nav-md');
+            $('body').addClass('nav-sm');
+            $('.left_col').removeClass('scroll-view');
+            $('.left_col').removeAttr('style');
+            $('.sidebar-footer').hide();
+
+            if ($('#sidebar-menu li').hasClass('active')) {
+                $('#sidebar-menu li.active').addClass('active-sm');
+                $('#sidebar-menu li.active').removeClass('active');
+            }
+
+        }
+    }
+
     $(window).resize(function(){
 
        if($(window).width() < "1280"){
