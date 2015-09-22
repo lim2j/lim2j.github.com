@@ -12,8 +12,12 @@
     <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styling plus plugins -->
     <link href="css/custom.css" rel="stylesheet">
+    <link href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet">
 
     <script src="js/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
     <!--[if lt IE 9]>
         <script src="../assets/js/ie8-responsive-file-warning.js"></script>
         <![endif]-->
@@ -266,7 +270,7 @@
                                         1
                                     </div>
                                     <div class="role-drag-list-cont">
-                                        <h4 id="999" class="draggable ui-draggable ui-draggable-handle isDrag">LADM</h4>
+                                        <h4 id="999">LADM</h4>
                                         <input type="hidden" name="id" value="999">
                                         <input type="hidden" name="prev_priority" value="1">
                                         Administrator
@@ -276,12 +280,12 @@
                                     </div>
                                 </li>
 
-                                <li id="2">
+                                <li id="2"  class="draggable">
                                     <div class="dragHandle role-drag-list-num">
                                         2
                                     </div>
                                     <div class="role-drag-list-cont">
-                                        <h4 id="5" class="draggable ui-draggable ui-draggable-handle isDrag">L5</h4>
+                                        <h4 id="5">L5</h4>
                                         <input type="hidden" name="id" value="5">
                                         <input type="hidden" name="prev_priority" value="2">
                                         Member
@@ -291,12 +295,12 @@
                                     </div>
                                 </li>
 
-                                <li id="3">
+                                <li id="3"  class="draggable">
                                     <div class="dragHandle role-drag-list-num">
                                         3
                                     </div>
                                     <div class="role-drag-list-cont">
-                                        <h4 id="50" class="draggable ui-draggable ui-draggable-handle">L50</h4>
+                                        <h4 id="50">L50</h4>
                                         <input type="hidden" name="id" value="50">
                                         <input type="hidden" name="prev_priority" value="3">
                                         본부장
@@ -306,12 +310,12 @@
                                     </div>
                                 </li>
 
-                                <li id="4">
+                                <li id="4"  class="draggable">
                                     <div class="dragHandle role-drag-list-num">
                                         4
                                     </div>
                                     <div class="role-drag-list-cont">
-                                        <h4 id="1004" class="draggable ui-draggable ui-draggable-handle">L3</h4>
+                                        <h4 id="1004">L3</h4>
                                         <input type="hidden" name="id" value="1004">
                                         <input type="hidden" name="prev_priority" value="4">
                                         tttttt
@@ -321,12 +325,12 @@
                                     </div>
                                 </li>
 
-                                <li id="5">
+                                <li id="5"  class="draggable">
                                     <div class="dragHandle role-drag-list-num">
                                         5
                                     </div>
                                     <div class="role-drag-list-cont">
-                                        <h4 id="45" class="draggable ui-draggable ui-draggable-handle">L45</h4>
+                                        <h4 id="45">L45</h4>
                                         <input type="hidden" name="id" value="45">
                                         <input type="hidden" name="prev_priority" value="5">
                                         Team Leader</div>
@@ -335,12 +339,12 @@
                                     </div>
                                 </li>
 
-                                <li id="6">
+                                <li id="6"  class="draggable">
                                     <div class="dragHandle role-drag-list-num">
                                         6
                                     </div>
                                     <div class="role-drag-list-cont">
-                                        <h4 id="4" class="draggable ui-draggable ui-draggable-handle">L2</h4>
+                                        <h4 id="4">L2</h4>
                                         <input type="hidden" name="id" value="4">
                                         <input type="hidden" name="prev_priority" value="6">
                                         Member2
@@ -350,12 +354,12 @@
                                     </div>
                                 </li>
 
-                                <li id="7">
+                                <li id="7"  class="draggable">
                                     <div class="dragHandle role-drag-list-num">
                                         7
                                     </div>
                                     <div class="role-drag-list-cont">
-                                        <h4 id="1007" class="draggable ui-draggable ui-draggable-handle">happytest</h4>
+                                        <h4 id="1007">happytest</h4>
                                         <input type="hidden" name="id" value="1007">
                                         <input type="hidden" name="prev_priority" value="7">
                                         정기 테스트 진행중
@@ -392,7 +396,7 @@
 
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12 role-drop-left">
-                                <div class="droppable1 ui-droppable">
+                                <div class="droppable1">
 
                                     <div class="role-drop-cont">
                                         <!--
@@ -487,7 +491,7 @@
 
                             <div class="col-md-6 col-sm-6 col-xs-12 role-drop-right">
                                 <form id="formUpdate" data-parsley-validate="" action="/kies/setting/role/update" method="post" novalidate="novalidate">
-                                    <div class="droppable2 ui-droppable">
+                                    <div class="droppable2">
                                         <div class="role-drop-cont">
                                             <!-- button type="submit" class="btn btn-primary">수정</button -->
                                             <!-- div>ID : 4</div -->
@@ -883,25 +887,31 @@
                         });
                         /* 권한 드래그 */
                         $(".draggable").draggable({
-                            helper: "clone",
+                            cursor: "move",
+                            handle: ".role-drag-list-num",
+                            revert: "invalid",
+                            helper: function(){
+                                return $(this).clone().width($(this).width());
+                            },
                             start: function () {
                                 $(this).addClass("isDrag");
                             }
                         });
                         $(".droppable1, .droppable2").droppable({
                             accept: $(".draggable"),
-                            drop: function () {
+                            drop: function (event, ui) {
                                 var dropContanier = $(this);
                                 var isdrop1 = dropContanier.hasClass("droppable1");
                                 var isdrop2 = dropContanier.hasClass("droppable2");
-                                var roleId = $(".isDrag").attr("id");
+                                var roleId = $(ui.draggable).attr("id");//$(".isDrag").attr("id");
                                 var formUpdate = $("#formUpdate");
 
-                                //console.log(roleId);
+                                console.log(roleId);
                                 if ((isdrop2 == true) && (roleId == 999)) {
                                     dropContanier.text("관리자 권한은 수정할 수 없습니다.");
                                     $(".isDrag").removeClass("isDrag");
                                 } else {
+                                    /*
                                     $.ajax({
                                         url: base_url + "rest/setting/role/" + roleId,
                                         dataType: "json",
@@ -916,7 +926,7 @@
                                                 var html = "";
                                                 if (isdrop2 == true)
                                                     html += "<button type='submit' class='btn btn-primary'>수정</button>";
-                                                html += "	<div>" + "ID : " + result.data.id + "</div>";
+                                                    html += "	<div>" + "ID : " + result.data.id + "</div>";
                                                 if (isdrop1 == true) {
                                                     html += "<div>권한명칭 : " + result.data.name + "</div>";
                                                     html += "<div>설명 : " + result.data.description + "</div>";
@@ -948,11 +958,12 @@
                                             $(".isDrag").removeClass("isDrag");
                                         }
                                     });
+                                    */
                                 }
                             },
                             activeClass: "droped"
                         });
-                        /* 테이블 드래그 */
+                        /* 테이블 드래그
                         table_role = $("#table-role");
                         table_role.tableDnD({
                             onDragClass: "myDragClass",
@@ -969,11 +980,11 @@
                                 var id = $(row).find("td:eq(1)").children("input:hidden[name='id']").val();
                                 var priority = $(row).find("td:eq(0)").text();
                                 var prev_priority = $(row).find("td:eq(1)").find("input:hidden[name='prev_priority']").val();
-                                /*
-		            console.log("id : " + id);
-		            console.log("priority : " + priority);
-		            console.log("prev_priority : " + prev_priority);
-					 */
+
+		            //console.log("id : " + id);
+		            //console.log("priority : " + priority);
+		            //console.log("prev_priority : " + prev_priority);
+
                                 var dataForm = {
                                     id: id,
                                     priority: priority,
@@ -996,6 +1007,7 @@
                             },
                             dragHandle: ".dragHandle"
                         });
+                        */
 
                         /* 에러를 alert창으로  */
                         $.validator.setDefaults({

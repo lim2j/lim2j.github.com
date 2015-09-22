@@ -6,11 +6,7 @@
 
 /** ******  left menu  *********************** **/
 $(function () {
-    $('body').removeClass('nav-md');
-    $('body').addClass('nav-sm');
-    $('.left_col').removeClass('scroll-view');
-    $('.left_col').removeAttr('style');
-    $('.sidebar-footer').hide();
+
 
     $('#sidebar-menu li ul').slideUp();
     $('#sidebar-menu li').removeClass('active');

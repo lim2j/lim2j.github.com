@@ -6396,8 +6396,9 @@ ul.notifications {
     margin-right: 5px;
 }
 .role-drag-list-wrap {
+    position: relative;
     height: 827px;
-
+    z-index: 1;
 }
 .role-drag-list {
     margin: 0;
@@ -6422,6 +6423,7 @@ ul.notifications {
     line-height: 75px;
     background-color: #00a5a7;
     color: #fff;
+    cursor: move;
 }
 .nodrop .role-drag-list-num{
     background-color: #de4837;
