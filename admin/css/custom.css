@@ -6391,8 +6391,67 @@ ul.notifications {
 .role-modal-table tbody>tr:first-child>td {
     border-top: 0 none;
 }
-.role-modal-table .fa {color: #ffcd1f;}
+.role-modal-table .fa {
+    color: #ffcd1f;
+    margin-right: 5px;
+}
+.role-drag-list-wrap {
+    height: 827px;
 
+}
+.role-drag-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-right: 1px solid #e5e5e5;
+}
+.role-drag-list li {
+    margin: 0 10px 10px 0;
+    padding: 0;
+    height: 75px;
+    background-color: #f5f5f5;
+    position: relative;
+    color: #888;
+}
+.role-drag-list-num {
+    float: left;
+    height: 100%;
+    width: 27px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 75px;
+    background-color: #00a5a7;
+    color: #fff;
+}
+.nodrop .role-drag-list-num{
+    background-color: #de4837;
+}
+.role-drag-list-cont {
+    margin-left: 37px;
+    padding-top: 8px;
+}
+.role-drag-list-cont h4 {
+    color: #555;
+    font-size: 16px;
+}
+.role-drag-list-btn {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+.role-drag-list-btn button {
+    font-size: 18px;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    display: block !important;
+    border-radius: 50%;
+    border: 1px solid #828282;
+    padding: 0px;
+    line-height: 27px;
+    margin-top: 5px;
+    background: none transparent;
+}
 .btn-ic-list {
     margin: 0;
     padding: 0;
@@ -6418,9 +6477,11 @@ ul.notifications {
     border-radius: 4px;
     color: #fff;
 }
+.btn-ic i.fa {color: #fff !important;}
 .btn-ic-rw {background-color: #0080c3;}
 .btn-ic-r {background-color: #00c393;}
-.btn-ic-re {background-color: #626262 ;}
+.btn-ic-re {background-color: #626262;}
+.btn-ic-mo {background-color: #61bcd3;}
 
 .role-drop-left {
     border: 1px solid #f5f5f5;
@@ -6430,12 +6491,48 @@ ul.notifications {
     background-color: #f5f5f5;
     padding: 20px;
 }
-
+.role-drop-cont {
+    height: 75px;
+    overflow: hidden;
+}
+.role-drop-cont h4 {
+    font-size: 18px;
+    color: #282828;
+}
+.role-drop-cont div {
+    color: #666;
+}
+.role-drop-cont input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    margin-bottom: 5px;
+}
 .role-drop-table {
+    height: 650px;
     border-top: 1px dashed #c2c2c2;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 .role-drop-table table {
     width: 100%;
+}
+.role-drop-table table td {
+    padding: 10px 10px 10px 0;
+}
+.role-drop-table table td i.fa {
+    color: #ffcd1f;
+    margin-right: 5px;
 }
