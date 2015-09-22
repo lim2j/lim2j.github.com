@@ -881,6 +881,22 @@ li.current-page a {
     color: #ededed;
 }
 
+.top_nav #menu_toggle {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 300;
+}
+.top_nav #menu_toggle a {
+    padding: 15px 15px 0;
+    margin: 0;
+}
+
+.top_nav #menu_toggle i {
+    font-size: 26px;
+    color: #ededed;
+}
+
 .nav.child_menu > li > a {
     color: #bcd7e0 !important;
     font-size: 14px;
