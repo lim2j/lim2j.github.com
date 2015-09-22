@@ -57,7 +57,12 @@ $(function () {
     $('#sidebar-menu li ul').slideUp();
     $('#sidebar-menu li').removeClass('active');
 
-    $('#sidebar-menu li').click(function () {
+    $('#sidebar-menu li').on("click",function () {
+        if($(this).find("ul").length < 1){
+            $(this).off("click");
+            window.location.href = $(this).find("a").attr("href");
+        }
+
         if ($(this).is('.active')) {
             $(this).removeClass('active');
             $('ul', this).slideUp();
@@ -71,6 +76,7 @@ $(function () {
             $('#sidebar-menu li').removeClass('active');
             $(this).addClass('active');
         }
+
     });
 
     $('#menu_toggle').click(function () {
