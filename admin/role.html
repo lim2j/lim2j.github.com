@@ -726,8 +726,6 @@
 
                                                         <tr>
                                                             <td rowspan="5"><i class="fa fa-folder"></i> 통계</td>
-
-
                                                             <td>활동정보요약</td>
                                                             <td class="text-right">
                                                                 <input type="hidden" name="resource_id" value="8">
@@ -784,8 +782,6 @@
 
                                                         <tr>
                                                             <td rowspan="3"><i class="fa fa-folder"></i> 직원</td>
-
-
                                                             <td>직원정보</td>
                                                             <td class="text-right">
                                                                 <input type="hidden" name="resource_id" value="13">
@@ -886,6 +882,7 @@
                             $("#name").focus();
                         });
                         /* 권한 드래그 */
+                        /*
                         $(".draggable").draggable({
                             cursor: "move",
                             handle: ".role-drag-list-num",
@@ -897,6 +894,33 @@
                                 $(this).addClass("isDrag");
                             }
                         });
+                        */
+
+                        $("#table-role").sortable({
+                            cursor: "move",
+                            connectWith: "#table-role",
+                            handle: ".role-drag-list-num",
+                            helper: "clone",
+                            placeholder: "ui-state-role",
+                            start: function (event, ui) {
+                                $(ui.item).addClass("isDrag");
+                            },
+                            stop:function(event, ui){
+                                $(ui.item).removeClass("isDrag");
+                                renumber_table('#table-role');
+                            }
+                        }).disableSelection();
+                        //Renumber table rows
+                        function renumber_table(tableID) {
+                            $(tableID + " li").each(function() {
+                                count = $(this).parent().children().index($(this)) + 1;
+                                $(this).find('.role-drag-list-num').html(count);
+                                $(this).attr('id', count);
+                            });
+                        }
+
+
+
                         $(".droppable1, .droppable2").droppable({
                             accept: $(".draggable"),
                             drop: function (event, ui) {

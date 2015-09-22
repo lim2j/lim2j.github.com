@@ -6441,6 +6441,10 @@ ul.notifications {
     color: #fff;
     cursor: move;
 }
+.ui-state-role {
+    border: 1px dotted #ddd;
+    background-color: #fff;
+}
 .nodrop .role-drag-list-num{
     background-color: #de4837;
 }
