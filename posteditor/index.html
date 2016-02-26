@@ -67,8 +67,8 @@
     
     
 
-
-<div id="staticMap" class="poast-daum-map"></div>    
+<!--
+<div id="staticMap" class="post-Dmap"></div>    
 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=a7b3e5375021061876b437aaaf84ef18"></script>
 
 
@@ -92,9 +92,26 @@ var staticMapContainer  = document.getElementById('staticMap'), // 이미지 지
 // 이미지 지도를 생성합니다
 var staticMap = new daum.maps.StaticMap(staticMapContainer, staticMapOption);
 </script>
-   
-    
 
+    
+<div id="staticMap" class="post-Dmap"></div>    
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=a7b3e5375021061876b437aaaf84ef18"></script>
+
+<script>
+var markerPosition  = new daum.maps.LatLng(33.450701, 126.570667); 
+var marker = {
+    position: markerPosition
+};
+var staticMapContainer  = document.getElementById('staticMap'), 
+    staticMapOption = { 
+        center: new daum.maps.LatLng(33.450701, 126.570667),
+        level: 3,
+        marker: marker
+    };
+var staticMap = new daum.maps.StaticMap(staticMapContainer, staticMapOption);
+</script>
+-->
+    
 
     
 </body>

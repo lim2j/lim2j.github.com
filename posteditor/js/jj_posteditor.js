@@ -12,6 +12,7 @@
         root.init = function(){
             root.options = $.extend({},$.posteditor.defaultOptions, options);
             root.createCanvas();
+            root.createApiScript();
             //root.initSreen();
             root.initControls();
             root.initCanvas();            
@@ -77,6 +78,15 @@
             root.$el.replaceWith($post);            
             $post.append(html);
           
+        };
+        
+        root.createApiScript = function(){
+            var script = $("<script />", {
+                'id':root.options.mapApiId,
+                'type':"text/javascript",
+                'src':"//apis.daum.net/maps/maps3.js?apikey="+root.options.mapApiKey
+            });
+          $("head").append(script);
         };
         
         /* Control click fucntion */
@@ -222,8 +232,12 @@
                 var videoUrl = canvas.find("."+root.options.postupdateClass).find("iframe").attr("src");
                 $("#modalVideo").find('.note-video-url').val("https:"+videoUrl);
                 
-            //add naver map
-            }).on("click", ".post-addNmap", function(){  
+            //add map
+            }).on("click", ".post-addDmap", function(){                
+                var selectThis = $(this);
+                var addElement = "post-Dmap";
+                
+                root.postAddButtonAction(selectThis, addElement);                 
             
             //add Line
             }).on("click", ".post-addLine", function(){
@@ -231,10 +245,12 @@
                 var addElement = "post-line";
                 
                 root.postAddButtonAction(selectThis, addElement);               
-                                
+            
+            
+                
             //testLog root.log("rowLength: " + rowLen + "/" +"rowIndex: " + rowIndex);
             // prevent default.
-            }).on("click", "a.post-moveRow, a.post-setRow, button.post-addText, div.post-text, button.post-addImage, div.post-image, button.post-image, button.post-addVideo, div.post-video, buttion.post-addNmap", function (e) {
+            }).on("click", "a.post-moveRow, a.post-setRow, button.post-addText, div.post-text, button.post-addImage, div.post-image, button.post-image, button.post-addVideo, div.post-video, button.post-addDmap, button.post-addLine", function (e) {
                 root.log("Clicked: " + $(this).attr("class"));
                 e.preventDefault();
             
@@ -272,6 +288,11 @@
                     $("#modalVideo").modal("show");
                 
                     break;
+                case 'post-addDmap':
+                    $("."+root.options.rowAddClass).find("."+addElement).addClass(root.options.postupdateClass);
+                    $("#modalDmap").modal("show");
+                    break;
+                    
                 case 'post-addLine':
                     $("."+root.options.rowAddClass).removeClass(root.options.rowAddClass);
                     break;
@@ -449,6 +470,9 @@
                         'frameborder': '0',
                         'src': ''
                     });
+                    addScreen=$("<span/>", {'class': root.options.postScreenClass});
+                    break;
+                case 'post-Dmap':
                     addScreen=$("<span/>", {'class': root.options.postScreenClass});
                     break;
                 case 'post-line':
@@ -825,16 +849,9 @@
                 element: "button",
                 btntype: "button",
                 btnClass: "post-addVideo"
-            },
+            },            
             {
-                btnLabel: "네이버지도",
-                title: "add naver map",
-                element: "button",
-                btntype: "button",
-                btnClass: "post-addNmap"
-            },
-            {
-                btnLabel: "다음지도",
+                btnLabel: "지도",
                 title: "add daum map",
                 element: "button",
                 btntype: "button",
@@ -1033,17 +1050,49 @@
                 '            <div class="modal-footer">'+
                 '            <button href="#" class="btn btn-primary note-video-btn disabled" disabled="">동영상 추가</button>'+
                 '            </div>'
-            }
-        ],
-        mapApi:[
+            },
             {
-                id:"naverMap",
-                key:"",
-                html:'',         
-                script:'',
+                id:"modalDmap",
+                html:
+                '            <div class="modal-header">'+
+                '                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>'+
+                '                <h4 class="modal-title">지도 위치 설정</h4>'+
+                '            </div>'+
+                '            <div class="modal-body">'+
+                '                <div id="modalDaumMap"></div>'+
+                '                <div id="modalDaumMapInfo"></div>'+
+                '            </div>'+
+                '            <div class="modal-footer">'+
+                '                <button href="#" class="btn btn-primary note-image-btn disabled" disabled="">사진 추가</button>'+
+                '            </div>'+
+                '<script>'+
+                'var mapContainer = document.getElementById("modalDaumMap"),'+
+                '    mapOption = { '+
+                '        center: new daum.maps.LatLng(33.450701, 126.570667),'+
+                '        level: 3'+
+                '    };'+
+                'var map = new daum.maps.Map(mapContainer, mapOption);'+
+                'var mapTypeControl = new daum.maps.MapTypeControl();'+
+                'map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);'+
+                'function getInfo() {'+
+                '    var center = map.getCenter(); '+
+                '    var level = map.getLevel();'+
+                '    var mapTypeId = map.getMapTypeId(); '+
+                '    var bounds = map.getBounds();'+
+                '    var swLatLng = bounds.getSouthWest(); '+
+                '    var neLatLng = bounds.getNorthEast(); '+
+                '    var boundsStr = bounds.toString();'+               
+                '    var message = "지도 중심좌표는 위도 " + center.getLat() + ",<br>";'+
+                '    message += "경도 " + center.getLng() + " 이고 <br>";'+
+                '    var infoDiv = document.getElementById("modalDaumMapInfo");'+
+                '    infoDiv.innerHTML = message;'+
+                '}'+
+                '</script>'
             }
-        ]
-        
+            
+        ],
+        mapApiId:"daumMap",
+        mapApiKey:"a7b3e5375021061876b437aaaf84ef18",       
        
     };
     
