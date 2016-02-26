@@ -337,7 +337,7 @@
             var canvas = $post.find("#" + root.options.canvasId);
             var updateClass = "update-post-cont";  
             root.log(canvas.find("."+updateClass).length);
-            if(canvas.find("."+updateClass).length > 0){
+            if(canvas.find("."+updateClass).length > 0 && canvas.find("."+updateClass).hasClass("post-text")){
                 root.editorControl("disable", $("."+updateClass));  
                 canvas.find("."+updateClass).removeClass(updateClass);
             }
