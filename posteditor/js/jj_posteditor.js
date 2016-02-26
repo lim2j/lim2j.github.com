@@ -1063,7 +1063,7 @@
                 '                <div id="modalDaumMapInfo"></div>'+
                 '            </div>'+
                 '            <div class="modal-footer">'+
-                '                <button href="#" class="btn btn-primary note-image-btn disabled" disabled="">지도 추가</button>'+
+                '                <button href="#" class="btn btn-primary note-image-btn">지도 추가</button>'+
                 '            </div>'+
                 '<script>'+
                 'var mapContainer = document.getElementById("modalDaumMap"),'+
