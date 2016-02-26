@@ -30,11 +30,12 @@
         </div> 
     -->
     
-    <form method="post" action="saveme" id="postSave">
-    <!-- hidden Field-->
+    <!-- submit
+    <form method="post" action="saveme" id="postSave">    
         <input type="hidden" name="mycontent" id="mycontent" />
         <input type="submit" name="submit" class="submit" />
     </form>
+    -->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>   
@@ -58,55 +59,39 @@
         $(".submit").on("click", function(e){
             canvas = post.$el.find("#" + post.options.canvasId);
             post.deinitCanvas();  
-            /*
-            $("#postEditor_wrap").val(canvas.html());
+            $("#mycontent").val(canvas.html());
             $(this).submit();
-            */
         });        
     });
     </script>
     
     
 
-<div id='naverMap' style='border:1px solid #000; width:500px; height:400px; margin:20px;'></div>
-<script type='text/javascript'>
-	var oPoint = new nhn.api.map.LatLng(37.5010226, 127.0396037); // 중심좌표
-	nhn.api.map.setDefaultPoint('LatLng');
-	oMap = new nhn.api.map.Map('naverMap' ,{ // 위 div의 id와 일치해야 합니다. 
-							point : oPoint,
-							zoom : 10,
-							enableWheelZoom : true,
-							enableDragPan : true,
-							enableDblClickZoom : false,
-							mapMode : 0,
-							activateTrafficMap : false,
-							activateBicycleMap : false,
-							minMaxLevel : [ 1, 14 ]
-					});
 
-	var oSize = new nhn.api.map.Size(28, 37);
-	var oOffset = new nhn.api.map.Size(14, 37);
-	var oIcon = new nhn.api.map.Icon('/resources/smarteditor/img/pin_spot2.png', oSize, oOffset);
+<div id="staticMap" style="width:600px;height:350px;"></div>    
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=a7b3e5375021061876b437aaaf84ef18"></script>
 
-	var oMarker = new nhn.api.map.Marker(oIcon);
-	oMarker.setPoint(oPoint);
-	oMap.addOverlay(oMarker);
-</script>
-   
-   
-<div id="daumMap" style="width:500px;height:400px;"></div> 
+
 <script>
-	var container = document.getElementById("daumMap");
-    var markerPosition  = new daum.maps.LatLng(33.450701, 126.570667); // 좌표 
-	var options = {
-		center: markerPosition,
-		level: 3 // zoom level 
-	};
+// 이미지 지도에서 마커가 표시될 위치입니다 
+var markerPosition  = new daum.maps.LatLng(33.450701, 126.570667); 
 
-	var map = new daum.maps.Map(container, options);
-	var marker = new daum.maps.Marker({position: markerPosition}); // 마커를 생성합니다. 
-	marker.setMap(map); // 마커가 지도 위에 표시되도록 설정합니다. 
-</script>
+// 이미지 지도에 표시할 마커입니다
+// 이미지 지도에 표시할 마커는 Object 형태입니다
+var marker = {
+    position: markerPosition
+};
+
+var staticMapContainer  = document.getElementById('staticMap'), // 이미지 지도를 표시할 div  
+    staticMapOption = { 
+        center: new daum.maps.LatLng(33.450701, 126.570667), // 이미지 지도의 중심좌표
+        level: 3, // 이미지 지도의 확대 레벨
+        marker: marker // 이미지 지도에 표시할 마커 
+    };    
+
+// 이미지 지도를 생성합니다
+var staticMap = new daum.maps.StaticMap(staticMapContainer, staticMapOption);
+</script>>
    
     
 
