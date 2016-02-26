@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+/* 2016-01-26 - 2j */
+a,body {color: #000}
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,p,select,table,td,textarea,th {margin: 0;padding: 0}
+/*
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul {margin: 0;padding: 0}
+*/
+body,button,input,select,table,textarea {font-size: 14px;font-family: malgun gothic, "맑은 고딕", "Helvetica Neue", helvetica, AppleSDGothicNeo-Regular, sans-serif, simhei}
+button {border: none;background-color: transparent;cursor: pointer}
+body {-webkit-text-size-adjust: none;word-break: break-all}
+body,html {height: 100%}
+fieldset,img {border: 0}
+img {vertical-align: middle}
+/* ol,ul {list-style: none} */
+address {font-style: normal}
+b,h1,h2,h3,h4,h5,h6,strong {font-weight: 600}
+a {text-decoration: none}
+table {border-collapse: collapse}
+hr {display: none!important}
+input:focus,textarea:focus {outline: 0}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-width: 320px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transitiontransition: .3s;
+    transition: .3s
+}
+
+blind {display: block;overflow: hidden;position: absolute;left: -9999px;width: 0;height: 0;font-size: 0;line-height: 0;}
+
+
+.post-tool {
+    position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+}
+.post-moveRow {
+    position: absolute;top: -10px;right: -10px;bottom: -10px;left: -10px;
+}
+.post-setRow {    
+    position: absolute;
+    top: 0;
+    left: -50px;
+    z-index: 210;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0,0,0,.2);
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: 16px;    
+}
+.post-removeRow {    
+    position: absolute;
+    top: 0;
+    right: -50px;
+    z-index: 210;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0,0,0,.2);
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: 16px;
+}
+.post-moveRow:hover {
+    border: 1px solid #ccc;
+    cursor: s-resize;
+}
+.post-moveRow.post-select-show {
+    border: 1px solid #3faaed;    
+}
+.post-add {
+    position: absolute;
+    bottom: -48px;
+    z-index: 99;
+    height: 0;
+    overflow: hidden;
+}
+.post-add button {
+    position: relative;
+    width: 52px;
+    height: 48px;
+    margin-right: 5px;
+    border: 0;
+    background-color: #fff;
+    vertical-align: top;
+    cursor: pointer;
+}
+.post-add button:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border: 1px solid #666;
+    opacity: .3;
+    content: '';
+}
+
+.post-edit-tool {
+    background-color: #f3f3f3;    
+    border: 1px solid #ccc;
+    padding: 5px 5px 5px 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.post-edit-tool button {
+    height: 30px;
+    min-width: 30px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    margin-left: -1px;
+}
+.ui-sortable-this{
+    opacity: .3;
+}
+.ui-sortable-placeholder {
+    background:#1291bf !important; 
+    height: 1px !important;
+    visibility: visible !important;
+    margin: 10px 0 -11px 0;
+}
+.ui-sortable-helper{
+    border: 1px solid #666;
+}
+.post-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: s-resize;
+}
+.post-screen:hover{
+    cursor: s-resize;
+}
+.post-view-controls {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0 9px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.post-view-controls button {
+    height: 30px;
+    min-width: 30px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    margin-left: -1px;
+}
+.post-view-controls button.post-view-on {
+    background-color: #74a9ff;
+    border: 1px solid #3570d0;
+    color: #fff;
+}
+.post-text:hover {
+    cursor: text;
+}
+.post-empty {
+    color: #ccc;
+}
+
+/* 사용자 정의 */
+#postEditor_wrap {margin: 60px 100px;}
+
+.postrow {
+    position: relative;
+    margin-top: 20px;
+}
+.postrow:first-child {
+    margin-top: 0;
+}
+.postcol{
+    position: relative;
+    z-index: 1;
+}
+.post-alignLeft {
+    text-align: left;
+}
+.post-alignCenter {
+    text-align: center;
+}
+.post-alignRight {
+    text-align: right;
+}
+.post-horizontal-line1 {
+    margin-top: 15px;
+    margin-bottom: 14px;
+    background-color: #ddd;
+    height: 1px;
+}
+.post-text {
+    min-height: 18px;
+}
+.post-image img {    
+    max-width: 100%;
+    height: auto
+}
+.post-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.post-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width:640px) {
+    body {
+        padding: 0 0 0 0
+    }
+    #postEditor_wrap {
+        min-height: 517px
+    }
+}
+
+
+
+
