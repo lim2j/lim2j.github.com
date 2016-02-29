@@ -794,6 +794,7 @@
                 var dmapId, dmapScript, dmapLatVal, dmapLngVal; 
                 
                 if(updateId == ""){
+                    
                     dmapLatVal = root.options.mapApiLat;
                     dmapLngVal = root.options.mapApiLng;
                 } else {
@@ -804,6 +805,7 @@
                     dmapLatVal = dmapLat.val();
                     dmapLngVal = dmapLng.val();
                 }
+                alert("위치 : " + dmapLatVal + "---" + dmapLngVal);
                 
                 daum.maps.load(function() {
                     var mapContainer = document.getElementById("modalDaumMap"),
