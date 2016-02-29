@@ -793,7 +793,7 @@
                 var dmapLng = $(this).find('.note-dmap-lng');
                 var dmapId, dmapScript, dmapLatVal, dmapLngVal; 
                 
-                if(updateId == ""){                    
+                if(updateId == "" || updateId == "undefined" ){                    
                     dmapLatVal = root.options.mapApiLat;
                     dmapLngVal = root.options.mapApiLng;
                 } else {
