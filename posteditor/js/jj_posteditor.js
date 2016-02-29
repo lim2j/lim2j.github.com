@@ -1083,7 +1083,7 @@
                 '    var infoDiv = document.getElementById("modalDaumMapInfo");'+
                 '    infoDiv.innerHTML = message;'+
                 '}'+
-                '});'
+                '});'+
                 '</script>'
             }
             
