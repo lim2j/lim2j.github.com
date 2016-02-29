@@ -262,6 +262,7 @@
                         var infoDiv = document.getElementById("modalDaumMapInfo");
                         infoDiv.innerHTML = message;
                     }
+                    map.relayout();
                 });
             
             //add Line
@@ -383,8 +384,10 @@
             var canvas = $post.find("#" + root.options.canvasId);
             var updateClass = "update-post-cont";  
             //root.log("aaaa"+canvas.find("."+updateClass).attr("class"));
-            if(canvas.find("."+updateClass).length > 0 && canvas.find("."+updateClass).hasClass("post-text")){               
-                root.editorControl("disable", $("."+updateClass));  
+            if(canvas.find("."+updateClass).length > 0){               
+                if(canvas.find("."+updateClass).hasClass("post-text")){
+                    root.editorControl("disable", $("."+updateClass));  
+                }
                 canvas.find("."+updateClass).removeClass(updateClass);
             }
             canvas.find("." + root.options.postEditToolClass).remove();
