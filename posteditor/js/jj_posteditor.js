@@ -491,6 +491,9 @@
                     addScreen=$("<span/>", {'class': root.options.postScreenClass});
                     break;
                 default:
+                     html = $("<div />",{
+                        'class': 'post-Dmap-map',
+                    });
                     root.log("add Col");
             }                  
             var col = $("<div/>").addClass(root.options.colClass)
@@ -768,6 +771,10 @@
             
             $("#modalDmap").on("shown.bs.modal", function () {
                 var dmapBtn = $(this).find('.note-dmap-btn');
+                var dmapLat = $(this).find('.note-dmap-lat');
+                var dmapLng = $(this).find('.note-dmap-lng');
+                var dmapId = root.uniqID();
+                var dmapScript = ""; 
                 daum.maps.load(function() {
                     var mapContainer = document.getElementById("modalDaumMap"),
                         mapOption = { 
@@ -789,24 +796,52 @@
                         var latlng = mouseEvent.latLng; 
                         // 마커 위치를 클릭한 위치로 옮깁니다
                         marker.setPosition(latlng);
-                        var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
-                        message += '경도는 ' + latlng.getLng() + ' 입니다';
-                        var resultDiv = document.getElementById('modalDaumMapInfo'); 
-                        resultDiv.innerHTML = message;
-
+                        //var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
+                        //message += '경도는 ' + latlng.getLng() + ' 입니다';
+                        //var resultDiv = document.getElementById('modalDaumMapInfo'); 
+                        //resultDiv.innerHTML = message;
+                        dmapLat.val(latlng.getLat());
+                        dmapLng.val(latlng.getLng());
                     });
                     map.relayout();
                 });
                 
-                videoBtn.click(function(e){
-                    e.preventDefault();                    canvas.find("."+root.options.postupdateClass).append("");
-                    videoBtn.addClass("uploadDmap");
+                dmapBtn.click(function(e){
+                    e.preventDefault();                                       
+                    dmapScript += '<script>'
+                    dmapScript += 'var markerPosition  = new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'); '
+                    dmapScript += 'var marker = {'
+                    dmapScript += '    position: markerPosition'
+                    dmapScript += '};'
+                    dmapScript += 'var staticMapContainer  = document.getElementById("'+dmapId+'"), '
+                    dmapScript += '    staticMapOption = { '
+                    dmapScript += '        center: new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'),'
+                    dmapScript += '        level: 3,'
+                    dmapScript += '        marker: marker'
+                    dmapScript += '    };'
+                    dmapScript += 'var staticMap = new daum.maps.StaticMap(staticMapContainer, staticMapOption);'
+                    dmapScript += '</script>'
+                    
+                    canvas.find("."+root.options.postupdateClass).find("div").attr("id", dmapId).append(dmapScript);
+                    dmapBtn.addClass("uploadDmap");
                     $("#modalDmap").modal("hide");
                     
                 });
-            });
+            });            
             
-            
+        };
+        
+        root.uniqID = function () {
+            var charSet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz',
+                charSetSize = charSet.length,
+                charCount = 10;
+
+            var id = '';
+            for (var i = 1; i <= charCount; i++) {
+                var randPos = Math.floor(Math.random() * charSetSize);
+                id += charSet[randPos];
+            }
+            return id;
         };
         
         /* deinitCanvas 
@@ -1114,7 +1149,14 @@
                 '            <div class="modal-body">'+
                 '                <div class="modalDaumlabel">지도를 클릭해주세요!</div>'+
                 '                <div id="modalDaumMap"></div>'+
-                '                <div id="modalDaumMapInfo"></div>'+
+                '                <div id="modalDaumMapInfo">
+                '                <div class="form-group">'+
+                '                <label>위도</label><input class="note-dmap-lat form-control" type="text" value="">'+
+                '                </div>'+
+                '                <div class="form-group">'+
+                '                <label>경도</label><input class="note-dmap-lng form-control" type="text" value="">'+
+                '                </div>'+
+                '                </div>'+
                 '            </div>'+
                 '            <div class="modal-footer">'+
                 '                <button href="#" class="btn btn-primary note-dmap-btn">지도 추가</button>'+

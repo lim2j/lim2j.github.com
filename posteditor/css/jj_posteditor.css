@@ -231,17 +231,17 @@ blind {display: block;overflow: hidden;position: absolute;left: -9999px;width: 0
     height: 100%;
 }
 
-.post-Dmap {
+.post-Dmap-map {
     width: 100%;   
     height: 480px;
 }
 
-.post-Dmap img {
+.post-Dmap-map img {
     max-width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
-    .poast-daum-map {
+    .post-Dmap-map {
         height: 250px;
     }
 }
