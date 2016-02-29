@@ -256,7 +256,7 @@
                 var mapTypeControl = new daum.maps.MapTypeControl();
                 map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
                 function getInfo() {
-                    var center = map.getCenter(); '+              
+                    var center = map.getCenter();        
                     var message = "지도 중심좌표는 위도 " + center.getLat() + ",<br>";
                     message += "경도 " + center.getLng() + " 이고 <br>";
                     var infoDiv = document.getElementById("modalDaumMapInfo");
