@@ -861,9 +861,10 @@
                     dmapScript += 'var '+dmapId+'StaticMap = new daum.maps.StaticMap('+dmapId+'StaticMapContainer, '+dmapId+'MarkerPosition);'
                     dmapScript += '</script>'
                     
-                    canvas.find("."+root.options.postupdateClass).find("div").attr("id", dmapId);//.append(dmapScript);
-                    canvas.find("."+root.options.postupdateClass).find("div").data("dmapLat", dmapLat.val());
-                    canvas.find("."+root.options.postupdateClass).find("div").data("dmapLng", dmapLng.val());
+                    canvas.find("."+root.options.postupdateClass).find("div").attr("id", dmapId);
+                    canvas.find("."+root.options.postupdateClass).find("div").append(dmapScript);
+                    canvas.find("."+root.options.postupdateClass).find("div").data("lat", dmapLat.val());
+                    canvas.find("."+root.options.postupdateClass).find("div").data("lng", dmapLng.val());
                     dmapBtn.addClass("uploadDmap");
                     $("#modalDmap").modal("hide");
                     
