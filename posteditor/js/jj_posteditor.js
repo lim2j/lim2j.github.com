@@ -793,8 +793,7 @@
                 var dmapLng = $(this).find('.note-dmap-lng');
                 var dmapId, dmapScript, dmapLatVal, dmapLngVal; 
                 
-                if(updateId == ""){
-                    alert(updateId == "");
+                if(updateId == ""){                    
                     dmapLatVal = root.options.mapApiLat;
                     dmapLngVal = root.options.mapApiLng;
                 } else {
@@ -805,7 +804,8 @@
                     dmapLatVal = dmapLat.val();
                     dmapLngVal = dmapLng.val();
                 }
-                alert("위치 : " + dmapLatVal + "---" + dmapLngVal);
+                root.log(updateId);
+                alert(updateId + "위치 : " + dmapLatVal + "---" + dmapLngVal);
                 
                 daum.maps.load(function() {
                     var mapContainer = document.getElementById("modalDaumMap"),
