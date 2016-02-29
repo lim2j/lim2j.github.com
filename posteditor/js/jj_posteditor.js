@@ -853,12 +853,12 @@
                     dmapScript += '    position: '+dmapId+'MarkerPosition'
                     dmapScript += '};'
                     dmapScript += 'var '+dmapId+'StaticMapContainer  = document.getElementById("'+dmapId+'"), '
-                    dmapScript += '    staticMapOption = { '
+                    dmapScript += '    '+dmapId+'StaticMapOption = { '
                     dmapScript += '        center: new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'),'
                     dmapScript += '        level: 3,'
                     dmapScript += '        marker: '+dmapId+'Marker'
                     dmapScript += '    };'
-                    dmapScript += 'var '+dmapId+'StaticMap = new daum.maps.StaticMap('+dmapId+'StaticMapContainer, '+dmapId+'MarkerPosition);'
+                    dmapScript += 'var '+dmapId+'StaticMap = new daum.maps.'+dmapId+'StaticMap('+dmapId+'StaticMapContainer, '+dmapId+'MarkerPosition);'
                     dmapScript += '</script>'
                     
                     canvas.find("."+root.options.postupdateClass).find("div").attr("id", dmapId);
