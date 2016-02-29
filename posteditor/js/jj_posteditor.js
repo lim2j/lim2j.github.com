@@ -243,9 +243,23 @@
             //add map
             }).on("click", ".post-addDmap", function(){                
                 var selectThis = $(this);
-                var addElement = "post-Dmap";
+                var addElement = "post-dmap";
                 
                 root.postAddButtonAction(selectThis, addElement);                
+                
+            //edit map
+            }).on("click", ".post-dmap", function(){                
+                root.clearColControls();
+                root.clearRowControls();
+                root.showRowControls($(this));                
+                
+                $(this).next().find(".post-moveRow").addClass("post-select-show");                
+                $(this).addClass(root.options.postupdateClass);                
+                $(this).append(root.editToolFactory(root.options.DmapButtonsAppend)); 
+            
+            //edit map
+            }).on("click", ".post-editdmap", function(){  
+                $("#modalDmap").modal("show");
             
             //add Line
             }).on("click", ".post-addLine", function(){
@@ -481,9 +495,9 @@
                     });
                     addScreen=$("<span/>", {'class': root.options.postScreenClass});
                     break;
-                case 'post-Dmap':
+                case 'post-dmap':
                     html = $("<div />",{
-                        'class': 'post-Dmap-map'
+                        'class': 'post-dmap-map'
                     });
                     addScreen=$("<span/>", {'class': root.options.postScreenClass});
                     break;
@@ -808,7 +822,6 @@
                         
                         dmapBtn.removeClass("disabled").prop("disabled", false);
                         
-                        
                         root.log(dmapLat.val());
                     });
                     map.relayout();
@@ -1047,6 +1060,15 @@
                 element: "button",
                 btntype: "button",
                 btnClass: "post-editvideo"
+            }
+        ],
+        DmapButtonsAppend:[           
+            {
+                btnLabel: "지도",
+                title: "edit dmap",
+                element: "button",
+                btntype: "button",
+                btnClass: "post-editdmap"
             }
         ],
         
