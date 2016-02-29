@@ -81,12 +81,22 @@
         };
         
         root.createApiScript = function(){
+            /*
             var script = $("<script />", {
                 'id':root.options.mapApiId,
                 'type':"text/javascript",
                 'src':"//apis.daum.net/maps/maps3.js?autoload=false&apikey="+root.options.mapApiKey
             });
-          $("head").append(script);
+            $("head").append(script);
+            */
+            var getScriptSrc = "//apis.daum.net/maps/maps3.js?autoload=false&apikey="+root.options.mapApiKey;
+            $.getScript(getScriptSrc, function ( data, textStatus, jqxhr )
+            {
+                root.log(data); // 받은 data 
+                root.log(textStatus); // success
+                root.log(jqxhr.status); // 200
+                root.log('자바스크립트 로드 완료');
+            });
         };
         
         /* Control click fucntion */
