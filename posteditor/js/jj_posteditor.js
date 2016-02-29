@@ -767,10 +767,11 @@
             
             
             $("#modalDmap").on("shown.bs.modal", function () {
+                var dmapBtn = $(this).find('.note-dmap-btn');
                 daum.maps.load(function() {
                     var mapContainer = document.getElementById("modalDaumMap"),
                         mapOption = { 
-                            center: new daum.maps.LatLng(33.450701, 126.570667),
+                            center: new daum.maps.LatLng(37.514833658289106, 127.06574351895208),
                             level: 3
                         };
                     var map = new daum.maps.Map(mapContainer, mapOption);
@@ -795,6 +796,13 @@
 
                     });
                     map.relayout();
+                });
+                
+                videoBtn.click(function(e){
+                    e.preventDefault();                    canvas.find("."+root.options.postupdateClass).append("");
+                    videoBtn.addClass("uploadDmap");
+                    $("#modalDmap").modal("hide");
+                    
                 });
             });
             
@@ -1104,11 +1112,12 @@
                 '                <h4 class="modal-title">지도 위치 설정</h4>'+
                 '            </div>'+
                 '            <div class="modal-body">'+
+                '                <div class="modalDaumlabel">지도를 클릭해주세요!</div>'+
                 '                <div id="modalDaumMap"></div>'+
                 '                <div id="modalDaumMapInfo"></div>'+
                 '            </div>'+
                 '            <div class="modal-footer">'+
-                '                <button href="#" class="btn btn-primary note-image-btn">지도 추가</button>'+
+                '                <button href="#" class="btn btn-primary note-dmap-btn">지도 추가</button>'+
                 '            </div>'               
             }
             
