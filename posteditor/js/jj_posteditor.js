@@ -807,6 +807,9 @@
                         dmapLng.val(latlng.getLng());
                         
                         dmapBtn.removeClass("disabled").prop("disabled", false);
+                        
+                        
+                        root.log(dmapLat.val());
                     });
                     map.relayout();
                 });
