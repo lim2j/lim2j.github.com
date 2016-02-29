@@ -856,7 +856,7 @@
                     dmapScript += '    StaticMapOption = { '
                     dmapScript += '        center: new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'),'
                     dmapScript += '        level: 3,'
-                    dmapScript += '        marker: '+dmapId+'Marker'
+                    dmapScript += '        marker: Marker'
                     dmapScript += '    };'
                     dmapScript += 'var StaticMap = new daum.maps.StaticMap(StaticMapContainer, MarkerPosition);'
                     dmapScript += '</script>'
