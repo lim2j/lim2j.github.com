@@ -246,22 +246,23 @@
                 var addElement = "post-Dmap";
                 
                 root.postAddButtonAction(selectThis, addElement);                 
-                
-                var mapContainer = document.getElementById("modalDaumMap"),
-                    mapOption = { 
-                        center: new daum.maps.LatLng(33.450701, 126.570667),
-                        level: 3
-                    };
-                var map = new daum.maps.Map(mapContainer, mapOption);
-                var mapTypeControl = new daum.maps.MapTypeControl();
-                map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
-                function getInfo() {
-                    var center = map.getCenter();        
-                    var message = "지도 중심좌표는 위도 " + center.getLat() + ",<br>";
-                    message += "경도 " + center.getLng() + " 이고 <br>";
-                    var infoDiv = document.getElementById("modalDaumMapInfo");
-                    infoDiv.innerHTML = message;
-                }
+                daum.maps.load(function() {
+                    var mapContainer = document.getElementById("modalDaumMap"),
+                        mapOption = { 
+                            center: new daum.maps.LatLng(33.450701, 126.570667),
+                            level: 3
+                        };
+                    var map = new daum.maps.Map(mapContainer, mapOption);
+                    var mapTypeControl = new daum.maps.MapTypeControl();
+                    map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
+                    function getInfo() {
+                        var center = map.getCenter();        
+                        var message = "지도 중심좌표는 위도 " + center.getLat() + ",<br>";
+                        message += "경도 " + center.getLng() + " 이고 <br>";
+                        var infoDiv = document.getElementById("modalDaumMapInfo");
+                        infoDiv.innerHTML = message;
+                    }
+                });
             
             //add Line
             }).on("click", ".post-addLine", function(){
