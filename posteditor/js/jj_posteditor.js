@@ -1149,7 +1149,7 @@
                 '            <div class="modal-body">'+
                 '                <div class="modalDaumlabel">지도를 클릭해주세요!</div>'+
                 '                <div id="modalDaumMap"></div>'+
-                '                <div id="modalDaumMapInfo">
+                '                <div id="modalDaumMapInfo">'+
                 '                <div class="form-group">'+
                 '                <label>위도</label><input class="note-dmap-lat form-control" type="text" value="">'+
                 '                </div>'+
