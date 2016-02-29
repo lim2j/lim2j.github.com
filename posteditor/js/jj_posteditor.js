@@ -84,7 +84,7 @@
             var script = $("<script />", {
                 'id':root.options.mapApiId,
                 'type':"text/javascript",
-                'src':"//apis.daum.net/maps/maps3.js?autoload=false&apikey="+root.options.mapApiKey
+                'src':"//apis.daum.net/maps/maps3.js?autoload=true&apikey="+root.options.mapApiKey
             });
           $("head").append(script);
         };
