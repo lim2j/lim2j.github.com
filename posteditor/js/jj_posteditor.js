@@ -482,18 +482,18 @@
                     addScreen=$("<span/>", {'class': root.options.postScreenClass});
                     break;
                 case 'post-Dmap':
+                    html = $("<div />",{
+                        'class': 'post-Dmap-map'
+                    });
                     addScreen=$("<span/>", {'class': root.options.postScreenClass});
                     break;
                 case 'post-line':
                     html = $("<div />",{
-                        'class': 'post-horizontal-line1',
+                        'class': 'post-horizontal-line1'
                     });
                     addScreen=$("<span/>", {'class': root.options.postScreenClass});
                     break;
-                default:
-                     html = $("<div />",{
-                        'class': 'post-Dmap-map',
-                    });
+                default:                    
                     root.log("add Col");
             }                  
             var col = $("<div/>").addClass(root.options.colClass)
