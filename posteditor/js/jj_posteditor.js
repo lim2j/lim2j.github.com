@@ -805,18 +805,12 @@
                         //resultDiv.innerHTML = message;
                         dmapLat.val(latlng.getLat());
                         dmapLng.val(latlng.getLng());
+                        
+                        dmapBtn.removeClass("disabled").prop("disabled", false);
                     });
                     map.relayout();
                 });
-                
-                dmapLat.on('input', function () {                    
-                    if (dmapLat.val() == "") {                 
-                        dmapBtn.addClass("disabled").prop("disabled", true);
-                    } else {
-                        dmapBtn.removeClass("disabled").prop("disabled", false);
-                    };
-                });  
-                
+                                
                 dmapBtn.click(function(e){
                     e.preventDefault();
                     dmapId = root.uniqID();
