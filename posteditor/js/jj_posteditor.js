@@ -776,8 +776,8 @@
                 var dmapBtn = $(this).find('.note-dmap-btn');
                 var dmapLat = $(this).find('.note-dmap-lat');
                 var dmapLng = $(this).find('.note-dmap-lng');
-                var dmapId = root.uniqID();
-                var dmapScript = ""; 
+                var dmapId;
+                var dmapScript; 
                 daum.maps.load(function() {
                     var mapContainer = document.getElementById("modalDaumMap"),
                         mapOption = { 
@@ -818,7 +818,9 @@
                 });  
                 
                 dmapBtn.click(function(e){
-                    e.preventDefault();                                       
+                    e.preventDefault();
+                    dmapId = root.uniqID();
+                    dmapScript = "";
                     dmapScript += '<script>'
                     dmapScript += 'var markerPosition  = new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'); '
                     dmapScript += 'var marker = {'
