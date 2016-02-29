@@ -787,15 +787,28 @@
             
             $("#modalDmap").on("shown.bs.modal", function () {
                 var canvas = $post.find("#" + root.options.canvasId);
+                var updateId = canvas.find("."+root.options.postupdateClass).find("div").attr("id");
                 var dmapBtn = $(this).find('.note-dmap-btn');
                 var dmapLat = $(this).find('.note-dmap-lat');
                 var dmapLng = $(this).find('.note-dmap-lng');
-                var dmapId;
-                var dmapScript; 
+                var dmapId, dmapScript, dmapLatVal, dmapLngVal; 
+                
+                if(updateId == ""){
+                    dmapLatVal = root.options.mapApiLat;
+                    dmapLngVal = root.options.mapApiLng;
+                } else {
+                    canvas.find("."+root.options.postupdateClass).find("div").html("");
+                    dmapLat.val(canvas.find("."+root.options.postupdateClass).find("div").data("dmapLat"));
+                    dmapLng.val(canvas.find("."+root.options.postupdateClass).find("div").data("dmapLng"));
+                    
+                    dmapLatVal = dmapLat.val();
+                    dmapLngVal = dmapLng.val();
+                }
+                
                 daum.maps.load(function() {
                     var mapContainer = document.getElementById("modalDaumMap"),
                         mapOption = { 
-                            center: new daum.maps.LatLng(37.514833658289106, 127.06574351895208),
+                            center: new daum.maps.LatLng(dmapLatVal, dmapLngVal),
                             level: 3
                         };
                     var map = new daum.maps.Map(mapContainer, mapOption);
@@ -820,32 +833,37 @@
                         dmapLat.val(latlng.getLat());
                         dmapLng.val(latlng.getLng());
                         
-                        dmapBtn.removeClass("disabled").prop("disabled", false);
-                        
-                        root.log(dmapLat.val());
+                        dmapBtn.removeClass("disabled").prop("disabled", false);                        
                     });
                     map.relayout();
                 });
                                 
                 dmapBtn.click(function(e){
-                    e.preventDefault();
+                    e.preventDefault();                    
+                    
+                    if(updateId != ""){
+                        canvas.find("."+root.options.postupdateClass).find("div").html("");
+                    }
+                    
                     dmapId = root.uniqID();
                     dmapScript = "";
                     dmapScript += '<script>'
-                    dmapScript += 'var markerPosition  = new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'); '
-                    dmapScript += 'var marker = {'
-                    dmapScript += '    position: markerPosition'
+                    dmapScript += 'var '+dmapId+'MarkerPosition  = new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'); '
+                    dmapScript += 'var '+dmapId+'Marker = {'
+                    dmapScript += '    position: '+dmapId+'MarkerPosition'
                     dmapScript += '};'
-                    dmapScript += 'var staticMapContainer  = document.getElementById("'+dmapId+'"), '
+                    dmapScript += 'var '+dmapId+'StaticMapContainer  = document.getElementById("'+dmapId+'"), '
                     dmapScript += '    staticMapOption = { '
                     dmapScript += '        center: new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'),'
                     dmapScript += '        level: 3,'
-                    dmapScript += '        marker: marker'
+                    dmapScript += '        marker: '+dmapId+'Marker'
                     dmapScript += '    };'
-                    dmapScript += 'var staticMap = new daum.maps.StaticMap(staticMapContainer, staticMapOption);'
+                    dmapScript += 'var '+dmapId+'StaticMap = new daum.maps.StaticMap('+dmapId+'StaticMapContainer, '+dmapId+'MarkerPosition);'
                     dmapScript += '</script>'
                     
                     canvas.find("."+root.options.postupdateClass).find("div").attr("id", dmapId).append(dmapScript);
+                    canvas.find("."+root.options.postupdateClass).find("div").data("dmapLat", dmapLat.val());
+                    canvas.find("."+root.options.postupdateClass).find("div").data("dmapLng", dmapLng.val());
                     dmapBtn.addClass("uploadDmap");
                     $("#modalDmap").modal("hide");
                     
@@ -1216,7 +1234,9 @@
             
         ],
         mapApiId:"daumMap",
-        mapApiKey:"a7b3e5375021061876b437aaaf84ef18",       
+        mapApiKey:"a7b3e5375021061876b437aaaf84ef18",     
+        mapApiLat:"37.514833658289106",
+        mapApiLng:"127.06574351895208"
        
     };
     
