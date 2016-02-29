@@ -84,7 +84,7 @@
             var script = $("<script />", {
                 'id':root.options.mapApiId,
                 'type':"text/javascript",
-                'src':"//apis.daum.net/maps/maps3.js?apikey="+root.options.mapApiKey
+                'src':"//apis.daum.net/maps/maps3.js?autoload=false?apikey="+root.options.mapApiKey
             });
           $("head").append(script);
         };
@@ -1067,6 +1067,7 @@
                 '                <button href="#" class="btn btn-primary note-image-btn">지도 추가</button>'+
                 '            </div>'+
                 '<script>'+
+                'daum.maps.load(function() {'+
                 'var mapContainer = document.getElementById("modalDaumMap"),'+
                 '    mapOption = { '+
                 '        center: new daum.maps.LatLng(33.450701, 126.570667),'+
@@ -1082,6 +1083,7 @@
                 '    var infoDiv = document.getElementById("modalDaumMapInfo");'+
                 '    infoDiv.innerHTML = message;'+
                 '}'+
+                '});'
                 '</script>'
             }
             
