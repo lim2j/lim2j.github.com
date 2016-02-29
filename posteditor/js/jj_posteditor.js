@@ -357,8 +357,8 @@
         root.clearColControls = function(){
             var canvas = $post.find("#" + root.options.canvasId);
             var updateClass = "update-post-cont";  
-            root.log(canvas.find("."+updateClass).length);
-            if(canvas.find("."+updateClass).length > 0 && canvas.find("."+updateClass).hasClass("post-text")){
+            //root.log("aaaa"+canvas.find("."+updateClass).attr("class"));
+            if(canvas.find("."+updateClass).length > 0 && canvas.find("."+updateClass).hasClass("post-text")){               
                 root.editorControl("disable", $("."+updateClass));  
                 canvas.find("."+updateClass).removeClass(updateClass);
             }
@@ -541,7 +541,8 @@
                     if(markupStrText == ""){                        
                         element.html("").append(root.options.postTextempty);
                         element.addClass(root.options.postEmptyClass);
-                    }else{                                     
+                    }else{              
+                        //element.html("", markupStr);
                         element.removeClass(root.options.postEmptyClass);
                     }
                 break;                    
