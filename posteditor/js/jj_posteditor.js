@@ -92,7 +92,7 @@
             var headTag = document.getElementsByTagName("head")[0];         
             var newScript = document.createElement('script');
             newScript.type = 'text/javascript';
-            newScript.onload = function() { console.log('자바스크립트 로드 완료') };
+            newScript.onload = function() { root.log('add script daum api') };
             newScript.src = "//apis.daum.net/maps/maps3.js?autoload=false&apikey="+root.options.mapApiKey;
             headTag.appendChild(newScript);
         };
