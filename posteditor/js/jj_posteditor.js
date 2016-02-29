@@ -794,7 +794,7 @@
                 var dmapId, dmapScript, dmapLatVal, dmapLngVal; 
                 
                 if(updateId == ""){
-                    
+                    alert(updateId == "");
                     dmapLatVal = root.options.mapApiLat;
                     dmapLngVal = root.options.mapApiLng;
                 } else {
