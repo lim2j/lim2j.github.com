@@ -89,14 +89,12 @@
             });
             $("head").append(script);
             */
-            var getScriptSrc = "//apis.daum.net/maps/maps3.js?autoload=false&apikey="+root.options.mapApiKey;
-            $.getScript(getScriptSrc, function ( data, textStatus, jqxhr )
-            {
-                root.log(data); // 받은 data 
-                root.log(textStatus); // success
-                root.log(jqxhr.status); // 200
-                root.log('자바스크립트 로드 완료');
-            });
+            var headTag = document.getElementsByTagName("head")[0];         
+            var newScript = document.createElement('script');
+            newScript.type = 'text/javascript';
+            newScript.onload = function() { console.log('자바스크립트 로드 완료') };
+            newScript.src = "//apis.daum.net/maps/maps3.js?autoload=false&apikey="+root.options.mapApiKey;
+            headTag.appendChild(newScript);
         };
         
         /* Control click fucntion */
