@@ -770,6 +770,7 @@
             
             
             $("#modalDmap").on("shown.bs.modal", function () {
+                var canvas = $post.find("#" + root.options.canvasId);
                 var dmapBtn = $(this).find('.note-dmap-btn');
                 var dmapLat = $(this).find('.note-dmap-lat');
                 var dmapLng = $(this).find('.note-dmap-lng');
