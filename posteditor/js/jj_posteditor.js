@@ -848,17 +848,17 @@
                     dmapId = root.uniqID();
                     dmapScript = "";
                     dmapScript += '<script>'
-                    dmapScript += 'var '+dmapId+'MarkerPosition  = new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'); '
-                    dmapScript += 'var '+dmapId+'Marker = {'
-                    dmapScript += '    position: '+dmapId+'MarkerPosition'
+                    dmapScript += 'var MarkerPosition  = new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'); '
+                    dmapScript += 'var Marker = {'
+                    dmapScript += '    position: MarkerPosition'
                     dmapScript += '};'
-                    dmapScript += 'var '+dmapId+'StaticMapContainer  = document.getElementById("'+dmapId+'"), '
-                    dmapScript += '    '+dmapId+'StaticMapOption = { '
+                    dmapScript += 'var StaticMapContainer  = document.getElementById("'+dmapId+'"), '
+                    dmapScript += '    StaticMapOption = { '
                     dmapScript += '        center: new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'),'
                     dmapScript += '        level: 3,'
                     dmapScript += '        marker: '+dmapId+'Marker'
                     dmapScript += '    };'
-                    dmapScript += 'var '+dmapId+'StaticMap = new daum.maps.StaticMap('+dmapId+'StaticMapContainer, '+dmapId+'MarkerPosition);'
+                    dmapScript += 'var StaticMap = new daum.maps.StaticMap(StaticMapContainer, MarkerPosition);'
                     dmapScript += '</script>'
                     
                     canvas.find("."+root.options.postupdateClass).find("div").attr("id", dmapId);
