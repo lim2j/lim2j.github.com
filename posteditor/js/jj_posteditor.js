@@ -662,6 +662,7 @@
                 }else{
                     $("."+root.options.rowAddClass).remove();
                 } 
+                imageBtn.removeClass("uploadImg");
                 imageInput.val("");
                 imageAlt.val("");
                 imageBtn.addClass("disabled").prop("disabled", true);
@@ -764,6 +765,7 @@
                 }else{
                     $("."+root.options.rowAddClass).remove();
                 } 
+                videoBtn.removeClass("uploadVideo");
                 videoUrl.val("");
                 videoBtn.addClass("disabled").prop("disabled", true);
             });
@@ -807,6 +809,14 @@
                     map.relayout();
                 });
                 
+                dmapLat.on('input', function () {                    
+                    if (dmapLat.val() == "") {                 
+                        dmapBtn.addClass("disabled").prop("disabled", true);
+                    } else {
+                        dmapBtn.removeClass("disabled").prop("disabled", false);
+                    };
+                });  
+                
                 dmapBtn.click(function(e){
                     e.preventDefault();                                       
                     dmapScript += '<script>'
@@ -828,7 +838,26 @@
                     $("#modalDmap").modal("hide");
                     
                 });
-            });            
+            });
+            
+            $("#modalDmap").on("hidden.bs.modal", function () {
+                var canvas = $post.find("#" + root.options.canvasId);
+                var dmapBtn = $(this).find('.note-dmap-btn');
+                var dmapLat = $(this).find('.note-dmap-lat');
+                var dmapLng = $(this).find('.note-dmap-lng');
+                var dmapId = root.uniqID();
+                var dmapScript = ""; 
+
+                if(dmapBtn.hasClass("uploadDmap")){
+                     $("."+root.options.rowAddClass).removeClass(root.options.rowAddClass);
+                }else{
+                    $("."+root.options.rowAddClass).remove();
+                } 
+                dmapBtn.removeClass("uploadDmap");
+                dmapLat.val("");
+                dmapLng.val("");
+                dmapBtn.addClass("disabled").prop("disabled", true);
+            });
             
         };
         
@@ -1160,7 +1189,7 @@
                 '                </div>'+
                 '            </div>'+
                 '            <div class="modal-footer">'+
-                '                <button href="#" class="btn btn-primary note-dmap-btn">지도 추가</button>'+
+                '                <button href="#" class="btn btn-primary note-dmap-btn disabled" disabled="">지도 추가</button>'+
                 '            </div>'               
             }
             

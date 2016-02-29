@@ -180,7 +180,7 @@ blind {display: block;overflow: hidden;position: absolute;left: -9999px;width: 0
     width: 100%;
     height: 350px;
 }
-.modalDaumMapInfo {
+#modalDaumMapInfo {
     display: none;
 }
 
