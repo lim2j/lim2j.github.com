@@ -1073,7 +1073,8 @@
                 '            </div>'+
                 '            <div class="modal-footer">'+
                 '                <button href="#" class="btn btn-primary note-image-btn">지도 추가</button>'+
-                '            </div>'+
+                '            </div>'
+                /*
                 '<script>'+
 //                'daum.maps.load(function() {'+
                 'var mapContainer = document.getElementById("modalDaumMap"),'+
@@ -1093,6 +1094,7 @@
                 '}'+
 //                '});'+
                 '</script>'
+                */
             }
             
         ],
