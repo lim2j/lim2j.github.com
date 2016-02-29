@@ -774,15 +774,26 @@
                             level: 3
                         };
                     var map = new daum.maps.Map(mapContainer, mapOption);
-                    var mapTypeControl = new daum.maps.MapTypeControl();
-                    map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
-                    function getInfo() {
-                        var center = map.getCenter();        
-                        var message = "지도 중심좌표는 위도 " + center.getLat() + ",<br>";
-                        message += "경도 " + center.getLng() + " 이고 <br>";
-                        var infoDiv = document.getElementById("modalDaumMapInfo");
-                        infoDiv.innerHTML = message;
-                    }
+                    // 지도를 클릭한 위치에 표출할 마커입니다
+                    var marker = new daum.maps.Marker({ 
+                        // 지도 중심좌표에 마커를 생성합니다 
+                        position: map.getCenter() 
+                    }); 
+                    // 지도에 마커를 표시합니다
+                    marker.setMap(map);
+                    // 지도에 클릭 이벤트를 등록합니다
+                    // 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
+                    daum.maps.event.addListener(map, 'click', function(mouseEvent) {
+                        // 클릭한 위도, 경도 정보를 가져옵니다 
+                        var latlng = mouseEvent.latLng; 
+                        // 마커 위치를 클릭한 위치로 옮깁니다
+                        marker.setPosition(latlng);
+                        var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
+                        message += '경도는 ' + latlng.getLng() + ' 입니다';
+                        var resultDiv = document.getElementById('modalDaumMapInfo'); 
+                        resultDiv.innerHTML = message;
+
+                    });
                     map.relayout();
                 });
             });
@@ -1098,28 +1109,7 @@
                 '            </div>'+
                 '            <div class="modal-footer">'+
                 '                <button href="#" class="btn btn-primary note-image-btn">지도 추가</button>'+
-                '            </div>'
-                /*
-                '<script>'+
-//                'daum.maps.load(function() {'+
-                'var mapContainer = document.getElementById("modalDaumMap"),'+
-                '    mapOption = { '+
-                '        center: new daum.maps.LatLng(33.450701, 126.570667),'+
-                '        level: 3'+
-                '    };'+
-                'var map = new daum.maps.Map(mapContainer, mapOption);'+
-                'var mapTypeControl = new daum.maps.MapTypeControl();'+
-                'map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);'+
-                'function getInfo() {'+
-                '    var center = map.getCenter(); '+                
-                '    var message = "지도 중심좌표는 위도 " + center.getLat() + ",<br>";'+
-                '    message += "경도 " + center.getLng() + " 이고 <br>";'+
-                '    var infoDiv = document.getElementById("modalDaumMapInfo");'+
-                '    infoDiv.innerHTML = message;'+
-                '}'+
-//                '});'+
-                '</script>'
-                */
+                '            </div>'               
             }
             
         ],
