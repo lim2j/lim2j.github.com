@@ -848,23 +848,23 @@
                     var dmapId = root.uniqID();
                     var dmapScript = "";
                     dmapScript += '<script>'
-                    dmapScript += 'var '+dmapId+'MarkerPosition  = new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'); '
-                    dmapScript += 'var '+dmapId+'Marker = {'
-                    dmapScript += '    position: '+dmapId+'MarkerPosition'
+                    dmapScript += 'var markerPosition'+dmapId+'  = new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+');'
+                    dmapScript += 'var marker'+dmapId+' = {'
+                    dmapScript += '    position: markerPosition'+dmapId+''
                     dmapScript += '};'
-                    dmapScript += 'var '+dmapId+'StaticMapContainer  = document.getElementById("'+dmapId+'"), '
-                    dmapScript += '    '+dmapId+'StaticMapOption = { '
+                    dmapScript += 'var staticMapContainer'+dmapId+'  = document.getElementById("'+dmapId+'"),'
+                    dmapScript += '    staticMapOption'+dmapId+' = { '
                     dmapScript += '        center: new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'),'
                     dmapScript += '        level: 3,'
-                    dmapScript += '        marker: '+dmapId+'Marker'
+                    dmapScript += '        marker: marker'+dmapId+''
                     dmapScript += '    };'
-                    dmapScript += 'var '+dmapId+'StaticMap = new daum.maps.StaticMap('+dmapId+'StaticMapContainer, '+dmapId+'MarkerPosition);'
+                    dmapScript += 'var staticMap'+dmapId+' = new daum.maps.StaticMap(staticMapContainer'+dmapId+', staticMapOption'+dmapId+');'
                     dmapScript += '</script>'
                     
                     canvas.find("."+root.options.postupdateClass).find("div").attr("id", dmapId);
                     canvas.find("."+root.options.postupdateClass).find("div").append(dmapScript);
-                    //canvas.find("."+root.options.postupdateClass).find("div").data("lat", dmapLat.val());
-                    //canvas.find("."+root.options.postupdateClass).find("div").data("lng", dmapLng.val());
+                    canvas.find("."+root.options.postupdateClass).find("div").data("lat", dmapLat.val());
+                    canvas.find("."+root.options.postupdateClass).find("div").data("lng", dmapLng.val());
                     dmapBtn.addClass("uploadDmap");
                     $("#modalDmap").modal("hide");
                     
@@ -893,7 +893,7 @@
         };
         
         root.uniqID = function () {
-            var charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz',
+            var charSet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz',
                 charSetSize = charSet.length,
                 charCount = 10;
 
