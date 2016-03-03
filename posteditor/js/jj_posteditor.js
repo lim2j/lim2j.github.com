@@ -630,7 +630,8 @@
         /* initModal */
         root.initModal = function(){
             $("body").append(root.modalFactory(root.options.modaldefault));
-        
+            
+            // img        
             $("#modalImg").on("shown.bs.modal", function () {
                 var canvas = $post.find("#" + root.options.canvasId);
                 var imageInput = $(this).find(".note-image-input"),
@@ -682,6 +683,7 @@
                 imageBtn.addClass("disabled").prop("disabled", true);
             });
             
+            // img link
             $("#modalLink").on("shown.bs.modal", function () {
                 var canvas = $post.find("#" + root.options.canvasId);
                 var thisLink = canvas.find("."+root.options.postupdateClass).find("a");
@@ -743,6 +745,7 @@
                 linkBtn.addClass("disabled").prop("disabled", true);
             });
             
+            // video
             $("#modalVideo").on("shown.bs.modal", function () {
                 var canvas = $post.find("#" + root.options.canvasId);
                 var videoUrl = $(this).find('.note-video-url'),
@@ -784,7 +787,7 @@
                 videoBtn.addClass("disabled").prop("disabled", true);
             });
             
-            
+            // daum map
             $("#modalDmap").on("shown.bs.modal", function () {
                 var canvas = $post.find("#" + root.options.canvasId);
                 var updateId = canvas.find("."+root.options.postupdateClass).find("div").attr("id");
@@ -863,8 +866,8 @@
                     
                     canvas.find("."+root.options.postupdateClass).find("div").attr("id", dmapId);
                     canvas.find("."+root.options.postupdateClass).find("div").append(dmapScript);
-                    canvas.find("."+root.options.postupdateClass).find("div").attr("data-lat", dmapLat.val());
-                    canvas.find("."+root.options.postupdateClass).find("div").attr("data-lng", dmapLng.val());
+                    canvas.find("."+root.options.postupdateClass).find("div").attr("data-dmapLat", dmapLat.val());
+                    canvas.find("."+root.options.postupdateClass).find("div").attr("data-dmapLng", dmapLng.val());
                     dmapBtn.addClass("uploadDmap");
                     $("#modalDmap").modal("hide");
                     
@@ -890,6 +893,7 @@
             
         };
         
+        /* uniq ID */
         root.uniqID = function () {
             var charSet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz',
                 charSetSize = charSet.length,
