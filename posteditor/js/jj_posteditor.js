@@ -791,7 +791,7 @@
                 var dmapBtn = $(this).find('.note-dmap-btn');
                 var dmapLat = $(this).find('.note-dmap-lat');
                 var dmapLng = $(this).find('.note-dmap-lng');
-                var dmapId, dmapScript, dmapLatVal, dmapLngVal; 
+                var dmapLatVal, dmapLngVal; 
                 
                 if(updateId == "" || updateId == undefined ){
                     dmapLatVal = root.options.mapApiLat;
@@ -845,8 +845,8 @@
                         canvas.find("."+root.options.postupdateClass).find("div").html("");
                     }
                     
-                    dmapId = root.uniqID();
-                    dmapScript = "";
+                    var dmapId = root.uniqID();
+                    var dmapScript = "";
                     dmapScript += '<script>'
                     dmapScript += 'var MarkerPosition  = new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'); '
                     dmapScript += 'var Marker = {'
@@ -862,7 +862,7 @@
                     dmapScript += '</script>'
                     
                     canvas.find("."+root.options.postupdateClass).find("div").attr("id", dmapId);
-                    canvas.find("."+root.options.postupdateClass).find("div").append(dmapScript);
+                    canvas.find("."+root.options.postupdateClass).find("div").html("" ,dmapScript);
                     //canvas.find("."+root.options.postupdateClass).find("div").data("lat", dmapLat.val());
                     //canvas.find("."+root.options.postupdateClass).find("div").data("lng", dmapLng.val());
                     dmapBtn.addClass("uploadDmap");
