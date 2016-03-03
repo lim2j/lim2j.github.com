@@ -806,6 +806,7 @@
                     
                     dmapLatVal = dmapLat.val();
                     dmapLngVal = dmapLng.val();
+                    root.log(updateId"= lat:"dmapLatVal+" lng:"+dmapLngVal)
                 }
                 
                 daum.maps.load(function() {
