@@ -855,7 +855,6 @@
                         var moveLatLon = new daum.maps.LatLng(dmapLat.val(), dmapLng.val());
                         // 지도 중심을 이동 시킵니다
                         map.setCenter(moveLatLon);
-
                     });
                     
                 });
