@@ -800,7 +800,6 @@
                     dmapLatVal = root.options.mapApiLat;
                     dmapLngVal = root.options.mapApiLng;
                 } else {
-                    canvas.find("."+root.options.postupdateClass).find("div").html("");
                     dmapLat.val(canvas.find("."+root.options.postupdateClass).find("div").attr("data-dmapLat"));
                     dmapLng.val(canvas.find("."+root.options.postupdateClass).find("div").attr("data-dmapLng"));
                     
