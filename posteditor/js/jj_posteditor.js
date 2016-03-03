@@ -805,7 +805,7 @@
                     dmapLngVal = dmapLng.val();
                 }
                 
-                daum.maps.load(function() {
+                //daum.maps.load(function() {
                     var mapContainer = document.getElementById("modalDaumMap"),
                         mapOption = { 
                             center: new daum.maps.LatLng(dmapLatVal, dmapLngVal),
@@ -836,7 +836,7 @@
                         dmapBtn.removeClass("disabled").prop("disabled", false);                        
                     });
                     map.relayout();
-                });
+                //});
                                 
                 dmapBtn.click(function(e){
                     e.preventDefault();                    
