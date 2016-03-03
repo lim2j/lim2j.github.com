@@ -811,14 +811,14 @@
                 }
                 root.log(updateId+"= lat:"+dmapLatVal+" lng:"+dmapLngVal);
                 
-                var map;
+                
                 daum.maps.load(function() {
                     var mapContainer = document.getElementById("modalDaumMap"),
                         mapOption = { 
                             center: new daum.maps.LatLng(dmapLatVal, dmapLngVal),
                             level: 3
                         };
-                    map = new daum.maps.Map(mapContainer, mapOption);
+                    var map = new daum.maps.Map(mapContainer, mapOption);
                     // 지도를 클릭한 위치에 표출할 마커입니다
                     var marker = new daum.maps.Marker({ 
                         // 지도 중심좌표에 마커를 생성합니다 
@@ -842,24 +842,25 @@
                         
                         dmapBtn.removeClass("disabled").prop("disabled", false);                        
                     });
-                    map.relayout();                    
+                    map.relayout();
+                    
+                    dmapLat.on('change' , function () { 
+                        // 이동할 위도 경도 위치를 생성합니다 
+                        var moveLatLon = new daum.maps.LatLng(dmapLat.val(), dmapLng.val());
+                        // 지도 중심을 이동 시킵니다
+                        map.setCenter(moveLatLon);
+                    });
+                    dmapLng.on('change' , function () { 
+                        // 이동할 위도 경도 위치를 생성합니다 
+                        var moveLatLon = new daum.maps.LatLng(dmapLat.val(), dmapLng.val());
+                        // 지도 중심을 이동 시킵니다
+                        map.setCenter(moveLatLon);
+
+                    });
                     
                 });
                 
-                dmapLat.on('change' , function () { 
-                    // 이동할 위도 경도 위치를 생성합니다 
-                    var moveLatLon = new daum.maps.LatLng(dmapLat.val(), dmapLng.val());
-                    // 지도 중심을 이동 시킵니다
-                    map.setCenter(moveLatLon);
-                });
-                dmapLng.on('change' , function () { 
-                    // 이동할 위도 경도 위치를 생성합니다 
-                    var moveLatLon = new daum.maps.LatLng(dmapLat.val(), dmapLng.val());
-
-                    // 지도 중심을 이동 시킵니다
-                    map.setCenter(moveLatLon);
-
-                });
+                
                                 
                 dmapBtn.click(function(e){
                     e.preventDefault();                    
