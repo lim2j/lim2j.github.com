@@ -805,9 +805,9 @@
                     dmapLng.val(canvas.find("."+root.options.postupdateClass).find("div").data("dmapLng"));
                     
                     dmapLatVal = dmapLat.val();
-                    dmapLngVal = dmapLng.val();
-                    root.log(updateId+"= lat:"dmapLatVal+" lng:"+dmapLngVal);
+                    dmapLngVal = dmapLng.val();                    
                 }
+                root.log(updateId+"= lat:"+dmapLatVal+" lng:"+dmapLngVal);
                 
                 daum.maps.load(function() {
                     var mapContainer = document.getElementById("modalDaumMap"),
