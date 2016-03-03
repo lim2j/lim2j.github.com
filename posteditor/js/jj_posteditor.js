@@ -1014,63 +1014,42 @@
         ],
         ImgButtonsAppend:[
             {
-                btnLabel: "L",
+                btnLabel: "왼쪽정렬",//"L",
                 title: "alignLeft",
                 element: "button",
                 btntype: "button",
                 btnClass: "post-alignLeft"
             },
             {
-                btnLabel: "C",
+                btnLabel: "가운데정렬",//"C",
                 title: "alignCenter",
                 element: "button",
                 btntype: "button",
                 btnClass: "post-alignCenter"
             },
             {
-                btnLabel: "R",
+                btnLabel: "오른쪽정렬",//"R",
                 title: "alignRight",
                 element: "button",
                 btntype: "button",
                 btnClass: "post-alignRight"
             },
             {
-                btnLabel: "Link",
+                btnLabel: "이미지 링크 걸기",//"Link",
                 title: "edit Link",
                 element: "button",
                 btntype: "button",
                 btnClass: "post-editlink"
             },
             {
-                btnLabel: "사진",
+                btnLabel: "이미지 변경",
                 title: "edit picture",
                 element: "button",
                 btntype: "button",
                 btnClass: "post-editpicture"
             }
         ],
-        VideoButtonsAppend:[
-            {
-                btnLabel: "L",
-                title: "alignLeft",
-                element: "button",
-                btntype: "button",
-                btnClass: "post-alignLeft"
-            },
-            {
-                btnLabel: "C",
-                title: "alignCenter",
-                element: "button",
-                btntype: "button",
-                btnClass: "post-alignCenter"
-            },
-            {
-                btnLabel: "R",
-                title: "alignRight",
-                element: "button",
-                btntype: "button",
-                btnClass: "post-alignRight"
-            },            
+        VideoButtonsAppend:[         
             {
                 btnLabel: "동영상",
                 title: "edit video",
@@ -1156,18 +1135,29 @@
                 html:
                 '            <div class="modal-header">'+
                 '                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>'+
-                '                <h4 class="modal-title">사진 추가</h4>'+
+                '                <h4 class="modal-title">이미지 추가</h4>'+
                 '            </div>'+
                 '            <div class="modal-body">'+
+                '                <div>'+
+                '                ※ 이미지는. 원 사이즈 그대로 웹페이지에 적용되며,'+
+                '                웹페이지 가로 사이즈보다 추가하는 이미지의 가로 사이즈가 더 큰 경우에는'+
+                '                웹페이지 제한된 가로 사이즈(스킨에 따라 700~800픽셀)에 꽉 차게 적용됩니다'+
+                '                </div>'+
                 '                <div class="form-group note-group-select-from-files">'+
-                '                    <label>파일 선택</label><input class="note-image-input form-control" type="file" name="files" accept="image/*" multiple="multiple">'+
+                '                    <label>추가 파일 선택</label><input class="note-image-input form-control" type="file" name="files" accept="image/*" multiple="multiple">'+
                 '                </div>'+
                 '                <div class="form-group note-group-select-from-files">'+
                 '                    <label>대체텍스트</label><input class="note-image-alt-input form-control" type="text" name="alt" multiple="multiple">'+
                 '                </div>'+
                 '            </div>'+
                 '            <div class="modal-footer">'+
-                '                <button href="#" class="btn btn-primary note-image-btn disabled" disabled="">사진 추가</button>'+
+                '                <button href="#" class="btn btn-primary note-image-btn disabled" disabled="">이미지 추가</button>'+
+                '                <div>'+
+                '               [주의] 이미지 추가 시 저작권자의 사전 허락 없이 도용한 경우에는 법적인 처벌이 발생할 수 '+
+                '               있으니 주의해주십시오.'+
+                '               포털사이트에서 검색한 이미지, 의학서적에서 스캔한 이미지, 다른 웹사이트에서 캡쳐한'+
+                '               이미지 등 타인(타사, 타 병원)의 이미지는 모두 저작권이 있으니 주의해주십시오.'+
+                '                </div>'+
                 '            </div>'            
             },
             {
@@ -1199,12 +1189,23 @@
                 '                <h4 class="modal-title">동영상 추가</h4>'+
                 '            </div>'+
                 '            <div class="modal-body">'+
+                '                <div>'+
+                '                ※ 동영상 파일(avi, wmv) 자체를 업로드 하는 방식은 지원이 불가합니다.'+
+                '                동영상은 유투브(youtube) 또는 비메오(vimeo)의 동영상 주소를 입력해주세요.'+
+                '                </div>'+
                 '                <div class="form-group row-fluid">'+
-                '                    <label>YouTube Video URL?<small class="text-muted"></small></label><input class="note-video-url form-control span12" type="text">'+
+                '                    <label>동영상 URL (http://~)<small class="text-muted"></small></label><input class="note-video-url form-control span12" type="text">'+
                 '                </div>'+
                 '            </div>'+
                 '            <div class="modal-footer">'+
                 '            <button href="#" class="btn btn-primary note-video-btn disabled" disabled="">동영상 추가</button>'+
+                '                <div>'+
+                '                [주의] 동영상 추가 시 저작권자의 사전 허락 없이 도용한 경우에는 법적인 처벌이 발생할 수 '+
+                '                있으니 주의해주십시오.'+
+                '                병원의 의료진이 TV방송에 출연했거나 병원의 장소를 협찬한 경우라고 하더라도 '+
+                '                동영상의 저작권은 방송국에 귀속됩니다. 그러므로 동영상 추가 시 방송국 측의 사전 허락을'+
+                '                받으셔야 합니다.'+
+                '                </div>'+
                 '            </div>'
             },
             {
@@ -1215,7 +1216,7 @@
                 '                <h4 class="modal-title">지도 위치 설정</h4>'+
                 '            </div>'+
                 '            <div class="modal-body">'+
-                '                <div class="modalDaumlabel">지도를 클릭해주세요!</div>'+
+                '                <div class="modalDaumlabel">※ 좀더 정확한 지도 위치 안내를 위해 아래 지도에서 직접 위치를 클릭·선택하시면 그 위치로 적용됩니다.</div>'+
                 '                <div id="modalDaumMap"></div>'+
                 '                <div id="modalDaumMapInfo">'+
                 '                <div class="form-group">'+
