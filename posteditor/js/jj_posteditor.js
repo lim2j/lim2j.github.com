@@ -811,13 +811,14 @@
                 }
                 root.log(updateId+"= lat:"+dmapLatVal+" lng:"+dmapLngVal);
                 
+                var map;
                 daum.maps.load(function() {
                     var mapContainer = document.getElementById("modalDaumMap"),
                         mapOption = { 
                             center: new daum.maps.LatLng(dmapLatVal, dmapLngVal),
                             level: 3
                         };
-                    var map = new daum.maps.Map(mapContainer, mapOption);
+                    map = new daum.maps.Map(mapContainer, mapOption);
                     // 지도를 클릭한 위치에 표출할 마커입니다
                     var marker = new daum.maps.Marker({ 
                         // 지도 중심좌표에 마커를 생성합니다 
