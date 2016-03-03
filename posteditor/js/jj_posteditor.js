@@ -1170,7 +1170,7 @@
                 '                <div class="form-group note-group-select-from-files">'+
                 '                    <label>추가 파일 선택</label><input class="note-image-input form-control" type="file" name="files" accept="image/*" multiple="multiple">'+
                 '                </div>'+
-                '                <div class="form-group note-group-select-from-files">'+
+                '                <div class="form-group note-group-select-from-files" style="display:none">'+
                 '                    <label>대체텍스트</label><input class="note-image-alt-input form-control" type="text" name="alt" multiple="multiple">'+
                 '                </div>'+
                 '            </div>'+

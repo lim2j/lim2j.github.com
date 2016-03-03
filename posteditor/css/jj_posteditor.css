@@ -76,7 +76,9 @@ blind {display: block;overflow: hidden;position: absolute;left: -9999px;width: 0
 }
 .post-add {
     position: absolute;
-    bottom: -48px;
+    /* bottom: -48px; */
+    top: 25px;
+    left: -25px;
     z-index: 99;
     height: 0;
     overflow: hidden;
