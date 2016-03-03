@@ -863,8 +863,8 @@
                     
                     canvas.find("."+root.options.postupdateClass).find("div").attr("id", dmapId);
                     canvas.find("."+root.options.postupdateClass).find("div").append(dmapScript);
-                    canvas.find("."+root.options.postupdateClass).find("div").data("lat", dmapLat.val());
-                    canvas.find("."+root.options.postupdateClass).find("div").data("lng", dmapLng.val());
+                    canvas.find("."+root.options.postupdateClass).find("div").attr("data-lat", dmapLat.val());
+                    canvas.find("."+root.options.postupdateClass).find("div").attr("data-lng", dmapLng.val());
                     dmapBtn.addClass("uploadDmap");
                     $("#modalDmap").modal("hide");
                     
