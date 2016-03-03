@@ -181,7 +181,7 @@ blind {display: block;overflow: hidden;position: absolute;left: -9999px;width: 0
     height: 350px;
 }
 #modalDaumMapInfo {
-    display: none;
+    /* display: none; */
 }
 
 /* 사용자 정의 */
