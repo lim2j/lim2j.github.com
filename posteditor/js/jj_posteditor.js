@@ -848,21 +848,21 @@
                     var dmapId = root.uniqID();
                     var dmapScript = "";
                     dmapScript += '<script>'
-                    dmapScript += 'var MarkerPosition  = new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'); '
-                    dmapScript += 'var Marker = {'
-                    dmapScript += '    position: MarkerPosition'
+                    dmapScript += 'var '+dmapId+'MarkerPosition  = new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'); '
+                    dmapScript += 'var '+dmapId+'Marker = {'
+                    dmapScript += '    position: '+dmapId+'MarkerPosition'
                     dmapScript += '};'
-                    dmapScript += 'var StaticMapContainer  = document.getElementById("'+dmapId+'"), '
-                    dmapScript += '    StaticMapOption = { '
+                    dmapScript += 'var '+dmapId+'StaticMapContainer  = document.getElementById("'+dmapId+'"), '
+                    dmapScript += '    '+dmapId+'StaticMapOption = { '
                     dmapScript += '        center: new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'),'
                     dmapScript += '        level: 3,'
-                    dmapScript += '        marker: Marker'
+                    dmapScript += '        marker: '+dmapId+'Marker'
                     dmapScript += '    };'
-                    dmapScript += 'var StaticMap = new daum.maps.StaticMap(StaticMapContainer, MarkerPosition);'
+                    dmapScript += 'var '+dmapId+'StaticMap = new daum.maps.StaticMap('+dmapId+'StaticMapContainer, '+dmapId+'MarkerPosition);'
                     dmapScript += '</script>'
                     
                     canvas.find("."+root.options.postupdateClass).find("div").attr("id", dmapId);
-                    canvas.find("."+root.options.postupdateClass).find("div").html("" ,dmapScript);
+                    canvas.find("."+root.options.postupdateClass).find("div").append(dmapScript);
                     //canvas.find("."+root.options.postupdateClass).find("div").data("lat", dmapLat.val());
                     //canvas.find("."+root.options.postupdateClass).find("div").data("lng", dmapLng.val());
                     dmapBtn.addClass("uploadDmap");
