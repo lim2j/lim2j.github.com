@@ -89,7 +89,8 @@ blind {display: block;overflow: hidden;position: absolute;left: -9999px;width: 0
     height: 48px;
     margin-right: 5px;
     border: 0;
-    background-color: #fff;
+    background-color: rgba(0,0,0,.5);
+    color: white;
     vertical-align: top;
     cursor: pointer;
 }
