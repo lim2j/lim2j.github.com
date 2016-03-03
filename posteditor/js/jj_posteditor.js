@@ -853,7 +853,7 @@
                     dmapScript += '    position: '+dmapId+'MarkerPosition'
                     dmapScript += '};'
                     dmapScript += 'var '+dmapId+'StaticMapContainer  = document.getElementById("'+dmapId+'"), '
-                    dmapScript += '    '+dmapId+'StaticMapOption = { '
+                    dmapScript += '    staticMapOption = { '
                     dmapScript += '        center: new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'),'
                     dmapScript += '        level: 3,'
                     dmapScript += '        marker: '+dmapId+'Marker'
