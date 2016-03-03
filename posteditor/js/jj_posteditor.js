@@ -799,6 +799,9 @@
                 if(updateId == "" || updateId == undefined ){
                     dmapLatVal = root.options.mapApiLat;
                     dmapLngVal = root.options.mapApiLng;
+                    
+                    dmapLat.val(dmapLatVal);
+                    dmapLng.val(dmapLngVal);
                 } else {
                     dmapLat.val(canvas.find("."+root.options.postupdateClass).find("div").attr("data-dmapLat"));
                     dmapLng.val(canvas.find("."+root.options.postupdateClass).find("div").attr("data-dmapLng"));
@@ -839,6 +842,22 @@
                         dmapBtn.removeClass("disabled").prop("disabled", false);                        
                     });
                     map.relayout();
+                    
+                    dmapLat.live('change' , function () { 
+                        // 이동할 위도 경도 위치를 생성합니다 
+                        var moveLatLon = new daum.maps.LatLng(dmapLat.val(), dmapLng.val());
+
+                        // 지도 중심을 이동 시킵니다
+                        map.setCenter(moveLatLon);
+                    });
+                    dmapLng.live('change' , function () { 
+                        // 이동할 위도 경도 위치를 생성합니다 
+                        var moveLatLon = new daum.maps.LatLng(dmapLat.val(), dmapLng.val());
+
+                        // 지도 중심을 이동 시킵니다
+                        map.setCenter(moveLatLon);
+                    
+                    });
                 });
                                 
                 dmapBtn.click(function(e){
@@ -1219,8 +1238,7 @@
                 '                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>'+
                 '                <h4 class="modal-title">지도 위치 설정</h4>'+
                 '            </div>'+
-                '            <div class="modal-body">'+
-                '                <div class="modalDaumlabel">※ 좀더 정확한 지도 위치 안내를 위해 아래 지도에서 직접 위치를 클릭·선택하시면 그 위치로 적용됩니다.</div>'+
+                '            <div class="modal-body">'+                
                 '                <div id="modalDaumMapInfo">'+
                 '                <div class="form-group">'+
                 '                <label>위도</label><input class="note-dmap-lat form-control" type="text" value="">'+
@@ -1229,6 +1247,7 @@
                 '                <label>경도</label><input class="note-dmap-lng form-control" type="text" value="">'+
                 '                </div>'+
                 '                </div>'+
+                '                <div class="modalDaumlabel">※ 좀더 정확한 지도 위치 안내를 위해 아래 지도에서 직접 위치를 클릭·선택하시면 그 위치로 적용됩니다.</div>'+
                 '                <div id="modalDaumMap"></div>'+
                 '            </div>'+
                 '            <div class="modal-footer">'+
