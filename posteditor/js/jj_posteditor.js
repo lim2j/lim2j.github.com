@@ -845,13 +845,13 @@
                     
                 });
                 
-                dmapLat.live('change' , function () { 
+                dmapLat.on('change' , function () { 
                     // 이동할 위도 경도 위치를 생성합니다 
                     var moveLatLon = new daum.maps.LatLng(dmapLat.val(), dmapLng.val());
                     // 지도 중심을 이동 시킵니다
                     map.setCenter(moveLatLon);
                 });
-                dmapLng.live('change' , function () { 
+                dmapLng.on('change' , function () { 
                     // 이동할 위도 경도 위치를 생성합니다 
                     var moveLatLon = new daum.maps.LatLng(dmapLat.val(), dmapLng.val());
 
