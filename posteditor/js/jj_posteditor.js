@@ -853,7 +853,7 @@
                     dmapScript += '    position: '+dmapId+'MarkerPosition'
                     dmapScript += '};'
                     dmapScript += 'var '+dmapId+'StaticMapContainer  = document.getElementById("'+dmapId+'"), '
-                    dmapScript += '    staticMapOption = { '
+                    dmapScript += '    '+dmapId+'StaticMapOption = { '
                     dmapScript += '        center: new daum.maps.LatLng('+dmapLat.val()+', '+dmapLng.val()+'),'
                     dmapScript += '        level: 3,'
                     dmapScript += '        marker: '+dmapId+'Marker'
@@ -893,7 +893,7 @@
         };
         
         root.uniqID = function () {
-            var charSet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz',
+            var charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz',
                 charSetSize = charSet.length,
                 charCount = 10;
 
