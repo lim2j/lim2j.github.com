@@ -69,15 +69,15 @@
                 'html': contents
             });
             
-            var elid = root.$el.attr("id");
-            var elclass = root.$el.attr("class");            
+            var elid = root.$el.attr("id");            
             $post = $("<div/>",{
-                'id':elid,
-                'class':elclass,                
+                'id':elid+"_postEditor",
+                'class':root.options.canvasClass,                
             });
-            root.$el.replaceWith($post);            
+            //root.$el.replaceWith($post);
+            root.$el.hide();
+            root.$el.after($post);
             $post.append(html);
-          
         };
         
         root.createApiScript = function(){
@@ -766,7 +766,8 @@
                 }).trigger('focus'); 
 
                 videoBtn.click(function(e){
-                    e.preventDefault();                    canvas.find("."+root.options.postupdateClass).find("iframe").attr('src', '//www.youtube.com/embed/' + youtubeId);
+                    e.preventDefault();
+                    canvas.find("."+root.options.postupdateClass).find("iframe").attr('src', '//www.youtube.com/embed/' + youtubeId);
                     videoBtn.addClass("uploadVideo");
                     $("#modalVideo").modal("hide");
                     
@@ -967,6 +968,7 @@
     /* options */
     $.posteditor.defaultOptions = {
         debug: true, //console : true/fals        
+        canvasClass: "post-canvas-wrap",
         canvasId: "post-canvas", // Canvas ID
         rowClass :"postrow",        
         rowAddClass: "post-add-row",
@@ -1093,19 +1095,29 @@
         ],
         
         summernote: {
-            config: {
+            config: {                
                 focus: true,
-                airMode: true,
+                //airMode: true,
                 lang: 'ko-KR',
                 dialogsInBody: true,
                 dialogsFade: true,
                 disableDragAndDrop: true,
                 //toolbarContainer: '.post-addText'                
                 fontNames: ['굴림', '돋움','Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],                
+                toolbar: [
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+                    ['font', ['bold', 'italic', 'underline']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['insert', ['link']]
+                  ],
                 popover: {                  
                   link: [
                     ['link', ['linkDialogShow', 'unlink']]
                   ],
+                /*
                   air: [
                     ['fontname', ['fontname']],
                     ['fontsize', ['fontsize']],
@@ -1116,6 +1128,7 @@
                     ['insert', ['link']]
                     //['insert', ['link', 'picture']]
                   ]
+                */
                 },
                 callbacks: {
                     onInit: function() {                        
