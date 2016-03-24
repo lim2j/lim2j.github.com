@@ -179,6 +179,9 @@ blind {display: block;overflow: hidden;position: absolute;left: -9999px;width: 0
 .post-empty {
     color: #ccc;
 }
+.update-post-cont{
+    min-height:1px
+}
 #modalDaumMap {
     width: 100%;
     height: 350px;

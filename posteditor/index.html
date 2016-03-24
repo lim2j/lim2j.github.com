@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>2j post editor</title>
-    <link rel="stylesheet" href="">   
-    
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/jj_posteditor.css">
-    <style type="text/css"></style>
 </head>
 <body>
     
@@ -30,8 +27,6 @@
             </div>        
         </div> 
     -->
-    
-    
         
         <input type="submit" name="submit" class="submit" />
     </form>
@@ -56,11 +51,31 @@
         var post = jQuery("#postEditor_wrap").posteditor({
             debug: true //console : true/false
         }).data('posteditor');
+        
+        /*첨부파일 디자인 적용하기
+        var fileTarget = $('.filebox .upload_hidden');
+        fileTarget.bind('change', function(){  // 값이 변경되면
+            if(window.FileReader){  // modern browser
+                var filename = $(this)[0].files[0].name;
+            } 
+            else {  // old IE
+                var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
+            }
+            // 추출한 파일명 삽입
+            $(this).siblings('.upload_name').val(filename);
+        });    
+        */
+
         $(".submit").on("click", function(e){
-            canvas = post.$el.find("#" + post.options.canvasId);
-            post.deinitCanvas();  
-            $("#mycontent").val(canvas.html());
-            $(this).submit();
+            if(confirm("수정 하시겠습니까?")){
+				//postEditor_wrap에 editor의 정보(html)를 저장한다.				
+				post.saveremote();
+				
+				$(this).submit();				
+				var action = "";
+				$("#postSave").attr("action", action).submit();
+
+			};
         });         
     });
     </script>
@@ -68,7 +83,6 @@
     <!-- 사용자 페이지에 발급받은 아래 스크립을 head에 추가
     <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=발급받은 API KEY를 사용하세요"></script>
      -->
-
     
 </body>
 </html>

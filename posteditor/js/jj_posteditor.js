@@ -644,11 +644,13 @@
                     var thisDom = $(this)[0];
 
                     if (thisDom.files && thisDom.files[0]) {
-                        var reader = new FileReader();
-                        reader.onload = function (e) {
-                            imgSrc = e.target.result;
-                        } 
-                        reader.readAsDataURL(thisDom.files[0]);
+                        if(root.options.imageSaveAjax == false){
+                            var reader = new FileReader();
+                            reader.onload = function (e) {
+                                imgSrc = e.target.result;
+                            } 
+                            reader.readAsDataURL(thisDom.files[0]);
+                        }
 
                         imageBtn.removeClass("disabled").prop("disabled", false);
                     } else {
@@ -659,7 +661,45 @@
                 imageBtn.click(function(e){
                     e.preventDefault();
                     if(imageInput.val() != ""){         
-                        canvas.find("."+root.options.postupdateClass).find("img").attr("src", imgSrc);                        canvas.find("."+root.options.postupdateClass).find("img").attr("alt", imageAlt.val());
+                        
+                        var file = imageInput.val();                    	
+                    	var ext = file.split(".");
+					    ext = ext[ext.length-1].toLowerCase();      
+					    var arrayExtensions = ["jpg" , "jpeg", "png", "bmp", "gif"];
+					
+					    if (arrayExtensions.lastIndexOf(ext) == -1) {
+					        alert("JPG, GIF, PNG, BMP 확장자만 가능합니다");
+					        imageInput.val("");
+					    }
+                        
+                        if(root.options.imageSaveAjax){
+                            var form = new FormData(document.getElementById('uploadForm'));
+                            
+                            $.ajax({
+					        url: root.options.imgUploadUrl,
+					        data: form,
+					        dataType: 'json',
+					        type: 'POST',
+					        mimeType: "multipart/form-data",
+					        processData: false,
+					        contentType: false,
+					        cache:false,
+					        success: function (data) {
+					        	root.log('success');
+					        	root.log(data);
+					        	imgSrc = data.result;
+					          	canvas.find("."+root.options.postupdateClass).find("img").attr("src", imgSrc);
+		                        canvas.find("."+root.options.postupdateClass).find("img").attr("alt", imageAlt.val());		                        
+					        },
+					        error: function (jqXHR) {
+					        	root.log('error');
+					        }
+					      });
+                        } else {
+                            canvas.find("."+root.options.postupdateClass).find("img").attr("src", imgSrc);                        canvas.find("."+root.options.postupdateClass).find("img").attr("alt", imageAlt.val());    
+                        }
+                        
+                        
                         imageBtn.addClass("uploadImg");
 
                         $("#modalImg").modal("hide");
@@ -951,6 +991,24 @@
             root.deinitCanvas();            
         };
         
+        /* saveremote
+         */
+        root.saveremote = function () {
+        	var canvas = $post.find("#" + root.options.canvasId);
+            root.deinitCanvas();
+            root.$el.val(canvas.html());
+            /*
+            $.ajax({
+                type: "POST",
+                url: root.options.saveURL,
+                data: {
+                    content: canvas.html()
+                }
+            });
+            */
+            root.log("Save Function Called");
+        };
+        
         /* log */
         root.log = function(logvar){
             if(root.options.debug){
@@ -1095,7 +1153,7 @@
         ],
         
         summernote: {
-            config: {                
+            config: {
                 focus: true,
                 //airMode: true,
                 lang: 'ko-KR',
@@ -1103,21 +1161,20 @@
                 dialogsFade: true,
                 disableDragAndDrop: true,
                 //toolbarContainer: '.post-addText'                
-                fontNames: ['굴림', '돋움','Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],                
+                fontNames: ['굴림', '돋움','Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
                 toolbar: [
-                    ['fontname', ['fontname']],
-                    ['fontsize', ['fontsize']],
-                    ['font', ['bold', 'italic', 'underline']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['height', ['height']],
-                    ['insert', ['link']]
-                  ],
+                          ['fontname', ['fontname']],
+                          ['fontsize', ['fontsize']],
+                          ['font', ['bold', 'italic', 'underline']],
+                          ['color', ['color']],
+                          ['para', ['ul', 'ol', 'paragraph']],
+                          ['height', ['height']],
+                          ['insert', ['link']]
+                        ],
                 popover: {                  
                   link: [
                     ['link', ['linkDialogShow', 'unlink']]
                   ],
-                /*
                   air: [
                     ['fontname', ['fontname']],
                     ['fontsize', ['fontsize']],
@@ -1125,10 +1182,8 @@
                     ['color', ['color']],
                     ['para', ['ul', 'ol', 'paragraph']],
                     ['height', ['height']],
-                    ['insert', ['link']]
-                    //['insert', ['link', 'picture']]
+                    ['insert', ['link']]                 
                   ]
-                */
                 },
                 callbacks: {
                     onInit: function() {                        
@@ -1138,6 +1193,7 @@
                 
             }
         },       
+             
         /*        
         hallo:{
             config: {
@@ -1176,16 +1232,16 @@
                 '            </div>'+
                 '            <div class="modal-body">'+
                 '                <div>'+
-                '                ※ 이미지는. 원 사이즈 그대로 웹페이지에 적용되며,'+
-                '                웹페이지 가로 사이즈보다 추가하는 이미지의 가로 사이즈가 더 큰 경우에는'+
-                '                웹페이지 제한된 가로 사이즈(스킨에 따라 700~800픽셀)에 꽉 차게 적용됩니다'+
+                '                ※ 이미지는. 원 사이즈 그대로 웹페이지에 적용되며,<br />웹페이지 가로 사이즈보다 추가하는 이미지의 가로 사이즈가 더 큰 경우에는<br />웹페이지 제한된 가로 사이즈(스킨에 따라 700~800픽셀)에 꽉 차게 적용됩니다'+
                 '                </div>'+
+                '                <form id="uploadForm" method="post" enctype="multipart/form-data">'+
                 '                <div class="form-group note-group-select-from-files">'+
                 '                    <label>추가 파일 선택</label><input class="note-image-input form-control" type="file" name="files" accept="image/*" multiple="multiple">'+
                 '                </div>'+
                 '                <div class="form-group note-group-select-from-files" style="display:none">'+
                 '                    <label>대체텍스트</label><input class="note-image-alt-input form-control" type="text" name="alt" multiple="multiple">'+
                 '                </div>'+
+                '                </form>'+
                 '            </div>'+
                 '            <div class="modal-footer">'+
                 '                <button href="#" class="btn btn-primary note-image-btn disabled" disabled="">이미지 추가</button>'+
@@ -1200,23 +1256,23 @@
             {
                 id:"modalLink",
                 html:
-                '        <div class="modal-header">'+
-                '            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">링크 추가</h4>'+
-                '        </div>'+
-                '        <div class="modal-body">'+
-                '            <div class="form-group">'+
-                '                <label>링크에 표시할 내용</label><input class="note-link-text form-control" type="text">'+
+                '            <div class="modal-header">'+
+                '                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">링크 추가</h4>'+
                 '            </div>'+
-                '            <div class="form-group">'+
-                '                <label>이동할 URL</label><input class="note-link-url form-control" type="text" value="http://">'+
+                '            <div class="modal-body">'+
+                '                <div class="form-group">'+
+                '                    <label>링크에 표시할 내용</label><input class="note-link-text form-control" type="text">'+
+                '                </div>'+
+                '                <div class="form-group">'+
+                '                    <label>이동할 URL</label><input class="note-link-url form-control" type="text" value="http://">'+
+                '                </div>'+
+                '                <div class="checkbox">'+
+                '                    <label><input type="checkbox" checked=""> 새창으로 열기</label>'+
+                '                </div>'+
                 '            </div>'+
-                '            <div class="checkbox">'+
-                '                <label><input type="checkbox" checked=""> 새창으로 열기</label>'+
-                '            </div>'+
-                '        </div>'+
-                '        <div class="modal-footer">'+
-                '            <button href="#" class="btn btn-primary note-link-btn disabled" disabled="">링크 추가</button>'+
-                '        </div>'
+                '            <div class="modal-footer">'+
+                '                <button href="#" class="btn btn-primary note-link-btn disabled" disabled="">링크 추가</button>'+
+                '            </div>'
             },
             {
                 id:"modalVideo",
@@ -1227,8 +1283,7 @@
                 '            </div>'+
                 '            <div class="modal-body">'+
                 '                <div>'+
-                '                ※ 동영상 파일(avi, wmv) 자체를 업로드 하는 방식은 지원이 불가합니다.'+
-                '                동영상은 유투브(youtube) 또는 비메오(vimeo)의 동영상 주소를 입력해주세요.'+
+                '                ※ 동영상 파일(avi, wmv) 자체를 업로드 하는 방식은 지원이 불가합니다.<br />동영상은 유투브(youtube) 또는 비메오(vimeo)의 동영상 주소를 입력해주세요.'+
                 '                </div>'+
                 '                <div class="form-group row-fluid">'+
                 '                    <label>동영상 URL (http://~)<small class="text-muted"></small></label><input class="note-video-url form-control span12" type="text">'+
@@ -1273,7 +1328,9 @@
         mapApiId:"daumMap",
         mapApiKey:"a7b3e5375021061876b437aaaf84ef18",     
         mapApiLat:"37.514833658289106",
-        mapApiLng:"127.06574351895208"
+        mapApiLng:"127.06574351895208",
+        imageSaveAjax:false,
+        saveURL:""
        
     };
     
