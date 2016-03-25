@@ -11,12 +11,35 @@
         */
         root.init = function(){
             root.options = $.extend({},$.posteditor.defaultOptions, options);
-            root.createCanvas();
-            root.createApiScript();
-            //root.initSreen();
-            root.initControls();
-            root.initCanvas();            
-            root.initModal();
+            
+            
+            if(root.options.mapApiKey){
+	            var headTag = document.getElementsByTagName("head")[0];         
+	            var newScript = document.createElement('script');
+	            newScript.type = 'text/javascript';
+	            newScript.onload = function() {
+	            	
+	            	root.createCanvas();
+	                //root.initSreen();
+	                root.initControls();
+	                root.initCanvas();            
+	                root.initModal();
+	                
+	            	root.log('add script daum api') 
+	            };
+	            newScript.src = "//apis.daum.net/maps/maps3.js?autoload=false&apikey="+root.options.mapApiKey;
+	            headTag.appendChild(newScript);
+	            
+	            root.log('add script daum api');
+        	} else {
+                root.createCanvas();
+                //root.createApiScript();
+                //root.initSreen();
+                root.initControls();
+                root.initCanvas();                            
+                root.log("Finished");    
+            }
+            
             root.log("Finished");
         };
         
