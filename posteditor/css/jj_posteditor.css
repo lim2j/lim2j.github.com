@@ -104,6 +104,8 @@ blind {display: block;overflow: hidden;position: absolute;left: -9999px;width: 0
     opacity: .3;
     content: '';
 }
+#post-canvas .note-editor {border: 0; position: relative; z-index: 10;}
+#post-canvas .note-editor .note-editable {padding: 0; background: none;}
 
 .post-edit-tool {
     background-color: rgba(63,170,237,0.5);
