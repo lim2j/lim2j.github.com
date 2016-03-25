@@ -82,10 +82,11 @@
             if(root.options.mapApiKey){
                 var headTag = document.getElementsByTagName("head")[0];         
                 var newScript = document.createElement('script');
-                newScript.type = 'text/javascript';
-                newScript.onload = function() { $post.append(html); };
+                newScript.type = 'text/javascript';                
                 newScript.src = "//apis.daum.net/maps/maps3.js?autoload=false&apikey="+root.options.mapApiKey;            
                 $post.append(newScript);    
+                
+                $post.append(html);
             }else{
                 $post.append(html);
             }
