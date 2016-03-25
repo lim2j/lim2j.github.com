@@ -11,8 +11,9 @@
         */
         root.init = function(){
             root.options = $.extend({},$.posteditor.defaultOptions, options);
-            root.createCanvas();
+            
             //root.createApiScript();
+            root.createCanvas();
             //root.initSreen();
             root.initControls();
             root.initCanvas();            
@@ -77,7 +78,18 @@
             //root.$el.replaceWith($post);
             root.$el.hide();
             root.$el.after($post);
-            $post.append(html);
+            
+            if(root.options.mapApiKey){
+                var headTag = document.getElementsByTagName("head")[0];         
+                var newScript = document.createElement('script');
+                newScript.type = 'text/javascript';
+                newScript.onload = function() { $post.append(html); };
+                newScript.src = "//apis.daum.net/maps/maps3.js?autoload=false&apikey="+root.options.mapApiKey;            
+                $post.append(newScript);    
+            }else{
+                $post.append(html);
+            }
+            
         };
         
         root.createApiScript = function(){
