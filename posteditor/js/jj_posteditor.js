@@ -78,19 +78,7 @@
             //root.$el.replaceWith($post);
             root.$el.hide();
             root.$el.after($post);
-            
-            if(root.options.mapApiKey){
-                var headTag = document.getElementsByTagName("head")[0];         
-                var newScript = document.createElement('script');
-                newScript.type = 'text/javascript';                
-                newScript.src = "//apis.daum.net/maps/maps3.js?autoload=false&apikey="+root.options.mapApiKey;            
-                $post.append(newScript);    
-                
-                $post.append(html);
-            }else{
-                $post.append(html);
-            }
-            
+            $post.append(html);
         };
         
         root.createApiScript = function(){
@@ -104,8 +92,7 @@
             */
             var headTag = document.getElementsByTagName("head")[0];         
             var newScript = document.createElement('script');
-            newScript.type = 'text/javascript';
-            newScript.onload = function() { root.log('add script daum api') };
+            newScript.type = 'text/javascript';            
             newScript.src = "//apis.daum.net/maps/maps3.js?autoload=false&apikey="+root.options.mapApiKey;
             headTag.appendChild(newScript);
         };
@@ -864,8 +851,7 @@
                     dmapLngVal = dmapLng.val();                    
                 }
                 root.log(updateId+"= lat:"+dmapLatVal+" lng:"+dmapLngVal);
-                
-                
+                                
                 daum.maps.load(function() {
                     var mapContainer = document.getElementById("modalDaumMap"),
                         mapOption = { 
@@ -992,9 +978,11 @@
             root.deactivateCols(cols);
             root.clearRowControls();
             root.clearColControls();
-            $("body").find("."+root.optionsviewGroupClass).remove();
+            $("body").find("."+root.options.viewGroupClass).remove();
             root.modalsRemove(root.options.modaldefault);
             canvas.find("."+root.options.postEmptyClass).text("");
+            canvas.find(".post-dmap-map").remove();
+            canvas.find(".post-dmap-map").find("a").remove();
         };
         
         /* clean
@@ -1132,7 +1120,7 @@
                 btnClass: "post-alignRight"
             },
             {
-                btnLabel: "이미지 링크 걸기",//"Link",
+                btnLabel: "링크 설정",//"Link",
                 title: "edit Link",
                 element: "button",
                 btntype: "button",
@@ -1148,7 +1136,7 @@
         ],
         VideoButtonsAppend:[         
             {
-                btnLabel: "동영상",
+                btnLabel: "동영상 변경",
                 title: "edit video",
                 element: "button",
                 btntype: "button",
@@ -1157,7 +1145,7 @@
         ],
         DmapButtonsAppend:[           
             {
-                btnLabel: "지도",
+                btnLabel: "지도 변경",
                 title: "edit dmap",
                 element: "button",
                 btntype: "button",
@@ -1339,7 +1327,7 @@
             
         ],
         mapApiId:"daumMap",
-        mapApiKey:"a7b3e5375021061876b437aaaf84ef18",     
+        mapApiKey:"",     
         mapApiLat:"37.514833658289106",
         mapApiLng:"127.06574351895208",
         imageSaveAjax:false,

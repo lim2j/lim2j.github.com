@@ -5,15 +5,13 @@
     <title>2j post editor</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/jj_posteditor.css">
-    
-    
-    <!-- script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=a7b3e5375021061876b437aaaf84ef18"></script -->
+    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=a7b3e5375021061876b437aaaf84ef18"></script>
 </head>
 <body>
     
    <form method="post" action="saveme" id="postSave">       
        <textarea id="postEditor_wrap" name="" id="" cols="30" rows="10">
-           &lt;div class="postrow"&gt;&lt;div class="postcol post-text" style="display: block;"&gt;&lt;p&gt;asdfasdfasdf&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="postrow"&gt;&lt;div class="postcol post-text" style="display: block;"&gt;&lt;p&gt;asdfasdf&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="postrow"&gt;&lt;div class="postcol post-dmap"&gt;&lt;div class="post-dmap-map" id="ht17ihXTkD"&gt;&lt;script&gt;var markerPositionht17ihXTkD  = new daum.maps.LatLng(37.5156680261253, 127.06403341311339);var markerht17ihXTkD = {    position: markerPositionht17ihXTkD};var staticMapContainerht17ihXTkD  = document.getElementById("ht17ihXTkD"),    staticMapOptionht17ihXTkD = {         center: new daum.maps.LatLng(37.5156680261253, 127.06403341311339),        level: 3,        marker: markerht17ihXTkD    };var staticMapht17ihXTkD = new daum.maps.StaticMap(staticMapContainerht17ihXTkD, staticMapOptionht17ihXTkD);&lt;/script&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="postrow"&gt;&lt;div class="postcol post-image"&gt;&lt;img src="http://src.clickmedi.co.kr/52/836/upload/smartEditor/2016-03-2405f25a40-e9f8-422a-9bb3-414732a02a75.jpg" alt=""&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="postrow"&gt;&lt;div class="postcol post-video"&gt;&lt;iframe frameborder="0" src="//www.youtube.com/embed/BiorIyrjTHc"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
+          
        </textarea>
    <!-- sample contents
        <div class="postrow">
@@ -56,8 +54,7 @@
         var post = jQuery("#postEditor_wrap").posteditor({
             debug: true //console : true/false
         }).data('posteditor');
-        
-        alert("aaaaa");
+                
         /*첨부파일 디자인 적용하기
         var fileTarget = $('.filebox .upload_hidden');
         fileTarget.bind('change', function(){  // 값이 변경되면
