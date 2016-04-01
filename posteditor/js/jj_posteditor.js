@@ -640,9 +640,50 @@
                     imgSrc;
 
                 imageInput.on("change", function () {
+                    // file format check
+                    var file = imageInput.val();                    	
+                    var ext = file.split(".");
+                    ext = ext[ext.length-1].toLowerCase();      
+                    var arrayExtensions = ["jpg" , "jpeg", "png", "bmp", "gif"];
+
+                    if (arrayExtensions.lastIndexOf(ext) == -1) {
+                        alert("JPG, GIF, PNG, BMP 확장자만 가능합니다");
+                        imageInput.val("");
+                    }
+                    
+                    // Get the file size
+                    var size;
+                    var maxSize = 1024*1024;  //1MB
+                    
+                    if (window.FileReader && window.File && window.FileList && window.Blob) {
+                        // HTML5 File API Supported
+                        size = imageInput[0].files[0].size;                        
+                    } else {
+                        // Need to use ActiveX to read the file size
+                        var myFSO = new ActiveXObject("Scripting.FileSystemObject");
+                        var filepath = imageInput.val();
+                        var thefile = myFSO.getFile(filepath);
+                        size = thefile.size;
+                    }
+                    
+                    if (size > maxSize) {
+                        //var _size = size;
+                        var fSExt = new Array('Bytes', 'KB', 'MB', 'GB'),
+                        i=0;while(size>900){size/=1024;i++;}
+                        var exactSize = (Math.round(size*100)/100)+' '+fSExt[i];
+
+                        //var _sizeMax = maxSize;
+                        j=0;while(maxSize>900){maxSize/=1024;j++;}
+                        var limitSize = (Math.round(maxSize*100)/100)+' '+fSExt[i];
+
+                        alert('The selected file is bigger than the maximum allowed file size.\r\n\r\nSelected file size: ' + exactSize+'\r\nMax allowed file size: ' + limitSize);
+                        imageInput.val("");
+                    }
+                    
+                    //imageBtn disabled
                     var val = $(this).val();
                     var thisDom = $(this)[0];
-
+                    
                     if (thisDom.files && thisDom.files[0]) {
                         if(root.options.imageSaveAjax == false){
                             var reader = new FileReader();
@@ -661,16 +702,6 @@
                 imageBtn.click(function(e){
                     e.preventDefault();
                     if(imageInput.val() != ""){         
-                        
-                        var file = imageInput.val();                    	
-                    	var ext = file.split(".");
-					    ext = ext[ext.length-1].toLowerCase();      
-					    var arrayExtensions = ["jpg" , "jpeg", "png", "bmp", "gif"];
-					
-					    if (arrayExtensions.lastIndexOf(ext) == -1) {
-					        alert("JPG, GIF, PNG, BMP 확장자만 가능합니다");
-					        imageInput.val("");
-					    }
                         
                         if(root.options.imageSaveAjax){
                             var form = new FormData(document.getElementById('uploadForm'));
@@ -889,12 +920,14 @@
                         var moveLatLon = new daum.maps.LatLng(dmapLat.val(), dmapLng.val());
                         // 지도 중심을 이동 시킵니다
                         map.setCenter(moveLatLon);
+                        map.setPosition(moveLatLon);
                     });
                     dmapLng.on('change' , function () { 
                         // 이동할 위도 경도 위치를 생성합니다 
                         var moveLatLon = new daum.maps.LatLng(dmapLat.val(), dmapLng.val());
                         // 지도 중심을 이동 시킵니다
                         map.setCenter(moveLatLon);
+                        map.setPosition(moveLatLon);
                     });
                     
                 });
