@@ -921,6 +921,7 @@
                         // 지도 중심을 이동 시킵니다
                         map.setCenter(moveLatLon);
                         marker.setPosition(moveLatLon);
+                        dmapBtn.removeClass("disabled").prop("disabled", false);
                     });
                     dmapLng.on('change' , function () { 
                         // 이동할 위도 경도 위치를 생성합니다 
@@ -928,6 +929,7 @@
                         // 지도 중심을 이동 시킵니다
                         map.setCenter(moveLatLon);
                         marker.setPosition(moveLatLon);
+                        dmapBtn.removeClass("disabled").prop("disabled", false);
                     });
                     
                 });
