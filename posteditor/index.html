@@ -5,7 +5,7 @@
     <title>2j post editor</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/jj_posteditor.css">
-    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=a7b3e5375021061876b437aaaf84ef18"></script>
+    <!-- script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=a7b3e5375021061876b437aaaf84ef18"></script -->
 </head>
 <body>
     
@@ -51,11 +51,13 @@
     <script src="js/hallo/hallo.js"></script -->
     <script>
     $(document).ready(function(){
+        
         var post = jQuery("#postEditor_wrap").posteditor({
             debug: true //console : true/false
         }).data('posteditor');
-                
-        /*첨부파일 디자인 적용하기
+       
+        /*        
+        *첨부파일 디자인 적용하기
         var fileTarget = $('.filebox .upload_hidden');
         fileTarget.bind('change', function(){  // 값이 변경되면
             if(window.FileReader){  // modern browser
@@ -79,14 +81,15 @@
 				$("#postSave").attr("action", action).submit();
 
 			};
-        });         
+        });   
+        
+       
     });
+        
+
     </script>
     
-    <!-- 사용자 페이지에 발급받은 아래 스크립을 head에 추가
-    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=발급받은 API KEY를 사용하세요"></script>
-     -->
-    
+      
 </body>
 </html>
 

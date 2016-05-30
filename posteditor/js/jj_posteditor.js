@@ -933,8 +933,7 @@
                     });
                     
                 });
-                
-                
+                            
                                 
                 dmapBtn.click(function(e){
                     e.preventDefault();                    
