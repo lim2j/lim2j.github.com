@@ -1,0 +1,533 @@
+// Core variables and mixins
+//@import "variables.less";
+
+// variables.less
+
+//== Typography
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+@zindex-navbar:            1000;
+@zindex-dropdown:          1000;
+@zindex-navbar-fixed:      1030;
+@zindex-modal-background:  1040;
+@zindex-modal:             1050;
+
+// Extra small screen / phone
+@screen-xs:                  480px;
+// Small screen / tablet
+@screen-sm:                  768px;
+
+@images:                    "../image"; //background: url("@{images}/white-sand.png");
+
+@black:                     #000;
+@base-color:                #f04615;
+@font-color:                #484848;
+@header-color:              #fff;
+@body-color:                #fff;
+@footer-color:              #565656;
+@footer-font-color:              #fff;
+/*
+@width: 0.5;
+width: percentage(@width); // returns `50%`
+color: saturate(@base-color, 5%);
+background-color: spin(lighten(@base-color, 25%), 8);
+*/
+
+@base-padding:                10px;
+
+
+// nanumgothic
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+// Default
+html {
+  font-family: 'Nanum Gothic', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+    color: @font-color;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+    color: @font-color;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: (@line-height-computed / 2);
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: @name @duration @delay @ease;
+	-moz-animation:    @name @duration @delay @ease;
+	-ms-animation:     @name @duration @delay @ease;
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+
+.list-none {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+
+// mixins
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+.reset-text() {
+  font-family: @font-family-base;
+  // We deliberately do NOT reset font-size.
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: @line-height-base;
+  text-align: left; // Fallback for where `start` is not supported
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+
+// Responsive image
+.img-responsive(@display: block) {
+  display: @display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+
+// grid
+.grid(@name; @columns; @index: 1) when (@index =< @columns) {
+  .grid(@name; @columns; (@index + 1));
+  .@{name}-@{index} {
+    width: ( percentage(@index / @columns) ) !important;
+
+  }
+}
+.grid(span12; 12);
+.grid(span5; 5);
+
+// menu
+.menu {
+    background-color: #fff;
+    width: 240px;
+    min-height: 480px;
+    position: fixed;
+    top: 0;
+    z-index: @zindex-navbar;
+    visibility: hidden;
+
+    ol {
+        .clearfix;
+        .list-none;
+        ol {
+            .list-none;
+        }
+    }
+    .loginout {
+        > li {
+            float: left;
+            &:last-child {
+                float: right;
+            }
+        }
+    }
+}
+
+.left-open {
+    left: 0;
+    .animation (slideleftopen, 500ms, 0s, ease);
+    visibility: visible !important;
+}
+@keyframe slideleftopen {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slideleftopen {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.left-close {
+    .animation (slideleftclose, 500ms, 0s, ease);
+}
+@keyframe slideleftclose {
+    0% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(-100%);
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes slideleftclose {
+    0% {
+        transform: translateX(0%);
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(-100%);
+        visibility: hidden;
+    }
+}
+
+.right-open {
+    right: 0;
+    .animation (slideopenright, 500ms, 0s, ease);
+    visibility: visible !important;
+}
+@keyframe slideopenright {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slideopenright {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.right-close {
+    .animation (sliderightclose, 500ms, 0s, ease);
+}
+@keyframe sliderightclose {
+    0% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(-100%);
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes sliderightclose {
+    0% {
+        transform: translateX(0%);
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(-100%);
+        visibility: hidden;
+    }
+}
+
+//slider
+.slider {
+    position: relative;
+
+    ol {
+        position: absolute;
+    }
+
+    .slider-pagination {
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        a {
+            background-color: #333;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin: 0 5px;
+            .border-radius(50%);
+        }
+    }
+}
+
+// header
+.header {
+    .clearfix;
+    position: relative;
+    z-index: @zindex-navbar;
+
+    .head {
+        background-color: @header-color;
+        max-height: 50px;
+        ol {
+            .clearfix;
+            .list-none;
+            > li {
+                float: left;
+                text-align: center;
+            }
+        }
+    }
+
+    .gnb {
+        .clearfix;
+        ol{
+            .list-none;
+            display: table;
+            width: 100%;
+            > li {
+                display: table-cell;
+                > a {
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// footer
+.body {
+    background-color: @body-color;
+    .clearfix;
+
+
+    .slider {
+        .clearfix;
+        overflow: hidden;
+        position: relative;
+        ol {
+            .clearfix;
+            .list-none;
+            overflow: hidden;
+            li {
+                float: left;
+            }
+        }
+    }
+    .tile{
+        ol {
+            .clearfix;
+            .list-none;
+            > li {
+                float: left;
+                width: 100%;
+                > img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// footer
+.footer {
+    background-color: @footer-color;
+    color:@footer-font-color;
+    padding: @base-padding;
+    .clearfix;
+
+    ol {
+        .clearfix;
+        .list-none;
+    }
+}
+
+.back-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background: fadein(@black, 80%);
+    .opacity(0.5);
+}
+
+/*
+section {
+    width: 360px;
+    margin: 0 auto;
+}
+*/
+
+
