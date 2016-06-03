@@ -1369,8 +1369,6 @@
 
     };
 
-    $.posteditor = function(el, options){
-
     $.fn.posteditor = function(options){
         return this.each(function(){
             var element = $(this);

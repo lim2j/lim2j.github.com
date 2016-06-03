@@ -5,101 +5,99 @@
     <title>2j post editor</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/jj_posteditor.css">
-    <!-- script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=a7b3e5375021061876b437aaaf84ef18"></script -->
+    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=a7b3e5375021061876b437aaaf84ef18"></script>
 </head>
 <body>
-    
-   <form method="post" action="saveme" id="postSave">       
+    <div style="padding: 20px;">
+        <h1>jj posteditor</h1>
+        <p>* 빠른 컨텐츠 제작 </p>
+        <p>* [+] 텍스트, 이미지, youtube, daum map 컨텐츠 생성 </p>
+        <p>* [-] 삭제 </p>
+        <p>* Drag 하여 상하 컨텐츠의 순서을 마음대로 변경 </p>
+    </div>
+
+   <form method="post" action="saveme" id="postSave">
        <textarea id="postEditor_wrap" name="" id="" cols="30" rows="10">
-          
+           <div class="postrow">
+                <div class="postcol post-text">텍스트을 편집하시려면 클릭하세요</div>
+            </div>
        </textarea>
    <!-- sample contents
        <div class="postrow">
-            <div class="postcol post-text">text1</div>        
-        </div> 
+            <div class="postcol post-text">text1</div>
+        </div>
 
         <div class="postrow">
             <div class="postcol post-image">
             <img src="http://src.clickmedi.co.kr/206/638/upload/smartEditor/2015-10-27/6efe6044-b6f3-455f-ad3b-c0bfc54e6be0.jpg" alt="">
-            </div>        
+            </div>
         </div>
 
         <div class="postrow">
             <div class="postcol post-video">
             <iframe frameborder="0" src="//www.youtube.com/embed/XDNlilnl8VY"></iframe>
-            </div>        
-        </div> 
+            </div>
+        </div>
     -->
-        
-        <input type="submit" name="submit" class="submit" />
+
+        <input type="submit" name="submit" class="submit" style="display: none;" />
     </form>
-   
-    
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>   
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
     <script src="bootstrap/bootstrap.min.js"></script>
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-    
+
     <script src="js/jj_posteditor.js"></script>
     <!-- text editro plugin summernote -->
     <link rel="stylesheet" href="js/summernote/summernote.etc.css">
     <script src="js/summernote/summernote.js"></script>
     <script src="js/summernote/lang/summernote-ko-KR.js"></script>
-    
+
     <!-- script src="http://rangy.googlecode.com/svn/trunk/currentrelease/rangy-core.js"></script>
     <script src="js/hallo/hallo.js"></script -->
     <script>
     $(document).ready(function(){
-        
+
         var post = jQuery("#postEditor_wrap").posteditor({
             debug: true //console : true/false
         }).data('posteditor');
-       
-        /*        
+
+        /*
         *첨부파일 디자인 적용하기
         var fileTarget = $('.filebox .upload_hidden');
         fileTarget.bind('change', function(){  // 값이 변경되면
             if(window.FileReader){  // modern browser
                 var filename = $(this)[0].files[0].name;
-            } 
+            }
             else {  // old IE
                 var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
             }
             // 추출한 파일명 삽입
             $(this).siblings('.upload_name').val(filename);
-        });    
+        });
         */
 
         $(".submit").on("click", function(e){
             if(confirm("수정 하시겠습니까?")){
-				//postEditor_wrap에 editor의 정보(html)를 저장한다.				
+				//postEditor_wrap에 editor의 정보(html)를 저장한다.
 				post.saveremote();
-				
-				$(this).submit();				
+
+				$(this).submit();
 				var action = "";
 				$("#postSave").attr("action", action).submit();
 
 			};
-        });   
-        
-       
+        });
+
+
     });
-        
+
 
     </script>
-    
-      
+
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
