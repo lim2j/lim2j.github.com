@@ -1,76 +1,164 @@
 // Core variables and mixins
-//@import "variables.less";
-
-// variables.less
-
-//== Typography
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-@font-family-base:        @font-family-sans-serif;
-
-@font-size-base:          14px;
-@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
-
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
-@font-size-h5:            @font-size-base;
-@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
-
-
-//** Unit-less `line-height` for use in components like buttons.
-@line-height-base:        1.428571429; // 20/14
-//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
-
-@zindex-navbar:            1000;
-@zindex-dropdown:          1000;
-@zindex-navbar-fixed:      1030;
-@zindex-modal-background:  1040;
-@zindex-modal:             1050;
-
-// Extra small screen / phone
-@screen-xs:                  480px;
-// Small screen / tablet
-@screen-sm:                  768px;
-
-@images:                    "../image"; //background: url("@{images}/white-sand.png");
-
-@black:                     #000;
-@base-color:                #f04615;
-@font-color:                #484848;
-@header-color:              #fff;
-@body-color:                #fff;
-@footer-color:              #565656;
-@footer-font-color:              #fff;
-/*
-@width: 0.5;
-width: percentage(@width); // returns `50%`
-color: saturate(@base-color, 5%);
-background-color: spin(lighten(@base-color, 25%), 8);
-*/
-
-@base-padding:                10px;
-
+@import "variables.less";
 
 // nanumgothic
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
+// icon font
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../font/icomoon.eot?fd76q4');
+    src:    url('../font/icomoon.eot?fd76q4#iefix') format('embedded-opentype'),
+        url('../font/icomoon.ttf?fd76q4') format('truetype'),
+        url('../font/icomoon.woff?fd76q4') format('woff'),
+        url('../font/icomoon.svg?fd76q4#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: @icon-color;
+    font-size: @font-size-base;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-chevron-down:before {
+    content: "\e900";
+}
+.icon-chevron-left:before {
+    content: "\e901";
+}
+.icon-chevron-right:before {
+    content: "\e902";
+}
+.icon-chevron-up:before {
+    content: "\e903";
+}
+.icon-download:before {
+    content: "\e904";
+}
+.icon-resize-100:before {
+    content: "\e905";
+}
+.icon-resize-full-screen:before {
+    content: "\e906";
+}
+.icon-save:before {
+    content: "\e907";
+}
+.icon-trash:before {
+    content: "\e908";
+}
+.icon-align-bottom:before {
+    content: "\e909";
+}
+.icon-align-horizontal-middle:before {
+    content: "\e90a";
+}
+.icon-align-left:before {
+    content: "\e90b";
+}
+.icon-align-right:before {
+    content: "\e90c";
+}
+.icon-align-top:before {
+    content: "\e90d";
+}
+.icon-align-vertical-middle:before {
+    content: "\e90e";
+}
+.icon-attachment:before {
+    content: "\e90f";
+}
+.icon-calendar:before {
+    content: "\e910";
+}
+.icon-check:before {
+    content: "\e911";
+}
+.icon-copy:before {
+    content: "\e912";
+}
+.icon-cross:before {
+    content: "\e913";
+}
+.icon-cw:before {
+    content: "\e914";
+}
+.icon-eye:before {
+    content: "\e915";
+}
+.icon-grid:before {
+    content: "\e916";
+}
+.icon-home:before {
+    content: "\e917";
+}
+.icon-image:before {
+    content: "\e918";
+}
+.icon-location:before {
+    content: "\e919";
+}
+.icon-lock-open:before {
+    content: "\e91a";
+}
+.icon-lock:before {
+    content: "\e91b";
+}
+.icon-magnifying-glass:before {
+    content: "\e91c";
+}
+.icon-mail:before {
+    content: "\e91d";
+}
+.icon-menu:before {
+    content: "\e91e";
+}
+.icon-message:before {
+    content: "\e91f";
+}
+.icon-minus:before {
+    content: "\e920";
+}
+.icon-new-message:before {
+    content: "\e921";
+}
+.icon-pencil:before {
+    content: "\e922";
+}
+.icon-phone:before {
+    content: "\e923";
+}
+.icon-plus:before {
+    content: "\e924";
+}
+.icon-text:before {
+    content: "\e925";
+}
+
+
 
 // Default
 html {
-  font-family: 'Nanum Gothic', sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-    color: @font-color;
+    font-family: 'Nanum Gothic', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-  margin: 0;
+    color: @font-color;
+    font-size: @font-size-base;
+    line-height: 1.42857143;
+    margin: 0;
 }
 
 article,
@@ -191,6 +279,7 @@ ol {
 	-webkit-animation: @name @duration @delay @ease;
 	-moz-animation:    @name @duration @delay @ease;
 	-ms-animation:     @name @duration @delay @ease;
+    animation:         @name @duration @delay @ease;
 }
 
 .border-radius (@radius: 5px) {
@@ -199,14 +288,12 @@ ol {
 	border-radius: @radius;
 }
 
-
 .list-none {
     list-style: none;
     margin-left: 0;
     margin-bottom: 0;
     padding-left: 0;
 }
-
 
 // mixins
 .clearfix() {
@@ -253,6 +340,16 @@ ol {
   white-space: nowrap;
 }
 
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-align-center {
+    text-align: center;
+}
+
 
 .hide {
   display: none !important;
@@ -268,6 +365,22 @@ ol {
   height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
 }
 
+// background-color
+.bg-color(@type, @color, @index: 0) when (@index =< 6) {
+  & when (@type = 'tints') {
+    .bgcolor-@{index} {
+      background-color: lighten(@color, (@index * 10%), relative);
+    }
+  }
+  & when (@type = 'shades') {
+    .bgcolor-@{index} {
+      background-color: darken(@color, (@index * 10%), relative);
+    }
+  }
+  .bg-color(@type, @color, (@index + 1));
+}
+
+.bg-color('shades', @point-color);
 
 // grid
 .grid(@name; @columns; @index: 1) when (@index =< @columns) {
@@ -298,10 +411,38 @@ ol {
         }
     }
     .loginout {
+        background-color: @point-color;
+
         > li {
             float: left;
             &:last-child {
                 float: right;
+            }
+
+            > a {
+                color: #fff;
+                display: block;
+                padding:10px 5px;
+            }
+        }
+    }
+
+    .item {
+        li {
+            border-bottom: 1px solid @line-color;
+
+            > a {
+                display: block;
+                padding: @base-padding;
+            }
+
+            > ol {
+                background-color: #f0f0f0;
+                > li {
+                    padding-left: 15px;
+                    border-bottom: 0 none;
+                    border-top: 1px solid @line-color;
+                }
             }
         }
     }
@@ -312,7 +453,7 @@ ol {
     .animation (slideleftopen, 500ms, 0s, ease);
     visibility: visible !important;
 }
-@keyframe slideleftopen {
+@keyframes slideleftopen {
     0% {
         transform: translateX(-100%);
     }
@@ -331,9 +472,10 @@ ol {
 }
 
 .left-close {
+    left: 0;
     .animation (slideleftclose, 500ms, 0s, ease);
 }
-@keyframe slideleftclose {
+@keyframes slideleftclose {
     0% {
         transform: translateX(0);
         visibility: visible;
@@ -360,7 +502,7 @@ ol {
     .animation (slideopenright, 500ms, 0s, ease);
     visibility: visible !important;
 }
-@keyframe slideopenright {
+@keyframes slideopenright {
     0% {
         transform: translateX(100%);
     }
@@ -379,9 +521,10 @@ ol {
 }
 
 .right-close {
+    right: 0;
     .animation (sliderightclose, 500ms, 0s, ease);
 }
-@keyframe sliderightclose {
+@keyframes sliderightclose {
     0% {
         transform: translateX(0);
         visibility: visible;
@@ -405,26 +548,61 @@ ol {
 
 //slider
 .slider {
+    .clearfix;
+    overflow: hidden;
     position: relative;
 
-    ol {
-        position: absolute;
+    img {
+        .img-responsive;
     }
 
-    .slider-pagination {
-        position: absolute;
-        z-index: 10;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        a {
-            background-color: #333;
-            display: inline-block;
-            width: 15px;
-            height: 15px;
-            margin: 0 5px;
-            .border-radius(50%);
+    ol {
+        .clearfix;
+        .list-none;
+        overflow: hidden;
+        li {
+            float: left;
         }
+    }
+
+    .bx-wrapper .bx-pager,
+    .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+
+    /* PAGER */
+    .bx-wrapper .bx-pager {
+        text-align: center;
+        font-size: .85em;
+        font-family: Arial;
+        font-weight: bold;
+        color: #666;
+        padding-top: 20px;
+    }
+
+    .bx-wrapper .bx-pager .bx-pager-item,
+    .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+        display: inline-block;
+        *zoom: 1;
+        *display: inline;
+    }
+
+    .bx-wrapper .bx-pager.bx-default-pager a {
+        background: @base-color;
+        text-indent: -9999px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        outline: 0;
+        .border-radius(5px);
+    }
+
+    .bx-wrapper .bx-pager.bx-default-pager a:hover,
+    .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background: @point-color;
     }
 }
 
@@ -436,13 +614,22 @@ ol {
 
     .head {
         background-color: @header-color;
-        max-height: 50px;
+        min-height: 50px;
         ol {
             .clearfix;
             .list-none;
+            padding-top: 10px;
             > li {
                 float: left;
                 text-align: center;
+                > a {
+                    font-size: 20px;
+                }
+
+                .logo {
+                    color: #fff;
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -456,6 +643,7 @@ ol {
             > li {
                 display: table-cell;
                 > a {
+                    padding: @base-padding;
                     display: block;
                     text-align: center;
                 }
@@ -469,20 +657,6 @@ ol {
     background-color: @body-color;
     .clearfix;
 
-
-    .slider {
-        .clearfix;
-        overflow: hidden;
-        position: relative;
-        ol {
-            .clearfix;
-            .list-none;
-            overflow: hidden;
-            li {
-                float: left;
-            }
-        }
-    }
     .tile{
         ol {
             .clearfix;
@@ -491,7 +665,7 @@ ol {
                 float: left;
                 width: 100%;
                 > img {
-                    width: 100%;
+                    .img-responsive;
                 }
             }
         }
@@ -502,12 +676,22 @@ ol {
 .footer {
     background-color: @footer-color;
     color:@footer-font-color;
-    padding: @base-padding;
     .clearfix;
 
     ol {
         .clearfix;
         .list-none;
+
+        > li {
+            padding: @base-padding;
+            border-bottom: 1px solid @line-color;
+
+            li {
+                float: left;
+                padding: 0;
+                border-bottom: 0 none;
+            }
+        }
     }
 }
 
@@ -523,11 +707,11 @@ ol {
     .opacity(0.5);
 }
 
-/*
+
 section {
     width: 360px;
     margin: 0 auto;
 }
-*/
+
 
 
