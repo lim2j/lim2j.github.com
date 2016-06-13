@@ -422,7 +422,7 @@ ol {
             > a {
                 color: #fff;
                 display: block;
-                padding:10px 5px;
+                padding: @base-padding;
             }
         }
     }
@@ -434,6 +434,14 @@ ol {
             > a {
                 display: block;
                 padding: @base-padding;
+
+                > i {
+                    color: @base-color;
+                    display: inline-block;
+                    float: right;
+                    font-size: 16px;
+                    margin-top: 2px;
+                }
             }
 
             > ol {
@@ -565,6 +573,11 @@ ol {
         }
     }
 
+    .bx-wrapper img {
+        max-width: 100%;
+        display: block;
+    }
+
     .bx-wrapper .bx-pager,
     .bx-wrapper .bx-controls-auto {
         position: absolute;
@@ -605,6 +618,10 @@ ol {
         background: @point-color;
     }
 }
+
+
+
+
 
 // header
 .header {
@@ -685,6 +702,7 @@ ol {
         > li {
             padding: @base-padding;
             border-bottom: 1px solid @line-color;
+            font-size: @font-size-h6;
 
             li {
                 float: left;
