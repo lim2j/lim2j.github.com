@@ -1,0 +1,118 @@
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: @name @duration @delay @ease;
+	-moz-animation:    @name @duration @delay @ease;
+	-ms-animation:     @name @duration @delay @ease;
+    animation:         @name @duration @delay @ease;
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.list-none {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+// mixins
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+.reset-text() {
+  font-family: @font-family-base;
+  // We deliberately do NOT reset font-size.
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: @line-height-base;
+  text-align: left; // Fallback for where `start` is not supported
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Responsive image
+.img-responsive(@display: block) {
+  display: @display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+// background-color
+.bg-color(@type, @color, @index: 0) when (@index =< 6) {
+  & when (@type = 'tints') {
+    .bgcolor-@{index} {
+      background-color: lighten(@color, (@index * 10%), relative);
+    }
+  }
+  & when (@type = 'shades') {
+    .bgcolor-@{index} {
+      background-color: darken(@color, (@index * 10%), relative);
+    }
+  }
+  .bg-color(@type, @color, (@index + 1));
+}
+
+.bg-color('shades', @point-color);
+
+// grid
+.grid(@name; @columns; @index: 1) when (@index =< @columns) {
+    .grid(@name; @columns; (@index + 1));
+    .@{name}-@{index} {
+    width: ( percentage(@index / @columns) ) !important;
+
+    }
+}
+.grid(span12; 12);
+.grid(span5; 5);
+
+//text aling
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-align-center {
+    text-align: center;
+}
+
+//show hide
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}

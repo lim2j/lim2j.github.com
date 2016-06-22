@@ -1,0 +1,71 @@
+// icon font
+@font-face {
+    font-family: 'icomoon';
+    src:    url('@{images}/font/icomoon.eot?mlmi7u');
+    src:    url('@{images}/font/icomoon.eot?mlmi7u#iefix') format('embedded-opentype'),
+        url('@{images}/font/icomoon.ttf?mlmi7u') format('truetype'),
+        url('@{images}/font/icomoon.woff?mlmi7u') format('woff'),
+        url('@{images}/font/icomoon.svg?mlmi7u#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: @font-size-base;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-comm_add:before {
+    content: "\e900";
+}
+.icon-comm_before:before {
+    content: "\e901";
+}
+.icon-comm_before_2:before {
+    content: "\e902";
+}
+.icon-comm_call:before {
+    content: "\e903";
+}
+.icon-comm_down:before {
+    content: "\e904";
+}
+.icon-comm_exit:before {
+    content: "\e905";
+}
+.icon-comm_menu:before {
+    content: "\e906";
+}
+.icon-comm_min:before {
+    content: "\e907";
+}
+.icon-comm_next:before {
+    content: "\e908";
+}
+.icon-comm_next_2:before {
+    content: "\e909";
+}
+.icon-comm_search:before {
+    content: "\e90a";
+}
+.icon-comm_up:before {
+    content: "\e90b";
+}
+
+.icon-new {
+    display: inline-block;
+    background-color: @point-color;
+    color: #fff;
+    font-size: 10px;
+    padding: 3px;
+    font-weight: bold;
+    .border-radius(3px);
+}

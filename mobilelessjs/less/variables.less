@@ -18,15 +18,20 @@
 @font-size-h5:            @font-size-base;
 @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
+//font-weight
+@font-semi-bold: 		  600;
+@font-bold: 			  bold;
 
 //** Unit-less `line-height` for use in components like buttons.
 @line-height-base:        1.428571429; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
-@zindex-navbar:            1000;
+@zindex-header:            1000;
 @zindex-dropdown:          1000;
-@zindex-navbar-fixed:      1030;
+@zindex-fixed:             1010;
+@zindex-navbar-background: 1020;
+@zindex-navbar:            1030;
 @zindex-modal-background:  1040;
 @zindex-modal:             1050;
 
@@ -35,19 +40,35 @@
 // Small screen / tablet
 @screen-sm:                  768px;
 
-@images:                    "../image"; //background: url("@{images}/white-sand.png");
+@images:                    ".."; //background: url("@{images}/white-sand.png");
 
 @black:                     #000;
 @base-color:                #ddd;
-@line-color:                #cbcbcb;
+@line-color:                #dedede;
+@bold-line-color:           @black;
 @point-color:               #2cb6c3;  //f78e48 b5c22c, 83c22b, 2cc269, 2bc19b, 2cb6c3, 2b83c2, c12b6a, c23d2c
 
-@font-color:                #484848;
-@icon-color:                #fff;
-@header-color:              @point-color; //#fff;
+@font-color:                #585757;
+@font-blod-color:           #333333;
+@font-lite-color:           #757575;
+
+@button-line-color:         #c5c5c5;
+@button-color:              #fff;
+@button-font-color:         #6d6d6d;
+@button-default-color:              #f7f7f7;
+
+@header-color:              @point-color;
+@header-font-color:         #fff;
 @body-color:                #fff;
+@sub-heder-color:           #fff;
+@sub-line-color:            #dedede;
 @footer-color:              #969696;
 @footer-font-color:         #fff;
+
+@input-bg-color:       	 	#f8f8f9;
+@input-border-color:       #d9d9d9;
+
+@form-control-boarder-color:       #ababab;
 /*
 @width: 0.5;
 width: percentage(@width); // returns `50%`
@@ -56,3 +77,8 @@ background-color: spin(lighten(@base-color, 25%), 8);
 */
 
 @base-padding:                15px;
+@base-box-padding:            12px 22px;
+@base-page-padding:           0px 18px;
+
+@base-margin-top:             22px;
+@base-margin-bottm:           22px;

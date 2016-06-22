@@ -1,0 +1,125 @@
+.btn {
+    background-color: @button-color;
+    border: 1px solid @button-line-color ;
+    color: @button-font-color;
+    cursor: pointer;
+    display: inline-block;
+    height: 34px;
+    outline: 0;
+    overflow: hidden;
+    padding: 6px 16px;
+    text-decoration: none!important;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &.btn-success {
+        background-color: @point-color;
+        border-color: @point-color;
+        color: #fff;
+    }
+
+    &.btn-default {
+        background-color: @button-default-color;
+    }
+}
+
+
+.form-control {
+    .btn;
+    cursor: auto;
+    text-align: left;
+}
+
+.select {
+    .btn;
+    padding: 6px 6px;
+}
+
+.input-group {
+    margin-top: @base-margin-top;
+    display: block;;
+    position: relative;
+    border-collapse: separate;
+    width: 100%;
+
+    .select {
+        width: 30%;
+        float: left;
+    }
+    .form-control {
+        width: 50%;
+        margin-left: -1px;
+        float: left;
+    }
+    .btn {
+        width: 20%;
+        margin-left: -1px;
+    }
+}
+
+.search-form,
+.btn-area {
+    margin-top: @base-margin-top;
+    padding: @base-page-padding;
+}
+
+.pagination {
+    margin-top: @base-margin-top;
+    text-align: center;
+    > ol {
+        .list-none;
+        display: inline-block;
+        > li {
+            display: inline;
+            > a {
+                display: inline-block;
+                padding: 8px 16px;
+            }
+            .on {
+                background-color: @point-color;
+                color: #fff;
+            }
+        }
+    }
+}
+
+// list
+.board-list {
+    margin-top: @base-margin-top;
+    padding:@base-page-padding;
+    ol > {
+        .list-none;
+        > li {
+            padding: 10px 0;
+            border-bottom: 1px solid @line-color;
+            > a {
+                color: @font-blod-color;
+            }
+            > p {
+                margin: 6px 0 0;
+                font-size: @font-size-small;
+                color: @font-lite-color;
+            }
+        }
+    }
+}
+
+.board-view {
+    margin-top: @base-margin-top;
+    padding:@base-page-padding;
+
+    .board-view-title {
+        margin: 0;
+    }
+    .board-view-info {
+        font-size: @font-size-small;
+        color: @font-lite-color;
+    }
+
+    .board-view-content {
+        border-top: 1px solid @line-color;
+        border-bottom: 1px solid @line-color;
+        padding: 17px 0;
+    }
+}
