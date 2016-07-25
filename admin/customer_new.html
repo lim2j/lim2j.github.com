@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>한국정보공학(주)</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styling plus plugins -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+        <![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body class="nav-md">
+
+    <div class="container body">
+
+
+        <div class="main_container">
+
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+
+                    <div class="navbar toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li><i class="fa fa-briefcase"></i> <a href="customer.html"> 고객사 <span class="fa fa-chevron-right"></span></a>
+                                </li>
+                                <li><i class="fa fa-calendar"></i><a> 스케줄 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="schedule.html">- 스케줄 관리</a></li>
+                                        <li><a href="schedule_history.html">- 스케줄 이력</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-file-text-o"></i><a> 보고서 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="report.html">- 보고서 조회</a></li>
+                                        <li><a href="report_macro.html">- 상용구 관리</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-bar-chart"></i><a> 통계정보 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="statistics.html">- 활동정보 요약</a></li>
+                                        <li><a href="statistics_active.html">- 활동정보 상세</a></li>
+                                        <li><a href="statistics_graph.html">- 활동그래프</a></li>
+                                        <li><a href="admin_rollbook.html">- 출퇴근기록</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-users"></i><a> 직원 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="member.html">- 직원 연락처</a></li>
+                                        <li><a href="member_state.html">- 비즈미 사용 현황</a></li>
+                                        <li><a href="member_stamp.html">- 업무발자취</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-folder-open"></i><a> 관리 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="admin_off.html">- 휴가자설정</a></li>
+                                        <li><a href="admin_holiday.html">- 휴일설정</a></li>
+                                        <li><a href="admin_department.html">- 조직관리</a></li>
+                                        <li><a href="admin_position.html">- 직위관리</a></li>
+                                        <li><a href="admin_employee.html">- 직원관리</a></li>
+                                        <li><a href="admin_work.html">- 업무구분설정</a></li>
+                                        <li><a href="admin_costomer.html">- 곡객구분설정</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-cog"></i><a> 설정 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="admin_level.html">- 권한설정</a></li>
+                                        <li><a href="admin_setting.html">- 환경변수 설정</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-tachometer"></i><a href="monitoring.html"> 상황실 <span class="fa fa-chevron-right"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /sidebar menu -->
+
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+
+                <div class="nav_menu">
+                    <nav role="navigation">
+                        <div class="nav_title" style="border: 0;">
+                            <a href="index.html" class="site_title"> 한국정보공학(주)</a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <i class=" fa fa-user"></i> 기술개발팀 과장 홍길동
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
+                                    <li><a href="#none" data-toggle="modal" data-target=".main_my"> 개인정보수정</a>
+                                    </li>
+                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                    </li>
+                                </ul>
+
+
+                                <!-- 개인정보수정 MODAL (S)-->
+                                <div class="modal fade main_my" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">개인정보수정</h4>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="member-number">사번
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" id="member-number" disabled="disabled" class="form-control col-md-7 col-xs-12" placeholder="150301">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="member-id">아이디
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" id="member-id" name="member-id" disabled="disabled" class="form-control col-md-7 col-xs-12" placeholder="ID">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="new-memberpw" class="control-label col-md-3 col-sm-3 col-xs-12">새 비밀번호</label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="new-memberpw" class="form-control col-md-7 col-xs-12" type="password" name="new-memberpw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="new-memberpw-ok" class="control-label col-md-3 col-sm-3 col-xs-12">새 비밀번호 확인</label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="new-memberpw-ok" class="form-control col-md-7 col-xs-12" type="password" name="new-memberpw-ok">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">E-mail
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-email" class="form-control col-md-7 col-xs-12" type="text" placeholder="id@domain.com">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mobile
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-mobile" class="form-control col-md-7 col-xs-12" type="text" placeholder="010-1234-1234">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Office
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-office" class="form-control col-md-7 col-xs-12" type="text" placeholder="02-1234-1234">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ln_solid"></div>
+                                                    <div class="form-group">
+                                                        <div class="col-md-6 col-sm-6 col-xs-12 col-xs-offset-3">
+                                                            <button type="submit" class="btn btn-primary">수정</button>
+                                                            <button type="reset" class="btn btn-success" data-dismiss="modal">취소</button>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 개인정보수정 MODAL (E)-->
+
+
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+            <!-- /top navigation -->
+
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3 class="titele_ic">고객사</h3>
+                    </div>
+
+                    <div class="title_right">
+                        <div id="contents-location" class="pull-right">
+                            <!-- location -->
+                            <ol class="breadcrumb">
+                              <li><i class="fa fa-home "></i> <a href="index.html">Home</a></li>
+                              <li><a href="customer.html">고객사</a></li>
+                              <li class="active">고객사 list</li><!-- 현재 -->
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- page-title (e) -->
+
+
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+
+
+                            <div class="x_content">
+
+                                <form class="form-horizontal form-label-left">
+
+                                    <span class="section section-bg01">고객사 분류</span>
+                                    <div class="row">
+                                        <div class="col-md-8 col-sm-8 col-xs-12">
+
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">분류</label>
+                                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                                    <select class="form-control">
+                                                        <option>고객사</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">공유범위</label>
+                                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                                    <select class="form-control">
+                                                        <option>전체공유</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- 고객사 분류 (E) -->
+
+
+
+                                    <span class="section section-bg01">고객사 정보</span>
+                                    <div class="row">
+                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">구분 <span class="required">*</span></label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <select class="form-control">
+                                                        <option>고객사 구분 선택</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">회사명 <span class="required">*</span></label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">주소 <span class="required">*</span></label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="위치입력">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-xs-offset-3 col-md-9 col-sm-9 col-xs-12">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-3">LAT</label>
+                                                    <div class="col-md-4 col-sm-4 col-xs-9">
+                                                        <input type="text" class="form-control" id="lat" placeholder="위도" value="37.54">
+                                                    </div>
+
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-3">LNG</label>
+                                                    <div class="col-md-4 col-sm-4 col-xs-9">
+                                                        <input type="text" class="form-control" id="lng" placeholder="경도" value="127">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">우편번호</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">대표자</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">대표번호</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Fax.</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Homepage</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">업태</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">업종</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 구글 map (S) -->
+                                        <div class="col-md-4 col-sm-4 col-xs-12">
+
+                                            <div class="googleMap-title">
+                                                <i class="fa fa-map-marker"></i>  지도데이터 확인
+                                            </div>
+                                            <div id="googleMap" style="height:424px"></div>
+
+                                            <script src="js/jquery-geolocation-edit-master/jquery.geolocation.edit.js"></script>
+                                            <script>
+                                            $(document).ready(function () {
+                                            	// activate geolocate plugin
+                                            	$("#googleMap").geolocate({
+                                            		lat: "#lat",
+                                            		lng: "#lng",
+                                                    mapOptions : {
+                                                		disableDefaultUI : false ,
+                                                		zoom : 8
+                                                	}
+                                            	});
+                                            });
+                                            </script>
+
+                                        </div>
+                                        <!-- 구글 map (E) -->
+
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <!-- 고객사 정보 (E) -->
+
+
+                                    <span class="section section-bg01">고객사 담당자</span>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2 col-sm-2 col-xs-12">이름</label>
+                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2 col-sm-2 col-xs-12">Mobile</label>
+                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                            <input type="number" class="form-control" placeholder="'-'와 숫자 입력만 가능합니다.">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2 col-sm-2 col-xs-12">Ofice</label>
+                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                            <input type="number" class="form-control" placeholder="'-'와 숫자 입력만 가능합니다.">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2 col-sm-2 col-xs-12">E-mail</label>
+                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                            <input type="email" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <span class="section section-bg01">고객사 담당자</span>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2 col-sm-2 col-xs-12">등록</label>
+                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="홍길동">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2 col-sm-2 col-xs-12">메모</label>
+                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">첨부파일
+                                            <button type="button" class="btn btn-link p0" id="InputFilePlus"><i class="fa fa-plus-square"></i></button>
+                                        </label>
+                                        <div class="col-md-7 col-sm-7 col-xs-12">
+                                             <div class="input-file-box">
+                                                 <div><input type="file"></div>
+                                             </div>
+                                             <p class="help-block">&#183; 파일 등록은 최대 5개까지 가능합니다.</p>
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                    $(document).ready(function() {
+                                        var max_fields      = 5; //maximum input boxes allowed
+                                        var wrapper         = $(".input-file-box"); //Fields wrapper
+                                        var add_button      = $("#InputFilePlus"); //Add button ID
+
+                                        var x = 1; //initlal text box count
+                                        $(add_button).click(function(e){ //on add input button click
+                                            e.preventDefault();
+                                            if(x < max_fields){ //max input box allowed
+                                                x++; //input-file box increment
+                                                $(wrapper).append('<div><input type="file"><button type="button" class="btn btn-link remove_field"><i class="fa fa-minus-square-o"></i></button></div>'); //add input box
+                                            } else {
+                                                $(".help-block").addClass("red");
+                                            }
+                                        });
+
+                                        $(wrapper).on("click",".remove_field", function(e){ //user click on remove input-file
+                                            e.preventDefault(); $(this).parent('div').remove(); x--;
+                                        })
+                                    });
+                                    </script>
+
+
+
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-2">
+                                            <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> 확인</button>
+                                            <button type="reset" class="btn btn-success">취소</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                            <!-- x_content (e) -->
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- footer content -->
+                <footer>
+                    <div class="">
+                        <p class="pull-left">
+                            한국정보공학(주) ㅣ 대표번호 : 031-789-8700   주소 : 경기도 성남시 분당구 서현동 253-4 경림빌딩<br />
+                            COPYRIGHT (c) 2005 KIES CO., LTD. All rights are reserved. Since 2015
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
+
+            </div>
+            <!-- /page content -->
+
+        </div>
+
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <!-- bootstrap progress js -->
+    <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+
+    <script src="js/custom.js"></script>
+
+
+</body>
+
+</html>

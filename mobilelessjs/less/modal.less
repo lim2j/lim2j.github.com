@@ -1,0 +1,53 @@
+//modal.less
+#modal{
+	display: none;
+	cursor: pointer;
+}
+.blockUI{
+	position: relative;
+	padding: 10px;
+	margin: 0;
+	width: 260px;
+	top: 50%;
+	left: 50%;
+	margin-left:-140px;
+	textalign: center;
+	border: 1px solid #aaa;
+	//border-radius: 6px;
+	background-color:#fff;
+	-webkit-overflow-scrolling: touch;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    .link{
+    	color: @point-color;
+    }
+    p{
+    	color: @font-lite-color;
+    	&.point_txt{
+    		margin: 35px 0px 25px 0;
+    		color: @black;
+    		font-weight: @font-bold;
+    		font-size: ceil((@font-size-base * 0.9));
+    		text-align: center; 
+    	}
+    }
+}
+.modalBtn{
+	width: 40%;
+	padding: 5px 0;
+	margin: 0 30% 15px 30%;
+	font-size: ceil((@font-size-base * 0.9));
+	color: @black;
+	&.modalBtn+.modalBtn{
+		margin-right: 4px;
+	}
+}
+.modal_cls{
+	display: block;
+	position: absolute;
+	top: 2px; 
+	right: 3px;
+	padding: 3px;
+}
+

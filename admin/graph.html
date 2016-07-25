@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>한국정보공학(주)</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="fonts/css/fonts.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styling plus plugins -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/style-jw.css" rel="stylesheet">
+    <link href="css/layer.popup.css"   rel="stylesheet">
+    <link href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet"  />
+    
+
+	<script src="js/jquery.min.js"></script>
+    <script src="js/calender.js"></script>
+
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&signed_in=true&libraries=places"></script>
+<!--     <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+	<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+    
+
+
+    
+    <!--[if lt IE 9]>
+    <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+    <![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+		var base_url = "http://" + document.location.host + "/kies" + "/";
+		//console.log("base_url : " + base_url);
+	</script>
+</head>
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<div class="col-md-3 left_col">
+				
+
+
+
+	<div class="left_col scroll-view">
+	    <div class="navbar toggle">
+	        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+	    </div>
+	    <div class="clearfix"></div>
+	    <!-- sidebar menu -->
+	    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+	        <div class="menu_section">
+	            <ul class="nav side-menu">
+	                <li><i class="fa fa-briefcase"></i><a> 고객사 <span class="fa fa-chevron-right"></span></a>
+	                	<ul class="nav child_menu" style="display: none">
+	                        <li><a href="/kies/customer/list">- 고객사 조회</a></li>
+	                    </ul>
+	                </li>
+	                <li><i class="fa fa-calendar"></i><a> 스케줄 <span class="fa fa-chevron-right"></span></a>
+	                    <ul class="nav child_menu" style="display: none">
+	                        <li><a href="/kies/schedule/list">- 스케줄 관리</a></li>
+	                        <li><a href="/kies/schedule/history">- 스케줄 이력</a></li>
+	                        <li><a href="/kies/boilerplate/list/1">- 상용구 관리</a></li>
+	                    </ul>
+	                </li>
+	                <li><i class="fa fa-file-text-o"></i><a> 보고서 <span class="fa fa-chevron-right"></span></a>
+	                    <ul class="nav child_menu" style="display: none">
+	                        <li><a href="/kies/report/list">- 보고서 조회</a></li>
+	                        <li><a href="/kies/boilerplate/list/2">- 상용구 관리</a></li>
+	                    </ul>
+	                </li>
+	                <li><i class="fa fa-bar-chart"></i><a> 통계정보 <span class="fa fa-chevron-right"></span></a>
+	                    <ul class="nav child_menu" style="display: none">
+	                        <li><a href="/kies/statistics/list">- 외근 통계</a></li>
+	                        <li><a href="/kies/statistics/active">- 외근 이력</a></li>
+	                        <li><a href="/kies/statistics/graph">- 통계 차트</a></li>
+	                        <li><a href="/kies/statistics/record">- 출퇴근 기록</a></li>
+	                    </ul>
+	                </li>
+	                <li><i class="fa fa-users"></i><a> 직원 <span class="fa fa-chevron-right"></span></a>
+	                    <ul class="nav child_menu" style="display: none">
+	                        <li><a href="/kies/employee/contacts">- 직원 연락처</a></li>
+	                        <li><a href="/kies/employee/usage">- 비즈미 사용 현황</a></li>
+	                        <li><a href="/kies/employee/location">- 업무발자취</a></li>
+	                    </ul>
+	                </li>
+	                <li><i class="fa fa-folder-open"></i><a> 관리 <span class="fa fa-chevron-right"></span></a>
+	                    <ul class="nav child_menu" style="display: none">
+	                        <li><a href="/kies/admin/user/off">- 휴가자설정</a></li>
+	                        <li><a href="/kies/admin/user/holiday">- 휴일설정</a></li>
+	                        <li><a href="/kies/admin/department/list">- 조직관리</a></li>
+	                        <li><a href="/kies/admin/position/list">- 직위관리</a></li>
+
+	                        <li><a href="/kies/admin/user/list">- 직원관리</a></li>
+	                        <li><a href="/kies/admin/work/category">- 업무구분설정</a></li>
+	                        <li><a href="/kies/admin/customer/category">- 고객구분설정</a></li>
+	                    </ul>
+	                </li>
+	                <li><i class="fa fa-cog"></i><a> 설정 <span class="fa fa-chevron-right"></span></a>
+	                    <ul class="nav child_menu" style="display: none">
+	                        <li><a href="/kies/setting/role">- 권한설정</a></li>
+	                        <li><a href="/kies/setting/config">- 환경변수설정</a></li>
+	                    </ul>
+	                </li>
+	                <li><i class="fa fa-tachometer"></i><a> 상황실 <span class="fa fa-chevron-right"></span></a>
+	                	<ul class="nav child_menu" style="display: none">
+	                        <li><a href="monitoring.html">- 상황실</a></li>
+	                    </ul>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	    <!-- /sidebar menu -->
+	</div>
+			</div>
+			<div class="top_nav">
+				
+
+
+	<div class="nav_menu">
+	    <nav role="navigation">
+	        <div class="nav_title" style="border: 0;">
+	            <a href="/kies/main" class="site_title"> 한국정보공학(주)</a>
+	        </div>
+	        <ul class="nav navbar-nav navbar-right">
+	            <li>
+	                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+	                    <i class=" fa fa-user"></i> 한국정보공학 | 관리자 | ROOT
+	                    <span class=" fa fa-angle-down"></span>
+	                </a>
+	                <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
+	                    <li><a href="#none" data-toggle="modal" data-target=".main_my" id="myinfo"> 개인정보수정</a>
+	                    </li>
+	                    <li><a href="/kies/logout-process"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+	                    </li>
+	                </ul>
+	                <!-- 개인정보수정 MODAL (S)-->
+	                <div class="modal fade main_my" tabindex="-1" role="dialog" aria-hidden="true">
+	                    <div class="modal-dialog modal-lg">
+	                        <div class="modal-content">
+	
+	                            <div class="modal-header">
+	                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+	                                </button>
+	                                <h4 class="modal-title" id="myModalLabel">개인정보수정</h4>
+	                            </div>
+	                            <div class="modal-body">
+									<form id="urlForm" action="" method="GET"></form>
+	                                <form id="info_form2" data-parsley-validate class="form-horizontal form-label-left" action="" method="" >
+	
+	                                    <div class="form-group">
+	                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="member-id">아이디
+	                                        </label>
+	                                        <div class="col-md-6 col-sm-6 col-xs-12">
+	                                            <input type="text" id="member-id" name="user_id" disabled="disabled" class="form-control col-md-7 col-xs-12" >
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="new_memberpw" class="control-label col-md-3 col-sm-3 col-xs-12">새 비밀번호</label>
+	                                        <div class="col-md-6 col-sm-6 col-xs-12">
+	                                            <input id="new_memberpw" name="password" class="form-control col-md-7 col-xs-12" type="password" name="new_memberpw">
+	                                           <div id="pw_error"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="new_memberpw_ok" class="control-label col-md-3 col-sm-3 col-xs-12">새 비밀번호 확인</label>
+	                                        <div class="col-md-6 col-sm-6 col-xs-12">
+	                                            <input id="new_memberpw_ok" class="form-control col-md-7 col-xs-12" type="password" name="new_memberpw_ok">
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="member-number">사번
+	                                        </label>
+	                                        <div class="col-md-6 col-sm-6 col-xs-12">
+	                                            <input type="text" id="member-number" name="id" class="form-control col-md-7 col-xs-12" >
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">E-mail
+	                                        </label>
+	                                        <div class="col-md-6 col-sm-6 col-xs-12">
+	                                            <input id="member-email" name="email" class="form-control col-md-7 col-xs-12" type="text">
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mobile
+	                                        </label>
+	                                        <div class="col-md-6 col-sm-6 col-xs-12">
+	                                            <input id="member-mobile" name="mobile" class="form-control col-md-7 col-xs-12" type="text">
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Office
+	                                        </label>
+	                                        <div class="col-md-6 col-sm-6 col-xs-12">
+	                                            <input id="member-office" name="officep_num" class="form-control col-md-7 col-xs-12" type="text">
+	                                        </div>
+	                                    </div>
+	                                    <div class="ln_solid"></div>
+	                                    <div class="form-group">
+	                                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+	                                            <button type="submit" id="update" class="btn btn-success">수정</button>
+	                                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="userInfoCancel">취소</button>
+	                                        </div>
+	                                    </div>
+	
+	                                </form>
+	
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- 개인정보수정 MODAL (E)-->
+                </li>
+            </ul>
+        </nav>
+	</div>
+<script type="text/javascript">
+jQuery.validator.addMethod("checkphone", function(value) {
+    var tel = value;
+    var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+    if (filter.test(tel) || (value.length ==0)) {
+        return true;
+    } else {
+        return false;
+    } 
+}, $.validator.format("전화번호 형식이 아닙니다."));
+
+$("#info_form2").validate({
+	errorClass:"red",
+	rules: {
+		email: {email: true},
+		mobile: {checkphone: true},
+		officep_num: {checkphone: true},
+		new_memberpw: { required: true},
+		id: {required: true},
+		new_memberpw_ok: { equalTo: "#new_memberpw" },
+	}, messages: {
+		email: {email: "이메일 형식이 아닙니다."},
+		new_memberpw: { required: "암호를 입력하시오." },
+		new_memberpw_ok: { equalTo: "암호를 다시 확인하시오." },
+		id: { required: "사번을 입력하시오." },
+	},
+});
+
+baseUrl = getUrl();
+function getUrl(){
+	pathArray = location.href.split( '/' );
+	protocol = pathArray[0];
+	host = pathArray[2];
+	url = protocol + '//' + host+'/'+pathArray[3];
+	return url;
+}
+
+
+$("#myinfo").click(function(){
+	var dataForm = {user_id: "root"};
+	console.log( "root");
+  	$.ajax({
+ 		url:baseUrl + "/rest/myinfo/",
+ 		dataType: "json",
+ 		type: "GET",
+ 		data: dataForm,
+ 		success: function(result){
+ 			$("#member-number").val(result.company_number);
+ 			$("#member-id").val(result.user_id);
+ 			$("#member-email").val(result.email);
+ 			$("#member-mobile").val(result.mobile);
+ 			$("#member-office").val(result.officep_num);
+		}, error: function(e){
+			console.log(e);
+		}
+	}); 
+
+});
+
+this.myinfoUpdate = function() {
+	var dataForm = {user_id: $("#member-id").val(), password: $("#new_memberpw").val(), email:$("#member-email").val()
+					, mobile: $("#member-mobile").val(), officep_num: $("#member-office").val(), company_number: $("#member-number").val()};
+  	var nowUrl = location.href;
+  	$.ajax({
+ 		url:baseUrl + "/rest/myupdate/",
+ 		dataType: "json",
+ 		type: "POST",
+ 		data: dataForm,
+ 		success: function(result){
+		}, error: function(e){
+		}
+	}); 
+};
+
+
+
+$("#update").click(function(){
+	if(($("#new_memberpw").val().length ==0 ) || ($("#new_memberpw").val().length >= 8 ) ){
+		myinfoUpdate();
+	}else{
+		$("#pw_error").html(" <label class='error red' for='new_memberpw'>비밀번호는 8자 이상입니다.</label>");
+		return false;
+	}
+}); 
+$("#myinfo").click(function(){
+	$("#pw_error").html(" ");
+	$("#new_memberpw").val("");
+	$("#new_memberpw_ok").val("");
+})
+</script>
+
+			</div>
+			<div class="right_col" role="main">
+				
+
+
+<h1>통계 차트</h1>
+<br>
+
+  <div class="row">        	
+          	<div class="x_panel">
+          	       <div class="col-md-12 col-sm-12 col-xs-12">
+          	       
+          	       		<form class="form-inline" id="locaitonForm" method="post">
+                                    	<input type="hidden" id="searchDepartmentId" name="searchDepartmentId" value="1" />
+                                    	<input type="hidden" id="startDate" name="startDate" value='2015-09-07' />
+                                    	<input type="hidden" id="endDate" name="endDate" value='2015-09-13' />
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                <input type="text" id="locationRangeDate" class="form-control" value="2015-09-07 ~ 2015-09-13" style="width:240px">
+                                            </div>
+                                        </div>
+                                        <!-- <button type="button" class="btn btn-info" id="">이번주</button>
+                                        <button type="button" class="btn btn-info">이번달</button> -->
+                                        <div class="form-group">
+                                            <span class="y-line"></span>
+                                        </div>
+                                        
+                                        <div class="form-group dropdown">
+                                            <button id='department_label' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' class='btn dropdown-white'>&nbsp;한국정보공학&nbsp;&nbsp;&nbsp;<span class='caret'></span></button><ul class='dropdown-menu member-list' aria-labelledby='department_label'><li class='team01'><a onclick="changeSelectBox('department_label',1,'한국정보공학')">한국정보공학</a></li><li role='separator' class='divider'></li><li class='team01'><a onclick="changeSelectBox('department_label',2,'IT사업부문')">IT사업부문</a></li><li class='team02'><a onclick="changeSelectBox('department_label',4,'  경영지원본부')">  경영지원본부</a></li><li><a onclick="changeSelectBox('department_label',10,'    경영지원팀')">-    경영지원팀</a></li><li><a onclick="changeSelectBox('department_label',65,'    영업지원팀')">-    영업지원팀</a></li><li><a onclick="changeSelectBox('department_label',73,'    마케팅팀')">-    마케팅팀</a></li><li><a onclick="changeSelectBox('department_label',86,'    ERP TFT')">-    ERP TFT</a></li><li class='team02'><a onclick="changeSelectBox('department_label',54,'  기술연구소')">  기술연구소</a></li><li><a onclick="changeSelectBox('department_label',31,'    기술개발팀')">-    기술개발팀</a></li><li><a onclick="changeSelectBox('department_label',64,'    기획영업팀')">-    기획영업팀</a></li><li><a onclick="changeSelectBox('department_label',79,'    ERP팀')">-    ERP팀</a></li><li class='team02'><a onclick="changeSelectBox('department_label',80,'  인프라사업부')">  인프라사업부</a></li><li class='team02'><a onclick="changeSelectBox('department_label',87,'  채널/EG 사업부')">  채널/EG 사업부</a></li><li><a onclick="changeSelectBox('department_label',42,'    채널사업부')">-    채널사업부</a></li><li><a onclick="changeSelectBox('department_label',14,'      채널1팀')">&nbsp;&nbsp;-      채널1팀</a></li><li><a onclick="changeSelectBox('department_label',74,'      채널3팀')">&nbsp;&nbsp;-      채널3팀</a></li><li><a onclick="changeSelectBox('department_label',81,'    EG사업부')">-    EG사업부</a></li><li><a onclick="changeSelectBox('department_label',21,'      부산지사')">&nbsp;&nbsp;-      부산지사</a></li><li><a onclick="changeSelectBox('department_label',22,'      대전지사')">&nbsp;&nbsp;-      대전지사</a></li><li><a onclick="changeSelectBox('department_label',82,'      EG영업팀')">&nbsp;&nbsp;-      EG영업팀</a></li><li><a onclick="changeSelectBox('department_label',85,'      EG서비스팀')">&nbsp;&nbsp;-      EG서비스팀</a></li></ul>
+                                        </div>
+                                        
+                                        <div class="form-group">                                            
+                                            <select id="id" name="id" class="form-control">
+                                            	<option value="0" selected>:::선택:::</option>
+                                                
+													<option value="15" >백인식</option>
+												
+													<option value="53" >황재동</option>
+												
+													<option value="26" >김용재</option>
+												
+													<option value="169" >정일용</option>
+												
+													<option value="93" >김도경</option>
+												
+													<option value="72" >박종일</option>
+												
+													<option value="3" >손태윤</option>
+												
+													<option value="40" >안성빈</option>
+												
+													<option value="80" >장대진</option>
+												
+													<option value="240" >이승훈</option>
+												
+													<option value="242" >이종헌</option>
+												
+													<option value="219" >권종필</option>
+												
+													<option value="92" >노영배</option>
+												
+													<option value="60" >백순기</option>
+												
+													<option value="81" >성진수</option>
+												
+													<option value="73" >오정훈</option>
+												
+													<option value="197" >유승목</option>
+												
+													<option value="86" >이상두</option>
+												
+													<option value="82" >이상훈</option>
+												
+													<option value="209" >이상희</option>
+												
+													<option value="89" >조원형</option>
+												
+													<option value="155" >고채현</option>
+												
+													<option value="83" >권경식</option>
+												
+													<option value="96" >류철</option>
+												
+													<option value="139" >백경묵</option>
+												
+													<option value="18" >이원경</option>
+												
+													<option value="17" >정성윤</option>
+												
+													<option value="23" >조도연</option>
+												
+													<option value="210" >한우현</option>
+												
+													<option value="203" >황철현</option>
+												
+													<option value="192" >권순형</option>
+												
+													<option value="157" >이병조</option>
+												
+													<option value="231" >지정원</option>
+												
+													<option value="61" >김기남</option>
+												
+													<option value="31" >김동현</option>
+												
+													<option value="241" >김정기</option>
+												
+													<option value="218" >노동춘</option>
+												
+													<option value="143" >노태균</option>
+												
+													<option value="177" >노현진</option>
+												
+													<option value="97" >박상진</option>
+												
+													<option value="58" >이은정</option>
+												
+													<option value="221" >정창래</option>
+												
+													<option value="62" >주정인</option>
+												
+													<option value="239" >최승복</option>
+												
+													<option value="84" >최은경</option>
+												
+													<option value="245" >김문기</option>
+												
+													<option value="243" >박지환</option>
+												
+													<option value="232" >오현우</option>
+												
+													<option value="166" >김선구</option>
+												
+													<option value="244" >김태환</option>
+												
+													<option value="122" >류정우</option>
+												
+													<option value="98" >박중건</option>
+												
+													<option value="165" >오세왕</option>
+												
+													<option value="128" >이혜경</option>
+												
+													<option value="238" >정다운</option>
+												
+													<option value="195" >한용운</option>
+												
+													<option value="207" >김은덕</option>
+												
+													<option value="204" >유효상</option>
+												
+													<option value="206" >이장원</option>
+												
+													<option value="179" >강신욱</option>
+												
+													<option value="127" >김나영</option>
+												
+													<option value="247" >김남이</option>
+												
+													<option value="194" >신동수</option>
+												
+													<option value="233" >우정권</option>
+												
+													<option value="214" >정진희</option>
+												
+													<option value="213" >홍혜진</option>
+												
+													<option value="174" >test6</option>
+												
+                                            </select>
+                                        </div>
+                                        <button type="button" class="btn btn-gray" id="submitButton" >검색</button>
+                                        <div class="form-group pt5">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;* 월별검색은 <span class="red">2달</span> 까지가능합니다.
+                                        </div>
+                                        <input type="submit" name="_submit" style="display:none"/>
+                                    </form>
+          	       		
+						<div class="row x_title">
+						오케이
+						</div>
+						<div class="row x_content">
+          				<table class="table table-striped selectable table-active">
+          				<tr>
+          				<th>구분</th>
+							
+								<th>09-07</th>
+							
+								<th>09-08</th>
+							
+								<th>09-09</th>
+							
+								<th>09-10</th>
+							
+								<th>09-11</th>
+							
+								<th>09-12</th>
+							
+								<th>09-13</th>
+							
+							</tr>
+							
+									<tr><td>total</td>
+									<td>
+									1
+									</td>
+									
+							
+									
+									<td>
+									4
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									10
+									</td>
+									
+							
+									
+									<td>
+									2
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									</tr>
+							
+									<tr><td>분류없음</td>
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									3
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									3
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									</tr>
+							
+									<tr><td>A/S업체</td>
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									1
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									</tr>
+							
+									<tr><td>물류업체</td>
+									<td>
+									1
+									</td>
+									
+							
+									
+									<td>
+									1
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									1
+									</td>
+									
+							
+									
+									<td>
+									1
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									</tr>
+							
+									<tr><td>의류업체</td>
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									2
+									</td>
+									
+							
+									
+									<td>
+									1
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									</tr>
+							
+									<tr><td>요식업</td>
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									1
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									</tr>
+							
+									<tr><td>아이티</td>
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									2
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									</tr>
+							
+									<tr><td>테스트</td>
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									</tr>
+							
+									<tr><td>테스트01</td>
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									</tr>
+							
+									<tr><td>테스트02</td>
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									</tr>
+							
+									<tr><td>테스트03</td>
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									
+							
+									
+									<td>
+									
+									</td>
+									</tr>
+							
+								
+							</table>
+				</div>
+			</div>
+		</div>
+	</div>
+                    
+  <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="x_panel">
+                        
+                            <div class="row x_title">
+                                <h3>테스트1</h3>
+                                
+                            </div>
+							<canvas class="row x_content" id="canvas" height="" width=""></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="x_panel">
+                        
+                            <div class="row x_title">
+                                <h3>테스트2</h3>
+                            </div>
+							<canvas class="row x_content" id="chart_2" height="" width=""></canvas>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="row">
+                    
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="x_panel">
+                        
+                            <div class="row x_title">
+                                <h3>테스트3</h3>
+                                
+                            </div>
+							<canvas class="row x_content" id="chart_3" height="" width=""></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel">
+                        
+                            <div class="row x_title">
+                                <h3>테스트4</h3>
+                            </div>
+							<canvas class="row x_content" id="chart_4" height="" width=""></canvas>
+                        </div>
+                    </div>
+
+                </div>
+	
+	
+
+	<script>
+	$(document).ready(function () {
+		var fDateArray = "2015-09-07".split("-");
+		var first = fDateArray[1]+"-"+fDateArray[2]+"-"+fDateArray[0];
+		var eDateArray = "2015-09-13".split("-");
+		var end = eDateArray[1]+"-"+eDateArray[2]+"-"+eDateArray[0];
+		var eDate = "2015-09-13";
+	    var cb = function (start, end, label) {
+	            //console.log(start.toISOString(), end.toISOString(), label);
+	            $('#locationRangeDate').val(start.format('YYYY-MM-DD') + ' ~ ' + end.format('YYYY-MM-DD'));
+	        }
+
+	        var optionSet1 = {
+	        	startDate: first,
+	            endDate: end,
+	            minDate: "01-01-2015",
+	            maxDate: "12-31-2015", 
+	            applyClass: "btn-primary",
+	            dateLimit:{
+	                "days": 30
+	            },
+	            locale: {
+	                format: 'YYYY-MM-DD',
+	                applyLabel: '선택',
+	                cancelLabel: '취소',
+	                fromLabel: 'From',
+	                toLabel: 'To',
+	                daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
+	                monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+	                firstDay: 1,
+	            },
+	            ranges: {
+	 		       '오늘': [moment(), moment()],
+	 		       '어제': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+	 		       '일주일 전 ~ 오늘': [moment().subtract(6, 'days'), moment()],
+	 		      // '30일 전': [moment().subtract(29, 'days'), moment()],
+	 		       '금주': [moment().startOf('week'), moment().endOf('week')],
+	 		       '금월': [moment().startOf('month'), moment().endOf('month')],
+	 		      // '지난 달': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+	 		     }
+	        };
+
+	        $('#locationRangeDate').daterangepicker(optionSet1, cb);
+	});
+	
+	
+	var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+
+	var barChartData = {
+		labels : ["January","February","March","April","May","June","July"],
+		datasets : [
+			{
+				fillColor : "rgba(79,148,205,0.5)",
+				strokeColor : "rgba(79,148,205,0.33)",
+				highlightFill: "rgba(79,148,205,0.8)",
+				highlightStroke: "rgba(79,148,205,1)",
+				data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+			},
+			{
+				fillColor : "rgba(238,118,33,0.5)",
+				strokeColor : "rgba(238,118,33,0.3)",
+				highlightFill : "rgba(238,118,33,0.8)",
+				highlightStroke : "rgba(238,118,33,1)",
+				data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+			},
+			{
+				fillColor : "rgba(165,42,42,0.5)",
+				strokeColor : "rgba(165,42,42,0.3)",
+				highlightFill : "rgba(165,42,42,0.8)",
+				highlightStroke : "rgba(165,42,42,1)",
+				data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+			},
+			{
+				fillColor : "rgba(0,139,69,0.5)",
+				strokeColor : "rgba(0,139,69,0.3)",
+				highlightFill : "rgba(0,139,69,0.8)",
+				highlightStroke : "rgba(0,139,69,1)",
+				data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+			}
+		]
+	}
+	var barChartData2 = {
+			labels : ["9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10","9/10"],
+			datasets : [
+				{
+					fillColor : "rgba(79,148,205,0.5)",
+					strokeColor : "rgba(79,148,205,0.33)",
+					highlightFill: "rgba(79,148,205,0.8)",
+					highlightStroke: "rgba(79,148,205,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				},
+				{
+					fillColor : "rgba(238,118,33,0.5)",
+					strokeColor : "rgba(238,118,33,0.3)",
+					highlightFill : "rgba(238,118,33,0.8)",
+					highlightStroke : "rgba(238,118,33,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				},
+				{
+					fillColor : "rgba(165,42,42,0.5)",
+					strokeColor : "rgba(165,42,42,0.3)",
+					highlightFill : "rgba(165,42,42,0.8)",
+					highlightStroke : "rgba(165,42,42,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				},
+				{
+					fillColor : "rgba(0,139,69,0.5)",
+					strokeColor : "rgba(0,139,69,0.3)",
+					highlightFill : "rgba(0,139,69,0.8)",
+					highlightStroke : "rgba(0,139,69,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				}
+			]
+		}
+	var pieChartData = [
+	    	            {
+	    	                value: 300,
+	    	                color:"#F7464A",
+	    	                highlight: "#FF5A5E",
+	    	                label: "Red"
+	    	            },
+	    	            {
+	    	                value: 50,
+	    	                color: "#46BFBD",
+	    	                highlight: "#5AD3D1",
+	    	                label: "Green"
+	    	            },
+	    	            {
+	    	                value: 100,
+	    	                color: "#FDB45C",
+	    	                highlight: "#FFC870",
+	    	                label: "Yellow"
+	    	            }
+	    	        ]
+	
+	
+	
+	window.onload = function(){
+		var chart_1 = document.getElementById("canvas").getContext("2d");
+		
+		window.myBar = new Chart(chart_1).StackedBar(barChartData, {
+			responsive : true,
+		});
+		
+		var chart_2 = document.getElementById("chart_2").getContext("2d");
+		var chart_2_1 = new Chart(chart_2).Bar(barChartData, {
+			responsive : true,
+			labelAlign: 'center'
+		});
+		
+var chart_3 = document.getElementById("chart_3").getContext("2d");
+		
+		window.myBar = new Chart(chart_3).StackedBar(barChartData2, {
+			responsive : true,
+		});
+		
+		var chart_4 = document.getElementById("chart_4").getContext("2d");
+		var chart_4_1 = new Chart(chart_4).Doughnut(pieChartData, {
+			responsive : true,
+		});
+	}	
+
+	
+	$("#submitButton").click(function(){
+		var datArray = $("#locationRangeDate").val().split('~');
+		$("#startDate").val($.trim(datArray[0]));
+		$("#endDate").val($.trim(datArray[1]));
+		$("#locaitonForm").submit();		
+	});
+	
+	function changeSelectBox(domId, department_id, department_name){
+		$("#searchDepartmentId").val(department_id);
+		$("#"+domId).html("&nbsp;"+department_name+"&nbsp;&nbsp;&nbsp;<span class='caret'></span>");
+		$.ajax({
+			url:baseUrl + "/rest/users/department/"+department_id,
+			dataType: "json",
+			type: "GET",
+			success: function(result){
+				html="<option value='0'>:::선택:::</option>";
+				for(var i in result){
+					html += "<option value='"+result[i].id+"' >"+result[i].user_name+"</option>";
+				}
+				$("#id").html(html);
+			}
+		}); 
+	}
+	
+	</script>
+				
+
+<!-- footer content -->
+<footer>
+	<div class="">
+		<p class="pull-left">
+			한국정보공학(주) ㅣ 대표번호 : 031-789-8700 | 주소 : 경기도 성남시 분당구 서현동 253-4 경림빌딩<br />
+			COPYRIGHT (c) 2005 KIES CO., LTD. All rights are reserved. Since 2015
+		</p>
+	</div>
+	<div class="clearfix"></div>
+	<!-- Back To Top -->
+	<a id="back-to-top" href="#">
+	    <i class="fa fa-angle-up"></i>
+	    <p>TOP</p>
+	</a>
+	<!-- /Back to Top -->
+</footer>
+<!-- /footer content -->
+			</div>
+		</div>
+	</div>
+	<div id="loding_layer" class="loding_layer">
+		<div style="display: table;margin: 0 auto; color: red">
+		</div>
+	</div>
+	
+    <script src="js/bootstrap.min.js"></script>
+    <!-- bootstrap progress js -->
+    <script src="js/bootstrap-timepicker/bootstrap-timepicker.js"></script>
+    <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/datepicker/daterangepicker.js"></script>
+	<script src="js/tablednd/jquery.tablednd.min.js"></script>
+	<script src="js/chartjs/chart.min.js"></script>
+	<script src="js/chartjs/chart.stackedbar.js"></script>
+	
+	<script src="js/custom.js"></script>
+	<script src="js/layer.popup.js"></script>
+	<script src="js/jquery.dotdotdot.min.js"></script>
+</body>
+</html>

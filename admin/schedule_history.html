@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>한국정보공학(주)</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styling plus plugins -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+        <![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body class="nav-md">
+
+    <div class="container body">
+
+
+        <div class="main_container">
+
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+
+                    <div class="navbar toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li><i class="fa fa-briefcase"></i> <a href="customer.html"> 고객사 <span class="fa fa-chevron-right"></span></a>
+                                </li>
+                                <li><i class="fa fa-calendar"></i><a> 스케줄 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="schedule.html">- 스케줄 관리</a></li>
+                                        <li><a href="schedule_history.html">- 스케줄 이력</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-file-text-o"></i><a> 보고서 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="report.html">- 보고서 조회</a></li>
+                                        <li><a href="report_macro.html">- 상용구 관리</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-bar-chart"></i><a> 통계정보 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="statistics.html">- 활동정보 요약</a></li>
+                                        <li><a href="statistics_active.html">- 활동정보 상세</a></li>
+                                        <li><a href="statistics_graph.html">- 활동그래프</a></li>
+                                        <li><a href="admin_rollbook.html">- 출퇴근기록</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-users"></i><a> 직원 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="member.html">- 직원 연락처</a></li>
+                                        <li><a href="member_state.html">- 비즈미 사용 현황</a></li>
+                                        <li><a href="member_stamp.html">- 업무발자취</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-folder-open"></i><a> 관리 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="admin_off.html">- 휴가자설정</a></li>
+                                        <li><a href="admin_holiday.html">- 휴일설정</a></li>
+                                        <li><a href="admin_department.html">- 조직관리</a></li>
+                                        <li><a href="admin_position.html">- 직위관리</a></li>
+                                        <li><a href="admin_employee.html">- 직원관리</a></li>
+                                        <li><a href="admin_work.html">- 업무구분설정</a></li>
+                                        <li><a href="admin_costomer.html">- 곡객구분설정</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-cog"></i><a> 설정 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="admin_level.html">- 권한설정</a></li>
+                                        <li><a href="admin_setting.html">- 환경변수 설정</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-tachometer"></i><a href="monitoring.html"> 상황실 <span class="fa fa-chevron-right"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /sidebar menu -->
+
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+
+                <div class="nav_menu">
+                    <nav role="navigation">
+                        <div class="nav_title" style="border: 0;">
+                            <a href="index.html" class="site_title"> 한국정보공학(주)</a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <i class=" fa fa-user"></i> 기술개발팀 과장 홍길동
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
+                                    <li><a href="#none" data-toggle="modal" data-target=".main_my"> 개인정보수정</a>
+                                    </li>
+                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                    </li>
+                                </ul>
+
+
+                                <!-- 개인정보수정 MODAL (S)-->
+                                <div class="modal fade main_my" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">개인정보수정</h4>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="member-number">사번
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" id="member-number" disabled="disabled" class="form-control col-md-7 col-xs-12" placeholder="150301">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="member-id">아이디
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" id="member-id" name="member-id" disabled="disabled" class="form-control col-md-7 col-xs-12" placeholder="ID">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="new-memberpw" class="control-label col-md-3 col-sm-3 col-xs-12">새 비밀번호</label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="new-memberpw" class="form-control col-md-7 col-xs-12" type="password" name="new-memberpw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="new-memberpw-ok" class="control-label col-md-3 col-sm-3 col-xs-12">새 비밀번호 확인</label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="new-memberpw-ok" class="form-control col-md-7 col-xs-12" type="password" name="new-memberpw-ok">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">E-mail
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-email" class="form-control col-md-7 col-xs-12" type="text" placeholder="id@domain.com">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mobile
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-mobile" class="form-control col-md-7 col-xs-12" type="text" placeholder="010-1234-1234">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Office
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-office" class="form-control col-md-7 col-xs-12" type="text" placeholder="02-1234-1234">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ln_solid"></div>
+                                                    <div class="form-group">
+                                                        <div class="col-md-6 col-sm-6 col-xs-12 col-xs-offset-3">
+                                                            <button type="submit" class="btn btn-primary">수정</button>
+                                                            <button type="reset" class="btn btn-success" data-dismiss="modal">취소</button>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 개인정보수정 MODAL (E)-->
+
+
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+            <!-- /top navigation -->
+
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3 class="titele_ic">스케줄 이력</h3>
+                    </div>
+
+                    <div class="title_right">
+                        <div id="contents-location" class="pull-right">
+                            <!-- location -->
+                            <ol class="breadcrumb">
+                              <li><i class="fa fa-home "></i> <a href="index.html">Home</a></li>
+                              <li><a href="customer.html">스케줄</a></li>
+                              <li class="active">스케줄 이력</li><!-- 현재 -->
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- page-title (e) -->
+
+
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+
+                            <div class="x_title">
+                                <div class="pull-left">
+                                    <form class="form-inline">
+                                        <div class="form-group">
+                                            <label for="table-view">View</label>
+                                            <select id="table-view" class="form-control">
+                                                <option value="10">10</option>
+                                                <option value="20">20</option>
+                                                <option value="30">30</option>
+                                                <option value="50">50</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="y-line"></span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                <input type="text" id="reportrangeDate" class="form-control" value="2015/08/22 ~ 2015/08/28" style="width:240px">
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="y-line"></span>
+                                        </div>
+                                        <div class="form-group dropdown">
+                                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn dropdown-white">
+                                                :::::&nbsp;부서 선택&nbsp;:::::&nbsp;&nbsp;
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu member-list" aria-labelledby="dLabel">
+                                                <li class="team01"><a href="">한국정보공학</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li class="team01"><a href="">IT사업부문</a></li>
+                                                <li class="team02"><a href="">인프라사업부</li>
+                                                <li class="team02"><a href="">기술연구소</li>
+                                                <li><a href="">- ERP팀</a></li>
+                                                <li><a href="">- 기획영업팀</a></li>
+                                                <li><a href="">- 기술개발팀</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="y-line"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                <option value="">작성자</option>
+                                            </select>
+                                            <input type="text" id="ex4" class="form-control" placeholder="검색">
+                                        </div>
+                                        <button type="submit" class="btn btn-gray">검색</button>
+                                    </form>
+                                </div>
+
+                                <div class="pull-right">
+                                    <a href="schedule_new.html" class="btn btn-primary"><i class="fa fa-print"></i> 프린트</a>
+                                    <a href="schedule_new.html" class="btn btn-success"><i class="fa fa-download"></i> 다운로드</a>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content">
+
+                                <div class="row">
+
+                                    <div class="col-sm-12 calender_list_column">
+
+                                        <table class="table table-striped selectable">
+                                            <thead>
+                                                <tr>
+                                                    <th>NO</th>
+                                                    <th>일시
+                                                        <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                    </th>
+                                                    <th>고객사
+                                                        <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                    </th>
+                                                    <th>고객사 담당자
+                                                        <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                    </th>
+                                                    <th>내용
+                                                        <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                    </th>
+                                                    <th>작성자
+                                                        <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                    </th>
+                                                    <th>보고서
+                                                        <span class="order"><span class="fa fa-sort-up"></span><span class="fa fa-sort-down"></span></span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="text-center">1</th>
+                                                    <td class="text-center">2015.07.07  11:05</td>
+                                                    <td class="text-center">한국정보공학</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td><a href="report_view.html">신규거래처 > 영업 혐의<br />
+                                                    비콘 H/W, S/W 구축범위 논의</a></td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td class="text-center"><button type="button" class="btn btn-link red" onclick="location.href='report_new.html'">미작성</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-center">2</th>
+                                                    <td class="text-center">2015.07.07  11:05</td>
+                                                    <td class="text-center">한국정보공학</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td>신규거래처 > 영업 혐의<br />
+                                                    비콘 H/W, S/W 구축범위 논의</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td class="text-center">작성</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-center">3</th>
+                                                    <td class="text-center">2015.07.07  11:05</td>
+                                                    <td class="text-center">한국정보공학</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td>신규거래처 > 영업 혐의<br />
+                                                    비콘 H/W, S/W 구축범위 논의</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td class="text-center">작성</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-center">4</th>
+                                                    <td class="text-center">2015.07.07  11:05</td>
+                                                    <td class="text-center">한국정보공학</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td>신규거래처 > 영업 혐의<br />
+                                                    비콘 H/W, S/W 구축범위 논의</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td class="text-center">작성</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-center">5</th>
+                                                    <td class="text-center">2015.07.07  11:05</td>
+                                                    <td class="text-center">한국정보공학</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td>신규거래처 > 영업 혐의<br />
+                                                    비콘 H/W, S/W 구축범위 논의</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td class="text-center">작성</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-center">6</th>
+                                                    <td class="text-center">2015.07.07  11:05</td>
+                                                    <td class="text-center">한국정보공학</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td>신규거래처 > 영업 혐의<br />
+                                                    비콘 H/W, S/W 구축범위 논의</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td class="text-center">작성</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-center">7</th>
+                                                    <td class="text-center">2015.07.07  11:05</td>
+                                                    <td class="text-center">한국정보공학</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td>신규거래처 > 영업 혐의<br />
+                                                    비콘 H/W, S/W 구축범위 논의</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td class="text-center">작성</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-center">8</th>
+                                                    <td class="text-center">2015.07.07  11:05</td>
+                                                    <td class="text-center">한국정보공학</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td>신규거래처 > 영업 혐의<br />
+                                                    비콘 H/W, S/W 구축범위 논의</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td class="text-center">작성</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-center">9</th>
+                                                    <td class="text-center">2015.07.07  11:05</td>
+                                                    <td class="text-center">한국정보공학</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td>신규거래처 > 영업 혐의<br />
+                                                    비콘 H/W, S/W 구축범위 논의</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td class="text-center">작성</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-center">10</th>
+                                                    <td class="text-center">2015.07.07  11:05</td>
+                                                    <td class="text-center">한국정보공학</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td>신규거래처 > 영업 혐의<br />
+                                                    비콘 H/W, S/W 구축범위 논의</td>
+                                                    <td class="text-center">김길동</td>
+                                                    <td class="text-center">작성</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <script>
+                                        $(document).ready(function() {
+                                            //all checkbox
+                                            $(".selectable thead tr input[type=checkbox]").change(function(e){
+                                                var tbodyCk = $(".selectable tbody tr");
+                                                if (e.target.checked){
+                                                    tbodyCk.addClass("success");
+                                                    tbodyCk.find("input[type=checkbox]").prop('checked', true)
+                                                }else{
+                                                    tbodyCk.removeClass("success");
+                                                    tbodyCk.find("input[type=checkbox]").prop('checked', false)
+                                                }
+                                            });
+                                            //checkbox row add remove Class
+                                            $(".selectable tbody tr input[type=checkbox]").change(function(e){
+                                                if (e.target.checked)
+                                                    $(this).closest("tr").addClass("success");
+                                                else
+                                                    $(this).closest("tr").removeClass("success");
+                                            });
+                                        });
+                                        </script>
+
+                                        <div class="dataTables_info">Total : <span>30</span> 개</div>
+
+                                        <div class="dataTables_paginate paging_full_numbers">
+                                            <a tabindex="0" class="first paginate_button paginate_button_disabled"><i class="fa fa-angle-double-left"></i></a>
+                                            <a tabindex="0" class="previous paginate_button paginate_button_disabled"><i class="fa fa-angle-left"></i></a><span>
+                                            <a tabindex="0" class="paginate_active">1</a>
+                                            <a tabindex="0" class="paginate_button">2</a>
+                                            <a tabindex="0" class="paginate_button">3</a>
+                                            <a tabindex="0" class="paginate_button">4</a></span>
+                                            <a tabindex="0" class="next paginate_button"><i class="fa fa-angle-right"></i></a>
+                                            <a tabindex="0" class="last paginate_button"><i class="fa fa-angle-double-right"></i></a>
+                                        </div>
+
+                                    </div>
+                                    <!-- /LIST -->
+
+                                </div>
+
+
+
+                            </div>
+                            <!-- x_content (e) -->
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- footer content -->
+                <footer>
+                    <div class="">
+                        <p class="pull-left">
+                            한국정보공학(주) ㅣ 대표번호 : 031-789-8700   주소 : 경기도 성남시 분당구 서현동 253-4 경림빌딩<br />
+                            COPYRIGHT (c) 2005 KIES CO., LTD. All rights are reserved. Since 2015
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
+
+            </div>
+            <!-- /page content -->
+
+        </div>
+
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <!-- bootstrap progress js -->
+    <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+
+    <script src="js/custom.js"></script>
+
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
+    <script>
+    $(document).ready(function () {
+
+        var cb = function (start, end, label) {
+                //console.log(start.toISOString(), end.toISOString(), label);
+                $('#reportrangeDate').val(start.format('YYYY/MM/DD') + ' ~ ' + end.format('YYYY/MM/DD'));
+            }
+
+            var optionSet1 = {
+                startDate: "08/22/2015",
+                endDate: "08/28/2015",
+                minDate: "01/01/2015",
+                maxDate: "12/31/2015",
+                applyClass: "btn-primary",
+                ranges: {
+                    '오늘': [moment(), moment()],
+                    '금주': [moment().subtract(6, 'days'), moment()],
+                    '이번달': [moment().startOf('month'), moment().endOf('month')],
+                    '지난달': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                locale: {
+                    format: 'YYYY/MM/DD',
+                    applyLabel: '선택',
+                    cancelLabel: '취소',
+                    fromLabel: 'From',
+                    toLabel: 'To',
+                    customRangeLabel: '사용자',
+                    daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
+                    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                    firstDay: 1
+                }
+            };
+
+            $('#reportrangeDate').daterangepicker(optionSet1, cb);
+    });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>한국정보공학(주)</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="fonts/css/fonts.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styling plus plugins -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+        <![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body class="nav-md">
+
+    <div class="container body">
+
+
+        <div class="main_container">
+
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+
+                    <div class="navbar toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li><i class="fa fa-briefcase"></i> <a href="customer.html"> 고객사 <span class="fa fa-chevron-right"></span></a>
+                                </li>
+                                <li><i class="fa fa-calendar"></i><a> 스케줄 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="schedule.html">- 스케줄 관리</a></li>
+                                        <li><a href="schedule_history.html">- 스케줄 이력</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-file-text-o"></i><a> 보고서 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="report.html">- 보고서 조회</a></li>
+                                        <li><a href="report_macro.html">- 상용구 관리</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-bar-chart"></i><a> 통계정보 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="statistics.html">- 활동정보 요약</a></li>
+                                        <li><a href="statistics_active.html">- 활동정보 상세</a></li>
+                                        <li><a href="statistics_graph.html">- 활동그래프</a></li>
+                                        <li><a href="admin_rollbook.html">- 출퇴근기록</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-users"></i><a> 직원 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="member.html">- 직원 연락처</a></li>
+                                        <li><a href="member_state.html">- 비즈미 사용 현황</a></li>
+                                        <li><a href="member_stamp.html">- 업무발자취</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-folder-open"></i><a> 관리 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="admin_off.html">- 휴가자설정</a></li>
+                                        <li><a href="admin_holiday.html">- 휴일설정</a></li>
+                                        <li><a href="admin_department.html">- 조직관리</a></li>
+                                        <li><a href="admin_position.html">- 직위관리</a></li>
+                                        <li><a href="admin_employee.html">- 직원관리</a></li>
+                                        <li><a href="admin_work.html">- 업무구분설정</a></li>
+                                        <li><a href="admin_costomer.html">- 곡객구분설정</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-cog"></i><a> 설정 <span class="fa fa-chevron-right"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="admin_level.html">- 권한설정</a></li>
+                                        <li><a href="admin_setting.html">- 환경변수 설정</a></li>
+                                    </ul>
+                                </li>
+                                <li><i class="fa fa-tachometer"></i><a href="monitoring.html"> 상황실 <span class="fa fa-chevron-right"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /sidebar menu -->
+
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+
+                <div class="nav_menu">
+                    <nav role="navigation">
+                        <div class="nav_title" style="border: 0;">
+                            <a href="index.html" class="site_title"> 한국정보공학(주)</a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <i class=" fa fa-user"></i> 기술개발팀 과장 홍길동
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
+                                    <li><a href="#none" data-toggle="modal" data-target=".main_my"> 개인정보수정</a>
+                                    </li>
+                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                    </li>
+                                </ul>
+
+
+                                <!-- 개인정보수정 MODAL (S)-->
+                                <div class="modal fade main_my" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">개인정보수정</h4>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="member-number">사번
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" id="member-number" disabled="disabled" class="form-control col-md-7 col-xs-12" placeholder="150301">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="member-id">아이디
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" id="member-id" name="member-id" disabled="disabled" class="form-control col-md-7 col-xs-12" placeholder="ID">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="new-memberpw" class="control-label col-md-3 col-sm-3 col-xs-12">새 비밀번호</label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="new-memberpw" class="form-control col-md-7 col-xs-12" type="password" name="new-memberpw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="new-memberpw-ok" class="control-label col-md-3 col-sm-3 col-xs-12">새 비밀번호 확인</label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="new-memberpw-ok" class="form-control col-md-7 col-xs-12" type="password" name="new-memberpw-ok">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">E-mail
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-email" class="form-control col-md-7 col-xs-12" type="text" placeholder="id@domain.com">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mobile
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-mobile" class="form-control col-md-7 col-xs-12" type="text" placeholder="010-1234-1234">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Office
+                                                        </label>
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <input id="member-office" class="form-control col-md-7 col-xs-12" type="text" placeholder="02-1234-1234">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ln_solid"></div>
+                                                    <div class="form-group">
+                                                        <div class="col-md-6 col-sm-6 col-xs-12 col-xs-offset-3">
+                                                            <button type="submit" class="btn btn-primary">수정</button>
+                                                            <button type="reset" class="btn btn-success" data-dismiss="modal">취소</button>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 개인정보수정 MODAL (E)-->
+
+
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+            <!-- /top navigation -->
+
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+
+
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 my-body">
+                        <div class="x_panel">
+
+                            <div class="x_title">
+                                <h3>스케줄</h3>
+                            </div>
+                            <!-- x_title (e) -->
+
+                            <div class="x_content">
+
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+
+                                    <!-- schedule (s) -->
+                                    <div class="calender-box">
+                                    <div class="row calender-toolbar02">
+                                        <div class="col-md-4 col-sm-4 col-xs-4 calender-button">
+                                            <button type="button" class="btn btn-White"><i class="fa fa-chevron-left"></i></button>
+                                            <button type="button" class="btn btn-White"><i class="fa fa-chevron-right"></i></button>
+
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4 col-xs-4 calender-yymm">
+                                            <h3 class="text-center">2015년 5월</h3>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4 col-xs-4 calender-info">
+                                            <button type="button" class="btn btn-White">오늘</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="calender-table">
+
+                                        <table class="table table-calender02">
+                                            <thead>
+                                                <tr>
+                                                    <th class="tc-day-header tc-sun">일</th>
+                                                    <th class="tc-day-header tc-mon">월</th>
+                                                    <th class="tc-day-header tc-tue">화</th>
+                                                    <th class="tc-day-header tc-wed">수</th>
+                                                    <th class="tc-day-header tc-thu">목</th>
+                                                    <th class="tc-day-header tc-fri">금</th>
+                                                    <th class="tc-day-header tc-sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun tc-other-month">
+                                                        <p class="tc-day">26</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon tc-other-month">
+                                                        <p class="tc-day">27</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue tc-other-month">
+                                                        <p class="tc-day">28</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed tc-other-month">
+                                                        <p class="tc-day">29</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu tc-other-month">
+                                                        <p class="tc-day">30</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri tc-other-month">
+                                                        <p class="tc-day">31</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">1</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">2</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">3</p>
+
+                                                        <div class="sc-cont">
+                                                            <span class="sc-txt"><i class="fa fa-circle red"></i></span>
+                                                            <span class="sc-txt"><i class="fa fa-circle blue"></i></span>
+                                                        </div>
+
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">4</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">5</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">6</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">7</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">8</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">9</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">10</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">11</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">12</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">13</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">14</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">15</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">16</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">17</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">18</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">19</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">20</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri">
+                                                        <p class="tc-day">21</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">22</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">23</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">24</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue">
+                                                        <p class="tc-day">25</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed">
+                                                        <p class="tc-day">26</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu">
+                                                        <p class="tc-day">27</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri tc-today-month">
+                                                        <p class="tc-day">28</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat">
+                                                        <p class="tc-day">29</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tc-day-content tc-sun">
+                                                        <p class="tc-day">30</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-mon">
+                                                        <p class="tc-day">31</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-tue tc-other-month">
+                                                        <p class="tc-day">1</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-wed tc-other-month">
+                                                        <p class="tc-day">2</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-thu tc-other-month">
+                                                        <p class="tc-day">3</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-fri tc-other-month">
+                                                        <p class="tc-day">4</p>
+                                                    </td>
+                                                    <td class="tc-day-content tc-sat tc-other-month">
+                                                        <p class="tc-day">5</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+
+                                        <script>
+                                        $(document).ready(function() {
+                                            //td click addClass
+                                            $('.table-calender02 tbody td').click(function() {
+                                                $('.table-calender02 tbody td').removeClass("tc-acive-month");
+                                                if($(this).hasClass('tc-acive-month')) {
+                                                    $(this).removeClass("tc-acive-month");
+                                                } else {
+                                                    $(this).addClass("tc-acive-month");
+                                                }
+                                            });
+                                        });
+                                        </script>
+
+                                    </div>
+                                    </div>
+                                    <!-- schedule (e) -->
+
+                                </div>
+
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+
+                                    <div class="" role="tabpanel">
+                                        <ul class="nav nav-tabs bar_tabs" role="tablist" id="myTab">
+                                            <li role="presentation" class="active"><a href="#tab_content1" role="tab" data-toggle="tab" aria-controls="true">MY 고객사</a></li>
+                                            <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab"  aria-controls="false">전체 고객사</a></li>
+                                        </ul>
+
+                                        <!-- tab-content (s)-->
+                                        <div class="tab-content v-scroll"  style="height:390px">
+                                            <div role="tabpanel" class="tab-pane fade active in" id="tab_content1">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>NO</th>
+                                                            <th>시간</th>
+                                                            <th>등록자</th>
+                                                            <th>업체명</th>
+                                                            <th>내용</th>
+                                                            <th>상태</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row" class="text-center">1</th>
+                                                            <td class="text-center">9:00~10:00</td>
+                                                            <td class="text-center">홍길동</td>
+                                                            <td class="text-center">한국정보공학</td>
+                                                            <td class="text-center"><a href="customer_view.html">SBA출결 기획 미팅. 기획 미팅</a></td>
+                                                            <td class="text-center"><span class="">방문</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row" class="text-center">1</th>
+                                                            <td class="text-center">9:00~10:00</td>
+                                                            <td class="text-center">홍길동</td>
+                                                            <td class="text-center">한국정보공학</td>
+                                                            <td class="text-center"><a href="customer_view.html">SBA출결 기획 미팅. 기획 미팅</a></td>
+                                                            <td class="text-center"><span class="red">미방문</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row" class="text-center">1</th>
+                                                            <td class="text-center">9:00~10:00</td>
+                                                            <td class="text-center">홍길동</td>
+                                                            <td class="text-center">한국정보공학</td>
+                                                            <td class="text-center"><a href="customer_view.html">SBA출결 기획 미팅. 기획 미팅</a></td>
+                                                            <td class="text-center"><span class="blue">예정</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row" class="text-center">1</th>
+                                                            <td class="text-center">9:00~10:00</td>
+                                                            <td class="text-center">홍길동</td>
+                                                            <td class="text-center">한국정보공학</td>
+                                                            <td class="text-center"><a href="customer_view.html">SBA출결 기획 미팅. 기획 미팅</a></td>
+                                                            <td class="text-center"><span class="">방문</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row" class="text-center">1</th>
+                                                            <td class="text-center">9:00~10:00</td>
+                                                            <td class="text-center">홍길동</td>
+                                                            <td class="text-center">한국정보공학</td>
+                                                            <td class="text-center"><a href="customer_view.html">SBA출결 기획 미팅. 기획 미팅</a></td>
+                                                            <td class="text-center"><span class="">방문</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row" class="text-center">1</th>
+                                                            <td class="text-center">9:00~10:00</td>
+                                                            <td class="text-center">홍길동</td>
+                                                            <td class="text-center">한국정보공학</td>
+                                                            <td class="text-center"><a href="customer_view.html">SBA출결 기획 미팅. 기획 미팅</a></td>
+                                                            <td class="text-center"><span class="">방문</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row" class="text-center">1</th>
+                                                            <td class="text-center">9:00~10:00</td>
+                                                            <td class="text-center">홍길동</td>
+                                                            <td class="text-center">한국정보공학</td>
+                                                            <td class="text-center"><a href="customer_view.html">SBA출결 기획 미팅. 기획 미팅</a></td>
+                                                            <td class="text-center"><span class="">방문</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                            <!-- tab_content1 (e) -->
+
+                                            <div role="tabpanel" class="tab-pane fade" id="tab_content2">
+                                                tab_content2
+                                            </div>
+                                            <!-- tab_content2 (e) -->
+
+                                        </div>
+                                        <!--
+                                        <script>
+                                          $(function () {
+                                            $('#myTab a:last').tab('show') //마지막이 보이게 처리
+                                          })
+                                        </script>
+                                        -->
+                                        <!-- tab-content (e)-->
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- x_content (e) -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-4 col-xs-12 my-body">
+                        <div class="x_panel">
+
+                            <div class="x_title">
+                                <div class="pull-left">
+                                    <h3>금주 신규등록 고객사</h3>
+                                </div>
+                                <div class="pull-right">
+                                    <span class="badge badge-blue">42</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- x_title (e) -->
+
+                            <div class="x_content">
+
+                                <div class="v-scroll" style="height:248px">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>NO</th>
+                                                <th>고객사명</th>
+                                                <th>등록자</th>
+                                                <th>고객사구분</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" class="text-center">1</th>
+                                                <td class="text-center"><a href="#">한국정보공학</a></td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">경쟁사</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-center">2</th>
+                                                <td class="text-center"><a href="#">한국정보공학</a></td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">경쟁사</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-center">3</th>
+                                                <td class="text-center"><a href="#">한국정보공학</a></td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">경쟁사</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-center">4</th>
+                                                <td class="text-center"><a href="#">한국정보공학</a></td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">경쟁사</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-center">5</th>
+                                                <td class="text-center"><a href="#">한국정보공학</a></td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">경쟁사</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <!-- x_content (e) -->
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12 my-body">
+                        <div class="x_panel">
+
+                            <div class="x_title">
+                                <div class="pull-left">
+                                    <h3>미완료 보고서</h3>
+                                </div>
+                                <div class="pull-right">
+                                    <span class="badge badge-aqua">42</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- x_title (e) -->
+
+                            <div class="x_content">
+
+                                <div class="v-scroll" style="height:248px">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>NO</th>
+                                                <th>생성일</th>
+                                                <th>고객사</th>
+                                                <th>담당자</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" class="text-center">1</th>
+                                                <td class="text-center">2015.08.06</td>
+                                                <td class="text-center"><a href="#">한국정보공학</a></td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-center">2</th>
+                                                <td class="text-center">2015.08.06</td>
+                                                <td class="text-center"><a href="#">한국정보공학</a></td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-center">3</th>
+                                                <td class="text-center">2015.08.06</td>
+                                                <td class="text-center"><a href="#">한국정보공학</a></td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-center">4</th>
+                                                <td class="text-center">2015.08.06</td>
+                                                <td class="text-center"><a href="#">한국정보공학</a></td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-center">5</th>
+                                                <td class="text-center">2015.08.06</td>
+                                                <td class="text-center"><a href="#">한국정보공학</a></td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <!-- x_content (e) -->
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12 my-body">
+                        <div class="x_panel">
+
+                            <div class="x_title">
+                                <h3>월별 외근 현황</h3>
+                            </div>
+                            <!-- x_title (e) -->
+
+                            <div class="x_content">
+
+                                <div class="chart-box" style="height:248px">
+                                    <div class="chart-info pull-right">
+                                        <div class="chart-info-bar">
+                                            <span class="bg-Sunglow"></span> <strong>개인</strong>
+                                        </div>
+                                        <div class="chart-info-bar">
+                                            <span class="bg-Ocean"></span> <strong>개인</strong>
+                                        </div>
+                                    </div>
+                                    <canvas id="canvas_bar"></canvas>
+                                </div>
+
+                            </div>
+                            <!-- x_content (e) -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+
+                        <div id="weather-widget">
+
+                            <!-- select id="select-time">
+                                <option value="real">Use Real Time</option>
+                                <option value="morning">Morning</option>
+                                <option value="day">Day</option>
+                                <option value="night">Night</option>
+                            </select -->
+                            <div id="notify"><p>Sorry :( Cant get Positiondata from device - using IP based Position tracking</p></div>
+
+                            <div id="center">
+                                <div id="app">
+                                    <div class="header-row doflex fxcenter">
+                                        <div>
+                                            <h1>Good Morning</h1>
+                                            <h2>Looking out of the window ...</h2>
+                                        </div>
+                                        <div>
+                                            <div class="city"></div>
+                                            <div class="temp" id="temp_MAIN"></div>
+                                        </div>
+                                        <div class="weather"><canvas id="icon_MAIN" width="80" height="80"></canvas></div>
+                                    </div>
+                                    <div class="days doflex fxcenter" id="days">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script src="//www.rootcdn.com/libs/skycons/0/skycons.min.js"></script>
+                            <script type="text/javascript">
+                            $(document).ready(function () {
+                              var skycons = new Skycons({
+                                'color': 'white'
+                              });
+
+                              var TIMEOVERWRITE = false;
+
+                              var STUB = {
+                                 city: {name: 'Earth'},
+                                 list: [
+                                   {temp: {max: 90},weather : [{description: 'clear'}]},
+                                   {temp: {max: 90},weather : [{description: 'rain'}]},
+                                   {temp: {max: 90},weather : [{description: 'storm'}]},
+                                   {temp: {max: 90},weather : [{description: 'clear'}]},
+                                   {temp: {max: 90},weather : [{description: 'snow'}]},
+                                   {temp: {max: 90},weather : [{description: 'mist'}]},
+                                   {temp: {max: 90},weather : [{description: 'sleet'}]},
+                                   {temp: {max: 90},weather : [{description: 'rain'}]}
+                                 ]
+                              };
+
+                              var weatherService = {
+                                api: {
+                                  url: 'http://api.openweathermap.org/data/2.5/forecast/daily?',
+                                  mode: 'json',
+                                  units: 'metric',
+                                  cnt: 8,
+                                  lat: 0,
+                                  lon: 0
+                                },
+
+                                buildUrl: function (pos) {
+                                  weatherService.api.lat = pos.coords.latitude;
+                                  weatherService.api.lon = pos.coords.longitude;
+
+                                  var apiParams = '';
+                                  for (var key in weatherService.api) {
+                                    if (key !== 'url') {
+                                      apiParams += key + '=' + weatherService.api[key] + '&';
+                                    }
+                                  }
+                                  return weatherService.api.url + apiParams.slice(0, -1);
+                                },
+
+                                fetchStub: function() {
+                                  var $d = $.Deferred();
+                                  $d.resolve(STUB);
+                                  return $d.promise();
+                                },
+
+                                fetchData: function (pos) {
+                                  return $.ajax({
+                                    url: weatherService.buildUrl(pos),
+                                    type: 'GET',
+                                    timeout: 3000,
+                                    dataType: 'JSONP'
+                                  });
+                                }
+                              };
+
+                              function bake(obj) {
+                                var tpl = '<div><canvas id="{{iconday}}" width="50" height="50"></canvas><span class="temp">{{temp}}°</span><strong>{{day}}</strong><div class="pop">{{desc}}</div></div>';
+
+                                for (var prop in obj) {
+                                  tpl = tpl.replace('{{' + prop + '}}', obj[prop]);
+                                }
+
+                                return $(tpl);
+                              }
+
+                              function translateIcon(day, desc, main) {
+                                if (typeof main === 'undefined') {
+                                  main = false;
+                                }
+
+                                day = 'icon_' + day;
+                                var time = getDayTime();
+
+                                if (desc.indexOf('clear') > -1) {
+
+                                  if (time === 'night' && main === true) {
+                                    skycons.add(day, Skycons.CLEAR_NIGHT);
+                                  } else {
+                                    skycons.add(day, Skycons.CLEAR_DAY);
+                                  }
+
+                                } else if (desc.indexOf('cloud') > -1) {
+                                  if (time === 'night' && main === true) {
+                                    skycons.add(day, Skycons.PARTLY_CLOUDY_NIGHT);
+                                  } else {
+                                    skycons.add(day, Skycons.PARTLY_CLOUDY_DAY);
+                                  }
+                                } else if (desc.indexOf('rain') > -1 || desc.indexOf('drizzle') > -1) {
+                                  skycons.add(day, Skycons.RAIN);
+                                } else if (desc.indexOf('storm') > -1 || desc.indexOf('wind') > -1 || desc.indexOf('breeze') > -1) {
+                                  skycons.add(day, Skycons.WIND);
+                                } else if (desc.indexOf('snow') > -1) {
+                                  skycons.add(day, Skycons.SNOW);
+                                } else if (desc.indexOf('mist') > -1 || desc.indexOf('smoke') > -1 || desc.indexOf('fog') > -1) {
+                                  skycons.add(day, Skycons.FOG);
+                                } else if (desc.indexOf('sleet') > -1) {
+                                  skycons.add(day, Skycons.SLEET);
+                                } else {
+                                  skycons.add(day, Skycons.CLOUDY);
+                                }
+                              }
+
+                              function getDayTime() {
+                                if (TIMEOVERWRITE) {
+                                  return TIMEOVERWRITE;
+                                }
+
+                                var nao = new Date();
+                                var hour = nao.getHours();
+
+                                if (hour > 5 && hour < 10) {
+                                  return 'morning';
+                                } else if (hour >= 10 && hour <= 17) {
+                                  return 'day';
+                                } else {
+                                  return 'night';
+                                }
+                              }
+
+                              function sortedDates() {
+                                var nao = new Date();
+                                var wkd = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+
+                                // im'a shuffelin!
+                                var mod = wkd.splice(0, nao.getDay());
+                                wkd = wkd.concat(mod);
+                                wkd = wkd.concat(wkd[0]);
+                                wkd[0] = 'MAIN';
+
+                                return wkd;
+                              }
+
+                              $('#select-time').on('change', function() {
+                                if ($(this).val() !== 'real') {
+                                  TIMEOVERWRITE = $(this).val();
+                                    $('#weather-widget').removeClass().addClass(TIMEOVERWRITE);
+                                    $('#weather-widget h1').text(headlines[TIMEOVERWRITE]);
+                                } else {
+                                  TIMEOVERWRITE = false;
+                                    var dt = getDayTime();
+                                    $('#weather-widget').removeClass().addClass(dt);
+                                    $('#weather-widget h1').text(headlines[dt]);
+                                }
+                              });
+
+                              var dt = getDayTime();
+                              var headlines = {
+                                morning : 'Good Morning!',
+                                day : 'Good Afternoon!',
+                                night : 'Good Evening!'
+                              }
+
+                              $('#weather-widget').addClass(dt);
+                              $('#weather-widget h1').text(headlines[dt]);
+
+                              function init(pos) {
+                                var promise = weatherService.fetchData(pos);
+                                promise.done(function (json) {
+                                  $('#app').addClass('show');
+                                  var len = json.list.length;
+                                  var weekdays = sortedDates();
+                                  $('.city').text(json.city.name);
+                                  $('#app').addClass('show');
+                                  for (var i = 0; i < len; i++) {
+
+                                    if (weekdays[i] !== 'MAIN') {
+                                      $('#days').append(bake({
+                                        day: weekdays[i],
+                                        iconday: 'icon_' + weekdays[i],
+                                        temp: json.list[i].temp.max,
+                                        desc: json.list[i].weather[0].description
+                                      }));
+                                      translateIcon(weekdays[i], json.list[i].weather[0].description);
+                                    } else {
+                                      $('#temp_MAIN').text(json.list[i].temp.max + '°');
+                                      $('h2').text('Today looks like '+json.list[i].weather[0].description);
+                                      translateIcon(weekdays[i], json.list[i].weather[0].description, true);
+                                    }
+                                  }
+                                  skycons.play();
+                                });
+                              }
+                              if (navigator.geolocation) {
+                                navigator.geolocation.getCurrentPosition(init, function() {
+                                  if (localStorage.getItem('weatherwidgetcache') !== null) {
+                                      var json = JSON.parse(localStorage.getItem('weatherwidgetcache'));
+                                      init({coords: {latitude: json.lat,longitude: json.lon}});
+
+                                  } else {
+
+                                    $.ajax({
+                                      url: 'http://ip-api.com/json',
+                                      type: 'GET',
+                                      timeout: 3000,
+                                      dataType: 'JSONP',
+
+                                      success: function(json) {
+                                        var d = new Date();
+                                        $('#notify').animate({
+                                          opacity: '1'
+                                        }, 500);
+
+                                        setTimeout(function() {
+                                          $('#notify').animate({
+                                          opacity: '0'
+                                        }, 500);
+
+                                        }, 7000);
+
+                                        // caching - due to usage limits
+                                        localStorage.setItem('weatherwidgetcache', JSON.stringify({
+                                          day: d.getDay(),
+                                          lat: json.lat,
+                                          lon: json.lon
+                                        }));
+
+                                        init({coords: {latitude: json.lat,longitude: json.lon}});
+                                      }
+                                    });
+                                  }
+                                });
+                              }
+                            });
+
+                            </script>
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4 col-sm-4 col-xs-12 my-body">
+                        <div class="x_panel">
+
+                            <div class="x_title">
+                                <div class="pull-left">
+                                    <h3>이달의 출근 현황</h3>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-White btn-xs"><i class="fa fa-plus"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- x_title (e) -->
+
+                            <div class="x_content">
+                                <div class="gowork-box">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <div class=" gowork-box1">
+                                            <p class="gowork-box-numbur">10</p>
+                                            <p class="gowork-box-txt">정상출근</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <div class="gowork-box2">
+                                            <p class="gowork-box-numbur">0</p>
+                                            <p class="gowork-box-txt">지각</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <div class="gowork-box3">
+                                            <p class="gowork-box-numbur">8</p>
+                                            <p class="gowork-box-txt">직근</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- x_content (e) -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- footer content -->
+                <footer>
+                    <div class="">
+                        <p class="pull-left">
+                            한국정보공학(주) ㅣ 대표번호 : 031-789-8700   주소 : 경기도 성남시 분당구 서현동 253-4 경림빌딩<br />
+                            COPYRIGHT (c) 2005 KIES CO., LTD. All rights are reserved. Since 2015
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
+
+            </div>
+            <!-- /page content -->
+
+        </div>
+
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <!-- bootstrap progress js -->
+    <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+
+    <script src="js/custom.js"></script>
+
+    <script src="js/chartjs/chart.min.js"></script>
+
+    <script>
+    var barChartData = {
+        labels: ["4월", "5월", "6월", "7월"],
+        datasets: [
+            {
+                fillColor: "#ffbf35", //rgba(220,220,220,0.5)
+                strokeColor: "#ffbf35", //rgba(220,220,220,0.8)
+                data: [51, 30, 40, 28]
+        },
+            {
+                fillColor: "#37b679", //rgba(151,187,205,0.5)
+                strokeColor: "#37b679", //rgba(151,187,205,0.8)
+                data: [41, 56, 25, 48]
+        }
+    ],
+    }
+
+    $(document).ready(function () {
+        new Chart($("#canvas_bar").get(0).getContext("2d")).Bar(barChartData, {
+            tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+            responsive: true,
+            barDatasetSpacing: 5,
+            barValueSpacing: 10
+        });
+    });
+    </script>
+
+
+</body>
+
+</html>

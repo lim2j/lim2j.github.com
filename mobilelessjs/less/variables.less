@@ -1,0 +1,100 @@
+// variables.less
+
+//== Typography
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-family-noto-sans-kr:  "Noto Sans KR", sans-serif;
+// nanumgothic
+//@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+//@font-family-nanum-gothic:  "Nanum Gothic", sans-serif;
+
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-noto-sans-kr;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+//font-weight
+@font-semi-bold: 		  600;
+@font-bold: 			  bold;
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+@zindex-header:            1000;
+@zindex-dropdown:          1000;
+@zindex-fixed:             1010;
+@zindex-navbar-background: 1020;
+@zindex-navbar:            1030;
+@zindex-modal-background:  1040;
+@zindex-modal:             1050;
+
+// Extra small screen / phone
+@screen-xs:                  480px;
+// Small screen / tablet
+@screen-sm:                  768px;
+
+@image-url:                 "../image/"; //background: url("@{image-url}/white-sand.png");
+@font-url:                  "../font/";
+
+@black:                     #000;
+@base-color:                #ddd;
+@line-color:                #dedede;
+@bold-line-color:           @black;
+
+/* point-color */
+@point-color:               #1db2e3;  //1db2e3    60d0f4    //f78e48 b5c22c, 83c22b, 2cc269, 2bc19b, 2cb6c3, 2b83c2, c12b6a, c23d2c
+
+@font-color:                #727272;
+@font-blod-color:           #424146;
+@font-lite-color:           #757575;
+
+@button-line-color:         #c5c5c5;
+@button-color:              #fff;
+@button-font-color:         #6d6d6d;
+@button-default-color:      #f7f7f7;
+
+@header-color:              transparent;    //@point-color;  //transparent;
+@header-font-color:         #fff;   //3a3a3a
+@header-logo-color:         #3a3a3a;
+@header-sub-color:          @point-color;
+@header-sub-font-color:     #fff;
+@body-color:                #fff;  //dfdbda
+@sub-body-header-color:     #fff;
+@sub-line-color:            #dedede;
+@footer-color:              #343434;  //868686
+@footer-line-color:         #717171;
+@footer-font-color:         #979797;
+
+@input-bg-color:       	 	#f8f8f9;
+@input-border-color:        #d9d9d9;
+
+@form-control-boarder-color:#ababab;
+/*
+@width: 0.5;
+width: percentage(@width); // returns `50%`
+color: saturate(@base-color, 5%);
+background-color: spin(lighten(@base-color, 25%), 8);
+*/
+
+@tile-padding:                0; //2px;
+
+@base-padding:                15px;
+@base-box-padding:            12px 22px;
+@base-page-padding:           0px 18px;
+
+@base-margin-top:             22px;
+@base-margin-bottm:           22px;
+@content-margin-bottm:        45px;

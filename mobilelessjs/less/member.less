@@ -1,0 +1,253 @@
+//member
+.member-con{
+    padding:@base-page-padding;
+    margin-top: @base-margin-top;
+    .screen-out{
+        text-indent: -999px;
+        line-height: 0;
+        font-size: 0;
+    }
+    .agreement-tit{
+        padding-bottom: 10px;
+        text-align: center;
+        border-bottom: 2px solid @bold-line-color;
+        font-size: @font-size-base;
+        font-weight: @font-semi-bold;
+        color: @font-blod-color;
+    }
+    >.agree-chk-box{
+        position: relative;
+        padding: @base-padding 0;
+        border-bottom: 1px solid @line-color;
+        >label{
+            display: inline-block;
+            width: 223px;
+            height: 34px;
+            background: url("@{image-url}/agree-chk-label.png") 0 0 no-repeat;
+            background-size: cover;
+            vertical-align: top;
+            .screen-out;
+        }
+        >input[type="checkbox"]{
+            display: inline-block;
+            margin-top: 15px;
+            vertical-align: top;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            border: 0;
+            border-radius:0;
+            &:before{
+                display: block;
+                position: absolute;
+                top: 28px;
+                right: 0;
+                z-index: 10;
+                content: '';
+                background: url("@{image-url}/iconset.png") 0 0 no-repeat;
+                width: 15px;
+                height: 11px;
+                background-size: 320px 307px;
+                background-position: -13px -264px;
+            }
+        }
+        >input[type="checkbox"]:checked{
+            &:before{
+                display: block;
+                position: absolute;
+                top: 28px;
+                right: 0;
+                z-index: 10;
+                content: '';
+                background: url("@{image-url}/iconset.png") 0 0 no-repeat;
+                width: 16px;
+                height: 12px;
+                background-size: 320px 307px;
+                background-position: -51px -264px;
+            }
+        }
+    }
+    .agreement-use{
+        margin-top: @base-margin-top;
+        margin-bottom: @base-margin-bottm;
+        border-bottom: 1px solid @line-color;
+        .agree-use-box{
+            margin-bottom: 27px;
+            h5{
+                margin: 0 0 9px 0;
+                font-size: @font-size-h5;
+                text-align: left;
+                font-weight: @font-bold;
+                color: @font-blod-color;
+            }
+            textarea{
+                overflow: auto;
+                display: block;
+                width: 100%;
+                height: 85px;
+                padding: 11px 8px;
+                background-color: @input-bg-color;
+                border: 1px solid @line-color;
+                outline: 0;
+            }
+        }
+    }
+    .btnset{
+        overflow: hidden;
+        padding: 0 34px;
+        margin: @base-margin-top 0 50px 0;
+        > button{
+            display: inline-block;
+            float: left;
+            height: 34px;
+            width: 46%;
+            box-sizing: border-box;
+            font-weight: @font-bold;
+            outline: 0;
+            &.agree-success{
+                margin-right: 4%;
+            }
+            &.btn-default{
+                margin-left: 4%;
+                color: @font-blod-color;
+            }
+        }
+    }
+    form.memberform{
+        border-top: 2px solid @bold-line-color;
+        fieldset{
+            border: none;
+            margin: 0;
+            padding: 0;
+            legend{
+                font-size: @font-size-large;
+                font-weight: @font-bold;
+            }
+           &:first-child{
+                legend{
+                   .screen-out;
+                }
+            }
+            &:nth-child(2){
+               margin-top: 35px;
+               .info-dec{
+                    padding-top: 12px;
+                    border-top: 1px solid @line-color;
+                    input{
+                        width: 70px;
+                        @media all and (max-width:360px){
+                             width: 60px;
+                        }
+                    }
+                    select{
+                        width: 60px;
+                        @media all and (max-width:360px){
+                             width: 55px;
+                        }
+                    }
+                }
+                legend{
+                    display: block;
+                }
+            }
+        }
+        .info-dec-mt{
+            padding-bottom: 11px;
+            margin-top: 12px;
+        }
+        .info-dec{
+            overflow: hidden;
+            clear: both;
+            .info-dec-mt;
+            border-bottom: 1px solid @line-color;
+            &.info-dec-type{
+                >label{
+                    margin-top: 5px;
+                }
+            }
+            &.info-dec-type2{
+                padding-bottom: 25px;
+            }
+            >label{
+                display: inline-block;
+                width: 28%;
+                font-size: @font-size-base;
+                font-weight: @font-bold;
+                color: @black;
+            }
+            >input{
+                width: 37%;
+                height: 32px;
+                border: 1px solid @input-border-color;
+            }
+            >input[type="radio"]{
+                display: inline-block;
+                width: 62px;
+                vertical-align: top;
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                border: 0;
+                border-radius:0;
+                outline: 0;
+                &::before{
+                    display: inline-block;
+                    width:62px;
+                    height: 31px;
+                    padding-top:5px;
+                    border: 1px solid @line-color;
+                    box-sizing: border-box;
+                    text-align: center;
+                }
+                &.type-chk1::before{
+                   content: '남자';
+                }
+                &.type-chk2::before{
+                    content: '여자';
+                }
+            }
+            >input[type="radio"]:checked{
+                &::before{
+                    display: inline-block;
+                    width:62px;
+                    height: 31px;
+                    padding-top:5px;
+                    border: 1px solid @point-color;
+                    background-color: @point-color;
+                    box-sizing: border-box;
+                    text-align: center;
+                    color: @body-color;
+                }
+            }
+            >select{
+                height: 32px;
+                border: 1px solid @input-border-color;
+                outline: 0;
+            }
+            .req-email-1{
+                width: 87px;
+            }
+            .req-email-2{
+                width: 94px;
+            }
+            .req-email-3{
+                margin: 8px 0 0 29%;
+                width: 150px;
+            }
+            span.i-email{
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                margin-bottom: 12px;
+                vertical-align: bottom;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .help-txt{
+        margin: 10px 0 0 28%;
+        line-height: 1.2em;
+    }
+}

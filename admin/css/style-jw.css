@@ -1,0 +1,535 @@
+/* ==================================================
+   Main schedule
+================================================== */
+.table-calender02 {
+    margin-bottom: 0 !important;
+}
+.table-calender02>tbody>tr>td{
+    height: 60px !important;
+    cursor:default;
+}
+.table-calender02>tbody>tr>td.tc-other-month{
+    background-color: #fff;
+    opacity: 0.4;
+    filter:Alpha(opacity=40);
+}
+.table-calender02>tbody>tr>td.tc-today-month .tc-day{
+    cursor:default;
+}
+.table-calender02>tbody>tr>td.tc-acive-month .tc-day{
+    background-color: #e9e26b !important;
+    color: #555 !important;
+    cursor:default;
+}
+
+/* ------------   schedule  ------------------ */
+.table-calender>tbody>tr>td {
+    height: 110px !important;
+    cursor:default;
+}
+.table-calender>tbody>tr>td.tc-other-month{
+    background-color: #efefef;
+    opacity: 0.5;
+    filter:Alpha(opacity=50);
+}
+.table-calender>tbody>tr>td.tc-today-month{
+    background-color: #dbf6f3;
+}
+.table-calender>tbody>tr>td.tc-acive-month{
+    background-color: #fffeaf;
+}
+.calender_list_column {    
+    padding-left: 20px;
+    padding-top: 23px;
+    padding-right: 0;
+}
+.my-schedule-wrap {
+    position: relative;
+    padding-top: 47px;
+    overflow-y: hidden!important;
+}
+.my-schedule {
+    overflow-y: auto !important;
+    max-height: 650px;
+}
+.my-schedule thead tr:first-child {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+}
+.my-schedule thead tr:first-child th {
+    display: block;
+    float: left;
+    line-height: 1.63em
+}
+.my-schedule thead tr th{
+    height: 47px;
+}
+
+/* ==================================================
+   Back to Top
+================================================== */
+#back-to-top {
+	display: block;
+	background-color: #ffffff;
+    border: solid 1px #cdcdcd;
+    border-radius: 4px;
+	margin: 0;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	z-index: 99;
+    box-shadow: 2px 2px 5px #888888;
+	
+	-webkit-transition: background 0.1s linear 0s;	
+	   -moz-transition: background 0.1s linear 0s;
+		 -o-transition: background 0.1s linear 0s;
+		    transition: background 0.1s linear 0s;
+}
+
+#back-to-top:hover {
+	background-color:#ededed;
+}
+
+#back-to-top i {
+	font-size: 24px;
+	color: #3C3F45;
+	position: absolute;
+	left: 50%;
+	top: 26%;
+	margin-top: -7px;
+	line-height: 1em;
+    text-decoration: none;
+}
+
+#back-to-top i {
+	margin-left: -7px;	
+}
+
+#back-to-top p {
+    display: block;
+    text-align: center;
+    color: #555555;
+    margin-top: 26px;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+#back-to-top p:hover {
+    text-decoration: none;
+}
+
+/* ==================================================
+   font weight
+================================================== */
+.bold-100 {
+    font-weight: 100;
+}
+.bold-500 {
+    font-weight: 500;
+}
+.bold-600 {
+    font-weight: 600;
+}
+.bold-700 {
+    font-weight: 700;
+}
+.bold-b {
+    font-weight: bold;
+}
+
+.modal-body-wrap {
+    position: relative;
+    padding-top: 47px
+}
+.modal-body-scroll {
+    max-height: 450px;
+    overflow-y: auto;
+    padding: 0;
+}
+.modal-body-scroll thead tr:first-child {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+}
+.modal-body-scroll thead tr:first-child th {
+    display: block;
+    float: left;
+    line-height: 1.63em
+}
+
+.modal-body-scroll thead tr th{
+    height: 47px;
+}
+.color-shuttle-gray {
+    color: #5D6C7D;
+}
+.color-steel-blue {
+    color: #6185BC;
+}
+
+/* ==================================================
+   List
+================================================== */
+.list-p {
+    color: #4a73b3;
+    line-height: normal;
+    font-weight: 500;
+}
+.imgdiv {
+    padding: 0;
+    margin: 0;       
+}
+.imgdiv .file-del-display {
+    list-style: none;
+    margin-bottom: 10px;
+}
+.imgdiv .file-del-display > li {
+    display: inline-block ;
+    padding: 0;
+    margin: 0;
+}
+.imgdiv .file-del-display .file-name {
+    font-size: 12px;
+    width: 69px;
+    overflow: hidden;
+    padding-top: 2px;
+    text-overflow: ellipsis;
+}
+.imgdiv .file-del-display .file-del {
+    width: 30px;
+}
+/* ==================================================
+   customer
+================================================== */
+.company-name {
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 15px;
+    font-weight: 500;
+}
+.infocon {
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 2px 12px;
+    color: white;
+    line-height: 1.5;
+}
+.infocon-green {
+    background-color: #3aa429;    
+}
+.infocon-darkcyan {
+    background-color: #2aafb4;    
+}
+.infocon-darkslateblue {
+    background-color: #3f6298;
+}
+.infocon-default {
+    background-color: #6c6c6c;
+}
+span.section-bg04{
+    background-image: url(../images/section_bg04.gif);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    display: block;
+    width: 100%;
+    padding: 10px 17px;
+    font-size-adjust: 16px;
+}
+.report-history-scroll-wrap {
+    position: relative;
+    padding-top: 47px;
+}
+.report-history-scroll {
+    max-height: 250px;
+    overflow-y: auto;
+}
+.report-history-scroll thead tr:first-child {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+}
+.report-history-scroll thead tr:first-child th {
+    display: block;
+    float: left;
+    line-height: 1.63em
+}
+.report-history-scroll thead tr th{
+    height: 47px;
+}
+.table-active {    
+}
+.table-active tbody tr:hover {
+    background-color: #feffe7 !important;
+    cursor: pointer;
+}
+/* ==================================================
+   Accordion
+================================================== */
+.accordion .panel {
+    margin-bottom: 2px;
+    border-radius: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #93b2e3;
+}
+
+.accordion .panel-heading {
+    padding: 13px;
+    width: 100%;
+    display: block;
+}
+.accordion .panel-heading:hover {
+    text-decoration: none;
+    background-color: azure;
+}
+
+.accordion .panel:hover {
+    background: azure;
+}
+.accordion .panel-body {
+    background-color: #f8f8f8;
+    border-top: 2px solid #93b2e3;
+}
+.accordion .panel-title {
+    font-size: 15px;
+    color: #4a73b3;
+    font-weight: 500;
+}
+.accordion .collapsed .panel-title {
+    color: #505050;
+}
+.accordion .panel-title span {
+    font-size: 14px;
+    color: #909090;
+    padding-left: 20px;
+}
+.accordion .panel-title span {
+    color: #93b2e3;
+}
+.accordion .panel-body ul {
+    margin-bottom: 0;
+    margin-top: -5px;
+    padding-left: 25px;
+}
+.accordion .panel-body ul li {
+    padding-top: 5px;
+    color: #565656;
+}
+.accordion .panel-body ul li a {
+    color: #0078d5x;
+    text-decoration: underline;
+}
+
+/* ==================================================
+   member
+================================================== */
+.dropdown-white {
+    background-color: #ffffff;
+    border-color: #ddd;
+    color: #5d6c7d;
+}
+.member-list li a {
+    font-size: 13px;    
+    padding-left: 17px;
+    color: #777777;
+    line-height: 120%;
+}
+.member-list li.team01 a {
+    color: #4a73b3;
+    padding-left: 7px !important;
+    line-height: 120%;
+    font-weight: 600;
+}
+.member-list li.team02 a {
+    color: #525252;
+    padding-left: 12px !important;
+    line-height: 120%;
+}
+.member-list .divider:hover {
+    background-color: white;
+}
+.bizme-out-time {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width:100%;
+}
+.bizme-out-time li {
+    margin: 3px 0;
+}
+
+/*---------- 업무발자취 -----------------*/
+.move-map {
+    padding: 0;
+    margin: 0 0 20px;
+}
+.move-map .move-map-box {
+    padding: 0;
+    margin-top: 10px;
+    height: 320px;
+    background-color: #efefef;
+}
+.move-map-conbox {
+    border: 3px solid #eee;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.move-map-form {    
+    background-color: #efefef;
+    padding: 5px;
+}
+.move-map-form .moveMap_info {
+    display: inline-block;
+    margin-top: 7px;
+    margin-left: 7px;
+    font-size: 1.2em;
+}
+.move-map-form .moveMap_info span {
+    color: darkblue;
+    font-weight: 600;
+}
+.move-map-list-wrap {
+    position: relative;
+    padding-top: 47px;
+}
+.move-map-list {
+    overflow-y: auto;
+    max-height: 250px;
+}
+.move-map-list thead tr:first-child {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+}
+.move-map-list thead tr:first-child th {
+    display: block;
+    float: left;
+    line-height: 1.63em
+}
+.move-map-list thead tr th{
+    height: 47px;
+}
+
+/* ==================================================
+   Add Button
+================================================== */
+.btn-green {
+    background-color: #25b983;
+    border: 1px solid #009a53;
+    color: #fff;
+}
+.btn-green:hover {
+    background-color: #33a87d;
+    text-decoration: none;
+    color: #fff;
+}
+.btn-Wedgewood {
+    background-color: #5A7AAC;
+    border: 1px solid #446dae;
+    color: #fff;
+}
+.btn-Wedgewood:hover {
+    background-color: #4d6c9b;
+    text-decoration: none;
+    color: #fff;
+}
+.btn-info3 {
+    background-color: #def5f1;
+    color: #656565 !important;
+}
+
+.circleBtn {
+    font-size: 17px;
+    border-radius: 50%;
+    line-height: 0;    
+    border: 0;
+    padding: 6px 10px;
+    background-color: #E0AF18;
+    color: #fff;
+}
+.circleBtn:hover {    
+    background-color: #c08811;
+}
+.dis-inline {
+    display:inline-block;
+}
+/* ==================================================
+   Statistics Graph
+================================================== */
+.graph-box {
+    position: relative;
+    width: 100%;    
+    display: inline-block;
+    margin: 20px auto;
+    border: solid 1px #f0f0f0; 
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    opacity: 1;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.graph-box .chart-box {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* ==================================================
+   Admin_Work
+================================================== */
+.table-work {
+    margin: 20px auto 30px;
+    width:96%;
+    border-top: 1px solid #b8cadd;
+}
+.table-work>thead>tr>th,
+.table-work>tbody>tr>th,
+.table-work>tbody>tr>td {    
+    border: 1px solid #e3e3e3; 
+    text-align: center;
+    width: 14.28%;
+    text-align: center;
+    color: #666;
+}
+.table-work>thead>tr:first-child>th {
+    border-bottom: 1px solid #b8cadd;
+    border-left: 1px solid #b8cadd;
+    border-right: 1px solid #b8cadd;
+    background-color: #dfeaf5;
+    color: #1e599e;
+}
+.table-work>thead>tr:nth-child(2)>th {
+    background-color: #f7f7f7;
+    color: #4a73b3;
+}
+.table-work>tbody>tr:first-child>th:first-child {
+    color: #4a73b3;
+}
+/* ==================================================
+   Admin_Setting
+================================================== */
+.setting-label {
+    font-weight: normal;
+    color: #666;
+}
+.setting-input[disabled] {
+    color: #888;
+}
