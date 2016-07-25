@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
 
-    <link rel="stylesheet/less" type="text/css" href="../less/jj.less">
+    <link rel="stylesheet/less" type="text/css" href="../less/style.less">
 
     <script src="../js/less.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -21,7 +21,7 @@
     - 타이틀
     - 아이콘(전화걸기)
     -->
-    <section class="header">
+    <section class="header float-top">
 
         <div class="head">
             <ol>
@@ -52,17 +52,14 @@
         </ol>
         -->
         <ol class="item">
-            <li><a href="#">병원소개</a>
+            <li><a href="#">본원소개</a>
                 <ol>
-                    <li><a href="">인사말</a></li>
-                    <li><a href="">의료진소개</a></li>
-                    <li><a href="">병원둘러보기</a></li>
-                    <li><a href="">찾아오시는길</a></li>
+                    <li><a href="Content/P101010.html">의료진소개</a></li>
+                    <li><a href="Content/P102010.html">진료안내</a></li>
+                    <li><a href="Content/P103010.html">오시는길</a></li>
                 </ol>
             </li>
-            <li><a href="">진료/클리닉</a></li>
-            <li><a href="">종합검진</a></li>
-            <li><a href="#">공단검진센터</a></li>
+            <li><a href="Content/P201010.html">안검하수</a></li>
         </ol>
 
     </section>
@@ -133,8 +130,9 @@
            <ol>
                <li>
                    <ol>
-                       <li class="span12-6">수지미래 산부인과의원</li>
-                       <li class="span12-6 text-align-right"><a href="">pc버전 바로가기</a></li>
+                        <li class="span12-6">수지미래 산부인과의원</li>
+                        <li class="span12-3 text-align-left"><a href="http://prettyeye.net/" target="_blank">pc버전 바로가기</a></li>
+                        <li class="span12-3 text-align-right"><a href="#header" class="icon-comm_up"></a></li>
                    </ol>
                </li>
                <li>
@@ -149,7 +147,48 @@
     <!-- // footer -->
 
     <script src="../js/jquery.bxslider.js"></script>
-    <script src="../js/jj.js"></script>
+    <script src="../js/jjSlideNav.js"></script>
+    <script src="../js/modalpopup.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+        var slidenav = new $('#menu').jjSlideNav({}).data('jjSlideNav');
+        slidenav.openEventDepth("@path");
+
+        if($('.slider').length > 0){
+            var slider=jQuery('.slider ol').bxSlider({
+                auto: true,
+                pause: $('.slider').attr('data-delay'),
+                controls: false,
+                onSliderLoad : function(){
+                    var pagingPosition = $(".slider").attr("data-paging-position");
+
+                    if(pagingPosition !== undefined){
+                        $('.slider').find('.bx-pager').css('bottom', pagingPosition+'px');
+                    }
+                }
+            });
+            setTimeout(function(){
+                    //slider.redrawSlider();
+                    slider.destroySlider();
+                    slider.reloadSlider();
+
+            },50);
+        }
+        
+        $('a[href="#header"]').on('click', function(){
+            var target = $( $(this).attr('href') );
+
+            if( target.length ) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.position().top
+                }, 500);
+            }
+        });
+    });
+    </script>
+
 
 
 

@@ -32,22 +32,18 @@ $('#req-email-3').change(function(){
     var memEmail = element.attr('value');
     idval.val(memEmail);
 });
-//checkbox
-$("input[type='checkbox'][name='type-chk']").click(function(){
-        if($(this).prop('checked')){
-            $("input[type='checkbox'][name='type-chk']").prop('checked',false);
-            $(this).prop('checked',true);
-
-        };
-});
 </script>
 
     <!-- agreement -->
-    <div class="member-head-bg">
-        <h4 class="member-head">회원가입</h4>
+    <div class="sub-heder">
+        회원가입
     </div>
+
+    <!--div class="member-head-bg">
+        <h4 class="member-head">회원가입</h4>
+    </div-->
     <div class="member-con">
-        <form name="loginform" class="loginform" action="#" method="post">
+        <form name="loginform" class="memberform" action="#" method="post">
             <fieldset>
                 <legend>회원정보 (필수)</legend>
                 <div class="info-dec">
@@ -67,9 +63,9 @@ $("input[type='checkbox'][name='type-chk']").click(function(){
                     <input type="text" name="name">
                 </div>
                 <div class="info-dec info-dec-type">
-                    <label for="type">성별</label>
-                        <input type="checkbox" class="type-chk1 type-chk" id="type-chk" name="type-chk" value="남자" checked="checked" title="남자">
-                        <input type="checkbox" class="type-chk2 type-chk " id="type-chk" name="type-chk" value="여자" title="여자">
+                    <label for="type-chk">성별</label>
+                        <input type="radio" name="type-chk" class="type-chk1 type-chk" value="남자" checked="checked" title="남자">
+                        <input type="radio" name="type-chk" class="type-chk2 type-chk" value="여자" title="여자">
                 </div>
                 <div class="info-dec">
                     <label for="birthday">생년월일</label>
@@ -85,7 +81,7 @@ $("input[type='checkbox'][name='type-chk']").click(function(){
                     <p class="help-txt">만14세미만의 회원가입은 PC홈페이지에서 가능합니다.</p>
                 </div>
                 <div class="info-dec info-dec-type2">
-                    <label for="birthday">이메일</label>
+                    <label for="email">이메일</label>
                         <input type="email" name="email" id="req-email-1" class="req-email-1">
                         <span class="i-email"><img src="Resource/image/i-email.png" alt="골뱅이아이콘"></span>
                         <input type="email" name="req-email-2" id="req-email-2" class="req-email-2">
@@ -103,7 +99,7 @@ $("input[type='checkbox'][name='type-chk']").click(function(){
             <fieldset>
                 <legend>회원정보 (선택)</legend>
                 <div class="info-dec">
-                    <label for="name">휴대전화번호</label>
+                    <label for="num">휴대전화번호</label>
                     <select id="num-1" name="num-1">
                         <option value="010">010</option>
                         <option value="011">011</option>

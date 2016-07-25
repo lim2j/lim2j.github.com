@@ -1,47 +1,17 @@
 //member
-.member-head-bg{
-    overflow: hidden;
-    position: relative;
-    min-height: 40px;
-    background-color: @point-color;
-    .back-arrow-ico{
-        position: absolute;
-        top: 0; 
-        left: 8px;
-        width: 40px;
-        height: 40px;
-        padding: 6px;
-        a{
-            display: inline-block;
-            height: 28px;
-            img{
-                width: 100%;
-            }
-        }
-    }
-    .member-head{
-        padding-top: 6px;
-        margin: 0;
-        color: @sub-heder-color;
-        font-weight: @font-semi-bold;
-        font-size: @font-size-h5;
-        text-align: center;
-        line-height: 1.9em;
-    }
-}
 .member-con{
-    padding: 0 8px;
+    padding:@base-page-padding;
     margin-top: @base-margin-top;
     .screen-out{
         text-indent: -999px;
-        line-height: 0; 
-        font-size: 0; 
+        line-height: 0;
+        font-size: 0;
     }
     .agreement-tit{
         padding-bottom: 10px;
         text-align: center;
         border-bottom: 2px solid @bold-line-color;
-        font-size: @font-size-base; 
+        font-size: @font-size-base;
         font-weight: @font-semi-bold;
         color: @font-blod-color;
     }
@@ -53,8 +23,8 @@
             display: inline-block;
             width: 223px;
             height: 34px;
-            background: url('/Resource/image/agree-chk-label.png') 0 0 no-repeat;
-            background-size: cover; 
+            background: url("@{image-url}/agree-chk-label.png") 0 0 no-repeat;
+            background-size: cover;
             vertical-align: top;
             .screen-out;
         }
@@ -74,7 +44,7 @@
                 right: 0;
                 z-index: 10;
                 content: '';
-                background: url('/Resource/image/iconset.png') 0 0 no-repeat;
+                background: url("@{image-url}/iconset.png") 0 0 no-repeat;
                 width: 15px;
                 height: 11px;
                 background-size: 320px 307px;
@@ -89,7 +59,7 @@
                 right: 0;
                 z-index: 10;
                 content: '';
-                background: url('/Resource/image/iconset.png') 0 0 no-repeat;
+                background: url("@{image-url}/iconset.png") 0 0 no-repeat;
                 width: 16px;
                 height: 12px;
                 background-size: 320px 307px;
@@ -129,7 +99,7 @@
         > button{
             display: inline-block;
             float: left;
-            height: 34px; 
+            height: 34px;
             width: 46%;
             box-sizing: border-box;
             font-weight: @font-bold;
@@ -143,7 +113,7 @@
             }
         }
     }
-    form.loginform{
+    form.memberform{
         border-top: 2px solid @bold-line-color;
         fieldset{
             border: none;
@@ -210,7 +180,7 @@
                 height: 32px;
                 border: 1px solid @input-border-color;
             }
-            >input[type="checkbox"]{
+            >input[type="radio"]{
                 display: inline-block;
                 width: 62px;
                 vertical-align: top;
@@ -222,7 +192,7 @@
                 outline: 0;
                 &::before{
                     display: inline-block;
-                    width:62px; 
+                    width:62px;
                     height: 31px;
                     padding-top:5px;
                     border: 1px solid @line-color;
@@ -236,10 +206,10 @@
                     content: '여자';
                 }
             }
-            >input[type="checkbox"]:checked{
+            >input[type="radio"]:checked{
                 &::before{
                     display: inline-block;
-                    width:62px; 
+                    width:62px;
                     height: 31px;
                     padding-top:5px;
                     border: 1px solid @point-color;

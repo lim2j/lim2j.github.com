@@ -1115,7 +1115,7 @@
                 element: "button",
                 btntype: "button",
                 btnClass: "post-addVideo"
-            },
+            },    
             {
                 btnLabel: "지도",
                 title: "add daum map",

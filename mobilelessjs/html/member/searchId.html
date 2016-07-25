@@ -1,0 +1,58 @@
+<!--아이디찾기-->
+<div class="member-con">
+	<form name="searchId_form" class="sIdform" method="post">
+		<fieldset>
+			<legend>아이디찾기</legend>
+			<div class="info-dec">
+                <label for="searchMemberid">아이디</label>
+                <input type="text" name="searchMemberID" maxlength="12">
+             </div>
+            <div class="info-dec info-dec-type2">
+                <label for="searchEmailID">이메일</label>
+                <input type="text" name="searchEmailID" class="req-email-1" maxlength="100">
+                <span class="i-email"><img src="/Resource/image/i-email.png" alt="골뱅이아이콘"></span>
+                <input type="text" name="EmailDomain" class="req-email-2" maxlength="100">
+                <select class="req-email-3" name="EmailDomainSelect" onchange="emailSelect_change(this);">
+					<option value="">직접입력</option>
+					<option value="naver.com">naver.com</option>
+					<option value="gmail.com">gmail.com</option>
+					<option value="hanmail.net">hanmail.net</option>
+					<option value="daum.net">daum.net</option>
+					<option value="nate.com">nate.com</option>
+				</select>
+            </div>
+		</fieldset>
+	</form>
+	<div class="btnonly">
+		<!-- [D] 아이디정보 없는경우 해당모달팝업(no-info) 노출-->
+        <button type="button" onclick="CheckForm();" name="searchIdBtn" class="searchIdBtn btn btn-default">아이디찾기</button>
+    </div>
+
+	<!-- [D] 아이디정보 없음 팝업 -->
+	<div id="modal" class="no-info">
+		<p class="point_txt">일치하는 정보가 없습니다.<br>
+		입력하신 정보를 재확인하시기 바랍니다.</p>
+		<input type="button" id="confirm" class="modalBtn confirm btn btn-default" value="확인" />
+		<span class="modal_cls"><i class="icon-comm_exit" title="닫기"></i></span>
+	</div>
+
+</div>
+
+
+<!--모달팝업창 열리는 경우 스크립트-->
+<script>
+ $(function(){
+  $(".searchIdBtn").click(function(){ // 아이디정보 없는 경우로 변경
+   $.blockUI({
+    message : $('#modal')
+    ,onOverlayClick : $.unblockUI
+   }); 
+  });
+  $("#confirm").click(function(){ //확인버튼 클릭시 
+   $.unblockUI();
+  });
+  $(".modal_cls").click(function(){ //상단닫힘버튼클릭시
+   $.unblockUI();
+  });
+ }); 
+</script>

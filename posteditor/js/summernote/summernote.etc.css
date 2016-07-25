@@ -342,6 +342,7 @@
     left: -10px;
     border: 0;
     background-color: rgba(63,170,237,0.5);
+    min-width: 560px;
 }
 
 .note-popover .popover-content>.btn-group,
